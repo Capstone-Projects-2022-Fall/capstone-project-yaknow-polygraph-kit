@@ -39,6 +39,7 @@ class gdx:
         for data collection.
 		"""
 
+
         # Call the godirect module to open a USB connection
         self.godirect.__init__(use_ble=False, use_usb=True)
 
