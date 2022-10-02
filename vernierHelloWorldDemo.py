@@ -1,4 +1,5 @@
 from gdx import gdx
+import tensorflow as tensorflow
 
 theAPIs = gdx()
 
@@ -8,3 +9,6 @@ theAPIs.start()
 deviceMeasurements = theAPIs.read()
 theAPIs.stop()
 theAPIs.close()
+
+print("Tensorflow running as version", tensorflow.__version__)
+
