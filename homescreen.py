@@ -30,7 +30,7 @@ def main():
 
     # handles the user and prints the value to the terminal
     event, values = window.read()
-    print(event, values[0], values[1], values[2])
+    print(event, values[0], values[1], values[2], values[3])
 
 
 if __name__ == '__main__':
