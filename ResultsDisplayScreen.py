@@ -12,7 +12,7 @@ import PySimpleGUI as sg
 #X-Axis = time, Y-Axis = Respiration rate
 
 def new_window():
-    layout = [
+    graph_layout = [
         [sg.Graph(canvas_size=(600, 600), graph_bottom_left= (0,0), graph_top_right= (600, 600), background_color= 'white', key='graph')]
         ]
 
@@ -20,7 +20,7 @@ def new_window():
     MIDDLE = TOP * 1/3
     BOTTOM = TOP * 2/3
 
-    window = sg.Window('Graph test', layout, finalize=True)
+    window = sg.Window('Graph test', graph_layout, finalize=True)
 
     graph = window['graph']
 
