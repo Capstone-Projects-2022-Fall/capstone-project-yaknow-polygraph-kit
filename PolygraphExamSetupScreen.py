@@ -1,5 +1,5 @@
 # import
-import PySimpleGUI as sg
+import PySimpleGUI as gui
 from PIL import Image, ImageTk
 
 # function to create specific window
@@ -21,38 +21,38 @@ def make_window():
     # the lists corresponds to how many rows there will be on the display
 
     row0 = [
-        [sg.Text('yaKnow - Polygraph Exam Startup', size=(25,1))]
+        [gui.Text('yaKnow - Polygraph Exam Startup', size=(25,1))]
     ]
 
     row1 = [
-        [sg.ButtonMenu('Select Examination Type', menu, k='-EXAMINATIONTYPE-'), sg.Text('Blood Pressure Sensor'), sg.Text('Skin Conductivity Sensor'), sg.Text('Respiration Sensor')]
+        [gui.ButtonMenu('Select Examination Type', menu, k='-EXAMINATIONTYPE-'), gui.Text('Blood Pressure Sensor'), gui.Text('Skin Conductivity Sensor'), gui.Text('Respiration Sensor')]
     ]
 
     row2 = [
-        [sg.Text('                                              '), sg.Image(size=(50, 50), key='theImage1'), sg.Text('                     '), sg.Image(size=(50, 50), key='theImage2'), sg.Text('                 '), sg.Image(size=(50, 50), key='theImage3')]
+        [gui.Text('                                              '), gui.Image(size=(50, 50), key='theImage1'), gui.Text('                     '), gui.Image(size=(50, 50), key='theImage2'), gui.Text('                 '), gui.Image(size=(50, 50), key='theImage3')]
 
     ]
 
     row3 = [
-        [sg.Text('Enter up to 5 "problematic questions" separated by a new line:')]
+        [gui.Text('Enter up to 5 "problematic questions" separated by a new line:')]
     ]
 
     row4 = [
-        [sg.Multiline(key='-PROBLEMATICQUESTIONS-', s=(40, 5)), sg.Button('Start Examination')]
+        [gui.Multiline(key='-PROBLEMATICQUESTIONS-', s=(40, 5)), gui.Button('Start Examination')]
     ]
 
     layout = [
-        [sg.Frame(layout=row0, title='', key='row0')],
-        [sg.Frame(layout=row1, title='', key='row1')],
-        [sg.Frame(layout=row2, title='', key='row2')],
-        [sg.Frame(layout=row3, title='', key='row3')],
-        [sg.Frame(layout=row4, title='', key='row4')]
+        [gui.Frame(layout=row0, title='', key='row0')],
+        [gui.Frame(layout=row1, title='', key='row1')],
+        [gui.Frame(layout=row2, title='', key='row2')],
+        [gui.Frame(layout=row3, title='', key='row3')],
+        [gui.Frame(layout=row4, title='', key='row4')]
         #[sg.Button('Ok')]
 
     ]
 
     # Window
-    window = sg.Window('yaKnow - PolyGraph Exam Startup', layout, size=(1000, 900), icon=icon, finalize=True)
+    window = gui.Window('yaKnow - PolyGraph Exam Startup', layout, size=(1000, 900), icon=icon, finalize=True)
 
     xImage = ImageTk.PhotoImage(image=xImage)
 
@@ -66,10 +66,10 @@ def make_window():
 
 def main():
     # set theme to dark amber
-    sg.theme('Dark Amber')
+    gui.theme('Dark Amber')
 
     # set background color to black
-    sg.theme_background_color('#000000')
+    gui.theme_background_color('#000000')
 
     # make window
     window = make_window()
@@ -78,10 +78,8 @@ def main():
     # window read returns a tuple (event and value)
     while True:
         event, values = window.read()
-        print(event, values)
         # if user clicks Start Examination button go to next page
-        if sg.WIN_CLOSED is None:
-            print("Bye")
+        if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event in ('Start Examination'):
             window['row0'].update(visible=False)
