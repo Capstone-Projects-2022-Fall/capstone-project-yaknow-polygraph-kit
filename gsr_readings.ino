@@ -12,11 +12,19 @@ int sensorValue;
 serial functions are responsible for interacting with the board.
 analogRead function is responsible for capturing the data from the GSR input, which has been pre-defined to the A2 port of the board.
 threshold value has been set to the first 500 values collected by the port before it is worn by the user to get a consistent value.
+
+the while condition catches the connectivity of the arduino board
 */
 void setup()
 {
-  long sum=0;
   Serial.begin(9600);
+  while(!Serial)
+  {
+    Serial.print("Waiting...");
+  }
+  Serial.println("Connected...");
+
+  long sum=0;
   pinMode(BUZZER,OUTPUT);
   digitalWrite(BUZZER,LOW);
   delay(1000);
@@ -37,22 +45,30 @@ The temp variable (threshold - sensorValue) is then analysed further.
 */
 void loop()
 {
-  int temp;
-  sensorValue=analogRead(GSR);
-  Serial.print("sensorValue=");
-  Serial.println(sensorValue);
-  temp = threshold - sensorValue;
-  if(abs(temp)>50)
+  if(Serial.available() > 1)
   {
+    int temp;
     sensorValue=analogRead(GSR);
+    Serial.print("sensorValue= ");
+    Serial.println(sensorValue);
     temp = threshold - sensorValue;
     if(abs(temp)>50)
     {
-      digitalWrite(BUZZER,HIGH);
-      Serial.println("YES!");
-      delay(3000);
-      digitalWrite(BUZZER,LOW);
-      delay(1000);
+      sensorValue=analogRead(GSR);
+      temp = threshold - sensorValue;
+        if(abs(temp)>50)
+        {
+          digitalWrite(BUZZER,HIGH);
+          Serial.println("YES!");
+          delay(3000);
+          digitalWrite(BUZZER,LOW);
+          delay(1000);
+        }
     }
+  }
+  else
+  {
+    Serial.print("Null Data To Analyze...\nProgram Is Closing");
+    delay(3000);
   }
 }
