@@ -1,5 +1,6 @@
 from gdx import gdx
-import tensorflow as tensorflow
+#import tensorflow as tensorflow
+#tensorflow is no loner needed as everthing regarding it will be done remotly.
 import logging
 
 with open('polygraphExamKitLogging.log', 'w'):
@@ -23,4 +24,4 @@ deviceMeasurements = theAPIs.read()
 theAPIs.stop()
 theAPIs.close()
 
-print("Tensorflow running as version", tensorflow.__version__)
+#print("Tensorflow running as version", tensorflow.__version__)
