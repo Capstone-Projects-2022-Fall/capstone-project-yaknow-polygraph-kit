@@ -3,7 +3,9 @@ import paramiko
 
 class SimplePythonLogin:
     hostName = "cis-linux2.temple.edu"
+    # TODO enter your temple username
     userName = ""
+    # TODO enter your temple password -- please delete before committing !!!
     password = ""
 
     ssh = paramiko.SSHClient()
