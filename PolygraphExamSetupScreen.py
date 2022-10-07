@@ -1,12 +1,14 @@
 # import
+import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
 
+
+database = ['What is your name?', 'How old are you?', 'Where were you?', 'Did you drink my coffee this morning?', 'What happened?']
 # function to create specific window
 def make_window():
 
     header = ['yaKnow - Polygraph Exam Startup']
-
     #Checkmark Image Source: https://toppng.com/uploads/preview/check-mark-png-11553206004impjy81rdu.png
     checkmarkImage = Image.open("transparentCheck.png")
 
@@ -33,20 +35,24 @@ def make_window():
 
     ]
 
-    row3 = [
-        [gui.Text('Enter up to 5 "problematic questions" separated by a new line:')]
+    # this will be in
+    col1 = [
+        [gui.Input(size=(20, 1), enable_events=True, key='-SEARCHINPUT-')],
+        [gui.Listbox(database, size=(20, 4), enable_events=True, key='-SEARCHQUESTIONS-')]
     ]
 
-    row4 = [
+    col2 = [
+        [gui.Listbox(database, size=(20, 4), select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='SELECTQUESTIONS')]
+    ]
+
+    col3 = [
         [gui.Multiline(key='-PROBLEMATICQUESTIONS-', s=(40, 5)), gui.Button('Start Examination')]
     ]
-
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
-        [gui.Frame(layout=row3, title='', key='row3')],
-        [gui.Frame(layout=row4, title='', key='row4')]
+        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Add New Questions', k='col3')  ]
         #[sg.Button('Ok')]
 
     ]
@@ -78,6 +84,7 @@ def main():
     # window read returns a tuple (event and value)
     while True:
         event, values = window.read()
+        print(event, values)
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
@@ -85,8 +92,9 @@ def main():
             window['row0'].update(visible=False)
             window['row1'].update(visible=False)
             window['row2'].update(visible=False)
-            window['row3'].update(visible=False)
-            window['row4'].update(visible=False)
+            window['col1'].update(visible=False)
+            window['col2'].update(visible=False)
+            window['col3'].update(visible=False)
         elif event == '-EXAMINATIONTYPE-':
             if values['-EXAMINATIONTYPE-'] == 'Control Question Technique':
                 window['-EXAMINATIONTYPE-'].update(button_text="Control Question Technique")
@@ -97,6 +105,15 @@ def main():
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 list_of_questions = str(problematic_questions).split('\n')
                 window.refresh()
+
+
+        # search functionality
+        if (values['-SEARCHINPUT-'] != ''):
+            search = values['-SEARCHINPUT-']
+            new_val = [x for x in database if search in x]
+            window['-SEARCHQUESTIONS-'].update(new_val)
+        else:
+            window['-SEARCHQUESTIONS-'].update(database)
 
     # list_of_questions stores all the problematic questions entered by the user
     # the purpose of list_of_questions is to be able to grab the questions individually
