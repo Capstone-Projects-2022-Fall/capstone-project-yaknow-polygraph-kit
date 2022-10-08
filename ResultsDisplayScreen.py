@@ -1,4 +1,7 @@
 import PySimpleGUI as sg
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.pyplot import figure
 
 #Blood pressure (Bottom)
 #X-Axis = time, Y-Axis = Pressure (mmHG)
@@ -6,40 +9,77 @@ import PySimpleGUI as sg
 #(Combined data)
 
 #Skin conductivity (Middle)
-#X_Axis = time, Y-Axis = Electrical conductance
+#X_Axis = time, Y-Axis = Electrical conductance (Electrical Siemens)
 
 #Respiration belt (Top)
 #X-Axis = time, Y-Axis = Respiration rate
 
-def new_window():
-    layout = [
-        [sg.Graph(canvas_size=(600, 600), graph_bottom_left= (0,0), graph_top_right= (600, 600), background_color= 'white', key='graph')]
-        ]
+BPM = [65,67,70,72,80,85,90,95,110,115]
+TIME = [1,2,3,4,5,6,7,8,9,10]
 
-    TOP = 600
-    MIDDLE = TOP * 1/3
-    BOTTOM = TOP * 2/3
+SIEMENS = [2, 3, 4, 4.6, 6, 5.3, 4.4, 4, 5, 6.8]
 
-    window = sg.Window('Graph test', layout, finalize=True)
+RESPIRATION = [12, 12, 13, 15, 14, 17, 16, 15, 15, 20]
 
-    graph = window['graph']
+#Figure
+def HeartRatePlot(TIME, BPM):
+    figure(figsize=(5, 5), dpi=50)
+    plt.plot(TIME, BPM, color='red', marker='o')
+    plt.title('Beats per minute', fontsize=10)
+    plt.xlabel('Time(Minutes)', fontsize=10)
+    plt.ylabel('BPM', fontsize=10)
+    plt.grid(True)
+    return plt.gcf()
 
-    BPM = [65,67,70,72,80,85,90,95,110,115,130]
+def SkinSensor(TIME, SIEMENS):
+    figure(figsize=(5, 5), dpi=50)
+    plt.plot(TIME, SIEMENS, color='red', marker='o')
+    plt.title('Electrical Conductance', fontsize=10)
+    plt.xlabel('Time(Minutes)', fontsize=10)
+    plt.ylabel('Siemens', fontsize=10)
+    plt.grid(True)
+    return plt.gcf()
 
-    graph.draw_line((0, MIDDLE), (600, MIDDLE), color='black')
-    graph.draw_line((0, BOTTOM), (600, BOTTOM), color='black')
+def RespirationBelt(TIME, RESPIRATION):
+    figure(figsize=(5, 5), dpi=50)
+    plt.plot(TIME, RESPIRATION, color='red', marker='o')
+    plt.title('Respiration Rate', fontsize=10)
+    plt.xlabel('Time(Minutes)', fontsize=10)
+    plt.ylabel('Breaths', fontsize=10)
+    plt.grid(True)
+    return plt.gcf()
 
-    graph.draw_line((0,0), (100, 100), color= 'black')
+#Canvas
+layout_BPM = [
+    [sg.Text('Heart Rate Monitor Graph')], [sg.Canvas(size=(1000,1000), key='CANVAS')], [sg.Exit()]
+]
+layout_GSR = [
+    [sg.Text('Skin Conductivity Graph')], [sg.Canvas(size=(1000,1000), key='CANVAS')], [sg.Exit()]
+]
+layout_Res = [
+    [sg.Text('Respiration Rate Graph')], [sg.Canvas(size=(1000,1000), key='CANVAS')], [sg.Exit()]
+]
 
-    return window
+def draw_figure(canvas, figure):
+    figure_canvas = FigureCanvasTkAgg(figure, canvas)
+    figure_canvas.draw()
+    figure_canvas.get_tk_widget().pack(side='top', fill='both', expand=True)
+    return figure_canvas
+
+window_BPM = sg.Window("Heart Rate Monitor", layout_BPM, finalize=True, element_justification='center')
+window_GSR = sg.Window("Skin Conductivity Monitor", layout_GSR, finalize=True, element_justification='center')
+window_Res = sg.Window("Respiration Rate Monitor", layout_Res, finalize=True, element_justification='center')
+
+draw_figure(window_BPM['CANVAS'].TKCanvas, HeartRatePlot(TIME, BPM))
+draw_figure(window_GSR['CANVAS'].TKCanvas, SkinSensor(TIME, SIEMENS))
+draw_figure(window_Res['CANVAS'].TKCanvas, RespirationBelt(TIME, RESPIRATION))
 
 def main():
-    window = new_window()
     while True:
-        event, values = window.read()
-        print(event, values)
-        if event == sg.WIN_CLOSED:
+        event, values = window_BPM.read()
+        if event == sg.WIN_CLOSED or event == "Exit":
             break
+    window_BPM.close(), window_GSR.close(), window_Res.close()
 
 if __name__ == '__main__':
     main()
