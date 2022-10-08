@@ -20,7 +20,7 @@ def new_window():
     MIDDLE = TOP * 1/3
     BOTTOM = TOP * 2/3
 
-    window = sg.Window('Graph test', layout, finalize=True)
+    window = sg.Window('Graph test', layout, size=(1000, 900), finalize=True)
 
     graph = window['graph']
 
@@ -35,6 +35,9 @@ def new_window():
 
 def main():
     window = new_window()
+    collectResults(window)
+
+def collectResults(window):
     while True:
         event, values = window.read()
         print(event, values)
