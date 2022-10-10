@@ -41,7 +41,7 @@ class gdx:
 
 
         # Call the godirect module to open a USB connection
-        self.godirect.__init__(use_ble=False, use_usb=True)
+        self.godirect.__init__(use_ble=True, use_usb=False)
 
         found_devices = self.godirect.list_devices()
         number_found_devices = len(found_devices)
