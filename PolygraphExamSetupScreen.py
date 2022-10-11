@@ -5,6 +5,22 @@ from PIL import Image, ImageTk
 
 
 database = ['What is your name?', 'How old are you?', 'Where were you?', 'Did you drink my coffee this morning?', 'What happened?']
+questions_searched_and_selected = []
+
+def database_lower():
+    for i in range(len(database)):
+        database[i] = database[i].lower()
+
+
+def print_questions_searched_and_selected():
+    '''
+    This function prints the contents inside questions_searched_and_selected.
+
+    :return: void
+    '''
+    for i in range(len(questions_searched_and_selected)):
+        print(questions_searched_and_selected[i][0])
+
 # function to create specific window
 def make_window():
 
@@ -71,6 +87,9 @@ def make_window():
     return window
 
 def main():
+    # set database questions to lower case
+    database_lower()
+
     # set theme to dark amber
     gui.theme('Dark Amber')
 
@@ -109,11 +128,27 @@ def main():
 
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
-            search = values['-SEARCHINPUT-']
-            new_val = [x for x in database if search in x]
+            search_question = values['-SEARCHINPUT-']
+            search_question = str(search_question).lower()
+            new_val = [question for question in database if search_question in question]
             window['-SEARCHQUESTIONS-'].update(new_val)
+
+            # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
+            if(len(values['-SEARCHQUESTIONS-']) != 0):
+                if(values['-SEARCHQUESTIONS-'] not in questions_searched_and_selected):
+                    questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
         else:
             window['-SEARCHQUESTIONS-'].update(database)
+
+            # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
+            if (len(values['-SEARCHQUESTIONS-']) != 0):
+                if(values['-SEARCHQUESTIONS-'] not in questions_searched_and_selected):
+                    questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
+
+
+
+    #print('third one:', questions_searched_and_selected[2][0])
+    #print_questions_searched_and_selected()
 
     # list_of_questions stores all the problematic questions entered by the user
     # the purpose of list_of_questions is to be able to grab the questions individually
