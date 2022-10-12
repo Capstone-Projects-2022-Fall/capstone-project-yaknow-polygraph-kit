@@ -9,8 +9,9 @@ def main_func():
         decodedRead = str(arduinoRead[0:len(arduinoRead)].decode("utf-8"))
         list_values = decodedRead.split('sensorValue=')
         arduinoClose = arduino.close()
-    except (OSError):
+    except OSError:
         print("No Board Found")
+
 
 if __name__ == '__main__':
     main_func()
