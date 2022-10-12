@@ -5,21 +5,69 @@ from PIL import Image, ImageTk
 
 
 database = ['What is your name?', 'How old are you?', 'Where were you?', 'Did you drink my coffee this morning?', 'What happened?']
-questions_searched_and_selected = []
+global_list_of_questions_searched_and_selected = []
+global_list_of_questions_5_added = []
+global_list_of_questions_selected = []
 
 def database_lower():
     for i in range(len(database)):
         database[i] = database[i].lower()
 
 
-def print_questions_searched_and_selected():
+def print_global_list_of_questions_searched_and_selected():
     '''
-    This function prints the contents inside questions_searched_and_selected.
+    This function prints the contents inside global_list_of_questions_searched_and_selected.
 
     :return: void
     '''
-    for i in range(len(questions_searched_and_selected)):
-        print(questions_searched_and_selected[i][0])
+    for i in range(len(global_list_of_questions_searched_and_selected)):
+        print(global_list_of_questions_searched_and_selected[i])
+
+
+def print_global_list_of_questions_selected():
+    '''
+    This functions prints the contents inside global_list_of_questions_selected.
+
+    :return: void
+    '''
+    for i in range(len(global_list_of_questions_selected)):
+        print(global_list_of_questions_selected[i])
+
+def print_global_list_of_questions_5_added():
+    '''
+    This function prints the first 5 contents inside global list of questions added.
+
+    :return: void
+    '''
+    if len(global_list_of_questions_5_added) >= 5:
+        for x in range(5):
+            print(global_list_of_questions_5_added[x])
+
+
+def get_global_list_of_questions_searched_and_selected():
+    '''
+    This function gets the question searched and selected by the user.
+
+    :return: list of questions searched and selected
+    '''
+    return global_list_of_questions_searched_and_selected
+
+def get_selected_questions():
+    '''
+    This functions gets the questions selected by the user
+
+    :return: list of questions selected
+    '''
+    return global_list_of_questions_selected
+
+def get_global_list_of_questions_5_added():
+    '''
+    This function gets the global list of questions added by the user manually.
+
+    :return:
+    '''
+    return global_list_of_questions_5_added
+
 
 # function to create specific window
 def make_window():
@@ -58,7 +106,7 @@ def make_window():
     ]
 
     col2 = [
-        [gui.Listbox(database, size=(20, 4), select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='SELECTQUESTIONS')]
+        [gui.Listbox(database, size=(20, 4), select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='-SELECTQUESTIONS-')]
     ]
 
     col3 = [
@@ -68,7 +116,7 @@ def make_window():
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
-        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Add New Questions', k='col3')  ]
+        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3')  ]
         #[sg.Button('Ok')]
 
     ]
@@ -121,9 +169,35 @@ def main():
                 window.refresh()
             elif values['-EXAMINATIONTYPE-'] == 'Guilty Knowledge Test':
                 window['-EXAMINATIONTYPE-'].update(button_text="Guilty Knowledge Test")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                list_of_questions = str(problematic_questions).split('\n')
+                # problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                # new_lines_count = problematic_questions.count('\n')
+                #
+                # # scenario: this scenario relies on user putting all questions in first line, each question separated by "?"
+                # if new_lines_count == 0:
+                #     question_mark_count = problematic_questions.count('?')
+                #
+                #     # split questions by "?", grab first 5 and add the "?" back in
+                #     if question_mark_count >= 5:
+                #         questions_added = str(problematic_questions).split('?')
+                #
+                #         if len(questions_added) >= 5:
+                #             for x in range(5):
+                #                 global_list_of_questions_5_added.append(questions_added[x].strip() + '?')
+                # else:
+                #     # scenario: user puts each questions on a separate line
+                #     local_list_of_questions = str(problematic_questions).split('\n')
+                #
+                #     # only grab first 5 questions on each line
+                #     if len(local_list_of_questions) >= 5:
+                #         for x in range(5):
+                #             # check if current question has '?', if not add it for them
+                #             if local_list_of_questions[x].count('?') == 0:
+                #                 global_list_of_questions_5_added.append(local_list_of_questions[x] + '?')
+                #             elif local_list_of_questions[x].count('?') == 1:
+                #                 global_list_of_questions_5_added.append(local_list_of_questions[x])
+
                 window.refresh()
+
 
 
         # search functionality
@@ -135,30 +209,72 @@ def main():
 
             # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
             if(len(values['-SEARCHQUESTIONS-']) != 0):
-                if(values['-SEARCHQUESTIONS-'] not in questions_searched_and_selected):
-                    questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
+                if(values['-SEARCHQUESTIONS-'] not in global_list_of_questions_searched_and_selected):
+                    local_searched_and_selected_questions = values['-SEARCHQUESTIONS-']
+                    for x in local_searched_and_selected_questions:
+                        global_list_of_questions_searched_and_selected.append(x)
+                    #global_list_of_questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
         else:
             window['-SEARCHQUESTIONS-'].update(database)
 
             # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
             if (len(values['-SEARCHQUESTIONS-']) != 0):
-                if(values['-SEARCHQUESTIONS-'] not in questions_searched_and_selected):
-                    questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
+                if(values['-SEARCHQUESTIONS-'] not in global_list_of_questions_searched_and_selected):
+                    local_searched_and_selected_questions = values['-SEARCHQUESTIONS-']
+                    for x in local_searched_and_selected_questions:
+                        global_list_of_questions_searched_and_selected.append(x)
+                    #global_list_of_questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
+
+        # select functionality (an event other than close window has to be triggered, e.g. pressing start examination button)
+        for x in values['-SELECTQUESTIONS-']:
+            if x not in global_list_of_questions_selected:
+                global_list_of_questions_selected.append(x)
+
+        # add functionality
+        if (values['-PROBLEMATICQUESTIONS-'] != ''):
+            if values['-EXAMINATIONTYPE-'] == 'Guilty Knowledge Test':
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                new_lines_count = problematic_questions.count('\n')
+
+                # scenario: this scenario relies on user putting all questions in first line, each question separated by "?"
+                if new_lines_count == 0:
+                    question_mark_count = problematic_questions.count('?')
+
+                    # split questions by "?", grab first 5 and add the "?" back in
+                    if question_mark_count >= 5:
+                        questions_added = str(problematic_questions).split('?')
+
+                        if len(questions_added) >= 5:
+                            for x in range(5):
+                                global_list_of_questions_5_added.append(questions_added[x].strip() + '?')
+                else:
+                    # scenario: user puts each questions on a separate line
+                    local_list_of_questions = str(problematic_questions).split('\n')
+
+                    # only grab first 5 questions on each line
+                    if len(local_list_of_questions) >= 5:
+                        for x in range(5):
+                            # check if current question has '?', if not add it for them
+                            if local_list_of_questions[x].count('?') == 0:
+                                global_list_of_questions_5_added.append(local_list_of_questions[x] + '?')
+                            elif local_list_of_questions[x].count('?') == 1:
+                                global_list_of_questions_5_added.append(local_list_of_questions[x])
 
 
 
-    #print('third one:', questions_searched_and_selected[2][0])
-    #print_questions_searched_and_selected()
+
+
+    #print('third one:', global_list_of_questions_searched_and_selected[2][0])
+    #print_global_list_of_questions_searched_and_selected()
 
     # list_of_questions stores all the problematic questions entered by the user
     # the purpose of list_of_questions is to be able to grab the questions individually
 
 
-    # only grab the first 5 questions, x starts at 0, increments automatically, and does not include 5
-    #for x in range(5):
-    #    print(list_of_questions[x])
-
     #print(examination_type)
+    print('searched:', get_global_list_of_questions_searched_and_selected())
+    print('selected:', get_selected_questions())
+    print('added:', get_global_list_of_questions_5_added())
 
     #close
     #window.close()
