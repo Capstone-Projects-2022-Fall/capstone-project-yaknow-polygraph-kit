@@ -151,6 +151,9 @@ class gdx:
                 print("open device ", i, " = ", open_device_success, sep="")
                 if open_device_success:
                     gdx.ble_open = True
+                    return True
+                else:
+                    return False
                 time.sleep(1)
                 i += 1
 

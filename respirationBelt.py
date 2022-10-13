@@ -1,7 +1,10 @@
-from gdx import gdx
+
 
 #import tensorflow as tensorflow
 import logging
+from PIL import Image, ImageTk
+
+import PolygraphExamSetupScreen
 
 with open('polygraphExamKitLogging.log', 'w'):
     pass
@@ -10,23 +13,42 @@ log_format = '%(asctime)s %(filename)s - %(levelname)s: %(message)s'
 
 logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG, force=True, format=log_format, datefmt='%H:%M:%S')
 
-theAPIs = gdx()
 
-devicesFound = theAPIs.open_ble('GDX-RB 0K4007N0')
-if devicesFound is None:
-    logging.error('No Device connected.')
-else:
-    logging.info('Devices found:' + devicesFound)
 
-theAPIs.select_sensors([1])
+def connectRespirationBelt():
+    from gdx import gdx
+    theAPIs = gdx()
+    connected = False
+    while connected == False:
+        respirationConnected = theAPIs.open_ble('GDX-RB 0K4007N0')
+        if(respirationConnected == True):
+            PolygraphExamSetupScreen.respirationConnected = True
+            PolygraphExamSetupScreen.window['theImage3'].update(data=PolygraphExamSetupScreen.checkmarkImage)
+            PolygraphExamSetupScreen.window.refresh()
+            connected = True
+        else:
+            theAPIs.close()
+    while not PolygraphExamSetupScreen.examStarted:
+        pass
 
-theAPIs.start(1000)
+    theAPIs.select_sensors([1])
 
-for i in range(10):
-    measurements = theAPIs.read()
-    if measurements == None:
-        break
-    print(measurements)
+    theAPIs.start(1000)
+
+    for i in range(10):
+        measurements = theAPIs.read()
+        if measurements == None:
+            break
+        print(measurements)
+    #if devicesFound is None:
+    #    logging.error('No Device connected.')
+    #else:
+    #    logging.info('Devices found:' + devicesFound)
+
+
+    #print("Hello World")
+
+
 
 
 #theAPIs.stop()
