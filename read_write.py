@@ -15,14 +15,14 @@ def create_question(question):
 
     if local_question not in local_database:
         f = open('database.txt', 'a')
-        f.write("\n" + question + "\n")
+        f.write("\n" + question.capitalize())
         f.close()
         local_database.append(local_question)
         local_database.append(question)
-        print("Your Question " + "( " + question + " )" + " Was Successfully Added")
+        print("Your Question " + "( " + question.capitalize() + " )" + " Was Successfully Added")
         return local_database
     else:
-        return "Your Question " + "( " + question + " )" + " Already Exists"
+        return "Your Question " + "( " + question.capitalize() + " )" + " Already Exists"
 
 
 def read_question(question):
@@ -33,9 +33,9 @@ def read_question(question):
         local_database[questions] = local_database[questions].lower()
 
     if local_question not in local_database:
-        return "Your Question " + "( " + question + " )" + " Not Found In Database"
+        return "Your Question " + "( " + question.capitalize() + " )" + " Not Found In Database"
     else:
-        return "Your Question " + "( " + question + " )" + " Found In Database"
+        return "Your Question " + "( " + question.capitalize() + " )" + " Found In Database"
 
 def main():
     print(read_database_file())

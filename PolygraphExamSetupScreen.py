@@ -2,9 +2,9 @@
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+from read_write import create_question, read_database_file
 
-
-database = ['What is your name?', 'How old are you?', 'Where were you?', 'Did you drink my coffee this morning?', 'What happened?']
+database = read_database_file()
 global_list_of_questions_searched_and_selected = []
 global_list_of_questions_5_added = []
 global_list_of_questions_selected = []
@@ -50,7 +50,8 @@ def get_global_list_of_questions_searched_and_selected():
 
     :return: list of questions searched and selected
     '''
-    return global_list_of_questions_searched_and_selected
+    res = [*set(global_list_of_questions_searched_and_selected)]
+    return res
 
 def get_selected_questions():
     '''
@@ -58,15 +59,17 @@ def get_selected_questions():
 
     :return: list of questions selected
     '''
-    return global_list_of_questions_selected
+    res = [*set(global_list_of_questions_selected)]
+    return res
 
 def get_global_list_of_questions_5_added():
     '''
     This function gets the global list of questions added by the user manually.
 
-    :return:
+    :return: list of questions entered by user (only first 5 will return)
     '''
-    return global_list_of_questions_5_added
+    res = [*set(global_list_of_questions_5_added)]
+    return res
 
 
 # function to create specific window
@@ -246,7 +249,8 @@ def main():
 
                         if len(questions_added) >= 5:
                             for x in range(5):
-                                global_list_of_questions_5_added.append(questions_added[x].strip() + '?')
+                                if questions_added[x] not in global_list_of_questions_5_added:
+                                    global_list_of_questions_5_added.append(questions_added[x].strip() + '?')
                 else:
                     # scenario: user puts each questions on a separate line
                     local_list_of_questions = str(problematic_questions).split('\n')
@@ -256,9 +260,11 @@ def main():
                         for x in range(5):
                             # check if current question has '?', if not add it for them
                             if local_list_of_questions[x].count('?') == 0:
-                                global_list_of_questions_5_added.append(local_list_of_questions[x] + '?')
+                                if local_list_of_questions[x] not in global_list_of_questions_5_added:
+                                    global_list_of_questions_5_added.append(local_list_of_questions[x] + '?')
                             elif local_list_of_questions[x].count('?') == 1:
-                                global_list_of_questions_5_added.append(local_list_of_questions[x])
+                                if local_list_of_questions[x] not in global_list_of_questions_5_added:
+                                    global_list_of_questions_5_added.append(local_list_of_questions[x])
 
 
 
@@ -275,6 +281,11 @@ def main():
     print('searched:', get_global_list_of_questions_searched_and_selected())
     print('selected:', get_selected_questions())
     print('added:', get_global_list_of_questions_5_added())
+
+
+    # add to database textfile
+    for x in get_global_list_of_questions_5_added():
+        create_question(x)
 
     #close
     #window.close()
