@@ -18,6 +18,8 @@ global checkmarkImage
 
 global examStarted
 
+global RespirationSamplingRate
+
 
 def make_window():
     header = ['yaKnow - Polygraph Exam Startup']
@@ -31,6 +33,9 @@ def make_window():
     # xImage = ImageTk.PhotoImage(image=xImage)
 
     menu = ['', ['Control Question Technique', 'Guilty Knowledge Test']]
+    RespirationSampling = ['', ['1', '5']]
+    BloodPressureSampling = ['', ['1', '5']]
+    SkinConductivitySampling = ['', ['1', '5']]
 
     # layout is a list of lists
     # the lists corresponds to how many rows there will be on the display
@@ -52,10 +57,16 @@ def make_window():
     ]
 
     row3 = [
-        [gui.Text('Enter up to 5 "problematic questions" separated by a new line:')]
+        [gui.ButtonMenu('Select Blood Pressure Sampling Rate', BloodPressureSampling, k='-BPSampling-'),
+         gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
+         gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
     ]
 
     row4 = [
+        [gui.Text('Enter up to 5 "problematic questions" separated by a new line:')]
+    ]
+
+    row5 = [
         [gui.Multiline(key='-PROBLEMATICQUESTIONS-', s=(40, 5)), gui.Button('Start Examination')]
     ]
 
@@ -64,7 +75,8 @@ def make_window():
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=row3, title='', key='row3')],
-        [gui.Frame(layout=row4, title='', key='row4')]
+        [gui.Frame(layout=row4, title='', key='row4')],
+        [gui.Frame(layout=row5, title='', key='row5')]
         # [sg.Button('Ok')]
 
     ]
@@ -137,6 +149,17 @@ def startExam(window1):
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 list_of_questions = str(problematic_questions).split('\n')
                 window.refresh()
+        elif event == '-RSampling-':
+            if values['-RSampling-'] == '1':
+                window['-RSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.RespirationSamplingRate = 1
+                window.refresh()
+            elif values['-RSampling-'] == '5':
+                window['-RSampling-'].update(button_text="5")
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                PolygraphExamSetupScreen.RespirationSamplingRate = 5
+                window.refresh()
+
 
 
     # list_of_questions stores all the problematic questions entered by the user

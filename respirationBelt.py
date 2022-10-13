@@ -3,6 +3,7 @@
 #import tensorflow as tensorflow
 import logging
 from PIL import Image, ImageTk
+import datetime
 
 import PolygraphExamSetupScreen
 
@@ -33,13 +34,15 @@ def connectRespirationBelt():
 
     theAPIs.select_sensors([1])
 
-    theAPIs.start(1000)
+    rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
+    theAPIs.start(rate)
 
     for i in range(10):
         measurements = theAPIs.read()
+        currentTime = datetime.datetime.now()
         if measurements == None:
             break
-        print(measurements)
+        print(currentTime, measurements)
     #if devicesFound is None:
     #    logging.error('No Device connected.')
     #else:
