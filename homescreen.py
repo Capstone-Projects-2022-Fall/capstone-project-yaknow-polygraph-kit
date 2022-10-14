@@ -1,4 +1,3 @@
-# import
 import PySimpleGUI as gui
 import PolygraphExamSetupScreen
 

@@ -77,6 +77,7 @@ import ResultsDisplayScreen
 import conductExamScreen
 import respirationBelt
 import threading
+import arduino
 from threading import Timer
 # function to create specific window
 
@@ -90,6 +91,10 @@ global checkmarkImage
 global examStarted
 
 global RespirationSamplingRate
+
+global GSRConnector
+
+global GSRSamplingRate
 
 
 def make_window():
@@ -135,7 +140,7 @@ def make_window():
 
     col2 = [
         [gui.Listbox(database, size=(20, 4), select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='-SELECTQUESTIONS-')]
-        
+    ]
     col3 = [
         [gui.Multiline(key='-PROBLEMATICQUESTIONS-', s=(40, 5)), gui.Button('Start Examination')]
     ]
@@ -160,7 +165,7 @@ def make_window():
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
-        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3')  ]
+        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3')],
         [gui.Frame(layout=row3, title='', key='row3')],
         [gui.Frame(layout=row4, title='', key='row4')],
         [gui.Frame(layout=row5, title='', key='row5')]
@@ -184,7 +189,7 @@ def make_window():
 
 def main():
     # set database questions to lower case
-    database_lower()
+
 
     # set theme to dark amber
     gui.theme('Dark Amber')
@@ -201,6 +206,7 @@ def main():
 
 
 def startExam(window1):
+    database_lower()
     PolygraphExamSetupScreen.examStarted = False
 
     PolygraphExamSetupScreen.checkmarkImage = Image.open("transparentCheck.png")
@@ -214,7 +220,10 @@ def startExam(window1):
     alreadyChanged = False
     PolygraphExamSetupScreen.respirationConnected = False
 
-    thread = threading.Thread(target=respirationBelt.connectRespirationBelt)
+    #thread = threading.Thread(target=respirationBelt.connectRespirationBelt)
+    #thread.start()
+
+    thread = threading.Thread(target=arduino.connectGSRSensor)
     thread.start()
 
     while True:
@@ -275,7 +284,16 @@ def startExam(window1):
                 PolygraphExamSetupScreen.RespirationSamplingRate = 5
                 window.refresh()
 
-
+        elif event == '-SCSampling-':
+            if values['-SCSampling-'] == '1':
+                window['-SCSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.GSRSamplingRate = 1
+                window.refresh()
+            elif values['-SCSampling-'] == '5':
+                window['-SCSampling-'].update(button_text="5")
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                PolygraphExamSetupScreen.GSRSamplingRate = 5
+                window.refresh()
 
 
 
