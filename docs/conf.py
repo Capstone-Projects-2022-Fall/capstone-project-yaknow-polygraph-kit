@@ -9,9 +9,9 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Main_GUI_Window'
-copyright = '2022, Ferdinand L'
-author = 'Ferdinand L'
+project = 'yaKnow'
+copyright = '2022, gdx'
+author = 'gdx'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
