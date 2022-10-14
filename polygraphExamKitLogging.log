@@ -1,0 +1,419 @@
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+18:43:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+18:43:39 selector_events.py - DEBUG: Using selector: KqueueSelector
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManagerDidUpdateState_
+18:43:40 CentralManagerDelegate.py - DEBUG: Bluetooth powered on
+18:43:40 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 85ECABDA-8C20-3D38-0915-DD3FCD2E6846: None @ RSSI: -94 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device AE8D02D0-4155-7B8F-E4F5-12C7280D063F: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 813D7F90-B840-ED66-90B3-EA1D0B666A60: None @ RSSI: -86 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 3902DCEB-3056-885D-EC6F-8C85E9E5346D: None @ RSSI: -78 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 31C27BE4-F884-C9CB-373F-42EAC3A95DEC: None @ RSSI: -86 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 5DEB6562-95D2-E583-E5A1-36274B8ED5BA: None @ RSSI: -89 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 2B4F790F-DCCD-D1E5-FCC1-52C8D4520658: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:40 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:40 CentralManagerDelegate.py - DEBUG: Discovered device 2385BDA8-1622-BCAD-DA2F-3428764BA76C: None @ RSSI: -75 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE: GDX-RB 0K4007N0 @ RSSI: -63 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataLocalName', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device C7342B43-D87A-8B19-6A18-C017D52C298D: None @ RSSI: -98 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 2C812CF9-1D1A-3CFD-B2C4-4AF644A85256: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device C7342B43-D87A-8B19-6A18-C017D52C298D: None @ RSSI: -98 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device BFFFD6A0-17BF-2097-A005-8C116861DEED: None @ RSSI: -79 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 01F3DB32-AACB-F244-201B-D1D2BF50CB4F: None @ RSSI: -84 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 2B4F790F-DCCD-D1E5-FCC1-52C8D4520658: None @ RSSI: -76 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device C7342B43-D87A-8B19-6A18-C017D52C298D: None @ RSSI: -98 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 77F875A8-3C6F-D09F-A23B-4F6195376B97: None @ RSSI: -94 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 5480F387-0204-D4AB-3522-C4AB3EDB3B1F: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 87E944DB-30CC-0B8C-8FAA-DC7864DA0F71: None @ RSSI: -83 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device CFF7802E-CCCE-FD47-93E5-3F8BAA09AEE9: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 4E2BBE54-FC6A-D6E9-9A34-C14EDD67BA14: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 31C27BE4-F884-C9CB-373F-42EAC3A95DEC: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device F13A62E4-9444-389F-4110-66D5A829A6B1: None @ RSSI: -72 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device D3C240C2-CEAF-15A0-59AE-2F723511589A: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 2C812CF9-1D1A-3CFD-B2C4-4AF644A85256: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device 98A64617-FCF1-A810-C892-431935A8B4DE: None @ RSSI: -89 (kCBAdvData <nsdict_keys(['kCBAdvDataRxPrimaryPHY', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device E6447B7A-9670-5821-8F2F-8D579EF02636: None @ RSSI: -82 (kCBAdvData <nsdict_keys(['kCBAdvDataRxPrimaryPHY', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:41 CentralManagerDelegate.py - DEBUG: Discovered device AE8D02D0-4155-7B8F-E4F5-12C7280D063F: None @ RSSI: -64 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device C233125F-881E-C5BD-EEF1-07FEACE812AA: None @ RSSI: -79 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 65184DF3-1615-0F72-B4EF-20BED39A6597: None @ RSSI: -65 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 573570A0-408B-04F4-9D5E-CF4AC2B93A15: None @ RSSI: -82 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 857BF997-DDF4-98F4-225A-91DC1FD6F557: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device FB54EF68-F4E8-5C11-D222-2D8578F6CD12: None @ RSSI: -70 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 1882C6F5-6AB6-D101-829F-C9A4EA84B144: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 61B1C352-7BBB-BEE9-7DED-CECBD1E54720: None @ RSSI: -90 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device BA201BDD-52B0-C978-935D-F93EB1BA8C9F: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE: GDX-RB 0K4007N0 @ RSSI: -64 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataLocalName', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:42 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:42 CentralManagerDelegate.py - DEBUG: Discovered device 7C8A65FA-EBF2-9711-B5AB-9F2CE66ABCDF: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 578BC514-326E-A5B6-527E-D855941A3E39: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device C1301B86-8CD9-8A8B-9304-9E83FEF581C6: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 269EF5B7-A663-CDCA-0CF8-51075748732F: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 005D3005-C46E-D410-EC6C-C0FEF10263E5: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 573570A0-408B-04F4-9D5E-CF4AC2B93A15: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 818A4A68-EB85-F3C7-6ECA-188355DA34F5: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 5678677C-B905-84F6-40A1-C985F031ACB3: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device E23D13B0-B787-774D-9B7F-8E29BC23344C: None @ RSSI: -95 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device 6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE: GDX-RB 0K4007N0 @ RSSI: -64 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataLocalName', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:43 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:43 CentralManagerDelegate.py - DEBUG: Discovered device FE2F9F23-9E76-9B25-58A5-9D559ED7E524: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 21D05AA8-5F5D-FA24-4FE9-A4D1D64A0222: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 1114882A-3109-82DF-54E6-E0F1711588C6: None @ RSSI: -92 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 200ADFA6-9B11-1F82-320F-44276ACBE1DD: None @ RSSI: -84 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device FDEEE118-3886-5DC7-4506-8381A0158651: None @ RSSI: -84 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 99A660A7-3DD4-6AFF-271A-087672A5E997: None @ RSSI: -65 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 9F5CC603-601E-2C88-7D85-5A9C4273823F: None @ RSSI: -90 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device D55430A8-8275-9FF3-070C-40D16A685552: None @ RSSI: -83 (kCBAdvData <nsdict_keys(['kCBAdvDataRxPrimaryPHY', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 6F69DA9A-D5E7-E0A6-BD55-F958B536367C: None @ RSSI: -91 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device 34A7EB6A-7FC0-3B87-9F14-AF22269E2E83: None @ RSSI: -67 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device A707F361-AB8A-EF98-B563-9C0ED717EE8A: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device FDEEE118-3886-5DC7-4506-8381A0158651: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device E4E164A2-5CF4-40CC-FF83-7FD156296A00: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:44 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:44 CentralManagerDelegate.py - DEBUG: Discovered device A707F361-AB8A-EF98-B563-9C0ED717EE8A: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device EF0D830B-94CB-936F-C864-55B2F016817E: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device D1609286-A0B6-D521-8A9B-BD8DDD253858: None @ RSSI: -93 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f3a380>
+18:43:45 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManagerDidUpdateState_
+18:43:45 CentralManagerDelegate.py - DEBUG: Bluetooth powered on
+18:43:45 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device B987C9FA-A11C-36BA-BB4F-86D82E07946A: None @ RSSI: -79 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device A76940FD-A7F0-EA50-1320-58AB9D7D7F6A: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device 0E364855-C49D-F3CA-2F02-8E84C23D4D85: None @ RSSI: -98 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device EF0D830B-94CB-936F-C864-55B2F016817E: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device 468C9CF0-5CCA-9C4C-6600-EE7CD0BD6BC5: None @ RSSI: -79 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device C1301B86-8CD9-8A8B-9304-9E83FEF581C6: None @ RSSI: -72 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device 9FD81F18-7457-37FD-48BB-2DEECCAB958E: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device 8816D5E1-BF6E-3CBA-64AC-125D6EEB49F0: None @ RSSI: -79 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device E23D13B0-B787-774D-9B7F-8E29BC23344C: None @ RSSI: -98 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:45 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:45 CentralManagerDelegate.py - DEBUG: Discovered device 34A7EB6A-7FC0-3B87-9F14-AF22269E2E83: None @ RSSI: -82 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 85ECABDA-8C20-3D38-0915-DD3FCD2E6846: None @ RSSI: -95 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 7C799E90-306B-ED3A-9250-159459073F42: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 516C3E20-88C0-4992-0375-CA42B57E56CE: None @ RSSI: -89 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device FAD5EC4C-DB2D-9E41-9528-C52131C9E7C1: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device BC63FBE4-BB5D-AD98-C840-108F7D5C4376: None @ RSSI: -74 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 6E47FB1F-CE2D-BE40-80C1-34582AB9D0AD: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 34A7EB6A-7FC0-3B87-9F14-AF22269E2E83: None @ RSSI: -71 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 427BF032-AD1E-523A-AA87-385EE7B419CB: None @ RSSI: -83 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device C1C28047-6ED2-09F6-E5A8-159248DC4C29: None @ RSSI: -90 (kCBAdvData <nsdict_keys(['kCBAdvDataRxPrimaryPHY', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device CD6A1950-03E9-0FB2-9EAE-901ED76B0BFC: None @ RSSI: -73 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device F44835DF-3F4C-C2D1-A9E6-A1E7F8EF1277: None @ RSSI: -74 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:46 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:46 CentralManagerDelegate.py - DEBUG: Discovered device 5EDBDCFE-1BF3-0AED-4C6A-13BBDEF67FE2: None @ RSSI: -78 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:47 CentralManagerDelegate.py - DEBUG: Discovered device 468C9CF0-5CCA-9C4C-6600-EE7CD0BD6BC5: None @ RSSI: -89 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:47 CentralManagerDelegate.py - DEBUG: Discovered device AC171A14-9734-A8F4-C48D-A6849AD554D8: None @ RSSI: -74 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataServiceData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:47 CentralManagerDelegate.py - DEBUG: Discovered device 8816D5E1-BF6E-3CBA-64AC-125D6EEB49F0: None @ RSSI: -71 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+18:43:47 CentralManagerDelegate.py - DEBUG: Discovered device 6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE: GDX-RB 0K4007N0 @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataLocalName', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTimestamp', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: Discovered device 780A5522-B71A-4A76-9397-2A278A3DA88D: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataTimestamp', 'kCBAdvDataManufacturerData', 'kCBAdvDataRxSecondaryPHY', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataRxPrimaryPHY'])>) and Central: <CBCentralManager: 0x600003f46980>
+18:43:47 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+18:43:47 client.py - DEBUG: CentralManagerDelegate  at <CentralManagerDelegate: 0x7fe7e62c23a0>
+18:43:47 client.py - DEBUG: Connecting to BLE device @ 6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE
+18:43:47 CentralManagerDelegate.py - DEBUG: centralManager_didConnectPeripheral_
+18:43:47 client.py - DEBUG: Retrieving services...
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverServices_
+18:43:47 PeripheralDelegate.py - DEBUG: Services discovered
+18:43:47 client.py - DEBUG: Retrieving characteristics for service 180A
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Characteristics discovered
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 2A29
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 7
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 2A25
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 9
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 2A26
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 11
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 2A28
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 13
+18:43:47 client.py - DEBUG: Retrieving characteristics for service 180F
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Characteristics discovered
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 2A19
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 16
+18:43:47 client.py - DEBUG: Retrieving characteristics for service D91714EF-28B9-4F91-BA16-F0D9A604F112
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Characteristics discovered
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic F4BF14A6-C7D5-4B6D-8AA8-DF1A7C83ADCB
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 19
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic B41E6675-A329-40E0-AA01-44D2F444BABE
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 21
+18:43:47 client.py - DEBUG: Retrieving characteristics for service 8E6F0F58-5819-11E6-8B77-86F30CA893D3
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Characteristics discovered
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 8E6F094A-5819-11E6-8B77-86F30CA893D3
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 25
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 9CEA5308-59A9-11E6-8B77-86F30CA893D3
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 27
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic CF052904-5D95-11E6-8B77-86F30CA893D3
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 29
+18:43:47 client.py - DEBUG: Retrieving descriptors for characteristic 248D6F39-5819-11E6-8B77-86F30CA893D3
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Descriptor discovered 31
+18:43:47 client.py - DEBUG: Services resolved for BleakClientCoreBluetooth (6B285622-D2CB-2D1E-4C64-77E5BA0CCAEE)
+18:43:47 PeripheralDelegate.py - DEBUG: peripheral_didUpdateNotificationStateForCharacteristic_error_
+18:43:47 PeripheralDelegate.py - DEBUG: Character Notify Update
+18:43:47 device.py - DEBUG: GDX >> 58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C  43  0D  42  0E  41
+18:43:47 device_bleak.py - DEBUG: BLE WRITE: >>>58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C
+18:43:47 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x19\xfe?\x1a\xa5J\x06I\x07H\x08G\tF\nE\x0bD\x0c'
+18:43:47 device_bleak.py - DEBUG: lengthRemaining 5 offset 20
+18:43:47 device_bleak.py - DEBUG: BLE WRITE: >>>43  0D  42  0E  41
+18:43:47 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'C\rB\x0eA'
+18:43:47 device_bleak.py - DEBUG: lengthRemaining 0 offset 25
+18:43:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+18:43:48 device_bleak.py - DEBUG: Receive buffer length: 26 Expected packet length: 26
+18:43:48 device_bleak.py - DEBUG: BLE READ: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+18:43:48 device.py - DEBUG: GDX << B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+18:43:48 device.py - DEBUG: GDX >> 58  05  FD  6A  10
+18:43:48 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FD  6A  10
+18:43:48 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x05\xfdj\x10'
+18:43:48 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+18:43:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  12  01  19  10  FD  00  00  05  02  00  00  04  01  00  00  55  00
+18:43:48 device_bleak.py - DEBUG: Receive buffer length: 18 Expected packet length: 18
+18:43:48 device_bleak.py - DEBUG: BLE READ: <<<98  12  01  19  10  FD  00  00  05  02  00  00  04  01  00  00  55  00
+18:43:48 device.py - DEBUG: GDX << 98  12  01  19  10  FD  00  00  05  02  00  00  04  01  00  00  55  00
+18:43:48 device.py - INFO: Device status:
+18:43:48 device.py - INFO:   Status: 0
+18:43:48 device.py - INFO:   Primary FW version: 5.2.0
+18:43:48 device.py - INFO:   Secondary FW version: 4.1.0
+18:43:48 device.py - INFO:   Battery percent: 85%
+18:43:48 device.py - INFO:   Charger state: 0
+18:43:48 device.py - DEBUG: GDX >> 58  05  FC  AE  55
+18:43:48 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FC  AE  55
+18:43:48 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x05\xfc\xaeU'
+18:43:48 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+18:43:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+18:43:48 device_bleak.py - DEBUG: Receive buffer length: 158 Expected packet length: 158
+18:43:48 device_bleak.py - DEBUG: BLE READ: <<<98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+18:43:48 device.py - DEBUG: GDX << 98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+18:43:48 device.py - INFO: Device info:
+18:43:48 device.py - INFO:   Description: Go Direct® Respiration Belt                                    
+18:43:48 device.py - INFO:   Order code: GDX-RB          
+18:43:48 device.py - INFO:   Serial number: 0K4007N0        
+18:43:48 device.py - INFO:   Device name: GDX-RB 0K4007N0                 
+18:43:48 device.py - INFO:   Mfg ID: 8
+18:43:48 device.py - INFO:   Mfg Date: 9/2/2022
+18:43:48 device.py - INFO:   Primary FW version: 5.2.0
+18:43:48 device.py - INFO:   Secondary FW version: 4.1.0
+18:43:48 device.py - INFO:   BLE address: bc:33:ac:ce:92:c8
+18:43:48 device.py - INFO:   NVRAM size: 8192bytes
+18:43:50 device.py - DEBUG: GDX >> 58  06  FB  AA  50  01
+18:43:50 device_bleak.py - DEBUG: BLE WRITE: >>>58  06  FB  AA  50  01
+18:43:50 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x06\xfb\xaaP\x01'
+18:43:50 device_bleak.py - DEBUG: lengthRemaining 0 offset 6
+18:43:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:50 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+18:43:50 device_bleak.py - DEBUG: Receive buffer length: 154 Expected packet length: 154
+18:43:50 device_bleak.py - DEBUG: BLE READ: <<<98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+18:43:50 device.py - DEBUG: GDX << 98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+18:43:50 device.py - INFO: Sensor[1] info:
+18:43:50 device.py - INFO:   Description: Force                                                       
+18:43:50 device.py - INFO:   ID: 448
+18:43:50 device.py - INFO:   Measurement type: 0
+18:43:50 device.py - INFO:   Sampling mode: 0
+18:43:50 device.py - INFO:   Units: N                               
+18:43:50 device.py - INFO:   Measurement uncertainty: 0
+18:43:50 device.py - INFO:   Measurement min: -50
+18:43:50 device.py - INFO:   Measurement max: 50
+18:43:50 device.py - INFO:   Period typical 100000
+18:43:50 device.py - INFO:   Period min: 50000
+18:43:50 device.py - INFO:   Period max: 3600000000
+18:43:50 device.py - INFO:   Period granularity: 100
+18:43:50 device.py - INFO:   Mutual exclusion mask: 0x0
+18:43:50 device.py - DEBUG: GDX >> 58  0F  FA  52  1B  FF  00  40  4B  4C  00  00  00  00  00
+18:43:50 device_bleak.py - DEBUG: BLE WRITE: >>>58  0F  FA  52  1B  FF  00  40  4B  4C  00  00  00  00  00
+18:43:50 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x0f\xfaR\x1b\xff\x00@KL\x00\x00\x00\x00\x00'
+18:43:50 device_bleak.py - DEBUG: lengthRemaining 0 offset 15
+18:43:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:50 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  10  04  97  1B  FA  FF  00  40  4B  4C  00  00  00  00  00
+18:43:50 device_bleak.py - DEBUG: Receive buffer length: 16 Expected packet length: 16
+18:43:50 device_bleak.py - DEBUG: BLE READ: <<<98  10  04  97  1B  FA  FF  00  40  4B  4C  00  00  00  00  00
+18:43:50 device.py - DEBUG: GDX << 98  10  04  97  1B  FA  FF  00  40  4B  4C  00  00  00  00  00
+18:43:50 device.py - DEBUG: GDX >> 58  13  F9  7E  18  FF  01  02  00  00  00  00  00  00  00  00  00  00  00
+18:43:50 device_bleak.py - DEBUG: BLE WRITE: >>>58  13  F9  7E  18  FF  01  02  00  00  00  00  00  00  00  00  00  00  00
+18:43:50 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x13\xf9~\x18\xff\x01\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+18:43:50 device_bleak.py - DEBUG: lengthRemaining 0 offset 19
+18:43:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:50 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  07  05  B5  18  F9  00
+18:43:50 device_bleak.py - DEBUG: Receive buffer length: 7 Expected packet length: 7
+18:43:50 device_bleak.py - DEBUG: BLE READ: <<<98  07  05  B5  18  F9  00
+18:43:50 device.py - DEBUG: GDX << 98  07  05  B5  18  F9  00
+18:43:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:50 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+18:43:50 device_bleak.py - DEBUG: Receive buffer length: 17 Expected packet length: 17
+18:43:50 device_bleak.py - DEBUG: BLE READ: <<<20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+18:43:50 device.py - DEBUG: GDX << 20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+18:43:50 device.py - INFO: Ignoring non-supported measurement type
+18:43:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:50 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  01  D9  06  02  00  01  F9  40  6B  3E  C0
+18:43:50 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:43:50 device_bleak.py - DEBUG: BLE READ: <<<20  0D  01  D9  06  02  00  01  F9  40  6B  3E  C0
+18:43:50 device.py - DEBUG: GDX << 20  0D  01  D9  06  02  00  01  F9  40  6B  3E  C0
+18:43:50 device.py - DEBUG: MEASUREMENT: 20  0D  01  D9  06  02  00  01  F9  40  6B  3E  C0
+18:43:50 device.py - DEBUG: REAL32: 40  6B  3E  C0
+18:43:55 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:43:55 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  02  8B  06  02  00  01  F9  C0  9E  3C  C0
+18:43:55 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:43:55 device_bleak.py - DEBUG: BLE READ: <<<20  0D  02  8B  06  02  00  01  F9  C0  9E  3C  C0
+18:43:55 device.py - DEBUG: GDX << 20  0D  02  8B  06  02  00  01  F9  C0  9E  3C  C0
+18:43:55 device.py - DEBUG: MEASUREMENT: 20  0D  02  8B  06  02  00  01  F9  C0  9E  3C  C0
+18:43:55 device.py - DEBUG: REAL32: C0  9E  3C  C0
+18:44:00 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:00 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  03  BF  06  02  00  01  F9  E0  B6  37  C0
+18:44:00 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:00 device_bleak.py - DEBUG: BLE READ: <<<20  0D  03  BF  06  02  00  01  F9  E0  B6  37  C0
+18:44:00 device.py - DEBUG: GDX << 20  0D  03  BF  06  02  00  01  F9  E0  B6  37  C0
+18:44:00 device.py - DEBUG: MEASUREMENT: 20  0D  03  BF  06  02  00  01  F9  E0  B6  37  C0
+18:44:00 device.py - DEBUG: REAL32: E0  B6  37  C0
+18:44:05 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:05 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  04  C3  06  02  00  01  F9  60  39  37  C0
+18:44:05 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:05 device_bleak.py - DEBUG: BLE READ: <<<20  0D  04  C3  06  02  00  01  F9  60  39  37  C0
+18:44:05 device.py - DEBUG: GDX << 20  0D  04  C3  06  02  00  01  F9  60  39  37  C0
+18:44:05 device.py - DEBUG: MEASUREMENT: 20  0D  04  C3  06  02  00  01  F9  60  39  37  C0
+18:44:05 device.py - DEBUG: REAL32: 60  39  37  C0
+18:44:10 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:10 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  05  92  06  02  00  01  F9  00  68  36  C0
+18:44:10 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:10 device_bleak.py - DEBUG: BLE READ: <<<20  0D  05  92  06  02  00  01  F9  00  68  36  C0
+18:44:10 device.py - DEBUG: GDX << 20  0D  05  92  06  02  00  01  F9  00  68  36  C0
+18:44:10 device.py - DEBUG: MEASUREMENT: 20  0D  05  92  06  02  00  01  F9  00  68  36  C0
+18:44:10 device.py - DEBUG: REAL32: 00  68  36  C0
+18:44:15 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:15 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  06  6D  06  02  00  01  F9  00  43  35  C0
+18:44:15 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:15 device_bleak.py - DEBUG: BLE READ: <<<20  0D  06  6D  06  02  00  01  F9  00  43  35  C0
+18:44:15 device.py - DEBUG: GDX << 20  0D  06  6D  06  02  00  01  F9  00  43  35  C0
+18:44:15 device.py - DEBUG: MEASUREMENT: 20  0D  06  6D  06  02  00  01  F9  00  43  35  C0
+18:44:15 device.py - DEBUG: REAL32: 00  43  35  C0
+18:44:20 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:20 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  07  45  06  02  00  01  F9  80  9B  34  C0
+18:44:20 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:20 device_bleak.py - DEBUG: BLE READ: <<<20  0D  07  45  06  02  00  01  F9  80  9B  34  C0
+18:44:20 device.py - DEBUG: GDX << 20  0D  07  45  06  02  00  01  F9  80  9B  34  C0
+18:44:20 device.py - DEBUG: MEASUREMENT: 20  0D  07  45  06  02  00  01  F9  80  9B  34  C0
+18:44:20 device.py - DEBUG: REAL32: 80  9B  34  C0
+18:44:25 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:25 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  08  20  06  02  00  01  F9  80  76  33  C0
+18:44:25 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:25 device_bleak.py - DEBUG: BLE READ: <<<20  0D  08  20  06  02  00  01  F9  80  76  33  C0
+18:44:25 device.py - DEBUG: GDX << 20  0D  08  20  06  02  00  01  F9  80  76  33  C0
+18:44:25 device.py - DEBUG: MEASUREMENT: 20  0D  08  20  06  02  00  01  F9  80  76  33  C0
+18:44:25 device.py - DEBUG: REAL32: 80  76  33  C0
+18:44:30 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:30 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  09  05  06  02  00  01  F9  60  7B  32  C0
+18:44:30 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:30 device_bleak.py - DEBUG: BLE READ: <<<20  0D  09  05  06  02  00  01  F9  60  7B  32  C0
+18:44:30 device.py - DEBUG: GDX << 20  0D  09  05  06  02  00  01  F9  60  7B  32  C0
+18:44:30 device.py - DEBUG: MEASUREMENT: 20  0D  09  05  06  02  00  01  F9  60  7B  32  C0
+18:44:30 device.py - DEBUG: REAL32: 60  7B  32  C0
+18:44:35 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:35 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  0A  D6  06  02  00  01  F9  80  2C  31  C0
+18:44:35 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+18:44:35 device_bleak.py - DEBUG: BLE READ: <<<20  0D  0A  D6  06  02  00  01  F9  80  2C  31  C0
+18:44:35 device.py - DEBUG: GDX << 20  0D  0A  D6  06  02  00  01  F9  80  2C  31  C0
+18:44:35 device.py - DEBUG: MEASUREMENT: 20  0D  0A  D6  06  02  00  01  F9  80  2C  31  C0
+18:44:35 device.py - DEBUG: REAL32: 80  2C  31  C0
+18:44:40 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:45 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:50 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:44:55 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:45:00 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+18:45:05 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
