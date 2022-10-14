@@ -8,6 +8,7 @@ import ResultsDisplayScreen
 import conductExamScreen
 import respirationBelt
 import threading
+import arduino
 import itertools
 from threading import Timer
 
@@ -27,6 +28,10 @@ global checkmarkImage
 global examStarted
 
 global RespirationSamplingRate
+
+global GSRConnected
+
+global GSRSamplingRate
 
 def database_lower():
     for i in range(len(database)):
@@ -241,6 +246,9 @@ def startExam(window1):
     thread = threading.Thread(target=respirationBelt.connectRespirationBelt)
     thread.start()
 
+    thread = threading.Thread(target=arduino.connectGSRSensor)
+    thread.start()
+
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
 
@@ -285,6 +293,16 @@ def startExam(window1):
                 window['-RSampling-'].update(button_text="5")
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 PolygraphExamSetupScreen.RespirationSamplingRate = 5
+                window.refresh()
+        elif event == '-SCSampling-':
+            if values['-SCSampling-'] == '1':
+                window['-SCSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.GSRSamplingRate = 1
+                window.refresh()
+            elif values['-SCSampling-'] == '5':
+                window['-SCSampling-'].update(button_text="5")
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                PolygraphExamSetupScreen.GSRSamplingRate = 5
                 window.refresh()
 
         # search functionality
