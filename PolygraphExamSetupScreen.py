@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 
 import PolygraphExamSetupScreen
 import ResultsDisplayScreen
+import conductExamScreen
 import respirationBelt
 import threading
 from threading import Timer
@@ -135,10 +136,10 @@ def startExam(window1):
             break
         elif event in ('Start Examination'):
             PolygraphExamSetupScreen.examStarted = True
-            newWindow = ResultsDisplayScreen.new_window()
+            newWindow = conductExamScreen.make_window()
             PolygraphExamSetupScreen.window.close()
             PolygraphExamSetupScreen.window = newWindow
-            ResultsDisplayScreen.collectResults(PolygraphExamSetupScreen.window)
+            conductExamScreen.startExam(newWindow)
         elif event == '-EXAMINATIONTYPE-':
             if values['-EXAMINATIONTYPE-'] == 'Control Question Technique':
                 window['-EXAMINATIONTYPE-'].update(button_text="Control Question Technique")
