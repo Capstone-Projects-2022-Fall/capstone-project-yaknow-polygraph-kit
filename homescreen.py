@@ -31,6 +31,8 @@ def make_window():
 
 
 def main():
+    # sets the local database text file contents to lower
+    PolygraphExamSetupScreen.database_lower()
     # sets the theme, background color and creates a window
     gui.theme('Dark Amber')
     gui.theme_background_color('#000000')
