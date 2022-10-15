@@ -7,6 +7,7 @@ import ResultsDisplayScreen
 import respirationBelt
 import threading
 import time
+import tts
 
 global window
 
@@ -51,9 +52,10 @@ def examCounter():
     while examFinished == False:
         conductExamScreen.examTime = conductExamScreen.examTime + 1
         PolygraphExamSetupScreen.window['-Time-'].update(examTime)
-        if (conductExamScreen.examTime % 60) == 0:
+        if (conductExamScreen.examTime % 60) == 1:
             newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[conductExamScreen.questionCounter]
             print(newQuestion)
+            tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
             conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
             conductExamScreen.window['-Text-'].update(newQuestion)
         time.sleep(1)
@@ -61,7 +63,7 @@ def examCounter():
 
 def startExam(window1):
 
-    conductExamScreen.questionCounter = 1
+    conductExamScreen.questionCounter = 0
 
     conductExamScreen.examFinished = False
 
