@@ -1,4 +1,5 @@
 import csv
+import datetime
 import serial
 import time
 
@@ -38,8 +39,9 @@ def connectGSRSensor():
     for i in range(10):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))
+        currentTime = datetime.datetime.now()
         final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-        print(final_reading)
+        print(currentTime, final_reading)
         sensor_data.append(final_reading)
         time.sleep(rate)
     print(final_reading)
