@@ -14,6 +14,8 @@ global examFinished
 
 global examTime
 
+global questionCounter
+
 def make_window():
 
     # layout is a list of lists
@@ -24,7 +26,7 @@ def make_window():
     ]
 
     row1 = [
-        [gui.Push(), gui.Text('Question Currently being asked', key='-Text-')]
+        [gui.Push(), gui.Text(PolygraphExamSetupScreen.global_list_of_questions_selected[0], key='-Text-')]
     ]
 
     row2 = [
@@ -49,10 +51,17 @@ def examCounter():
     while examFinished == False:
         conductExamScreen.examTime = conductExamScreen.examTime + 1
         PolygraphExamSetupScreen.window['-Time-'].update(examTime)
+        if (conductExamScreen.examTime % 60) == 0:
+            newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[conductExamScreen.questionCounter]
+            print(newQuestion)
+            conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+            conductExamScreen.window['-Text-'].update(newQuestion)
         time.sleep(1)
 
 
 def startExam(window1):
+
+    conductExamScreen.questionCounter = 1
 
     conductExamScreen.examFinished = False
 
