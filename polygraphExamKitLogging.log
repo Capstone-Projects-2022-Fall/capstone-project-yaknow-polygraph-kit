@@ -1,239 +1,532 @@
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-17:09:56 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-17:09:56 proactor_events.py - DEBUG: Using proactor: IocpProactor
-17:09:57 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:09:57 scanner.py - DEBUG: Received 76:04:6D:A9:17:1D: Unknown.
-17:09:57 scanner.py - DEBUG: Received 76:04:6D:A9:17:1D: Unknown.
-17:09:57 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-17:09:57 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:57 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:57 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-17:09:57 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:09:57 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:09:57 scanner.py - DEBUG: Received 18:55:0C:5A:C9:11: Unknown.
-17:09:57 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:09:57 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:09:57 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:57 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:57 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:09:57 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:09:57 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:57 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:57 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:09:57 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:57 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:57 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:57 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:09:57 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:57 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:09:57 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:58 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-17:09:58 scanner.py - DEBUG: Received 73:0A:90:C9:ED:E7: Unknown.
-17:09:58 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:58 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:58 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:58 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:09:58 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:09:58 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:58 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:58 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:58 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:58 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:58 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:09:58 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:09:58 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:09:59 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:09:59 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:59 scanner.py - DEBUG: Received 43:75:77:18:28:08: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:59 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:09:59 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:59 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-17:09:59 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:09:59 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:09:59 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:59 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:09:59 scanner.py - DEBUG: Received 40:CD:8B:A2:F1:A2: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:09:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:09:59 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:09:59 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:00 scanner.py - DEBUG: Received 43:75:77:18:28:08: Unknown.
-17:10:00 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:10:00 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:00 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:10:00 scanner.py - DEBUG: Received CD:54:D4:DF:13:A7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:10:00 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:00 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:00 scanner.py - DEBUG: Received 73:0A:90:C9:ED:E7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 73:0A:90:C9:ED:E7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:00 scanner.py - DEBUG: Received 43:75:77:18:28:08: Unknown.
-17:10:00 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:00 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:01 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:01 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:01 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:01 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:01 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:10:01 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:10:01 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:01 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:10:01 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:01 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:01 scanner.py - DEBUG: 22 devices found. Watcher status: 3.
-17:10:01 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:01 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:01 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:01 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-17:10:02 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:02 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:02 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:02 scanner.py - DEBUG: Received DC:9C:FF:C9:71:77: Unknown.
-17:10:02 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:02 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:02 scanner.py - DEBUG: Received 5A:8B:1E:F9:67:AC: Unknown.
-17:10:02 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:02 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:02 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:02 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:02 scanner.py - DEBUG: Received ED:84:53:D2:A0:C8: Unknown.
-17:10:02 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:02 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:02 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:02 scanner.py - DEBUG: Received 6A:5F:F6:CD:16:EC: Unknown.
-17:10:02 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:02 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:02 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:02 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:02 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:02 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:03 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:10:03 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: [TV] Samsung 7 Series (65).
-17:10:03 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:03 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:03 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:03 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-17:10:03 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-17:10:03 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: [TV] Samsung 7 Series (65).
-17:10:03 scanner.py - DEBUG: Received 18:55:0C:5A:C9:11: Unknown.
-17:10:03 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:03 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:03 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:03 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:03 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:03 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:03 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:03 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:03 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:03 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:03 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:03 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-17:10:04 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:04 scanner.py - DEBUG: Received FC:6C:E9:0F:FF:66: Unknown.
-17:10:04 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:04 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:04 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:04 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:10:04 scanner.py - DEBUG: Received 74:13:BE:B6:2C:F6: Unknown.
-17:10:04 scanner.py - DEBUG: Received 74:13:BE:B6:2C:F6: Unknown.
-17:10:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:04 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:04 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:04 scanner.py - DEBUG: Received ED:84:53:D2:A0:C8: Unknown.
-17:10:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:04 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:04 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:04 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:04 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:04 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:04 scanner.py - DEBUG: Received 18:55:0C:5A:C9:11: Unknown.
-17:10:04 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:05 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:05 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:05 scanner.py - DEBUG: Received 43:75:77:18:28:08: Unknown.
-17:10:05 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:05 scanner.py - DEBUG: Received 4B:41:75:A4:72:76: Unknown.
-17:10:05 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:05 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:05 scanner.py - DEBUG: Received ED:84:53:D2:A0:C8: Unknown.
-17:10:05 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:10:05 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:05 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:05 scanner.py - DEBUG: Received 69:A8:29:B1:4D:DD: Unknown.
-17:10:05 scanner.py - DEBUG: Received 5C:D2:41:F7:A6:39: Unknown.
-17:10:06 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:06 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:10:06 scanner.py - DEBUG: Received 73:0A:90:C9:ED:E7: Unknown.
-17:10:06 scanner.py - DEBUG: Received 73:0A:90:C9:ED:E7: Unknown.
-17:10:06 scanner.py - DEBUG: Received 43:75:77:18:28:08: Unknown.
-17:10:06 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:06 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:06 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:06 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:06 scanner.py - DEBUG: 26 devices found. Watcher status: 3.
-17:10:06 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:06 scanner.py - DEBUG: Received 78:C5:34:DE:CA:06: Unknown.
-17:10:06 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:06 scanner.py - DEBUG: Received 18:55:0C:5A:C9:11: Unknown.
-17:10:06 scanner.py - DEBUG: Received 53:67:D5:F3:EA:C6: Unknown.
-17:10:07 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:07 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:07 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:07 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:07 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-17:10:07 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:07 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:07 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:07 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:07 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:07 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:07 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-17:10:07 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:07 scanner.py - DEBUG: Received 5B:DD:8A:82:43:F5: Unknown.
-17:10:07 scanner.py - DEBUG: Received 5C:D2:41:F7:A6:39: Unknown.
-17:10:07 scanner.py - DEBUG: Received 57:78:A1:BF:0C:FD: Unknown.
-17:10:07 scanner.py - DEBUG: Received 3F:14:03:10:10:C8: Unknown.
-17:10:07 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-17:10:07 scanner.py - DEBUG: Received 2E:8A:AC:34:75:29: Unknown.
-17:10:07 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:07 scanner.py - DEBUG: Received 78:28:38:51:D4:D7: Unknown.
-17:10:07 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:07 scanner.py - DEBUG: Received 6B:80:9D:FD:DD:E0: Unknown.
-17:10:08 scanner.py - DEBUG: Received F7:BC:9B:09:B7:08: Unknown.
-17:10:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-17:10:08 scanner.py - DEBUG: Received FC:6C:E9:0F:FF:66: Unknown.
-17:10:08 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-17:10:08 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:08 scanner.py - DEBUG: Received 71:4D:73:A8:4E:CB: Unknown.
-17:10:08 scanner.py - DEBUG: Received 5C:D2:41:F7:A6:39: Unknown.
-17:10:08 scanner.py - DEBUG: Received 5C:D2:41:F7:A6:39: Unknown.
-17:10:08 scanner.py - DEBUG: Received FB:FE:9A:6E:D5:40: Unknown.
-17:10:08 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+14:21:39 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+14:21:39 proactor_events.py - DEBUG: Using proactor: IocpProactor
+14:21:40 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:21:40 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:21:40 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:40 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:41 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:41 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:41 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:41 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:41 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:41 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:41 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:41 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:21:42 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:42 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:42 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:42 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:42 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:42 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:42 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:43 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:43 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:43 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:43 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:43 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:43 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:43 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:44 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:44 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:44 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:21:44 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:45 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:45 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:45 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:45 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:45 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:45 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:45 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:46 tts.py - DEBUG: text: what is your name?
+14:21:46 tts.py - DEBUG: tld: com
+14:21:46 tts.py - DEBUG: lang: en
+14:21:46 tts.py - DEBUG: slow: False
+14:21:46 tts.py - DEBUG: lang_check: True
+14:21:46 tts.py - DEBUG: pre_processor_funcs: [<function tone_marks at 0x00000249F55840D0>, <function end_of_line at 0x00000249F5584A60>, <function abbreviations at 0x00000249F55849D0>, <function word_sub at 0x00000249F5584AF0>]
+14:21:46 tts.py - DEBUG: tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=\uff1f).|(?<=\uff01).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\[|\u3002|¿|;|\\)|\u2025|\uff0c|\\\n|\uff1a|\u3001|…|¡|—|\u060c|\\(|\\]', re.IGNORECASE) from: [<function tone_marks at 0x00000249F5584CA0>, <function period_comma at 0x00000249F5584D30>, <function colon at 0x00000249F5584DC0>, <function other_punctuation at 0x00000249F5584E50>]>
+14:21:46 lang.py - DEBUG: langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ms': 'Malay', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+14:21:46 tts.py - DEBUG: pre-processing: <function tone_marks at 0x00000249F55840D0>
+14:21:46 tts.py - DEBUG: pre-processing: <function end_of_line at 0x00000249F5584A60>
+14:21:46 tts.py - DEBUG: pre-processing: <function abbreviations at 0x00000249F55849D0>
+14:21:46 tts.py - DEBUG: pre-processing: <function word_sub at 0x00000249F5584AF0>
+14:21:46 tts.py - DEBUG: text_parts: ['what is your name?']
+14:21:46 tts.py - DEBUG: text_parts: 1
+14:21:46 tts.py - DEBUG: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22what%20is%20your%20name%3F%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+14:21:46 connectionpool.py - DEBUG: Starting new HTTPS connection (1): translate.google.com:443
+14:21:46 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:46 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:46 connectionpool.py - DEBUG: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+14:21:46 tts.py - DEBUG: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '156'}
+14:21:46 tts.py - DEBUG: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+14:21:46 tts.py - DEBUG: status-0: 200
+14:21:46 tts.py - DEBUG: part-0 written to <_io.BufferedWriter name='speech0.mp3'>
+14:21:46 tts.py - DEBUG: part-0 created
+14:21:46 tts.py - DEBUG: Saved to speech0.mp3
+14:21:46 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:47 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:47 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:47 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:48 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:48 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:48 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:48 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:48 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:48 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:48 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:49 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:49 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:49 scanner.py - DEBUG: 5 devices found. Watcher status: 3.
+14:21:50 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:50 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:50 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:50 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:52 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:52 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:52 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:52 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:52 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:53 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:53 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:53 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:54 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:54 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:54 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:54 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:54 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:54 scanner.py - DEBUG: 4 devices found. Watcher status: 3.
+14:21:55 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:55 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:55 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:55 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:21:55 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:56 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:57 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:21:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:57 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:57 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:57 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:57 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:58 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:21:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:21:58 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:58 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:21:59 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:59 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:21:59 scanner.py - DEBUG: 6 devices found. Watcher status: 3.
+14:21:59 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:00 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:00 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:00 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:00 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:00 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:00 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:00 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:00 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:00 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:01 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:01 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:01 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:02 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:02 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:02 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:02 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:03 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:03 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:03 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:03 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:03 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:03 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:03 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:03 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:03 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:03 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:03 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:04 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:04 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:04 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:04 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:04 scanner.py - DEBUG: 6 devices found. Watcher status: 3.
+14:22:04 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:04 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:05 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:05 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:05 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:05 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:05 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:05 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:22:06 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:06 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:06 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:06 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:06 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:06 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:06 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:06 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:06 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:06 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:06 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:06 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:06 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:06 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:07 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:07 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:07 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:07 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:22:08 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:08 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:09 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:09 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:09 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:09 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:09 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:09 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:22:09 scanner.py - DEBUG: 8 devices found. Watcher status: 3.
+14:22:09 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:09 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:10 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:10 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:10 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:10 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:10 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:11 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:11 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:11 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:11 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:11 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:11 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:11 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:11 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:12 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:12 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:12 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:12 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:12 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:12 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:12 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:13 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:13 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:14 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:14 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:14 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:14 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:14 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:14 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:14 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:14 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:14 scanner.py - DEBUG: 6 devices found. Watcher status: 3.
+14:22:15 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:15 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:15 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:15 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:15 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:15 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:22:16 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:16 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:16 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:16 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:16 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:16 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:16 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:17 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:17 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:17 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:17 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:18 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:18 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:18 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:18 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:18 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:19 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:19 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:19 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:19 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:19 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:19 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:19 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:19 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:22:20 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:21 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:21 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:21 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:21 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:21 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:22 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:22 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:22 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:22 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:22 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:22 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:23 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:23 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:23 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:23 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:23 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:23 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:23 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:23 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:23 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:24 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:24 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:24 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:24 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:24 scanner.py - DEBUG: Received 50:C9:3B:69:98:C6: Unknown.
+14:22:24 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:22:25 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:25 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:25 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:25 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:25 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:25 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:25 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:25 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:25 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:25 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:26 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:26 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:26 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:26 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:26 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:26 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:27 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:28 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:28 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:28 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:28 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:28 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:28 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:28 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:29 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:29 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:29 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:29 scanner.py - DEBUG: Received D9:E2:77:A3:EF:05: Unknown.
+14:22:29 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:22:31 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:31 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:31 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:31 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:31 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:32 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:32 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:32 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:32 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:32 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:33 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:33 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:33 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:33 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:33 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:33 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:34 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:34 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:34 scanner.py - DEBUG: 5 devices found. Watcher status: 3.
+14:22:35 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:35 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:35 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:35 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:35 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:35 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:36 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:36 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:36 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:36 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:36 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:36 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:36 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:36 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:36 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:36 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:36 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:36 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:37 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:37 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:37 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:37 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:37 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:37 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:38 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:38 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:38 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:38 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:38 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:39 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:39 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:39 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:39 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:39 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:39 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:39 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:39 scanner.py - DEBUG: 6 devices found. Watcher status: 3.
+14:22:40 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:40 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:40 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:40 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:40 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:40 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:40 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:40 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:40 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:41 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:41 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:42 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:42 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:42 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:43 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:43 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:43 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:43 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:43 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:44 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:44 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:44 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:44 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:44 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:44 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:44 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:44 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:44 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:45 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:22:45 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:45 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:45 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:45 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:45 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:46 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:46 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:46 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:46 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:46 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:46 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:46 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:46 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:47 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:47 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:47 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:47 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:47 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:47 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:47 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:47 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:47 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:47 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:47 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:47 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:48 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:48 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:48 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:48 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:48 scanner.py - DEBUG: Received 49:5E:2B:29:2A:3E: Unknown.
+14:22:48 tts.py - DEBUG: text: how old are you?
+14:22:48 tts.py - DEBUG: tld: com
+14:22:48 tts.py - DEBUG: lang: en
+14:22:48 tts.py - DEBUG: slow: False
+14:22:48 tts.py - DEBUG: lang_check: True
+14:22:48 tts.py - DEBUG: pre_processor_funcs: [<function tone_marks at 0x00000249F55840D0>, <function end_of_line at 0x00000249F5584A60>, <function abbreviations at 0x00000249F55849D0>, <function word_sub at 0x00000249F5584AF0>]
+14:22:48 tts.py - DEBUG: tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=\uff1f).|(?<=\uff01).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\[|\u3002|¿|;|\\)|\u2025|\uff0c|\\\n|\uff1a|\u3001|…|¡|—|\u060c|\\(|\\]', re.IGNORECASE) from: [<function tone_marks at 0x00000249F5584CA0>, <function period_comma at 0x00000249F5584D30>, <function colon at 0x00000249F5584DC0>, <function other_punctuation at 0x00000249F5584E50>]>
+14:22:48 lang.py - DEBUG: langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ms': 'Malay', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+14:22:48 tts.py - DEBUG: pre-processing: <function tone_marks at 0x00000249F55840D0>
+14:22:48 tts.py - DEBUG: pre-processing: <function end_of_line at 0x00000249F5584A60>
+14:22:48 tts.py - DEBUG: pre-processing: <function abbreviations at 0x00000249F55849D0>
+14:22:48 tts.py - DEBUG: pre-processing: <function word_sub at 0x00000249F5584AF0>
+14:22:48 tts.py - DEBUG: text_parts: ['how old are you?']
+14:22:48 tts.py - DEBUG: text_parts: 1
+14:22:48 tts.py - DEBUG: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22how%20old%20are%20you%3F%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+14:22:48 connectionpool.py - DEBUG: Starting new HTTPS connection (1): translate.google.com:443
+14:22:48 connectionpool.py - DEBUG: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+14:22:48 tts.py - DEBUG: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '154'}
+14:22:48 tts.py - DEBUG: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+14:22:48 tts.py - DEBUG: status-0: 200
+14:22:48 tts.py - DEBUG: part-0 written to <_io.BufferedWriter name='speech1.mp3'>
+14:22:48 tts.py - DEBUG: part-0 created
+14:22:48 tts.py - DEBUG: Saved to speech1.mp3
+14:22:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:49 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:49 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:49 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:49 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:50 scanner.py - DEBUG: 7 devices found. Watcher status: 3.
+14:22:51 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:52 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:52 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:52 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:52 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:52 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:52 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:52 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:52 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:53 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:53 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:53 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:53 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:53 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:53 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:53 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:53 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:54 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:54 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:55 scanner.py - DEBUG: 5 devices found. Watcher status: 3.
+14:22:55 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:55 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:55 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:55 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:56 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:56 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:56 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:56 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:56 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:56 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:56 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:56 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:57 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:57 scanner.py - DEBUG: Received 72:71:D4:79:E2:8E: Unknown.
+14:22:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:57 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:57 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:57 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+14:22:57 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:58 scanner.py - DEBUG: Received 75:F7:88:60:61:CC: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:58 scanner.py - DEBUG: Received 61:64:06:CA:5D:9F: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:58 scanner.py - DEBUG: Received 77:7A:4D:4A:73:D3: Unknown.
+14:22:58 scanner.py - DEBUG: Received 39:99:AA:68:E3:A7: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.
+14:22:58 scanner.py - DEBUG: Received DA:A8:B3:51:81:3A: Unknown.

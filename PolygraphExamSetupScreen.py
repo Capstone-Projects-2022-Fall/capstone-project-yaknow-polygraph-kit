@@ -9,7 +9,6 @@ import conductExamScreen
 import respirationBelt
 import threading
 import arduino
-#import database.txt as db
 import itertools
 from threading import Timer
 
