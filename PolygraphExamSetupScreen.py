@@ -9,8 +9,17 @@ import conductExamScreen
 import respirationBelt
 import threading
 import arduino
+#import database.txt as db
 import itertools
 from threading import Timer
+
+import os
+import sys
+
+bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+checkPath = os.path.abspath(os.path.join(bundle_dir, 'transparentCheck.png'))
+XPath = os.path.abspath(os.path.join(bundle_dir, 'transparentX.png'))
+
 
 database = read_database_file()
 global_list_of_questions_searched_and_selected = []
@@ -101,10 +110,10 @@ def make_window():
     
     #Checkmark Image Source: https://toppng.com/uploads/preview/check-mark-png-11553206004impjy81rdu.png
 
-    checkmarkImage = Image.open("transparentCheck.png")
+    checkmarkImage = Image.open(checkPath)
 
     # X Image Source: https://www.pngfind.com/pngs/m/42-423721_green-check-red-x-png-red-x-transparent.png
-    xImage = Image.open("transparentX.png")
+    xImage = Image.open(XPath)
     xImage = xImage.resize((50, 50), Image.Resampling.LANCZOS)
     # xImage = ImageTk.PhotoImage(image=xImage)
 
@@ -232,8 +241,8 @@ def make_window():
 def startExam(window1):
     PolygraphExamSetupScreen.examStarted = False
 
-    PolygraphExamSetupScreen.checkmarkImage = Image.open("transparentCheck.png")
-    PolygraphExamSetupScreen.checkmarkImage = Image.open("transparentCheck.png")
+    PolygraphExamSetupScreen.checkmarkImage = Image.open(checkPath)
+    PolygraphExamSetupScreen.checkmarkImage = Image.open(checkPath)
 
     PolygraphExamSetupScreen.checkmarkImage = PolygraphExamSetupScreen.checkmarkImage.resize((50, 50), Image.Resampling.LANCZOS)
     PolygraphExamSetupScreen.checkmarkImage = PolygraphExamSetupScreen.ImageTk.PhotoImage(image=checkmarkImage)

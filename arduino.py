@@ -6,7 +6,7 @@ import PolygraphExamSetupScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem2101"
+arduino_port = "/dev/cu.usbmodem101"
 
 
 def connectGSRSensor():
