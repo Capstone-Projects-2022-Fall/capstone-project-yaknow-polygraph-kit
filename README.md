@@ -17,3 +17,11 @@ After the examination has been completed, timestamps of questions asked will be 
 - Ferdinand Lukito
 - Caleb Okoh-Aihe
 - Thomas Herner
+
+## How to Run
+- Navigate to the release.
+- Identify if you have a Windows OS or MAC OS.
+- Download the corresponding zip file.
+- Unzip the file.
+- Double click the "homescreen" file in the unzipped folder.
+
