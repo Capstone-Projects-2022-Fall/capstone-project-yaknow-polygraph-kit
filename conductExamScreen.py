@@ -52,9 +52,8 @@ def examCounter():
     while examFinished == False:
         conductExamScreen.examTime = conductExamScreen.examTime + 1
         PolygraphExamSetupScreen.window['-Time-'].update(examTime)
-        if (conductExamScreen.examTime % 60) == 1:
+        if (conductExamScreen.examTime % 15) == 1:
             newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[conductExamScreen.questionCounter]
-            print(newQuestion)
             tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
             conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
             conductExamScreen.window['-Text-'].update(newQuestion)

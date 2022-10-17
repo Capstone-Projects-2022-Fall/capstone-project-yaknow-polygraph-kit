@@ -39,12 +39,12 @@ def connectRespirationBelt():
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
 
-    for i in range(10):
+    for i in range(12):
         measurements = theAPIs.read()
         currentTime = datetime.datetime.now()
         if measurements == None:
             break
-        print(currentTime, measurements)
+        print("Respiration Recordings: ", currentTime, measurements)
     #if devicesFound is None:
     #    logging.error('No Device connected.')
     #else:
@@ -75,7 +75,7 @@ def connectRespirationBeltIndividual():
     rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
     theAPIs.start(rate)
 
-    times = int (IndividualDeviceScreen.DeviceSamplingTime / IndividualDeviceScreen.DeviceSamplingRate)
+    times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     for i in range(times):
         measurements = theAPIs.read()
         currentTime = datetime.datetime.now()

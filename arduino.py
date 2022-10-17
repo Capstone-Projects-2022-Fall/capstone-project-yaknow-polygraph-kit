@@ -8,11 +8,11 @@ import IndividualDeviceScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem101"
+arduino_port = "/dev/cu.usbmodem2101"
+arduino_port2 = "/dev/cu.usbmodem101"
 
 
 def connectGSRSensor():
-
     connected = False
     while connected == False:
         try:
@@ -23,8 +23,12 @@ def connectGSRSensor():
             print("Test3")
         except Exception as e:
             print("Board Not Connected", e)
+            try:
+                ser = serial.Serial(arduino_port2, baud)
+            except:
+                print("Neither Port Connected")
 
-        if(connected == True):
+        if (connected == True):
             PolygraphExamSetupScreen.GSRConnector = True
             PolygraphExamSetupScreen.window['theImage2'].update(data=PolygraphExamSetupScreen.checkmarkImage)
             PolygraphExamSetupScreen.window.refresh()
@@ -36,30 +40,29 @@ def connectGSRSensor():
     sensor_data = []
     rate = PolygraphExamSetupScreen.GSRSamplingRate
 
-    times = int(IndividualDeviceScreen.DeviceSamplingTime / IndividualDeviceScreen.DeviceSamplingRate)
-    for i in range(times):
+    for i in range(12):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))
         currentTime = datetime.datetime.now()
         final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-        print(currentTime, final_reading)
+        print("Skin Conductivity Recording: ", currentTime, final_reading)
         sensor_data.append(final_reading)
         time.sleep(rate)
     print(final_reading)
 
 
 def connectGSRSensorIndividual():
-
     connected = False
     while connected == False:
         try:
-            print("Test")
             ser = serial.Serial(arduino_port, baud)
-            print("Test2")
             connected = True
-            print("Test3")
         except Exception as e:
             print("Board Not Connected", e)
+            try:
+                ser = serial.Serial(arduino_port2, baud)
+            except:
+                print("Neither Port Connected")
 
         if (connected == True):
             IndividualDeviceScreen.deviceConnected = True
@@ -71,27 +74,22 @@ def connectGSRSensorIndividual():
         pass
 
     sensor_data = []
-    rate = IndividualDeviceScreen.DeviceSamplingRate
-
-    for i in range( (IndividualDeviceScreen.deviceTime) / (IndividualDeviceScreen.DeviceSamplingRate) ):
+    times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    for i in range(times):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))
         currentTime = datetime.datetime.now()
         final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
         print(currentTime, final_reading)
         sensor_data.append(final_reading)
-        time.sleep(rate)
+        time.sleep(IndividualDeviceScreen.DeviceSamplingRate)
     print(final_reading)
 
-
-
-    #if devicesFound is None:
+    # if devicesFound is None:
     #    logging.error('No Device connected.')
-    #else:
+    # else:
     #    logging.info('Devices found:' + devicesFound)
 
-
-    #print("Hello World")
-
+    # print("Hello World")
 
 # GUI Branch

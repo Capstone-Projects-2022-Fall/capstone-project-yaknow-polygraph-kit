@@ -260,7 +260,7 @@ def startExam(window1):
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
 
-        print(event, values)
+        #print(event, values)
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break

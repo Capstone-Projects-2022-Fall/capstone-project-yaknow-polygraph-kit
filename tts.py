@@ -16,10 +16,10 @@ def questionToSpeech(question, counter):
     mixer.music.play()
     time.sleep(2)
     mixer.stop()
-    try:
-        os.remove('speech{}.mp3'.format(counter % 2))
-        print("Removed")
-    except Exception as e:
-        print(e)
-        pass
+    #try:
+    #    os.remove('speech{}.mp3'.format(counter % 2))
+    #    print("Removed")
+    #except Exception as e:
+    #    print(e)
+    #    pass
 
