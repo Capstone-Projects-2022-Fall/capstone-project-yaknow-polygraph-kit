@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>gdx module &#8212; yaKnow  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="vernierHelloWorldDemo module" href="vernierHelloWorldDemo.html" />
+    <link rel="prev" title="conf module" href="conf.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-gdx">
+<span id="gdx-module"></span><h1>gdx module<a class="headerlink" href="#module-gdx" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="gdx.gdx">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gdx.</span></span><span class="sig-name descname"><span class="pre">gdx</span></span><a class="headerlink" href="#gdx.gdx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdx.gdx.ble_open">
+<span class="sig-name descname"><span class="pre">ble_open</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#gdx.gdx.ble_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdx.gdx.buffer">
+<span class="sig-name descname"><span class="pre">buffer</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gdx.gdx.buffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect the USB or BLE device and quit godirect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.device_info">
+<span class="sig-name descname"><span class="pre">device_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.device_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about the device. The device must be opened first,
+using the open() function, before this function can be called.</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>device_info[]: a 1D list for one device or a 2D list for multiple. The list</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>includes name, description, battery %, charger state, rssi</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdx.gdx.device_sensors">
+<span class="sig-name descname"><span class="pre">device_sensors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gdx.gdx.device_sensors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdx.gdx.devices">
+<span class="sig-name descname"><span class="pre">devices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gdx.gdx.devices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.discover_ble_devices">
+<span class="sig-name descname"><span class="pre">discover_ble_devices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.discover_ble_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables bluetooth, and returns the name and rssi of all discovered GoDirect devices.
+This function should be called prior to opening a device. The name returned
+by this function can be used as an argurment in the ble_open() function to open a specific device.</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>discovered_ble_devices[]: a 2D list. A list containing a list of name and rssi for each device</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>[[name1,rssi1],[name2,rssi2],[name3,rssi3]]</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.enabled_sensor_info">
+<span class="sig-name descname"><span class="pre">enabled_sensor_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.enabled_sensor_info" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Returns each enabled sensors’ description and units (good for column headers).</dt><dd><dl class="simple">
+<dt>Returns:</dt><dd><p>sensor_info[]: a 1D list that includes each enabled sensors’ description</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>with units, e.g. [‘Force (N)’, ‘X-axis acceleration (m/s²)’]</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdx.gdx.enabled_sensors">
+<span class="sig-name descname"><span class="pre">enabled_sensors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gdx.gdx.enabled_sensors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.listOfListsReadValues">
+<span class="sig-name descname"><span class="pre">listOfListsReadValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dev2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.listOfListsReadValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same functionality as read() above, however value sensor.values is copied into
+values[] by value instead of by reference, allowing sensor.clear() to be called.
+Only the most recent measurements are returned from readValues() and then cleared
+from both sensor.values and values[]
+Returns:</p>
+<blockquote>
+<div><p>value[]: a list that includes a data point from each of the enabled sensors</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.open_ble">
+<span class="sig-name descname"><span class="pre">open_ble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_to_open</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.open_ble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a Go Direct device via bluetooth for data collection.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>device_to_open: Leave this argument blank to provide a list in the termial of all discovered
+Go Direct devices. The user then chooses the device or devices from the prompt. To run code
+without a prompt, the argument can be set to a specific Go Direct device name or names.
+For example,  “GDX-FOR 071000U9” or “GDX-FOR 071000U9, GDX-HD 151000C1”. In addition, the argument
+can be set to “proximity_pairing” to open the device with the highest rssi (closest proximity).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.open_usb">
+<span class="sig-name descname"><span class="pre">open_usb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.open_usb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discovers all Go Direct devices with a USB connection and opens those devices
+for data collection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take single point readings from the enabled sensors and return the readings as a 1D list.
+Returns:</p>
+<blockquote>
+<div><p>retvalues[]: a 1D list of sensor readings. A single data point for each enabled sensor.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.readValues">
+<span class="sig-name descname"><span class="pre">readValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.readValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take multiple point readings from the enabled sensors and return the readings as a 2D list.
+Returns:</p>
+<blockquote>
+<div><p>retvalues[]: a 2D list of sensor readings. Multiple points for each enabled sensor.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.select_sensors">
+<span class="sig-name descname"><span class="pre">select_sensors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.select_sensors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the sensors you wish to enable for data collection.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sensors []: if the sensors argument is left blank, a list of all available sensors is provided
+by a prompt in the terminal for the user to select from. To run code without a prompt, set this argument
+as a 1D list or a 2D list of lists of the sensors you wish to enable, such as [1,2,3] to enable
+sensors 1,2 and 3 for one device, or [[1,2,3],[1,2]] to enable sensors 1,2 and 3 for one device and
+sensors 1 and 2 for a second device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.sensor_info">
+<span class="sig-name descname"><span class="pre">sensor_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.sensor_info" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Information about all of the available sensors on a connected Go Direct device.</dt><dd><dl class="simple">
+<dt>Returns:</dt><dd><p>available_sensors[]: a 2D list containing information about each</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>sensor found on the device. This includes sensor number, description, units, and
+a list of incompatible sensors (if any). An incompatible sensor is a sensor that can
+not run at the same time as this sensor. For example, Go Direct EKG cannot run the EKG
+sensor at the same time as the EMG sensor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start collecting data from the sensors that were selected in the select_sensors() function.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>period (int): If period is left blank, a prompt in the terminal allows the user to enter
+the period (time between samples). To run the code without this prompt, set this argument to
+a period in milliseconds, e.g. period=1000</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdx.gdx.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdx.gdx.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop data collection on the enabled sensors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">yaKnow</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">capstone-project-yaknow-polygraph-kit</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="conf.html">conf module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">gdx module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vernierHelloWorldDemo.html">vernierHelloWorldDemo module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">capstone-project-yaknow-polygraph-kit</a><ul>
+      <li>Previous: <a href="conf.html" title="previous chapter">conf module</a></li>
+      <li>Next: <a href="vernierHelloWorldDemo.html" title="next chapter">vernierHelloWorldDemo module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, gdx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/gdx.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
