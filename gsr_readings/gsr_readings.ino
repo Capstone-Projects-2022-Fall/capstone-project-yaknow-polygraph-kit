@@ -18,6 +18,7 @@ the while condition catches the connectivity of the arduino board
 void setup()
 {
   Serial.begin(9600);
+
   while(!Serial)
   {
     Serial.print("Waiting...");
@@ -45,8 +46,8 @@ The temp variable (threshold - sensorValue) is then analysed further.
 */
 void loop()
 {
-  if(Serial.available() > 1)
-  {
+  //if(Serial.available() > 1)
+  //{
     int temp;
     sensorValue=analogRead(GSR);
     Serial.print("sensorValue= ");
@@ -65,10 +66,10 @@ void loop()
           delay(1000);
         }
     }
-  }
-  else
-  {
-    Serial.print("Null Data To Analyze...\nProgram Is Closing");
-    delay(3000);
-  }
+  //}
+  //else
+  //{
+    //Serial.print("Null Data To Analyze...\nProgram Is Closing");
+    //delay(3000);
+  //}
 }
