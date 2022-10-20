@@ -28,6 +28,7 @@ def connectBloodPressureDevice():
 
 #TUNE THIS FOR BLOOD PRESSURE MEASUREMENTS !!!
 # blood pressure sensor can measure mean arterial pressure, systolic (the maximum), diastolic (minimum)
+# Also, sampling rate would be different then the other device, since recording blood pressure will take longer    
     theAPIs.select_sensors([2])         #should this be 2 since we are using '1' for respiration ?
 
     rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000

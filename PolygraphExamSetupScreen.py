@@ -259,7 +259,7 @@ def startExam(window1):
     thread = threading.Thread(target=arduino.connectGSRSensor)
     thread.start()
 # NEW FOR BLOOD PRESSURE
-    thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice())
+    thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
     thread.start()
 
     while True:
@@ -317,7 +317,7 @@ def startExam(window1):
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 PolygraphExamSetupScreen.GSRSamplingRate = 5
                 window.refresh()
- # NEW FOR BLOOD PRESSURE
+ # NEW FOR BLOOD PRESSURE // might need to update 
         elif event == '-BPSampling-':
             if values['-BPSampling-'] == '1':
                 window['-BPSampling-'].update(button_text="1")
