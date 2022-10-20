@@ -8,6 +8,7 @@ import arduino
 import homescreen
 import conductExamScreen
 import respirationBelt
+import bloodPressureDevice
 import threading
 import os
 import sys
@@ -114,8 +115,11 @@ def startExam(window1):
         window['DeviceSelected'].update('GSR Sensor')
         thread = threading.Thread(target=arduino.connectGSRSensorIndividual)
         thread.start()
-    # elif homescreen.deviceSelected == 2:
-    # Waiting for blood pressure device
+    elif homescreen.deviceSelected == 2:
+        window['DeviceSeleceted'].update('Blood Pressure Device')
+        thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDeviceIndividual)
+        thread.start()
+
 
     while True:
         event, values = IndividualDeviceScreen.window.read()
