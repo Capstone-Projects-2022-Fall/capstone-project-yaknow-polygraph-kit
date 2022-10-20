@@ -7,6 +7,8 @@ import datetime
 
 import PolygraphExamSetupScreen
 
+import IndividualDeviceScreen
+
 with open('polygraphExamKitLogging.log', 'w'):
     pass
 
@@ -37,12 +39,12 @@ def connectRespirationBelt():
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
 
-    for i in range(10):
+    for i in range(12):
         measurements = theAPIs.read()
         currentTime = datetime.datetime.now()
         if measurements == None:
             break
-        print(currentTime, measurements)
+        print("Respiration Recordings: ", currentTime, measurements)
     #if devicesFound is None:
     #    logging.error('No Device connected.')
     #else:
@@ -52,8 +54,40 @@ def connectRespirationBelt():
     #print("Hello World")
 
 
+def connectRespirationBeltIndividual():
+    from gdx import gdx
+    theAPIs = gdx()
+    connected = False
+    while connected == False:
+        respirationConnected = theAPIs.open_ble('GDX-RB 0K4007N0')
+        if (respirationConnected == True):
+            IndividualDeviceScreen.deviceConnected = True
+            IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
+            IndividualDeviceScreen.window.refresh()
+            connected = True
+        else:
+            theAPIs.close()
+    while not IndividualDeviceScreen.recordingStarted:
+        pass
 
+    theAPIs.select_sensors([1])
 
+    rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
+    theAPIs.start(rate)
+
+    times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    for i in range(times):
+        measurements = theAPIs.read()
+        currentTime = datetime.datetime.now()
+        if measurements == None:
+            break
+        print(currentTime, measurements)
+    # if devicesFound is None:
+    #    logging.error('No Device connected.')
+    # else:
+    #    logging.info('Devices found:' + devicesFound)
+
+    # print("Hello World")
 #theAPIs.stop()
 #theAPIs.close()
 
