@@ -2,6 +2,8 @@
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+
+import bloodPressureDevice
 from read_write import create_question, read_database_file
 import PolygraphExamSetupScreen
 import ResultsDisplayScreen
@@ -256,6 +258,9 @@ def startExam(window1):
 
     thread = threading.Thread(target=arduino.connectGSRSensor)
     thread.start()
+# NEW FOR BLOOD PRESSURE
+    thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice())
+    thread.start()
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
@@ -311,6 +316,17 @@ def startExam(window1):
                 window['-SCSampling-'].update(button_text="5")
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 PolygraphExamSetupScreen.GSRSamplingRate = 5
+                window.refresh()
+ # NEW FOR BLOOD PRESSURE
+        elif event == '-BPSampling-':
+            if values['-BPSampling-'] == '1':
+                window['-BPSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.BloodPressureSamplingRate = 1
+                window.refresh()
+            elif values['-BPSampling-'] == '5':
+                window['-BPSampling-'].update(button_text="5")
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                PolygraphExamSetupScreen.BloodPressureSamplingRate = 5
                 window.refresh()
 
         # search functionality
