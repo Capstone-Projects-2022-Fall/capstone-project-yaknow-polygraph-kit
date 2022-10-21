@@ -33,29 +33,36 @@ def main():
             connected = True
         # else:
         #     logging.info('Devices found:' + devicesFound)
-    theAPIs.select_sensors([1])
+#     theAPIs.select_sensors([1])
+#     theAPIs.start(500)
+#     correctPressure = False
+# # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
+# # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
+# # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
+#     while correctPressure == False:
+#         measurements = theAPIs.read()
+#         print(measurements)
+#         if measurements[0] > 155:
+#             correctPressure = True
+
+#    theAPIs.stop()
+    theAPIs.select_sensors([2])
+
     theAPIs.start(500)
-    correctPressure = False
-# This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
-# Cuff pressure needs to be at least 155 for the device to start reading blood pressure
-# then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
-    while correctPressure == False:
-        measurements = theAPIs.read()
-        print(measurements)
-        if measurements[0] > 155:
-            correctPressure = True
-
-    theAPIs.stop()
-    theAPIs.select_sensors([4])
-
-    theAPIs.start(10000)
-
-    for i in range(10):
+# This will continuously print out empty arrays - I thought if we just made it go longer, eventually it would print out the result, but it didnt
+    for i in range(40):
         measurements = theAPIs.read()
         if measurements == None:
             break
         print(measurements)
+#IDEA: print out the values (they are nothing) until a result is more than 0 (the blood pressure) *this prints absolutely nothing tho*
+    # while correctPressure == False:
+    #     measurements = theAPIs.read()
+    #     print(measurements)
+    #     if measurements[0] > 0:
+    #         correctPressure = True
 
+    theAPIs.stop()
 
 def connectBloodPressureDevice():
     from gdx import gdx
