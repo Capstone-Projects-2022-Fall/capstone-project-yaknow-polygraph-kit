@@ -36,6 +36,9 @@ def main():
     theAPIs.select_sensors([1])
     theAPIs.start(500)
     correctPressure = False
+# This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
+# Cuff pressure needs to be at least 155 for the device to start reading blood pressure
+# then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
     while correctPressure == False:
         measurements = theAPIs.read()
         print(measurements)
@@ -45,11 +48,7 @@ def main():
     theAPIs.stop()
     theAPIs.select_sensors([4])
 
-
-
-
-
-    theAPIs.start(1000)
+    theAPIs.start(10000)
 
     for i in range(10):
         measurements = theAPIs.read()
