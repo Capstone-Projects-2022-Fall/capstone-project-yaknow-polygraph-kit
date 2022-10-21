@@ -26,14 +26,28 @@ def main():
                         datefmt='%H:%M:%S')
 
     theAPIs = gdx()
-
-    devicesFound = theAPIs.open_ble('GDX-RB 0K4007N0')
-    if devicesFound is None:
-        logging.error('No Device connected.')
-    else:
-        logging.info('Devices found:' + devicesFound)
-
+    connected = False
+    while connected == False:
+        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+        if devicesFound == True:
+            connected = True
+        # else:
+        #     logging.info('Devices found:' + devicesFound)
     theAPIs.select_sensors([1])
+    theAPIs.start(500)
+    correctPressure = False
+    while correctPressure == False:
+        measurements = theAPIs.read()
+        print(measurements)
+        if measurements[0] > 155:
+            correctPressure = True
+
+    theAPIs.stop()
+    theAPIs.select_sensors([4])
+
+
+
+
 
     theAPIs.start(1000)
 
@@ -62,7 +76,7 @@ def connectBloodPressureDevice():
 #TUNE THIS FOR BLOOD PRESSURE MEASUREMENTS !!!
 # blood pressure sensor can measure mean arterial pressure, systolic (the maximum), diastolic (minimum)
 # Also, sampling rate would be different then the other device, since recording blood pressure will take longer    
-    theAPIs.select_sensors([2])         #should this be 2 since we are using '1' for respiration ?
+    theAPIs.select_sensors([1])         #should this be 2 since we are using '1' for respiration ?
 
     rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000
     theAPIs.start(rate)

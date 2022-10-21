@@ -175,6 +175,7 @@ class gdx:
         if not gdx.devices:
             print("select_sensors() - no device connected")
             return
+        
 
         # If the sensors argument is left blank provide an input prompt for the user to select sensors
         if sensors == None:
