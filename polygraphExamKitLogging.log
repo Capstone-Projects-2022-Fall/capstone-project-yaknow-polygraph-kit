@@ -1,737 +1,244 @@
-15:55:49 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-15:55:49 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-15:55:50 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-15:55:50 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-15:55:50 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
-15:55:50 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
-15:55:50 proactor_events.py - DEBUG: Using proactor: IocpProactor
-15:55:50 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:50 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:55:50 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:55:50 scanner.py - DEBUG: Received FD:B2:4D:03:BB:BC: Unknown.
-15:55:50 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:50 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:50 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:50 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:50 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:50 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:50 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:51 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:55:51 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:55:51 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:51 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:51 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:51 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:51 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:55:51 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:51 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:51 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:51 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:51 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:52 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:55:52 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:52 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:52 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:52 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:52 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:55:52 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:55:52 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:52 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:55:52 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:53 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:53 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:53 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:53 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:53 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:53 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:53 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:55:53 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:55:53 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:53 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:53 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:53 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:54 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:54 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:54 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:54 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:54 scanner.py - DEBUG: Received C8:7B:D8:DB:87:74: Unknown.
-15:55:54 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:54 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:54 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:55:54 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:55:54 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:54 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:54 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:54 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:55:54 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:55:54 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:55:54 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:54 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:54 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:54 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:55:54 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:55:54 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:55 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:55 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:55 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:55 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:55 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:55 scanner.py - DEBUG: 20 devices found. Watcher status: 3.
-15:55:55 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:55 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:55 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:55 scanner.py - DEBUG: Received 52:DF:F6:86:9A:62: Unknown.
-15:55:55 scanner.py - DEBUG: Received 52:DF:F6:86:9A:62: Unknown.
-15:55:55 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:55 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:55 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:55 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:55 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:55 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:56 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:56 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:56 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:56 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:56 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:56 scanner.py - DEBUG: Received C8:7B:D8:DB:87:74: Unknown.
-15:55:56 scanner.py - DEBUG: Received C2:14:ED:CF:A5:DB: Unknown.
-15:55:56 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:56 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:56 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:55:56 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:56 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:56 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:55:56 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:56 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:55:56 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:55:56 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:55:56 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:56 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:56 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:55:56 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:56 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:56 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:56 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:56 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:56 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:55:57 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:57 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:57 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:57 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:55:57 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:57 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:55:57 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:55:57 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:57 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:55:57 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:57 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:57 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:57 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:57 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:57 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:58 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:58 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:58 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:55:58 scanner.py - DEBUG: Received C2:14:ED:CF:A5:DB: Unknown.
-15:55:58 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:55:58 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:58 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:58 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:58 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:55:58 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:58 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:59 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:59 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:55:59 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:55:59 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:55:59 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:55:59 scanner.py - DEBUG: Received E4:A3:8D:2F:E2:10: Unknown.
-15:55:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:59 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:55:59 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:59 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:55:59 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:55:59 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:00 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:00 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:00 scanner.py - DEBUG: 21 devices found. Watcher status: 3.
-15:56:00 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:00 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:00 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:00 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:00 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:00 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:00 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:00 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:00 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:00 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:00 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:00 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:56:00 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:01 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:01 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:01 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:01 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:01 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:01 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-15:56:01 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:01 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:01 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:01 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:01 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:01 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:01 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:01 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:01 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:01 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:01 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:56:01 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:56:01 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:01 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:01 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:01 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:02 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:02 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:02 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:02 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:56:02 scanner.py - DEBUG: Received 72:C3:C2:CC:93:ED: Unknown.
-15:56:02 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:02 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:02 scanner.py - DEBUG: Received FD:B2:4D:03:BB:BC: Unknown.
-15:56:02 scanner.py - DEBUG: Received C3:5B:7A:DA:22:9E: Unknown.
-15:56:02 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:02 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:03 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:56:03 scanner.py - DEBUG: Received 64:37:D2:77:EF:77: Unknown.
-15:56:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:03 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:03 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:03 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:03 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:04 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:04 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:04 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:04 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:04 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:04 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:04 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:04 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:04 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:56:04 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:04 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:04 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:04 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:05 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:05 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:05 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:05 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:05 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:05 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:05 scanner.py - DEBUG: 21 devices found. Watcher status: 3.
-15:56:05 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:05 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:05 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:05 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:05 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:05 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:05 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:05 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:05 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:05 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:05 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:05 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:05 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:05 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:05 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:05 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:06 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:06 scanner.py - DEBUG: Received 5F:86:69:D2:13:F2: Unknown.
-15:56:06 scanner.py - DEBUG: Received 5F:86:69:D2:13:F2: Unknown.
-15:56:06 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:06 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:06 scanner.py - DEBUG: Received C2:14:ED:CF:A5:DB: Unknown.
-15:56:06 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:06 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:06 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:06 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:56:06 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:07 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:07 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:07 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:07 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:07 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:07 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:07 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:07 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:07 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:07 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:07 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:07 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:07 scanner.py - DEBUG: Received D2:83:F4:CC:32:B9: Unknown.
-15:56:08 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:08 scanner.py - DEBUG: Received C8:7B:D8:DB:87:74: Unknown.
-15:56:08 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:08 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:08 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:08 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:08 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:08 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:08 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:08 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:08 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:08 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:08 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:08 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:09 scanner.py - DEBUG: Received A0:D0:5B:8D:BA:CC: Unknown.
-15:56:09 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:09 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:09 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:09 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:09 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:09 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:09 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:10 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:10 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:10 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:10 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:10 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:10 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:10 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:10 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:10 scanner.py - DEBUG: 21 devices found. Watcher status: 3.
-15:56:10 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:10 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:10 scanner.py - DEBUG: Received FD:B2:4D:03:BB:BC: Unknown.
-15:56:10 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:10 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:10 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:10 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:10 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:10 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:11 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:11 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:11 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:11 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:11 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:11 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:11 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:11 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:11 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:11 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:11 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:11 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:11 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:11 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:11 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:11 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:11 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:11 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:12 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:12 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:12 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:12 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:12 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:12 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:12 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:12 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:12 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:12 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:12 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:12 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:12 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:12 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:12 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:12 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:12 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:12 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:12 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:13 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:13 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:13 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:13 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:13 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:13 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:13 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:13 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:13 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:13 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:13 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:13 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:13 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:13 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:14 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:14 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:14 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:14 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:14 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:14 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:14 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:14 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:14 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:14 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:14 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:14 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:14 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:14 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:14 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:14 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:14 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:15 scanner.py - DEBUG: 20 devices found. Watcher status: 3.
-15:56:15 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:15 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:15 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:15 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:15 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:15 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:16 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:16 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:16 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:16 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:16 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:16 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:16 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:16 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:56:16 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:16 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:16 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:16 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:17 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:17 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:17 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:17 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:17 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:17 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:17 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:17 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:17 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:17 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:17 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:17 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:17 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:17 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:17 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:17 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:17 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:17 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:18 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:18 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:18 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:18 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:18 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:18 scanner.py - DEBUG: Received F6:3B:02:51:2B:26: Unknown.
-15:56:18 scanner.py - DEBUG: Received F6:3B:02:51:2B:26: BLE_2B26.
-15:56:18 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:18 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:18 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:18 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:18 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:18 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:18 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:18 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:18 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:18 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:18 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:18 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:19 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:19 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:19 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:19 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:19 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:19 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:19 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:19 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:19 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:19 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:19 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:19 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:19 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:19 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:19 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:19 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:19 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:19 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:19 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:19 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:19 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:20 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:20 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:20 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:20 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:20 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:20 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:20 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:20 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:20 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:20 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:20 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:20 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:20 scanner.py - DEBUG: 20 devices found. Watcher status: 3.
-15:56:20 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:20 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:20 scanner.py - DEBUG: Received 6C:EE:7F:5A:B7:12: Unknown.
-15:56:20 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:20 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:20 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:20 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:20 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:20 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:20 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:20 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:20 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:20 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:21 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:21 scanner.py - DEBUG: Received F5:58:85:C8:70:9C: Unknown.
-15:56:21 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:21 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:21 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:21 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:21 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:21 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:21 scanner.py - DEBUG: Received 6F:32:E8:B4:DE:F8: Unknown.
-15:56:21 scanner.py - DEBUG: Received 6F:32:E8:B4:DE:F8: Unknown.
-15:56:21 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:21 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:21 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:21 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:21 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:21 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:22 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:22 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:22 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:22 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:22 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:22 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:22 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:56:22 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:22 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:22 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:22 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:22 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:22 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:22 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:22 scanner.py - DEBUG: Received 6F:32:E8:B4:DE:F8: Unknown.
-15:56:22 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:22 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:22 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:22 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:22 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:23 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:23 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:23 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:24 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:24 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:24 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:24 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:24 scanner.py - DEBUG: Received F6:3B:02:51:2B:26: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:24 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:25 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:25 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:25 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:25 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:25 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:25 scanner.py - DEBUG: 17 devices found. Watcher status: 3.
-15:56:25 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:25 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:25 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:25 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:25 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:25 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:26 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:26 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:26 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:26 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:26 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:26 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:26 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:26 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:26 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:26 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:26 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:26 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:26 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:27 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:27 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:27 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:27 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:27 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:27 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:27 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:27 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:27 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:56:27 scanner.py - DEBUG: Received 04:A7:C5:4E:3B:FB: Unknown.
-15:56:27 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:27 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:27 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:27 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:56:27 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:28 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:28 scanner.py - DEBUG: Received 75:87:97:3E:7E:E8: Unknown.
-15:56:28 scanner.py - DEBUG: Received 75:87:97:3E:7E:E8: Unknown.
-15:56:28 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:28 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:28 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:28 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:28 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:28 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:28 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:28 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:28 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:28 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:28 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:28 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:28 scanner.py - DEBUG: Received 75:87:97:3E:7E:E8: Unknown.
-15:56:28 scanner.py - DEBUG: Received 75:87:97:3E:7E:E8: Unknown.
-15:56:28 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:28 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:29 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:29 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:29 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:29 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:29 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:29 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:29 scanner.py - DEBUG: Received DC:B5:C2:47:B8:11: Unknown.
-15:56:29 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:29 scanner.py - DEBUG: Received F6:3B:02:51:2B:26: Unknown.
-15:56:29 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:29 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:29 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:29 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:29 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:29 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:30 scanner.py - DEBUG: Received 7A:80:53:DB:26:0C: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:30 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:30 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:30 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:30 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:30 scanner.py - DEBUG: 20 devices found. Watcher status: 3.
-15:56:30 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:30 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:30 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:30 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:30 scanner.py - DEBUG: Received 41:F8:4C:DA:FF:13: Unknown.
-15:56:30 scanner.py - DEBUG: Received 41:F8:4C:DA:FF:13: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:30 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:31 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:31 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:31 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:31 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:31 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:31 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:31 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:31 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:31 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:31 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:31 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:31 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:31 scanner.py - DEBUG: Received 31:B3:C1:68:D6:13: Unknown.
-15:56:31 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:31 scanner.py - DEBUG: Received 56:37:0A:6B:1D:30: Unknown.
-15:56:31 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:31 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:31 scanner.py - DEBUG: Received 70:B3:6F:A3:3A:39: Unknown.
-15:56:31 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:31 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:31 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:31 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:31 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:32 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:32 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:32 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:32 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:32 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:32 scanner.py - DEBUG: Received 47:DE:64:FD:93:42: Unknown.
-15:56:32 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:56:32 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:32 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:32 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:32 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:32 scanner.py - DEBUG: Received 6F:33:A7:B7:77:21: Unknown.
-15:56:32 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:32 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:32 scanner.py - DEBUG: Received C5:C1:E8:15:95:45: Unknown.
-15:56:32 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:32 scanner.py - DEBUG: Received 48:38:2F:D6:C0:26: Unknown.
-15:56:32 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:32 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:32 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:32 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:33 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:33 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:33 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:33 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:33 scanner.py - DEBUG: Received 5D:A3:04:A2:E4:1A: Unknown.
-15:56:33 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:33 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:33 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:33 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:33 scanner.py - DEBUG: Received E4:A3:8D:2F:E2:10: Unknown.
-15:56:33 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:33 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:33 scanner.py - DEBUG: Received 19:96:8E:77:5C:77: Unknown.
-15:56:33 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:34 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:34 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:34 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:34 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:34 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:34 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:34 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:34 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:34 scanner.py - DEBUG: Received 04:C5:20:82:7A:39: Unknown.
-15:56:34 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:34 scanner.py - DEBUG: Received 51:81:09:36:0E:9F: Unknown.
-15:56:34 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
-15:56:34 scanner.py - DEBUG: Received B2:22:7A:8F:41:02: Unknown.
-15:56:34 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:34 scanner.py - DEBUG: Received 72:05:D7:BD:EF:D2: Unknown.
-15:56:34 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:34 scanner.py - DEBUG: Received 53:BC:6C:18:CA:ED: Unknown.
-15:56:34 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:34 scanner.py - DEBUG: Received 45:3C:31:AF:8C:8A: Unknown.
-15:56:34 scanner.py - DEBUG: Received FD:B2:4D:03:BB:BC: Unknown.
-15:56:35 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:35 scanner.py - DEBUG: Received 32:24:A9:BA:72:47: Unknown.
-15:56:35 scanner.py - DEBUG: Received B8:3A:9D:88:A8:C7: Unknown.
-15:56:35 scanner.py - DEBUG: Received 4C:AB:4F:95:87:7B: Unknown.
-15:56:35 scanner.py - DEBUG: Received 44:5C:E9:84:13:F7: Unknown.
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IHDR' 16 13
+19:01:37 PngImagePlugin.py - DEBUG: STREAM b'IDAT' 41 8192
+19:01:37 proactor_events.py - DEBUG: Using proactor: IocpProactor
+19:01:38 scanner.py - DEBUG: Received 52:CD:24:37:8E:E6: Unknown.
+19:01:38 scanner.py - DEBUG: Received 52:CD:24:37:8E:E6: Unknown.
+19:01:38 scanner.py - DEBUG: Received 7E:EF:47:2A:7C:07: Unknown.
+19:01:38 scanner.py - DEBUG: Received 7E:EF:47:2A:7C:07: Unknown.
+19:01:38 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:38 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:38 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:38 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:38 scanner.py - DEBUG: Received 4A:BA:D0:E5:AF:B2: Unknown.
+19:01:38 scanner.py - DEBUG: Received 4A:BA:D0:E5:AF:B2: Unknown.
+19:01:38 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:38 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:38 scanner.py - DEBUG: Received 52:CD:24:37:8E:E6: Unknown.
+19:01:38 scanner.py - DEBUG: Received 52:CD:24:37:8E:E6: Unknown.
+19:01:39 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:39 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:39 scanner.py - DEBUG: Received 4A:BA:D0:E5:AF:B2: Unknown.
+19:01:39 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:39 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:40 scanner.py - DEBUG: Received 4A:BA:D0:E5:AF:B2: Unknown.
+19:01:40 scanner.py - DEBUG: Received 4A:BA:D0:E5:AF:B2: Unknown.
+19:01:40 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:40 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:40 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:40 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:40 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:41 scanner.py - DEBUG: Received 46:1D:32:AA:FA:D3: Unknown.
+19:01:41 scanner.py - DEBUG: Received 46:1D:32:AA:FA:D3: Unknown.
+19:01:41 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:41 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:41 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Unknown.
+19:01:41 scanner.py - DEBUG: Received 2C:41:A1:10:6B:4B: Bose Color II SoundLink.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:41 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:42 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:42 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:42 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:42 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:42 scanner.py - DEBUG: Received 7E:EF:47:2A:7C:07: Unknown.
+19:01:42 scanner.py - DEBUG: Received 7E:EF:47:2A:7C:07: Unknown.
+19:01:42 scanner.py - DEBUG: Received 46:1D:32:AA:FA:D3: Unknown.
+19:01:42 scanner.py - DEBUG: Received 46:1D:32:AA:FA:D3: Unknown.
+19:01:42 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:42 scanner.py - DEBUG: Received 4C:8F:C1:4B:21:15: Unknown.
+19:01:42 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:42 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: Unknown.
+19:01:42 scanner.py - DEBUG: 8 devices found. Watcher status: 3.
+19:01:42 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:42 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:43 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:43 scanner.py - DEBUG: Received 53:C8:44:64:A1:EA: Unknown.
+19:01:43 scanner.py - DEBUG: Received BC:33:AC:CE:92:C8: GDX-RB 0K4007N0.
+19:01:43 scanner.py - DEBUG: 2 devices found. Watcher status: 3.
+19:01:43 client.py - DEBUG: Connecting to BLE device @ BC:33:AC:CE:92:C8
+19:01:44 client.py - DEBUG: max_pdu_size_changed_handler: 247
+19:01:44 client.py - DEBUG: session_status_changed_event_handler: id: <_bleak_winrt_Windows_Devices_Bluetooth.BluetoothDeviceId object at 0x000001F09D244770>, error: BluetoothError.SUCCESS, status: GattSessionStatus.ACTIVE
+19:01:44 client.py - DEBUG: Get Services...
+19:01:44 client.py - INFO: Services resolved for BleakClientWinRT (BC:33:AC:CE:92:C8)
+19:01:44 device.py - DEBUG: GDX >> 58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C  43  0D  42  0E  41
+19:01:44 device_bleak.py - DEBUG: BLE WRITE: >>>58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C
+19:01:45 device_bleak.py - DEBUG: lengthRemaining 5 offset 20
+19:01:45 device_bleak.py - DEBUG: BLE WRITE: >>>43  0D  42  0E  41
+19:01:45 device_bleak.py - DEBUG: lengthRemaining 0 offset 25
+19:01:46 device_bleak.py - DEBUG: BLE NOTIFY: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+19:01:46 device_bleak.py - DEBUG: Receive buffer length: 26 Expected packet length: 26
+19:01:46 device_bleak.py - DEBUG: BLE READ: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+19:01:46 device.py - DEBUG: GDX << B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+19:01:46 device.py - DEBUG: GDX >> 58  05  FD  6A  10
+19:01:46 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FD  6A  10
+19:01:46 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+19:01:46 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  12  01  0A  10  FD  00  00  05  02  00  00  04  01  00  00  46  00
+19:01:46 device_bleak.py - DEBUG: Receive buffer length: 18 Expected packet length: 18
+19:01:46 device_bleak.py - DEBUG: BLE READ: <<<98  12  01  0A  10  FD  00  00  05  02  00  00  04  01  00  00  46  00
+19:01:46 device.py - DEBUG: GDX << 98  12  01  0A  10  FD  00  00  05  02  00  00  04  01  00  00  46  00
+19:01:46 device.py - INFO: Device status:
+19:01:46 device.py - INFO:   Status: 0
+19:01:46 device.py - INFO:   Primary FW version: 5.2.0
+19:01:46 device.py - INFO:   Secondary FW version: 4.1.0
+19:01:46 device.py - INFO:   Battery percent: 70%
+19:01:46 device.py - INFO:   Charger state: 0
+19:01:46 device.py - DEBUG: GDX >> 58  05  FC  AE  55
+19:01:46 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FC  AE  55
+19:01:46 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+19:01:46 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+19:01:46 device_bleak.py - DEBUG: Receive buffer length: 158 Expected packet length: 158
+19:01:46 device_bleak.py - DEBUG: BLE READ: <<<98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+19:01:46 device.py - DEBUG: GDX << 98  9E  02  60  55  FC  47  44  58  2D  52  42  00  00  00  00  00  00  00  00  00  00  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  47  44  58  2D  52  42  20  30  4B  34  30  30  37  4E  30  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  09  02  05  02  00  00  04  01  00  00  C8  92  CE  AC  33  BC  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  52  65  73  70  69  72  61  74  69  6F  6E  20  42  65  6C  74  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+19:01:46 device.py - INFO: Device info:
+19:01:46 device.py - INFO:   Description: Go Direct® Respiration Belt                                    
+19:01:46 device.py - INFO:   Order code: GDX-RB          
+19:01:46 device.py - INFO:   Serial number: 0K4007N0        
+19:01:46 device.py - INFO:   Device name: GDX-RB 0K4007N0                 
+19:01:46 device.py - INFO:   Mfg ID: 8
+19:01:46 device.py - INFO:   Mfg Date: 9/2/2022
+19:01:46 device.py - INFO:   Primary FW version: 5.2.0
+19:01:46 device.py - INFO:   Secondary FW version: 4.1.0
+19:01:46 device.py - INFO:   BLE address: bc:33:ac:ce:92:c8
+19:01:46 device.py - INFO:   NVRAM size: 8192bytes
+19:01:50 tts.py - DEBUG: text: what is your name?
+19:01:50 tts.py - DEBUG: tld: com
+19:01:50 tts.py - DEBUG: lang: en
+19:01:50 tts.py - DEBUG: slow: False
+19:01:50 tts.py - DEBUG: lang_check: True
+19:01:50 tts.py - DEBUG: pre_processor_funcs: [<function tone_marks at 0x000001F08A55D6C0>, <function end_of_line at 0x000001F08A55E050>, <function abbreviations at 0x000001F08A55DFC0>, <function word_sub at 0x000001F08A55E0E0>]
+19:01:50 tts.py - DEBUG: tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=\uff1f).|(?<=\uff01).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\uff0c|\u2025|\\)|\u3002|\u060c|\u3001|\\\n|—|\\(|\\[|;|¿|¡|…|\uff1a|\\]', re.IGNORECASE) from: [<function tone_marks at 0x000001F08A55E170>, <function period_comma at 0x000001F08A55E290>, <function colon at 0x000001F08A55E320>, <function other_punctuation at 0x000001F08A55E3B0>]>
+19:01:50 lang.py - DEBUG: langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ms': 'Malay', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+19:01:50 tts.py - DEBUG: pre-processing: <function tone_marks at 0x000001F08A55D6C0>
+19:01:50 tts.py - DEBUG: pre-processing: <function end_of_line at 0x000001F08A55E050>
+19:01:50 tts.py - DEBUG: pre-processing: <function abbreviations at 0x000001F08A55DFC0>
+19:01:50 tts.py - DEBUG: pre-processing: <function word_sub at 0x000001F08A55E0E0>
+19:01:50 tts.py - DEBUG: text_parts: ['what is your name?']
+19:01:50 tts.py - DEBUG: text_parts: 1
+19:01:50 tts.py - DEBUG: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22what%20is%20your%20name%3F%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+19:01:50 connectionpool.py - DEBUG: Starting new HTTPS connection (1): translate.google.com:443
+19:01:50 connectionpool.py - DEBUG: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+19:01:50 tts.py - DEBUG: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '156'}
+19:01:50 tts.py - DEBUG: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+19:01:50 tts.py - DEBUG: status-0: 200
+19:01:50 tts.py - DEBUG: part-0 written to <_io.BufferedWriter name='speech0.mp3'>
+19:01:50 tts.py - DEBUG: part-0 created
+19:01:50 tts.py - DEBUG: Saved to speech0.mp3
+19:01:52 device.py - DEBUG: GDX >> 58  06  FB  AA  50  01
+19:01:52 device_bleak.py - DEBUG: BLE WRITE: >>>58  06  FB  AA  50  01
+19:01:52 device_bleak.py - DEBUG: lengthRemaining 0 offset 6
+19:01:52 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: Receive buffer length: 154 Expected packet length: 154
+19:01:52 device_bleak.py - DEBUG: BLE READ: <<<98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+19:01:52 device.py - DEBUG: GDX << 98  9A  03  4B  50  FB  01  00  C0  01  00  00  00  00  46  6F  72  63  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  4E  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  9A  99  99  99  99  99  B9  3F  00  00  00  00  00  00  49  C0  00  00  00  00  00  00  49  40  50  C3  00  00  00  A4  93  D6  00  00  00  00  A0  86  01  00  64  00  00  00  00  00  00  00
+19:01:52 device.py - INFO: Sensor[1] info:
+19:01:52 device.py - INFO:   Description: Force                                                       
+19:01:52 device.py - INFO:   ID: 448
+19:01:52 device.py - INFO:   Measurement type: 0
+19:01:52 device.py - INFO:   Sampling mode: 0
+19:01:52 device.py - INFO:   Units: N                               
+19:01:52 device.py - INFO:   Measurement uncertainty: 0
+19:01:52 device.py - INFO:   Measurement min: -50
+19:01:52 device.py - INFO:   Measurement max: 50
+19:01:52 device.py - INFO:   Period typical 100000
+19:01:52 device.py - INFO:   Period min: 50000
+19:01:52 device.py - INFO:   Period max: 3600000000
+19:01:52 device.py - INFO:   Period granularity: 100
+19:01:52 device.py - INFO:   Mutual exclusion mask: 0x0
+19:01:52 device.py - DEBUG: GDX >> 58  0F  FA  0C  1B  FF  00  40  42  0F  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: BLE WRITE: >>>58  0F  FA  0C  1B  FF  00  40  42  0F  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: lengthRemaining 0 offset 15
+19:01:52 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  10  04  51  1B  FA  FF  00  40  42  0F  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: Receive buffer length: 16 Expected packet length: 16
+19:01:52 device_bleak.py - DEBUG: BLE READ: <<<98  10  04  51  1B  FA  FF  00  40  42  0F  00  00  00  00  00
+19:01:52 device.py - DEBUG: GDX << 98  10  04  51  1B  FA  FF  00  40  42  0F  00  00  00  00  00
+19:01:52 device.py - DEBUG: GDX >> 58  13  F9  7E  18  FF  01  02  00  00  00  00  00  00  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: BLE WRITE: >>>58  13  F9  7E  18  FF  01  02  00  00  00  00  00  00  00  00  00  00  00
+19:01:52 device_bleak.py - DEBUG: lengthRemaining 0 offset 19
+19:01:52 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  07  05  B5  18  F9  00
+19:01:52 device_bleak.py - DEBUG: Receive buffer length: 7 Expected packet length: 7
+19:01:52 device_bleak.py - DEBUG: BLE READ: <<<98  07  05  B5  18  F9  00
+19:01:52 device.py - DEBUG: GDX << 98  07  05  B5  18  F9  00
+19:01:53 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+19:01:53 device_bleak.py - DEBUG: Receive buffer length: 17 Expected packet length: 17
+19:01:53 device_bleak.py - DEBUG: BLE READ: <<<20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+19:01:53 device.py - DEBUG: GDX << 20  11  00  3F  0C  02  00  00  00  00  00  00  00  00  00  00  00
+19:01:53 device.py - INFO: Ignoring non-supported measurement type
+19:01:53 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  01  82  06  02  00  01  F9  A0  DD  15  C0
+19:01:53 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:53 device_bleak.py - DEBUG: BLE READ: <<<20  0D  01  82  06  02  00  01  F9  A0  DD  15  C0
+19:01:53 device.py - DEBUG: GDX << 20  0D  01  82  06  02  00  01  F9  A0  DD  15  C0
+19:01:53 device.py - DEBUG: MEASUREMENT: 20  0D  01  82  06  02  00  01  F9  A0  DD  15  C0
+19:01:53 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:54 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  02  83  06  02  00  01  F9  A0  DD  15  C0
+19:01:54 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:54 device_bleak.py - DEBUG: BLE READ: <<<20  0D  02  83  06  02  00  01  F9  A0  DD  15  C0
+19:01:54 device.py - DEBUG: GDX << 20  0D  02  83  06  02  00  01  F9  A0  DD  15  C0
+19:01:54 device.py - DEBUG: MEASUREMENT: 20  0D  02  83  06  02  00  01  F9  A0  DD  15  C0
+19:01:54 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:55 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  03  84  06  02  00  01  F9  A0  DD  15  C0
+19:01:55 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:55 device_bleak.py - DEBUG: BLE READ: <<<20  0D  03  84  06  02  00  01  F9  A0  DD  15  C0
+19:01:55 device.py - DEBUG: GDX << 20  0D  03  84  06  02  00  01  F9  A0  DD  15  C0
+19:01:55 device.py - DEBUG: MEASUREMENT: 20  0D  03  84  06  02  00  01  F9  A0  DD  15  C0
+19:01:55 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:56 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  04  85  06  02  00  01  F9  A0  DD  15  C0
+19:01:56 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:56 device_bleak.py - DEBUG: BLE READ: <<<20  0D  04  85  06  02  00  01  F9  A0  DD  15  C0
+19:01:56 device.py - DEBUG: GDX << 20  0D  04  85  06  02  00  01  F9  A0  DD  15  C0
+19:01:56 device.py - DEBUG: MEASUREMENT: 20  0D  04  85  06  02  00  01  F9  A0  DD  15  C0
+19:01:56 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:57 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  05  86  06  02  00  01  F9  A0  DD  15  C0
+19:01:57 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:57 device_bleak.py - DEBUG: BLE READ: <<<20  0D  05  86  06  02  00  01  F9  A0  DD  15  C0
+19:01:57 device.py - DEBUG: GDX << 20  0D  05  86  06  02  00  01  F9  A0  DD  15  C0
+19:01:57 device.py - DEBUG: MEASUREMENT: 20  0D  05  86  06  02  00  01  F9  A0  DD  15  C0
+19:01:57 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:58 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  06  87  06  02  00  01  F9  A0  DD  15  C0
+19:01:58 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:58 device_bleak.py - DEBUG: BLE READ: <<<20  0D  06  87  06  02  00  01  F9  A0  DD  15  C0
+19:01:58 device.py - DEBUG: GDX << 20  0D  06  87  06  02  00  01  F9  A0  DD  15  C0
+19:01:58 device.py - DEBUG: MEASUREMENT: 20  0D  06  87  06  02  00  01  F9  A0  DD  15  C0
+19:01:58 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:01:59 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  07  88  06  02  00  01  F9  A0  DD  15  C0
+19:01:59 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:01:59 device_bleak.py - DEBUG: BLE READ: <<<20  0D  07  88  06  02  00  01  F9  A0  DD  15  C0
+19:01:59 device.py - DEBUG: GDX << 20  0D  07  88  06  02  00  01  F9  A0  DD  15  C0
+19:01:59 device.py - DEBUG: MEASUREMENT: 20  0D  07  88  06  02  00  01  F9  A0  DD  15  C0
+19:01:59 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:02:00 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  08  89  06  02  00  01  F9  A0  DD  15  C0
+19:02:00 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:02:00 device_bleak.py - DEBUG: BLE READ: <<<20  0D  08  89  06  02  00  01  F9  A0  DD  15  C0
+19:02:00 device.py - DEBUG: GDX << 20  0D  08  89  06  02  00  01  F9  A0  DD  15  C0
+19:02:00 device.py - DEBUG: MEASUREMENT: 20  0D  08  89  06  02  00  01  F9  A0  DD  15  C0
+19:02:00 device.py - DEBUG: REAL32: A0  DD  15  C0
+19:02:01 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  09  80  06  02  00  01  F9  C0  B3  15  C0
+19:02:01 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:02:01 device_bleak.py - DEBUG: BLE READ: <<<20  0D  09  80  06  02  00  01  F9  C0  B3  15  C0
+19:02:01 device.py - DEBUG: GDX << 20  0D  09  80  06  02  00  01  F9  C0  B3  15  C0
+19:02:01 device.py - DEBUG: MEASUREMENT: 20  0D  09  80  06  02  00  01  F9  C0  B3  15  C0
+19:02:01 device.py - DEBUG: REAL32: C0  B3  15  C0
+19:02:02 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  0A  96  06  02  00  01  F9  80  07  16  C0
+19:02:02 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:02:02 device_bleak.py - DEBUG: BLE READ: <<<20  0D  0A  96  06  02  00  01  F9  80  07  16  C0
+19:02:02 device.py - DEBUG: GDX << 20  0D  0A  96  06  02  00  01  F9  80  07  16  C0
+19:02:02 device.py - DEBUG: MEASUREMENT: 20  0D  0A  96  06  02  00  01  F9  80  07  16  C0
+19:02:02 device.py - DEBUG: REAL32: 80  07  16  C0
+19:02:03 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  0B  82  06  02  00  01  F9  C0  B3  15  C0
+19:02:03 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:02:03 device_bleak.py - DEBUG: BLE READ: <<<20  0D  0B  82  06  02  00  01  F9  C0  B3  15  C0
+19:02:03 device.py - DEBUG: GDX << 20  0D  0B  82  06  02  00  01  F9  C0  B3  15  C0
+19:02:03 device.py - DEBUG: MEASUREMENT: 20  0D  0B  82  06  02  00  01  F9  C0  B3  15  C0
+19:02:03 device.py - DEBUG: REAL32: C0  B3  15  C0
+19:02:04 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  0D  0C  83  06  02  00  01  F9  C0  B3  15  C0
+19:02:04 device_bleak.py - DEBUG: Receive buffer length: 13 Expected packet length: 13
+19:02:04 device_bleak.py - DEBUG: BLE READ: <<<20  0D  0C  83  06  02  00  01  F9  C0  B3  15  C0
+19:02:04 device.py - DEBUG: GDX << 20  0D  0C  83  06  02  00  01  F9  C0  B3  15  C0
+19:02:04 device.py - DEBUG: MEASUREMENT: 20  0D  0C  83  06  02  00  01  F9  C0  B3  15  C0
+19:02:04 device.py - DEBUG: REAL32: C0  B3  15  C0
