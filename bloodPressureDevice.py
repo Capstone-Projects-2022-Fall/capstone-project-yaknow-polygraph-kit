@@ -28,7 +28,8 @@ def main():
     theAPIs = gdx()
     connected = False
     while connected == False:
-        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+#        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+        devicesFound = theAPIs.open_usb()
         if devicesFound == True:
             connected = True
         # else:
@@ -48,9 +49,10 @@ def main():
 #    theAPIs.stop()
     theAPIs.select_sensors([2])
 
-    theAPIs.start(500)
+    theAPIs.start()
+    correctPressure = False
 # This will continuously print out empty arrays - I thought if we just made it go longer, eventually it would print out the result, but it didnt
-    for i in range(40):
+    for i in range(20):
         measurements = theAPIs.read()
         if measurements == None:
             break
@@ -59,7 +61,7 @@ def main():
     # while correctPressure == False:
     #     measurements = theAPIs.read()
     #     print(measurements)
-    #     if measurements[0] > 0:
+    #     if measurements[0] > 1:
     #         correctPressure = True
 
     theAPIs.stop()
