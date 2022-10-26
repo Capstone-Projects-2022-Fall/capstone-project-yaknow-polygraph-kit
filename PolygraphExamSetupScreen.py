@@ -29,6 +29,8 @@ global_list_of_questions_selected = []
 global global_overall_questions
 PolygraphExamSetupScreen.global_overall_questions = []
 
+global samplingRateGeneral
+
 global respirationConnected
 
 global window
@@ -42,6 +44,8 @@ global RespirationSamplingRate
 global GSRConnected
 
 global GSRSamplingRate
+
+global BloodPressureSamplingRate
 
 def database_lower():
     for i in range(len(database)):
@@ -119,9 +123,9 @@ def make_window():
     # xImage = ImageTk.PhotoImage(image=xImage)
 
     menu = ['', ['Control Question Technique', 'Guilty Knowledge Test']]
-    RespirationSampling = ['', ['1', '5']]
-    BloodPressureSampling = ['', ['1', '5']]
-    SkinConductivitySampling = ['', ['1', '5']]
+    # RespirationSampling = ['', ['1', '5']]
+    # BloodPressureSampling = ['', ['1', '5']]
+    # SkinConductivitySampling = ['', ['1', '5']]
 
     # layout is a list of lists
     # the lists corresponds to how many rows there will be on the display
@@ -156,9 +160,14 @@ def make_window():
     ]
 
     row3 = [
-        [gui.ButtonMenu('Select Blood Pressure Sampling Rate', BloodPressureSampling, k='-BPSampling-'),
-         gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
-         gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
+        # [
+       #  gui.ButtonMenu('Select Blood Pressure Sampling Rate', gui.Input(size=(20, 1), enable_events=True, key='-BPSampling-')),
+        #  gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
+        #  gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
+        [
+            gui.Input(size=(20, 1), enable_events=True, key='-BPSampling-'), gui.Input(size=(20, 1), enable_events=True, key='-RSampling-'),
+            gui.Input(size=(20, 1), enable_events=True, key='-RSampling-')
+         ]
     ]
 
     col4 = [
@@ -230,7 +239,7 @@ def make_window():
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=row4, title='', key='row4')],
         [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3')],
-        [gui.Frame(layout=row3, title='', key='row3')],
+        [gui.Frame(layout=row3, title='Choose a Sampling Rate for\n       Blood Pressure               Skin Conductivity              Blood Pressure', key='row3')],
         [gui.Frame(layout=col5, title='', key='row5'), gui.Frame(layout=col6, title='', k='col6')],
         [gui.Frame(layout=col4, title='Selected Questions. Click on Selected Questions to deselect', key='col4'), gui.Frame(layout=col4_2, title='', k='col4_2'), gui.Frame(layout=col4_3, title='', k='col4_3')],
         [gui.Frame(layout=row7, title='', key='row7')]
@@ -336,25 +345,21 @@ def startExam(window1):
                 window['-EXAMINATIONTYPE-'].update(button_text="Guilty Knowledge Test")
                 window.refresh()
         elif event == '-RSampling-':
-            if values['-RSampling-'] == '1':
-                window['-RSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.RespirationSamplingRate = 1
-                window.refresh()
-            elif values['-RSampling-'] == '5':
-                window['-RSampling-'].update(button_text="5")
+             if values['-RSampling-'] != '':
+            #     window['-RSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.RespirationSamplingRate = values['-RSampling-']
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.RespirationSamplingRate = 5
                 window.refresh()
         elif event == '-SCSampling-':
-            if values['-SCSampling-'] == '1':
-                window['-SCSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.GSRSamplingRate = 1
-                window.refresh()
-            elif values['-SCSampling-'] == '5':
-                window['-SCSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.GSRSamplingRate = 5
-                window.refresh()
+             if values['-SCSampling-'] != '':
+                 PolygraphExamSetupScreen.GSRSamplingRate = values['-SCSampling-']
+                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                 window.refresh()
+        elif event == '-BPSampling-':
+             if values['-BPSampling-'] != '':
+                 PolygraphExamSetupScreen.BloodPressureSamplingRate = values['-BPSampling-']
+                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                 window.refresh()
 
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
