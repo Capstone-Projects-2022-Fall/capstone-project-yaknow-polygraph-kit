@@ -118,7 +118,6 @@ def make_window():
     xImage = xImage.resize((50, 50), Image.Resampling.LANCZOS)
     # xImage = ImageTk.PhotoImage(image=xImage)
 
-    menu = ['', ['Control Question Technique', 'Guilty Knowledge Test']]
     RespirationSampling = ['', ['1', '5']]
     BloodPressureSampling = ['', ['1', '5']]
     SkinConductivitySampling = ['', ['1', '5']]
@@ -131,7 +130,7 @@ def make_window():
     ]
 
     row1 = [
-        [gui.ButtonMenu('Select Examination Type', menu, k='-EXAMINATIONTYPE-'), gui.Text('Blood Pressure Sensor'),
+        [gui.Text('Blood Pressure Sensor'),
          gui.Text('Skin Conductivity Sensor'), gui.Text('Respiration Sensor')]
     ]
 
@@ -310,11 +309,7 @@ def startExam(window1):
             PolygraphExamSetupScreen.examStarted = True
 
             # to be removed later, we don't want to limit our customer to just 5-15 questions before proceeding
-            if (len(PolygraphExamSetupScreen.global_overall_questions) < 5):
-                #print('Minimum 5 questions, Maximum 15 questions')
-                #print('you have: ' + str(len(PolygraphExamSetupScreen.global_overall_questions)) + ' questions')
-                continue
-            elif (len(PolygraphExamSetupScreen.global_overall_questions) > 15):
+            if (len(PolygraphExamSetupScreen.global_overall_questions) != 9):
                 #print('Minimum 5 questions, Maximum 15 questions')
                 #print('you have: ' + str(len(PolygraphExamSetupScreen.global_overall_questions)) + ' questions')
                 continue
