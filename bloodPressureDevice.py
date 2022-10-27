@@ -28,29 +28,29 @@ def main():
     theAPIs = gdx()
     connected = False
     while connected == False:
-#        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
-        devicesFound = theAPIs.open_usb()
+        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+#        devicesFound = theAPIs.open_usb()
         if devicesFound == True:
             connected = True
         # else:
         #     logging.info('Devices found:' + devicesFound)
-#     theAPIs.select_sensors([1])
-#     theAPIs.start(500)
-#     correctPressure = False
+    theAPIs.select_sensors()
+    theAPIs.start(1000)
+    correctPressure = False
 # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
 # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
 # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
-#     while correctPressure == False:
-#         measurements = theAPIs.read()
-#         print(measurements)
-#         if measurements[0] > 155:
-#             correctPressure = True
+    while correctPressure == False:
+        measurements = theAPIs.read()
+        print(measurements)
+        if measurements[0] > 155:
+            correctPressure = True
 
-#    theAPIs.stop()
-    theAPIs.select_sensors([2])
+    theAPIs.stop()
+#    theAPIs.select_sensors([1])
 
-    theAPIs.start()
-    correctPressure = False
+#    theAPIs.start()
+#    correctPressure = False
 # This will continuously print out empty arrays - I thought if we just made it go longer, eventually it would print out the result, but it didnt
     for i in range(20):
         measurements = theAPIs.read()
