@@ -28,7 +28,7 @@ def createGraphs():
         RespirationMeasurement.append(respirationRecording.measurement)
         RespirationTime.append(respirationRecording.timestamp)
 
-    graph0.plot(RespirationMeasurement, RespirationTime, color='b', marker='o')
+    graph0.plot(RespirationTime, RespirationMeasurement, color='b', marker='o')
     graph0.set_ylabel("Respiration")
 
     '''graph1.plot(x, y, color='k', marker='o')
@@ -40,14 +40,14 @@ def createGraphs():
     graph3.plot(x, y, color='b', marker='o')
     graph3.set_ylabel("BPM")'''
 
-def update():
+def update(val):
     current_value = slider_position.val
     graph3.axis([current_value, current_value+10, 0, 100])
     fig.canvas.draw()
 
-createGraphs()
-slider_position.on_changed(update)
+#createGraphs()
+#slider_position.on_changed(update)
 
-plt.show()
+#plt.show()
 
 

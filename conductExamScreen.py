@@ -148,6 +148,7 @@ def startExam(window1):
             conductExamScreen.examFinished = True
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
+            graphResults.plt.show()
             examOver()
 
 
