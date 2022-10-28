@@ -3,14 +3,13 @@
 import mysql.connector
 from mysql.connector import errorcode
 
-db = mysql.connector.connect(
-    host="173.255.232.150",
-    user="cis4398",
-    passwd="dNC=IK~9)7",
-    database="Questions"
-)
-
 def add_question(question):
+    db = mysql.connector.connect(
+        host="173.255.232.150",
+        user="cis4398",
+        passwd="dNC=IK~9)7",
+        database="Questions"
+    )
     '''
     This function adds question into the centralized database using MySQL
     :param question: The user input for question to be added
@@ -20,7 +19,15 @@ def add_question(question):
         mycursor.execute("INSERT INTO Question (question) VALUES (%s)", (question,))
         db.commit()
 
+    db. close()
+
 def delete_question(question):
+    db = mysql.connector.connect(
+        host="173.255.232.150",
+        user="cis4398",
+        passwd="dNC=IK~9)7",
+        database="Questions"
+    )
     '''
     This function delete question from the centralized database.
     Only user with admin rights can delete question from the database.
@@ -39,7 +46,15 @@ def delete_question(question):
         else:
             raise
 
+    db.close()
+
 def show_questions():
+    db = mysql.connector.connect(
+        host="173.255.232.150",
+        user="cis4398",
+        passwd="dNC=IK~9)7",
+        database="Questions"
+    )
     '''
     This function shows/prints the contents in Question database in MySQL
     :return: void
@@ -49,4 +64,29 @@ def show_questions():
         for x in mycursor:
             print(x[0])
 
-show_questions()
+    db.close()
+def get_questions():
+    db = mysql.connector.connect(
+        host="173.255.232.150",
+        user="cis4398",
+        passwd="dNC=IK~9)7",
+        database="Questions"
+    )
+    '''
+    This function returns the contents in table Question
+    :return: questions in tuples
+    '''
+
+    questions = []
+    with db.cursor() as mycursor:
+        mycursor.execute("SELECT * FROM Question")
+        questions = mycursor.fetchall()
+
+    # convert list of tuples to just a list
+    list_question = [item for t in questions for item in t]
+    # change to lowercase
+    list_questions_lower = [x.lower() for x in list_question]
+    # remove leading and trailing spaces and new lines
+    list_questions_clean = [x.strip().replace("\n", "") for x in list_questions_lower]
+    db.close()
+    return list_questions_clean
