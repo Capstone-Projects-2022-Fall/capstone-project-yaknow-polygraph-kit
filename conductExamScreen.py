@@ -9,6 +9,12 @@ import threading
 import time
 import tts
 
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+import scipy.integrate as integrate
+from multiprocessing import Process, Queue
+
 global window
 
 global examFinished
@@ -29,6 +35,7 @@ global skinConductivityRecordings
 
 global yn
 
+global thread
 
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
@@ -59,7 +66,7 @@ def make_window():
     ]
 
     row4 = [
-        [gui.Push(), gui.Button('Restart', key='-Restart-'), gui.Button('Cancel Conversion', key='-cancelConversion-'),
+        [gui.Push(), gui.Button('Restart', key='-Restart-', visible='False'), gui.Button('Cancel Conversion', key='-cancelConversion-'),
          gui.Push()]
     ]
 
@@ -80,27 +87,51 @@ def make_window():
 
 
 def examCounter():
-    while examFinished == False:
+    while conductExamScreen.examFinished == False:
         conductExamScreen.examTime = conductExamScreen.examTime + 1
-        PolygraphExamSetupScreen.window['-Time-'].update(examTime)
-        if (conductExamScreen.examTime % 120) == 1:
+        conductExamScreen.window['-Time-'].update(examTime)
+        #print("MODDED: ", conductExamScreen.examTime % 10)
+        if (conductExamScreen.examTime % 10) == 1:
             for respirationRecording in conductExamScreen.respirationRecordings:
                 if respirationRecording.yn == None:
                     respirationRecording.yn = conductExamScreen.yn
             conductExamScreen.yn = None
-            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[conductExamScreen.questionCounter]
+            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
             tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
-            conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
-            conductExamScreen.window['-Text-'].update(newQuestion)
+            if(len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1) ):
+                window.write_event_value('-ENDED-', None)
+
+
+            else:
+                conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+                conductExamScreen.window['-Text-'].update(newQuestion)
         time.sleep(1)
 
 
+def examOver():
+    respirationbyQuestion = []
+    tempArray = []
+    tempQuestion = conductExamScreen.respirationRecordings[0].question
+    x = 0
+    while(x < len(respirationRecordings)):
+        if( (tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1) ) ):
+            respirationbyQuestion.append(tempArray)
+            print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
+            tempArray = []
+            tempArray.append(respirationRecordings[x].measurement)
+            tempQuestion = respirationRecordings[x].question
+            x = x + 1
+        else:
+            tempArray.append(respirationRecordings[x].measurement)
+            x = x + 1
+
 def startExam(window1):
 
+    conductExamScreen.justRespirationRate = []
 
     conductExamScreen.window = window1
 
-    thread = threading.Thread(target=examCounter)
+    thread = threading.Thread(target=conductExamScreen.examCounter)
     thread.start()
 
     while True:
@@ -112,3 +143,8 @@ def startExam(window1):
             conductExamScreen.yn = True
         elif event == '-NO-':
             conductExamScreen.yn = False
+        elif event == '-ENDED-':
+            conductExamScreen.examFinished = True
+            examOver()
+
+

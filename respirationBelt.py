@@ -49,10 +49,11 @@ def connectRespirationBelt():
 
         tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
         conductExamScreen.respirationRecordings.append(tempMeasurement)
-        length = len(conductExamScreen.respirationRecordings)
-        print(length)
-        print(conductExamScreen.respirationRecordings[length-1].timestamp, conductExamScreen.respirationRecordings[length-1].measurement, conductExamScreen.respirationRecordings[length-1].question, conductExamScreen.respirationRecordings[length-1].yn)
-        #print("Respiration Recordings: ", currentTime, measurements)
+        #length = len(conductExamScreen.respirationRecordings)
+        #print(length)
+        #if(length > 3):
+            #print("First: ", conductExamScreen.respirationRecordings[length-1].timestamp, conductExamScreen.respirationRecordings[length-1].measurement, conductExamScreen.respirationRecordings[length-1].question, conductExamScreen.respirationRecordings[length-1].yn)
+    print("Respiration Exited")
 
 
 def connectRespirationBeltIndividual():

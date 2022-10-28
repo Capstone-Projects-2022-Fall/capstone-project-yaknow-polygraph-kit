@@ -43,6 +43,10 @@ global GSRConnected
 
 global GSRSamplingRate
 
+global thread1
+
+global thread2
+
 def database_lower():
     for i in range(len(database)):
         database[i] = database[i].lower()
@@ -265,11 +269,11 @@ def startExam(window1):
     alreadyChanged = False
     PolygraphExamSetupScreen.respirationConnected = False
 
-    thread = threading.Thread(target=respirationBelt.connectRespirationBelt)
-    thread.start()
+    thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt)
+    thread1.start()
 
-    thread = threading.Thread(target=arduino.connectGSRSensor)
-    thread.start()
+    thread2 = threading.Thread(target=arduino.connectGSRSensor)
+    thread2.start()
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
