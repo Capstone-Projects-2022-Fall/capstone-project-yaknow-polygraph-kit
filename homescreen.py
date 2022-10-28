@@ -2,6 +2,8 @@ import PySimpleGUI as gui
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
 import homescreen
+import matplotlib
+matplotlib.use("TkAgg")
 
 global deviceSelected
 
