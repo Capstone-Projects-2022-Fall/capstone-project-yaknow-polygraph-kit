@@ -4,6 +4,8 @@ import datetime
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
 
+# import numpy as np
+
 
 with open('polygraphExamKitLogging.log', 'w'):
     pass
@@ -34,29 +36,58 @@ def main():
             connected = True
         # else:
         #     logging.info('Devices found:' + devicesFound)
-    theAPIs.select_sensors()
-    theAPIs.start(1000)
+    theAPIs.select_sensors([1,7])
+    theAPIs.start(100)
     correctPressure = False
+    possibleBP = []
+    maxOsc = 0
 # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
 # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
 # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
     while correctPressure == False:
         measurements = theAPIs.read()
         print(measurements)
-        if measurements[0] > 155:
+        possibleBP.append(measurements)
+        if measurements[1] > maxOsc:
+            maxOsc = measurements[1]
+        if measurements[0] < 60:
             correctPressure = True
 
     theAPIs.stop()
+
+    print("Max oscillation is : " + str(maxOsc))
+  #  print(possibleBP)
+
+
+
+# Creates a list of lists from the measurements, then creats a list of each value going from cuff pressure, oscillation, cuff pressure, oscillation, etc
+# then from there finds the max value of the oscilation, then gets the corresponding cuff pressure, which is mean arterial pressure
+    listt = []
+    for inner_list in (possibleBP):
+        for element in (inner_list):
+            listt.append(element)
+            # if element == maxOsc:
+            #     print("Your mean arterial blood pressure is : " + str(element-1))
+
+    for index, elem in enumerate(listt):
+        if (index +1 < len(listt) and index - 1 >= 0):
+            prev_el = str(listt[index - 1])
+            if elem == maxOsc:
+                print("Your real mean arterial blood pressure is : " + str(prev_el))
+
+
+
+
 #    theAPIs.select_sensors([1])
 
 #    theAPIs.start()
 #    correctPressure = False
 # This will continuously print out empty arrays - I thought if we just made it go longer, eventually it would print out the result, but it didnt
-    for i in range(20):
-        measurements = theAPIs.read()
-        if measurements == None:
-            break
-        print(measurements)
+#     for i in range(40):
+#         measurements = theAPIs.read()
+#         if measurements == None:
+#             break
+#         print(measurements)
 #IDEA: print out the values (they are nothing) until a result is more than 0 (the blood pressure) *this prints absolutely nothing tho*
     # while correctPressure == False:
     #     measurements = theAPIs.read()
