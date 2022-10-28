@@ -98,8 +98,7 @@ def startExam(window1):
 
     IndividualDeviceScreen.checkmarkImage = Image.open(checkPath)
 
-    IndividualDeviceScreen.checkmarkImage = IndividualDeviceScreen.checkmarkImage.resize((50, 50),
-                                                                                         Image.Resampling.LANCZOS)
+    IndividualDeviceScreen.checkmarkImage = IndividualDeviceScreen.checkmarkImage.resize((50, 50), Image.Resampling.LANCZOS)
     IndividualDeviceScreen.checkmarkImage = IndividualDeviceScreen.ImageTk.PhotoImage(image=checkmarkImage)
 
     IndividualDeviceScreen.window = window1
