@@ -58,7 +58,10 @@ class gdx:
             while i < len(gdx.devices):
                 open_device_success = gdx.devices[i].open()
                 print("open device ", i, " = ", open_device_success, sep="")
+                return True
                 i += 1
+        
+                
 
     def open_ble(self, device_to_open=None):
         """ Open a Go Direct device via bluetooth for data collection.
@@ -175,6 +178,7 @@ class gdx:
         if not gdx.devices:
             print("select_sensors() - no device connected")
             return
+        
 
         # If the sensors argument is left blank provide an input prompt for the user to select sensors
         if sensors == None:
