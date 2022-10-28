@@ -4,6 +4,14 @@ import datetime
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
 
+import math
+import numpy as np
+
+import time
+
+
+from scipy.signal import find_peaks
+
 # import numpy as np
 
 
@@ -27,6 +35,9 @@ def main():
     logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG, force=True, format=log_format,
                         datefmt='%H:%M:%S')
 
+
+
+
     theAPIs = gdx()
     connected = False
     while connected == False:
@@ -40,7 +51,9 @@ def main():
     theAPIs.start(100)
     correctPressure = False
     possibleBP = []
+    listOfOscillations = []
     maxOsc = 0
+    t0 = time.time()
 # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
 # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
 # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
@@ -48,20 +61,50 @@ def main():
         measurements = theAPIs.read()
         print(measurements)
         possibleBP.append(measurements)
+        listOfOscillations.append(measurements[1])
         if measurements[1] > maxOsc:
             maxOsc = measurements[1]
-        if measurements[0] < 60:
+        if measurements[0] < 70:
             correctPressure = True
 
+    t1 = time.time()
     theAPIs.stop()
+    totalTime = t1 - t0
+
 
     print("Max oscillation is : " + str(maxOsc))
+
+    print("the time it took to find blood pressure: " + str(totalTime))
+
+    oscillationPeaks = (find_peaks(listOfOscillations))
+   # x = np.linspace()
+    peak_pos = [oscillationPeaks[0]]
+    print(peak_pos)
+    oscillationPeaksList = (list(oscillationPeaks))
+
+
+
+ #   print(oscillationPeaks.sum())
+ #   print(oscillationPeaks[0].size)
+#    print(oscillationPeaksList)
+
+#    print(len(oscillationPeaksList))
+
+  #  print("Length of number of peaks: " + str(len(find_peaks(listOfOscillations))))
+  #  print("Length of number of peaks: " + str(np.count_nonzero((find_peaks(listOfOscillations)))))
+    print("Length of number of peaks: " + str(len([peak_pos])))
+
+    pulseRate = ((((len(peak_pos)))/totalTime) * 60)
+    print("The pulse rate is: " + str(pulseRate))
+
+
   #  print(possibleBP)
 
 
 
 # Creates a list of lists from the measurements, then creats a list of each value going from cuff pressure, oscillation, cuff pressure, oscillation, etc
 # then from there finds the max value of the oscilation, then gets the corresponding cuff pressure, which is mean arterial pressure
+
     listt = []
     for inner_list in (possibleBP):
         for element in (inner_list):
