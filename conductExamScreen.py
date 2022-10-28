@@ -8,6 +8,7 @@ import respirationBelt
 import threading
 import time
 import tts
+import graphResults
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -145,6 +146,8 @@ def startExam(window1):
             conductExamScreen.yn = False
         elif event == '-ENDED-':
             conductExamScreen.examFinished = True
+            graphResults.createGraphs()
+            graphResults.slider_position.on_changed(graphResults.update)
             examOver()
 
 
