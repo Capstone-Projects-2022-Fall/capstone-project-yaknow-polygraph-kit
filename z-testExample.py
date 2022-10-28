@@ -10,6 +10,8 @@
 # 
 # If the Z-statistic is more then 3.0, the two samples are highly signficantly different
 
+#this method is by hand lowkey
+
 import math
 
 
@@ -29,14 +31,6 @@ problematicDataPoints = 25
 baselineOmega = ((baselineDeviation / (math.sqrt(baselineDataPoints))))
 problematicOmega = ((problematicDeviation / (math.sqrt(problematicDataPoints))))
 
-# print(baselineOmega)
-# print(problematicOmega)
-# print(baselineOmega**2)
-# print(problematicOmega**2)
-# print(math.sqrt(baselineOmega**2 + problematicOmega**2))
-# print((baselineMean - problematicMean)/math.sqrt(baselineOmega**2 + problematicOmega**2))
-# print(baselineMean - problematicMean)
-# print(baselineOmega**2 + problematicOmega**2)
 
 
 z_test = (baselineMean - problematicMean)/(math.sqrt(baselineOmega**2 + problematicOmega**2))
