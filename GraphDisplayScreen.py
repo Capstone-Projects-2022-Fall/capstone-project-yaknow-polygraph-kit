@@ -11,7 +11,7 @@ SIEMENS = [2, 3, 4, 4.6, 6, 5.3, 4.4, 4, 5, 6.8]
 
 RESPIRATION = [12, 12, 13, 15, 14, 17, 16, 15, 15, 20]
 
-fig, graph= plt.subplots(2, 2, sharex=True)
+fig, (graph0, graph1, graph2, graph3)= plt.subplots(nrows=4, ncols=1, sharex=True)
 
 fig.subplots_adjust(hspace=0)
 
@@ -37,22 +37,22 @@ def animate(i):
             x.append(row[0])
             y.append(int(row[1]))
 
-        graph[0,0].clear()
-        graph[1,0].clear()
-        graph[0,1].clear()
-        graph[1,1].clear()
+        graph0.clear()
+        graph1.clear()
+        graph2.clear()
+        graph3.clear()
 
-        graph[0,0].plot(x, y, color='b', marker='o')
-        graph[0,0].set_ylabel("BPM")
+        graph0.plot(x, y, color='b', marker='o')
+        graph0.set_ylabel("BPM")
 
-        graph[1,0].plot(x, y, color='k', marker='o')
-        graph[1,0].set_ylabel("Siemens")
+        graph1.plot(x, y, color='k', marker='o')
+        graph1.set_ylabel("Siemens")
 
-        graph[0,1].plot(x, y, color='g', marker='o')
-        graph[0,1].set_ylabel("Respiration")
+        graph2.plot(x, y, color='g', marker='o')
+        graph2.set_ylabel("Respiration")
 
-        graph[1,1].plot(x, y, color='b', marker='o')
-        graph[1,1].set_ylabel("BPM")
+        graph3.plot(x, y, color='b', marker='o')
+        graph3.set_ylabel("BPM")
 
 ani = animation.FuncAnimation(fig, animate, interval=1000)
 
