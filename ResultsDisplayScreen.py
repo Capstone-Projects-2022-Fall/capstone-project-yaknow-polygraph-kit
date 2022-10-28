@@ -24,6 +24,7 @@ def new_window():
 
     graph = window['graph']
 
+
     BPM = [65,67,70,72,80,85,90,95,110,115,130]
 
     graph.draw_line((0, MIDDLE), (600, MIDDLE), color='black')
