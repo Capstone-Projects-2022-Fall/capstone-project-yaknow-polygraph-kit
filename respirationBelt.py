@@ -9,6 +9,8 @@ import PolygraphExamSetupScreen
 
 import IndividualDeviceScreen
 
+import conductExamScreen
+
 with open('polygraphExamKitLogging.log', 'w'):
     pass
 
@@ -39,19 +41,19 @@ def connectRespirationBelt():
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
 
-    for i in range(12):
+    while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
         currentTime = datetime.datetime.now()
         if measurements == None:
             break
-        print("Respiration Recordings: ", currentTime, measurements)
-    #if devicesFound is None:
-    #    logging.error('No Device connected.')
-    #else:
-    #    logging.info('Devices found:' + devicesFound)
 
-
-    #print("Hello World")
+        tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
+        conductExamScreen.respirationRecordings.append(tempMeasurement)
+        #length = len(conductExamScreen.respirationRecordings)
+        #print(length)
+        #if(length > 3):
+            #print("First: ", conductExamScreen.respirationRecordings[length-1].timestamp, conductExamScreen.respirationRecordings[length-1].measurement, conductExamScreen.respirationRecordings[length-1].question, conductExamScreen.respirationRecordings[length-1].yn)
+    print("Respiration Exited")
 
 
 def connectRespirationBeltIndividual():
