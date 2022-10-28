@@ -1,4 +1,3 @@
-# import
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
@@ -14,6 +13,7 @@ from threading import Timer
 import homescreen
 import tts
 
+import database
 import os
 import sys
 
@@ -22,25 +22,20 @@ checkPath = os.path.abspath(os.path.join(bundle_dir, 'transparentCheck.png'))
 XPath = os.path.abspath(os.path.join(bundle_dir, 'transparentX.png'))
 
 
-database = read_database_file()
 global_list_of_questions_searched_and_selected = []
 global_list_of_questions_5_added = []
 global_list_of_questions_selected = []
-global global_overall_questions
 PolygraphExamSetupScreen.global_overall_questions = []
-
+# this is the overall questions selected and added by user
+global global_overall_questions
+# this is the variable that will store the questions read from the MySQL database
+global this_data
 global respirationConnected
-
 global window
-
 global checkmarkImage
-
 global examStarted
-
 global RespirationSamplingRate
-
 global GSRConnected
-
 global GSRSamplingRate
 
 global thread1
@@ -111,10 +106,11 @@ def get_global_list_of_questions_5_added():
 
 
 def make_window():
+    # this is the variable that will store the questions read from the MySQL database
+    PolygraphExamSetupScreen.this_data = database.get_questions()
     header = ['yaKnow - Polygraph Exam Startup']
     
     #Checkmark Image Source: https://toppng.com/uploads/preview/check-mark-png-11553206004impjy81rdu.png
-
     checkmarkImage = Image.open(checkPath)
 
     # X Image Source: https://www.pngfind.com/pngs/m/42-423721_green-check-red-x-png-red-x-transparent.png
@@ -127,8 +123,6 @@ def make_window():
     BloodPressureSampling = ['', ['1', '5']]
     SkinConductivitySampling = ['', ['1', '5']]
 
-    # layout is a list of lists
-    # the lists corresponds to how many rows there will be on the display
 
     row0 = [
         [gui.Text('yaKnow - Polygraph Exam Startup', size=(25, 1))]
@@ -148,15 +142,19 @@ def make_window():
 
     col1 = [
         [gui.Input(size=(20, 1), enable_events=True, key='-SEARCHINPUT-')],
-        [gui.Listbox(database, size=(20, 4), enable_events=True, key='-SEARCHQUESTIONS-')]
+        [gui.Listbox(this_data, size=(30, 4), enable_events=True, key='-SEARCHQUESTIONS-')]
     ]
 
     col2 = [
-        [gui.Listbox(database, size=(20, 4), enable_events=True, select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='-SELECTQUESTIONS-')]
+        [gui.Listbox(this_data, size=(30, 4), enable_events=True, select_mode=PySimpleGUI.LISTBOX_SELECT_MODE_MULTIPLE, k='-SELECTQUESTIONS-')]
     ]
         
     col3 = [
-        [gui.Multiline(key='-PROBLEMATICQUESTIONS-', enable_events=True, s=(40, 5)), gui.Button('Start Examination')]
+        [gui.Multiline(key='-PROBLEMATICQUESTIONS-', enable_events=True, s=(26, 4)), gui.Button('Add to database')]
+    ]
+
+    col3_2 = [
+        [gui.Button('Start Examination')]
     ]
 
     row3 = [
@@ -233,7 +231,7 @@ def make_window():
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=row4, title='', key='row4')],
-        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3')],
+        [gui.Frame(layout=col1, title='Search Functionality', key='col1'), gui.Frame(layout=col2, title='Select Functionality', k='col2'), gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3'), gui.Frame(layout=col3_2, title='', k='col3_2')],
         [gui.Frame(layout=row3, title='', key='row3')],
         [gui.Frame(layout=col5, title='', key='row5'), gui.Frame(layout=col6, title='', k='col6')],
         [gui.Frame(layout=col4, title='Selected Questions. Click on Selected Questions to deselect', key='col4'), gui.Frame(layout=col4_2, title='', k='col4_2'), gui.Frame(layout=col4_3, title='', k='col4_3')],
@@ -277,9 +275,7 @@ def startExam(window1):
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
-
         #print(event, values)
-        # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event == '-BackButton-':
@@ -312,18 +308,6 @@ def startExam(window1):
             conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
 
             PolygraphExamSetupScreen.examStarted = True
-
-            # to be removed later, we don't want to limit our customer to just 5-15 questions before proceeding
-            if (len(PolygraphExamSetupScreen.global_overall_questions) < 5):
-                #print('Minimum 5 questions, Maximum 15 questions')
-                #print('you have: ' + str(len(PolygraphExamSetupScreen.global_overall_questions)) + ' questions')
-                continue
-            elif (len(PolygraphExamSetupScreen.global_overall_questions) > 15):
-                #print('Minimum 5 questions, Maximum 15 questions')
-                #print('you have: ' + str(len(PolygraphExamSetupScreen.global_overall_questions)) + ' questions')
-                continue
-
-            #print("you met the requirements")
             newWindow = conductExamScreen.make_window()
             PolygraphExamSetupScreen.window.close()
             PolygraphExamSetupScreen.window = newWindow
@@ -364,7 +348,7 @@ def startExam(window1):
         if (values['-SEARCHINPUT-'] != ''):
             search_question = values['-SEARCHINPUT-']
             search_question = str(search_question).lower()
-            new_val = [question for question in database if search_question in question]
+            new_val = [question for question in this_data if search_question in question]
             window['-SEARCHQUESTIONS-'].update(new_val)
 
             # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
@@ -377,7 +361,7 @@ def startExam(window1):
                             PolygraphExamSetupScreen.global_overall_questions.append(x)
                     #global_list_of_questions_searched_and_selected.append(values['-SEARCHQUESTIONS-'])
         else:
-            window['-SEARCHQUESTIONS-'].update(database)
+            window['-SEARCHQUESTIONS-'].update(this_data)
             # only append to list if the list from -SEARCHQUESTIONS- is not empty AND the value to be appended is not already in the list
             if (len(values['-SEARCHQUESTIONS-']) != 0):
                 if(values['-SEARCHQUESTIONS-'] not in global_list_of_questions_searched_and_selected):
@@ -403,66 +387,46 @@ def startExam(window1):
             if x not in global_list_of_questions_selected:
                 global_list_of_questions_selected.append(x)
 
-        # add functionality
-        if (values['-PROBLEMATICQUESTIONS-'] != ''):
-            if values['-EXAMINATIONTYPE-'] == 'Guilty Knowledge Test':
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                new_lines_count = problematic_questions.count('\n')
+        # add functionality revision
+        if(event == 'Add to database'):
+            if(values['-PROBLEMATICQUESTIONS-'] != ''):
+                # store the user input for questions
+                questions = values['-PROBLEMATICQUESTIONS-']
+                # separate user questions based on "?"
+                questions_split = questions.split("?")
+                # strip white spaces
+                questions_split = [x.strip(' ') for x in questions_split]
+                # for each question
+                for x in questions_split:
+                    if x != '':
+                        # add the question mark back in and create that question in mysql database
+                        database.add_question(x+"?")
+                        # add the question mark back in and append to the overall list
+                        global_overall_questions.append(x+"?")
 
-                # scenario: this scenario relies on user putting all questions in first line, each question separated by "?"
-                if new_lines_count == 0:
-                    question_mark_count = problematic_questions.count('?')
-
-                    # split questions by "?", grab first 5 and add the "?" back in
-                    if question_mark_count >= 5:
-                        questions_added = str(problematic_questions).split('?')
-
-                        if len(questions_added) >= 5:
-                            for x in range(5):
-                                if questions_added[x] not in global_list_of_questions_5_added:
-                                    global_list_of_questions_5_added.append(questions_added[x].strip() + '?')
-                                    PolygraphExamSetupScreen.global_overall_questions.append(questions_added[x].strip() + '?')
-                                    PolygraphExamSetupScreen.global_overall_questions = [*set(PolygraphExamSetupScreen.global_overall_questions)]
-                                    window['-OVERALLQUESTIONS-'].update(PolygraphExamSetupScreen.global_overall_questions)
-                else:
-                    # scenario: user puts each questions on a separate line
-                    local_list_of_questions = str(problematic_questions).split('\n')
-
-                    # only grab first 5 questions on each line
-                    if len(local_list_of_questions) >= 5:
-                        for x in range(5):
-                            # check if current question has '?', if not add it for them
-                            if local_list_of_questions[x].count('?') == 0:
-                                if local_list_of_questions[x] not in global_list_of_questions_5_added:
-                                    global_list_of_questions_5_added.append(local_list_of_questions[x] + '?')
-                                    PolygraphExamSetupScreen.global_overall_questions.append(local_list_of_questions[x] + '?')
-                                    PolygraphExamSetupScreen.global_overall_questions = [*set(PolygraphExamSetupScreen.global_overall_questions)]
-                                    window['-OVERALLQUESTIONS-'].update(PolygraphExamSetupScreen.global_overall_questions)
-                            elif local_list_of_questions[x].count('?') == 1:
-                                if local_list_of_questions[x] not in global_list_of_questions_5_added:
-                                    global_list_of_questions_5_added.append(local_list_of_questions[x])
-                                    PolygraphExamSetupScreen.global_overall_questions.append(local_list_of_questions[x])
-                                    PolygraphExamSetupScreen.global_overall_questions = [*set(PolygraphExamSetupScreen.global_overall_questions)]
-                                    window['-OVERALLQUESTIONS-'].update(PolygraphExamSetupScreen.global_overall_questions)
+            # user input has been added to database and overall list, now clear user input for questions
+            window['-PROBLEMATICQUESTIONS-'].update('')
+            # get the data that has been added to MySQL by reading from the MySQL database (must use global variable otherwise program crashes)
+            PolygraphExamSetupScreen.this_data = database.get_questions()
+            # update the search and select window to show that the questions has been added to MySQL database
+            window['-SEARCHQUESTIONS-'].update(PolygraphExamSetupScreen.this_data)
+            window['-SELECTQUESTIONS-'].update(PolygraphExamSetupScreen.this_data)
+            # update the overall questions box
+            window['-OVERALLQUESTIONS-'].update(PolygraphExamSetupScreen.global_overall_questions)
 
         if event == '-OVERALLQUESTIONS-':
             # deselect all questions selected in the selection functionality (this is required as we need to have all values['-SELECTQUESTIONS-'] deselected first in order to deselect here
             # erase all text inputs from add new questions functionality (required for deselect)
             window['-SELECTQUESTIONS-'].update(set_to_index=[])
             window['-PROBLEMATICQUESTIONS-'].update('')
+            # if overall question is not empty
             if len(values['-OVERALLQUESTIONS-']) > 0:
                 deselect_question = values['-OVERALLQUESTIONS-'][0]
 
-                PolygraphExamSetupScreen.global_overall_questions = [
-                    *set(PolygraphExamSetupScreen.global_overall_questions)]
-                #print(deselect_question)
-
+                PolygraphExamSetupScreen.global_overall_questions = [*set(PolygraphExamSetupScreen.global_overall_questions)]
                 try:
                     while True:
                         PolygraphExamSetupScreen.global_overall_questions.remove(deselect_question)
-                        #global_list_of_questions_selected.remove(deselect_question)
-
-
                 except ValueError:
                     pass
 
@@ -500,10 +464,6 @@ def startExam(window1):
     #print('selected:', get_selected_questions())
     #print('added:', get_global_list_of_questions_5_added())
 
-
-    # add to database textfile
-    for x in get_global_list_of_questions_5_added():
-        create_question(x)
 
 
 if __name__ == '__main__':
