@@ -19,7 +19,7 @@ def add_question(question):
         mycursor.execute("INSERT INTO Question (question) VALUES (%s)", (question,))
         db.commit()
 
-    db. close()
+    db.close()
 
 def delete_question(question):
     db = mysql.connector.connect(
