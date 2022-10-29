@@ -4,7 +4,7 @@
 import logging
 from PIL import Image, ImageTk
 import datetime
-
+import time
 import PolygraphExamSetupScreen
 
 import IndividualDeviceScreen
@@ -40,11 +40,11 @@ def connectRespirationBelt():
 
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
-
+    examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         if(conductExamScreen.inQuestion == True):
             measurements = theAPIs.read()
-            currentTime = datetime.datetime.now()
+            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
             if measurements == None:
                 break
 

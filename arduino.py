@@ -5,6 +5,7 @@ import time
 
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
+import conductExamScreen
 
 baud = 9600
 file_name = "analog_data.csv"
@@ -40,16 +41,17 @@ def connectGSRSensor():
     if(immediateExit == False):
         sensor_data = []
         rate = PolygraphExamSetupScreen.GSRSamplingRate
-
-        for i in range(12):
+        examStartTime = datetime.datetime.now()
+        while conductExamScreen.examFinished == False:
             getData = ser.readline()
             data = int(getData.decode('utf-8'))
-            currentTime = datetime.datetime.now()
+            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
             final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-            print("Skin Conductivity Recording: ", currentTime, final_reading)
-            sensor_data.append(final_reading)
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading,
+                                                                  conductExamScreen.newQuestion, conductExamScreen.yn)
+            conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
             time.sleep(rate)
-        print(final_reading)
+            print(final_reading)
     print("GSR Exited")
 
 
