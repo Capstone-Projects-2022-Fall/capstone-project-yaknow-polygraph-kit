@@ -1,5 +1,6 @@
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+import arduino
 
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -130,6 +131,8 @@ def startExam(window1):
 
     conductExamScreen.justRespirationRate = []
 
+
+
     conductExamScreen.window = window1
 
     thread = threading.Thread(target=conductExamScreen.examCounter)
@@ -150,5 +153,3 @@ def startExam(window1):
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show()
             examOver()
-
-
