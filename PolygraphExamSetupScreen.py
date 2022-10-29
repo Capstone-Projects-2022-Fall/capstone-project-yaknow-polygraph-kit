@@ -226,8 +226,6 @@ def make_window():
         [gui.Button("Back", k='-BackButton-')]
     ]
 
-    #
-
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
@@ -271,12 +269,14 @@ def startExam(window1):
 
     thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt)
     thread1.start()
-# NEW FOR BLOOD PRESSURE
-    thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
-    thread.start()
-    
+
     thread2 = threading.Thread(target=arduino.connectGSRSensor)
     thread2.start()
+
+    # NEW FOR BLOOD PRESSURE
+    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
+    thread3.start()
+
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
@@ -289,6 +289,7 @@ def startExam(window1):
             PolygraphExamSetupScreen.window = newWindow
             homescreen.main()
         elif event in ('Start Examination'):
+
 
             conductExamScreen.respirationRecordings = []
 
@@ -308,9 +309,13 @@ def startExam(window1):
 
             conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[0]
 
-            tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+            conductExamScreen.inQuestion = False
 
-            conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+            #tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+
+            #conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+
+            conductExamScreen.iterated = False
 
             PolygraphExamSetupScreen.examStarted = True
             newWindow = conductExamScreen.make_window()

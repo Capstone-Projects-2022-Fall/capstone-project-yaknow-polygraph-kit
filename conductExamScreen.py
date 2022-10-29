@@ -37,6 +37,10 @@ global yn
 
 global thread
 
+global readyToStart
+
+global inQuestion
+
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
         self.timestamp = timestamp
@@ -58,7 +62,7 @@ def make_window():
     ]
 
     row2 = [
-        [gui.Text('0', key='-Time-')]
+        [gui.Text('0', key='-Time-'), gui.Text('Cuff Pressure: ', key='-CuffPressure-')]
     ]
 
     row3 = [
@@ -88,24 +92,29 @@ def make_window():
 
 def examCounter():
     while conductExamScreen.examFinished == False:
-        conductExamScreen.examTime = conductExamScreen.examTime + 1
-        conductExamScreen.window['-Time-'].update(examTime)
-        #print("MODDED: ", conductExamScreen.examTime % 10)
-        if (conductExamScreen.examTime % 10) == 1:
-            for respirationRecording in conductExamScreen.respirationRecordings:
-                if respirationRecording.yn == None:
-                    respirationRecording.yn = conductExamScreen.yn
-            conductExamScreen.yn = None
-            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
-            tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
-            if(len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1) ):
-                window.write_event_value('-ENDED-', None)
+        if(conductExamScreen.inQuestion == True):
+            conductExamScreen.examTime = conductExamScreen.examTime + 1
+            conductExamScreen.window['-Time-'].update(examTime)
+            if(conductExamScreen.iterated == False):
+                print("Switched Question")
+                conductExamScreen.iterated = True
+                #for respirationRecording in conductExamScreen.respirationRecordings:
+                #    if respirationRecording.yn == None:
+                #        respirationRecording.yn = conductExamScreen.yn
+                conductExamScreen.yn = None
+                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
+                tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
+                if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
+                    window.write_event_value('-ENDED-', None)
+                else:
+                    conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+                    conductExamScreen.window['-Text-'].update(newQuestion)
+            time.sleep(1)
+        else:
+            print("Pausing")
+            conductExamScreen.iterated = False
+            time.sleep(1)
 
-
-            else:
-                conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
-                conductExamScreen.window['-Text-'].update(newQuestion)
-        time.sleep(1)
 
 
 def examOver():

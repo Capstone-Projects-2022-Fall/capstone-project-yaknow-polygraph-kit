@@ -3,6 +3,7 @@ import datetime
 
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
+import conductExamScreen
 
 import math
 import numpy as np
@@ -24,7 +25,7 @@ logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG,
 
 
 def connectBloodPressureDevice():
-    from gdx import gdx
+    from gdx2 import gdx
     theAPIs = gdx()
     connected = False
     while connected == False:
@@ -37,56 +38,73 @@ def connectBloodPressureDevice():
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
         pass
-
+    print("Starting Exam in BP")
 # blood pressure sensor can measure mean arterial pressure, systolic (the maximum), diastolic (minimum)
 # Also, sampling rate would be different then the other device, since recording blood pressure will take longer    
     theAPIs.select_sensors([1,7])
 
-    rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000
-    theAPIs.start(rate)
+    #rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000
+    theAPIs.start(100)
 
-    correctPressure = False
-    possibleBP = []
     listOfOscillations = []
+    possibleBP = []
     maxOsc = 0
-    t0 = time.time()
+    conductExamScreen.inQuestion = False
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
-    while correctPressure == False:
+    while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
-        print(measurements)
-        possibleBP.append(measurements)
-        listOfOscillations.append(measurements[1])
-        if measurements[1] > maxOsc:
-            maxOsc = measurements[1]
-        if measurements[0] < 500:
-            correctPressure = True
+        correctPressure = False
+        conductExamScreen.inQuestion = False
+        if ( (measurements[0] < 150)):
+            #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
+            print("Paused Measurements: ", measurements[0])
+        else:
+            conductExamScreen.inQuestion = True
+            while correctPressure == False:
+                measurements = theAPIs.read()
+                print("Recording Measurements: ", measurements[0])
+                currentTime = datetime.datetime.now()
+                possibleBP.append(measurements)
+                listOfOscillations.append(measurements[1])
+                if measurements[1] > maxOsc:
+                    maxOsc = measurements[1]
+                if measurements[0] < 70:
+                    print("Less than 70")
+                    listt = []
+                    for inner_list in (possibleBP):
+                        for element in (inner_list):
+                            listt.append(element)
+                            # if element == maxOsc:
+                            #     print("Your mean arterial blood pressure is : " + str(element-1))
 
-    t1 = time.time()
-    theAPIs.stop()
-    totalTime = t1 - t0
+                    for index, elem in enumerate(listt):
+                        if (index + 1 < len(listt) and index - 1 >= 0):
+                            prev_el = str(listt[index - 1])
+                            if elem == maxOsc:
+                                finalMeasurement = prev_el
+                                #print("Your real mean arterial blood pressure is : " + str(prev_el))
+                    tempMeasurement = conductExamScreen.singularRecording(currentTime, finalMeasurement,conductExamScreen.newQuestion, conductExamScreen.yn)
+                    conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
+                    correctPressure = True
+                    listOfOscillations = []
+                    possibleBP = []
 
-    print("Max oscillation is : " + str(maxOsc))
 
-    print("the time it took to find blood pressure: " + str(totalTime))
+    #t1 = time.time()
+    #theAPIs.stop()
+    #totalTime = t1 - t0
+
+    #print("Max oscillation is : " + str(maxOsc))
+
+    #print("the time it took to find blood pressure: " + str(totalTime))
 
 
     # Creates a list of lists from the measurements, then creats a list of each value going from cuff pressure, oscillation, cuff pressure, oscillation, etc
     # then from there finds the max value of the oscilation, then gets the corresponding cuff pressure, which is mean arterial pressure
 
-    listt = []
-    for inner_list in (possibleBP):
-        for element in (inner_list):
-            listt.append(element)
-            # if element == maxOsc:
-            #     print("Your mean arterial blood pressure is : " + str(element-1))
 
-    for index, elem in enumerate(listt):
-        if (index + 1 < len(listt) and index - 1 >= 0):
-            prev_el = str(listt[index - 1])
-            if elem == maxOsc:
-                print("Your real mean arterial blood pressure is : " + str(prev_el))
 
     # for i in range(12):
     #     measurements = theAPIs.read()
