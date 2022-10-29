@@ -1,6 +1,8 @@
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+
+import bloodPressureDevice
 from read_write import create_question, read_database_file
 import PolygraphExamSetupScreen
 import ResultsDisplayScreen
@@ -224,8 +226,6 @@ def make_window():
         [gui.Button("Back", k='-BackButton-')]
     ]
 
-    #
-
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
@@ -273,6 +273,11 @@ def startExam(window1):
     thread2 = threading.Thread(target=arduino.connectGSRSensor)
     thread2.start()
 
+    # NEW FOR BLOOD PRESSURE
+    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
+    thread3.start()
+
+
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
         #print(event, values)
@@ -284,6 +289,7 @@ def startExam(window1):
             PolygraphExamSetupScreen.window = newWindow
             homescreen.main()
         elif event in ('Start Examination'):
+
 
             conductExamScreen.respirationRecordings = []
 
@@ -303,9 +309,13 @@ def startExam(window1):
 
             conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[0]
 
-            tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+            conductExamScreen.inQuestion = False
 
-            conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+            #tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+
+            #conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+
+            conductExamScreen.iterated = False
 
             PolygraphExamSetupScreen.examStarted = True
             newWindow = conductExamScreen.make_window()
@@ -342,6 +352,17 @@ def startExam(window1):
                 window['-SCSampling-'].update(button_text="5")
                 problematic_questions = values['-PROBLEMATICQUESTIONS-']
                 PolygraphExamSetupScreen.GSRSamplingRate = 5
+                window.refresh()
+ # NEW FOR BLOOD PRESSURE // might need to update 
+        elif event == '-BPSampling-':
+            if values['-BPSampling-'] == '1':
+                window['-BPSampling-'].update(button_text="1")
+                PolygraphExamSetupScreen.BloodPressureSamplingRate = 1
+                window.refresh()
+            elif values['-BPSampling-'] == '5':
+                window['-BPSampling-'].update(button_text="5")
+                problematic_questions = values['-PROBLEMATICQUESTIONS-']
+                PolygraphExamSetupScreen.BloodPressureSamplingRate = 5
                 window.refresh()
 
         # search functionality
