@@ -8,6 +8,11 @@ global table_number
 
 
 def create_table(table_name):
+    '''
+    This function create table in MySQL
+    :param table_name:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -27,6 +32,11 @@ def create_table(table_name):
     db.close()
 
 def drop_table(table_name):
+    '''
+    This function drop table in MySQL
+    :param table_name:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -38,7 +48,13 @@ def drop_table(table_name):
         mycursor.execute(f"DROP TABLE {table_name}")
         db.commit()
     db.close()
+
 def show_table(table_to_show):
+    '''
+    This function show the contents in table_to_show
+    :param table_to_show:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -61,6 +77,10 @@ def show_table(table_to_show):
     db.close()
 
 def show_all_tables():
+    '''
+    This function show all tables in database Questions
+    :return:
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -75,17 +95,18 @@ def show_all_tables():
 
     for x in result:
         print(x[0])
+
 def desc_table(table_to_desc):
+    '''
+        This function describes the attributes in table_to_desc
+        :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
         passwd="dNC=IK~9)7",
         database="Questions"
     )
-    '''
-    This function describes the contents in table_to_desc
-    :return: void
-    '''
     result = None
     try:
         with db.cursor() as mycursor:
@@ -97,7 +118,13 @@ def desc_table(table_to_desc):
 
     db.close()
     print(result)
+
 def check_table_exist(the_table_to_check):
+    '''
+    This function checks if a table exists in MySQL
+    :param the_table_to_check:
+    :return: boolean
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -118,6 +145,11 @@ def check_table_exist(the_table_to_check):
 
 
 def get_table_id(the_table_to_check):
+    '''
+    This function gets the table id of the table to check
+    :param the_table_to_check:
+    :return: integer
+    '''
     match = re.search(r'\d+', the_table_to_check)
 
     if(match):
@@ -126,6 +158,13 @@ def get_table_id(the_table_to_check):
         return 1
 
 def find_available_id(the_table_to_check):
+    '''
+    This function finds the available id given the_table_to_check.
+    Upon finding an available id, create 4 table "Respiration", "BP", "Pulse", and "GSR",
+    with that available id appended to the end of respective table name.
+    :param the_table_to_check:
+    :return: void
+    '''
     new_table_to_check = None
     new_number = 0
     # while table exist, keep searching until table with id doesn't exist
@@ -158,7 +197,16 @@ def find_available_id(the_table_to_check):
 
 
 
-def respiration_insert(respiration_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+def Respiration_insert(respiration_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+    '''
+    This function inserts the given parameters into the respiration_table
+    :param respiration_table:
+    :param question_to_be_inserted:
+    :param response_to_be_inserted:
+    :param time_to_be_inserted:
+    :param measurement_to_be_inserted:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -173,6 +221,15 @@ def respiration_insert(respiration_table, question_to_be_inserted, response_to_b
     db.close()
 
 def BP_insert(bp_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+    '''
+    This function inserts the given parameters into the bp_table
+    :param bp_table:
+    :param question_to_be_inserted:
+    :param response_to_be_inserted:
+    :param time_to_be_inserted:
+    :param measurement_to_be_inserted:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -186,7 +243,16 @@ def BP_insert(bp_table, question_to_be_inserted, response_to_be_inserted, time_t
 
     db.close()
 
-def pulse_insert(pulse_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+def Pulse_insert(pulse_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+    '''
+    This function inserts the given parameter into pulse_table
+    :param pulse_table:
+    :param question_to_be_inserted:
+    :param response_to_be_inserted:
+    :param time_to_be_inserted:
+    :param measurement_to_be_inserted:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -201,6 +267,15 @@ def pulse_insert(pulse_table, question_to_be_inserted, response_to_be_inserted, 
     db.close()
 
 def GSR_insert(gsr_table, question_to_be_inserted, response_to_be_inserted, time_to_be_inserted, measurement_to_be_inserted):
+    '''
+    This function inserts the given parameter into gsr_table
+    :param gsr_table:
+    :param question_to_be_inserted:
+    :param response_to_be_inserted:
+    :param time_to_be_inserted:
+    :param measurement_to_be_inserted:
+    :return: void
+    '''
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -213,8 +288,18 @@ def GSR_insert(gsr_table, question_to_be_inserted, response_to_be_inserted, time
         db.commit()
 
     db.close()
+
 def get_table_number():
+    '''
+    This function gets the table number
+    :return: table number
+    '''
     return table_number
 
 def set_table_number(number_to_be_set):
+    '''
+    This function sets the table number
+    :param number_to_be_set:
+    :return: void
+    '''
     store_other_mysql.table_number = number_to_be_set
