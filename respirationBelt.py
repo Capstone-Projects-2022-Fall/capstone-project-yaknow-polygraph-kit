@@ -46,9 +46,8 @@ def connectRespirationBelt():
             print("Recording Respiration")
             measurements = theAPIs.read()
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
-            if measurements == None:
+            if measurements is None:
                 break
-
             tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
             conductExamScreen.respirationRecordings.append(tempMeasurement)
     print("Respiration Exited")
@@ -74,6 +73,7 @@ def connectRespirationBeltIndividual():
 
     rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
     theAPIs.start(rate)
+    print("Respiration Started")
 
     times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     for i in range(times):

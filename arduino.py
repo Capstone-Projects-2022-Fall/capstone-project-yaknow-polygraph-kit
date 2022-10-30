@@ -80,6 +80,7 @@ def connectGSRSensorIndividual():
 
     sensor_data = []
     times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    print("GSR: Started")
     for i in range(times):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))

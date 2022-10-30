@@ -10,6 +10,7 @@ import threading
 import time
 import tts
 import graphResults
+import homescreen
 
 import numpy as np
 import matplotlib.pyplot
@@ -102,9 +103,9 @@ def make_window():
 
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
-        [gui.VPush()],
+        #[gui.VPush()],
         [gui.Frame(layout=row1, title='', key='row1')],
-        [gui.VPush()],
+       # [gui.VPush()],
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=col3_1, title='', k='col3_1'), gui.Frame(layout=col3_2, title='', k='col3_2')],
         [gui.Push(), gui.Frame(layout=row4, title='', key='row4'), gui.Push()],
@@ -233,6 +234,13 @@ def startExam(window1):
             showRespirationProbabilityDistribution(4)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(5)
+        elif event == '-Restart-':
+          #  newWindow = homescreen.make_window()
+            conductExamScreen.window.close()
+           # PolygraphExamSetupScreen.window = newWindow
+            homescreen.main()
+
+
 
 
 
