@@ -43,6 +43,7 @@ def connectRespirationBelt():
     examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         if(conductExamScreen.inQuestion == True):
+            print("Recording Respiration")
             measurements = theAPIs.read()
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
             if measurements == None:

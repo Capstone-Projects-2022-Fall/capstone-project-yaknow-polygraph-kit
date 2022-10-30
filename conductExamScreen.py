@@ -123,7 +123,7 @@ def examCounter():
             conductExamScreen.examTime = conductExamScreen.examTime + 1
             conductExamScreen.window['-Time-'].update(examTime)
             if(conductExamScreen.iterated == False):
-                conductExamScreen.questionTimestamps[questionCounter] = examTime
+                conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
                 #for respirationRecording in conductExamScreen.respirationRecordings:
                 #    if respirationRecording.yn == None:
@@ -185,6 +185,8 @@ def startExam(window1):
 
     conductExamScreen.questionTimestamps = []
 
+    conductExamScreen.respirationbyQuestion = []
+
     conductExamScreen.window = window1
 
     conductExamScreen.initialExamEnded = False
@@ -202,6 +204,8 @@ def startExam(window1):
         elif event == '-NO-':
             conductExamScreen.yn = False
         elif event == '-ENDED-':
+            examOver()
+            print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
