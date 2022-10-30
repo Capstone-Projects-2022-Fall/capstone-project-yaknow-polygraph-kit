@@ -70,9 +70,9 @@ mean2 = statistics.mean(cityB)
 sd2 = statistics.stdev(cityB)
 
 plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
-plt.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g')
-# plt.hist(cityA, bins=int(180/10), density=True, alpha=0.6, color='b')
-# plt.hist(cityB, bins=int(180/10), density=True, alpha=0.6, color='g')
+plt.annotate('question 1',xy=(85,.03),arrowprops=dict(arrowstyle='-',connectionstyle='arc3,rad=0'),xytext=(85,.01))
+plt.annotate('question 2',xy=(105.03,.02986),arrowprops=dict(arrowstyle='-',connectionstyle='arc3,rad=0'),xytext=(105.03,.01))
+
 plt.show()
 
 
