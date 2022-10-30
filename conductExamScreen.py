@@ -112,3 +112,41 @@ def startExam(window1):
             conductExamScreen.yn = True
         elif event == '-NO-':
             conductExamScreen.yn = False
+<<<<<<< Updated upstream
+=======
+        elif event == '-ENDED-':
+            examOver()
+            print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
+            conductExamScreen.examFinished = True
+            conductExamScreen.window['-Test1R-'].update(visible=True)
+            conductExamScreen.window['-Test2R-'].update(visible=True)
+            conductExamScreen.window['-Test3R-'].update(visible=True)
+            conductExamScreen.window['-Test4R-'].update(visible=True)
+            conductExamScreen.window['-Test5R-'].update(visible=True)
+            conductExamScreen.window['-Test6R-'].update(visible=True)
+            conductExamScreen.window['-Test1G-'].update(visible=True)
+            conductExamScreen.window['-Test2G-'].update(visible=True)
+            conductExamScreen.window['-Test3G-'].update(visible=True)
+            conductExamScreen.window['-Test4G-'].update(visible=True)
+            conductExamScreen.window['-Test5G-'].update(visible=True)
+            conductExamScreen.window['-Test6G-'].update(visible=True)
+        elif event == '-Test1R-':
+            showRespirationProbabilityDistribution(0)
+        elif event == '-Test2R-':
+            showRespirationProbabilityDistribution(1)
+        elif event == '-Test3R-':
+            showRespirationProbabilityDistribution(2)
+        elif event == '-Test4R-':
+            showRespirationProbabilityDistribution(3)
+        elif event == '-Test5R-':
+            showRespirationProbabilityDistribution(4)
+        elif event == '-Test6R-':
+            showRespirationProbabilityDistribution(5)
+
+        #graphResults.createGraphs()
+        #graphResults.slider_position.on_changed(graphResults.update)
+        #graphResults.plt.show(block=False)
+        #examOver()
+
+        # plt.annotate('question 1',xy=(timeOfEndOfQuestion,topOfGraphValue),arrowprops=dict(arrowstyle='-',connectionstyle='arc3,rad=0'),xytext=(timeOfEndOfQuestion,.1))
+>>>>>>> Stashed changes

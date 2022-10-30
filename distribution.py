@@ -69,8 +69,16 @@ sd1 = statistics.stdev(cityA)
 mean2 = statistics.mean(cityB)
 sd2 = statistics.stdev(cityB)
 
-plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
-plt.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g')
+# plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+# plt.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g')
+
+
+fig, (graph0, graph1) = plt.subplots(nrows=2, ncols=1, sharex=False)
+graph0.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r',marker='o')
+graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g',marker='*')
+# plt.figure()
+# plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+# plt.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g')
 # plt.hist(cityA, bins=int(180/10), density=True, alpha=0.6, color='b')
 # plt.hist(cityB, bins=int(180/10), density=True, alpha=0.6, color='g')
 plt.show()
