@@ -174,6 +174,34 @@ def examOver():
             tempArray.append(respirationRecordings[x].measurement[0])
             x = x + 1
 
+def conductZtest(question):
+    '''
+    This function will return the z and p values from comparing a problematic question to a baseline
+    needs baselineData array/list and ProblematicQuestionData as input
+
+    :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
+    '''
+    # baselineData = [baselineData]
+    # problematicData = [problematicData.currentQuestion]
+    # zTest = list(ztest(baselineData, problematicData.currentQuestion))
+    # if conclusion[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+    baselineData1 = respirationbyQuestion[0]
+    baselineData2 = respirationbyQuestion[1]
+    baselineData3 = respirationbyQuestion[2]
+
+    questionData = respirationbyQuestion[question]
+
+    zTest1 = list(ztest(baselineData1, questionData))
+    if zTest1[1] < .05:
+        print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    else:
+        print("We do not have reason to believe the data has any major differences")
+
+
+
 def showRespirationProbabilityDistribution(question):
     # mean1 = statistics.mean(cityA)
     # sd1 = statistics.stdev(cityA)
@@ -223,8 +251,7 @@ def showRespirationProbabilityDistribution(question):
     matplotlib.pyplot.show()
 
 
-# def zTest():
-#
+
 
 def startExam(window1):
 
