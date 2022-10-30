@@ -1,6 +1,8 @@
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
 import arduino
+import matplotlib
+matplotlib.use('TKAgg')
 
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -131,18 +133,21 @@ def examCounter():
                 conductExamScreen.yn = None
                 conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
-                if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
+                conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+                conductExamScreen.window['-Text-'].update(newQuestion)
+                if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter)):
                     while(len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions) ):
                         #print("BP SIZE: ", len(bloodPressureRecordings) )
                         #print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
                         conductExamScreen.examTime = conductExamScreen.examTime + 1
                         conductExamScreen.window['-Time-'].update(examTime)
+                        conductExamScreen.window["-CuffPressure-"].update(bloodPressureRecordings)
                         time.sleep(1)
                         continue
                     window.write_event_value('-ENDED-', None)
-                else:
-                    conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
-                    conductExamScreen.window['-Text-'].update(newQuestion)
+                #else:
+                #    conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+                #    conductExamScreen.window['-Text-'].update(newQuestion)
             time.sleep(1)
         else:
             print("Pausing")
