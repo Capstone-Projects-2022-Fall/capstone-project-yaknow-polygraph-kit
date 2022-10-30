@@ -175,16 +175,51 @@ def examOver():
             x = x + 1
 
 def showRespirationProbabilityDistribution(question):
+    # mean1 = statistics.mean(cityA)
+    # sd1 = statistics.stdev(cityA)
+    #
+    # mean2 = statistics.mean(cityB)
+    # sd2 = statistics.stdev(cityB)
+    #
+    # # plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+    # #
+    #
+    #
+    #
+    # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
+    # plt.show()
 
     conductExamScreen.respirationbyQuestion[question].sort()
+
+    fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
+    fig, axs = matplotlib.subplot_mosaic([['1', '2'], ['3', '2']],constrained_layout=True)
+    for label, ax in axs.items():
+        ax.set_title('Probability Distribution for Respiration', fontstyle='italic')
+        ax.set_title(label, fontfamily='serif', loc='left', fontsize='medium')
+
     #baseline1question
+    meanBaseline1 = statistics.mean(conductExamScreen.respirationbyQuestion[0])
+    standardDeviationBaseline1 = statistics.stdev(conductExamScreen.respirationbyQuestion[0])
+    graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
+
     #baseline2question
+    meanBaseline2 = statistics.mean(conductExamScreen.respirationbyQuestion[1])
+    standardDeviationBaseline2 = statistics.stdev(conductExamScreen.respirationbyQuestion[1])
+    graph0.plot(conductExamScreen.respirationbyQuestion[1],norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+
     #baseline3question
 
-    mean = statistics.mean(conductExamScreen.respirationbyQuestion[question])
-    standardDeviation= statistics.stdev(conductExamScreen.respirationbyQuestion[question])
+    meanBaseline3 = statistics.mean(conductExamScreen.respirationbyQuestion[2])
+    standardDeviationBaseline3 = statistics.stdev(conductExamScreen.respirationbyQuestion[2])
+    graph0.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
 
-    matplotlib.pyplot.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(conductExamScreen.respirationbyQuestion[question], mean, standardDeviation))
+    #Test
+    meanTest = statistics.mean(conductExamScreen.respirationbyQuestion[question])
+    standardDeviationTest = statistics.stdev(conductExamScreen.respirationbyQuestion[question])
+
+    graph0.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     matplotlib.pyplot.show()
 
 def startExam(window1):
