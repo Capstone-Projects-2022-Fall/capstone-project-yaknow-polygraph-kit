@@ -96,7 +96,7 @@ def make_window():
     ]
 
     row5 = [
-        [gui.Push(), gui.Button('Restart', key='-Restart-', visible='False'), gui.Button('Cancel Conversion', key='-cancelConversion-'),
+        [gui.Push(), gui.Button('Restart', key='-Restart-', visible=False), gui.Button('Cancel Conversion', key='-cancelConversion-'),
          gui.Push()]
     ]
 
@@ -207,6 +207,7 @@ def startExam(window1):
             examOver()
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
+            conductExamScreen.window['-Restart-'].update(visible=True)
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
             conductExamScreen.window['-Test3R-'].update(visible=True)
@@ -219,6 +220,7 @@ def startExam(window1):
             conductExamScreen.window['-Test4G-'].update(visible=True)
             conductExamScreen.window['-Test5G-'].update(visible=True)
             conductExamScreen.window['-Test6G-'].update(visible=True)
+
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(0)
         elif event == '-Test2R-':
@@ -231,6 +233,8 @@ def startExam(window1):
             showRespirationProbabilityDistribution(4)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(5)
+
+
 
         #graphResults.createGraphs()
         #graphResults.slider_position.on_changed(graphResults.update)
