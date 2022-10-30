@@ -39,3 +39,20 @@ plt.xlabel("Data Points of Device for current question")
 plt.ylabel("Frequency")
 
 plt.show()
+
+
+#Example
+
+
+# max_val1 = currentQuestionData[0]
+# for check in currentQuestionData:
+#     if check > max_val1:
+#         max_val1 = check
+# 
+# min_val1 = currentQuestionData[0]
+# for check in currenQuestionData:
+#     if check < min_val1:
+#         min_val1 = check
+
+
+# plt.hist(currentQuestionData, bins=np.arange(min_val1, max_val1+1))

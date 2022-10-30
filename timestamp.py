@@ -77,6 +77,9 @@ plt.show()
 
 
 
+#if we have a timestamp:
+# plt.annotate('question 1',xy=(timeOfEndOfQuestion,topOfGraphValue),arrowprops=dict(arrowstyle='-',connectionstyle='arc3,rad=0'),xytext=(timeOfEndOfQuestion,.1))
+
 
 
 
