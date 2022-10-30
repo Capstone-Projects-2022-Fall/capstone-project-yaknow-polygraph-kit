@@ -222,6 +222,10 @@ def showRespirationProbabilityDistribution(question):
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     matplotlib.pyplot.show()
 
+
+# def zTest():
+#
+
 def startExam(window1):
 
     conductExamScreen.justRespirationRate = []
