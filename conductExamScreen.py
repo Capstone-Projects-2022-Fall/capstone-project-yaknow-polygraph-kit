@@ -12,6 +12,7 @@ import threading
 import time
 import tts
 import graphResults
+from statsmodels.stats.weightstats import ztest as ztest
 
 import numpy as np
 import matplotlib.pyplot
@@ -51,6 +52,9 @@ global respirationbyQuestion
 
 global questionTimestamps
 
+global zTest1
+global zTest2
+global zTest3
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
         self.timestamp = timestamp
@@ -181,24 +185,33 @@ def conductZtest(question):
 
     :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
     '''
-    # baselineData = [baselineData]
-    # problematicData = [problematicData.currentQuestion]
-    # zTest = list(ztest(baselineData, problematicData.currentQuestion))
-    # if conclusion[1] < .05:
-    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
-    # else:
-    #     print("We do not have reason to believe the data has any major differences")
+
     baselineData1 = respirationbyQuestion[0]
     baselineData2 = respirationbyQuestion[1]
     baselineData3 = respirationbyQuestion[2]
 
     questionData = respirationbyQuestion[question]
 
-    zTest1 = list(ztest(baselineData1, questionData))
-    if zTest1[1] < .05:
-        print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
-    else:
-        print("We do not have reason to believe the data has any major differences")
+    conductExamScreen.zTest1 = list(ztest(baselineData1, questionData))
+    # if zTest1[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+    conductExamScreen.zTest2 = list(ztest(baselineData2, questionData))
+    # if zTest2[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+    conductExamScreen.zTest3 = list(ztest(baselineData3, questionData))
+
+    # if zTest3[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+ #   return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
 
 
 
@@ -230,10 +243,11 @@ def showRespirationProbabilityDistribution(question):
     standardDeviationBaseline1 = statistics.stdev(conductExamScreen.respirationbyQuestion[0])
     graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
 
+
     #baseline2question
     meanBaseline2 = statistics.mean(conductExamScreen.respirationbyQuestion[1])
     standardDeviationBaseline2 = statistics.stdev(conductExamScreen.respirationbyQuestion[1])
-    graph0.plot(conductExamScreen.respirationbyQuestion[1],norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    graph0.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
 
     #baseline3question
 
@@ -248,6 +262,15 @@ def showRespirationProbabilityDistribution(question):
     graph0.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+
+    graph0.text(0.5, 0.5, 'Ztest results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
+                transform=graph0.transAxes)
+    graph1.text(0.5, 0.5, 'Ztest results(%s)' % conductExamScreen.zTest2, horizontalalignment='center', verticalalignment='center',
+                transform=graph0.transAxes)
+    graph2.text(0.5, 0.5, 'Ztest results(%s)' % conductExamScreen.zTest3, horizontalalignment='center', verticalalignment='center',
+                transform=graph0.transAxes)
+
+
     matplotlib.pyplot.show()
 
 
