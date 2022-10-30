@@ -177,6 +177,9 @@ def examOver():
 def showRespirationProbabilityDistribution(question):
 
     conductExamScreen.respirationbyQuestion[question].sort()
+    #baseline1question
+    #baseline2question
+    #baseline3question
 
     mean = statistics.mean(conductExamScreen.respirationbyQuestion[question])
     standardDeviation= statistics.stdev(conductExamScreen.respirationbyQuestion[question])
@@ -225,17 +228,17 @@ def startExam(window1):
             conductExamScreen.window['-Test5G-'].update(visible=True)
             conductExamScreen.window['-Test6G-'].update(visible=True)
         elif event == '-Test1R-':
-            showRespirationProbabilityDistribution(0)
-        elif event == '-Test2R-':
-            showRespirationProbabilityDistribution(1)
-        elif event == '-Test3R-':
-            showRespirationProbabilityDistribution(2)
-        elif event == '-Test4R-':
             showRespirationProbabilityDistribution(3)
-        elif event == '-Test5R-':
+        elif event == '-Test2R-':
             showRespirationProbabilityDistribution(4)
-        elif event == '-Test6R-':
+        elif event == '-Test3R-':
             showRespirationProbabilityDistribution(5)
+        elif event == '-Test4R-':
+            showRespirationProbabilityDistribution(6)
+        elif event == '-Test5R-':
+            showRespirationProbabilityDistribution(7)
+        elif event == '-Test6R-':
+            showRespirationProbabilityDistribution(8)
 
         #graphResults.createGraphs()
         #graphResults.slider_position.on_changed(graphResults.update)
