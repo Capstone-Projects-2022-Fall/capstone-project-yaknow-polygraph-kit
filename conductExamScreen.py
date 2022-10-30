@@ -250,7 +250,6 @@ def showRespirationProbabilityDistribution(question):
     graph0.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
 
     #baseline3question
-
     meanBaseline3 = statistics.mean(conductExamScreen.respirationbyQuestion[2])
     standardDeviationBaseline3 = statistics.stdev(conductExamScreen.respirationbyQuestion[2])
     graph0.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
@@ -263,15 +262,17 @@ def showRespirationProbabilityDistribution(question):
     graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
 
-    graph0.text(0.5, 0.5, 'Ztest results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
+    graph0.text(0.5, 0.25, 'Ztest results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
-    graph1.text(0.5, 0.5, 'Ztest results(%s)' % conductExamScreen.zTest2, horizontalalignment='center', verticalalignment='center',
+    graph1.text(0.5, 0.25, 'Ztest results(%s)' % conductExamScreen.zTest2, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
-    graph2.text(0.5, 0.5, 'Ztest results(%s)' % conductExamScreen.zTest3, horizontalalignment='center', verticalalignment='center',
+    graph2.text(0.5, 0.25, 'Ztest results(%s)' % conductExamScreen.zTest3, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
 
 
     matplotlib.pyplot.show()
+
+
 
 
 
