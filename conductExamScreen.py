@@ -233,6 +233,10 @@ def showRespirationProbabilityDistribution(question):
     for measurement in respirationbyQuestion[question]:
         print(measurement)
     conductExamScreen.respirationbyQuestion[question].sort()
+    conductExamScreen.respirationbyQuestion[1].sort()
+    conductExamScreen.respirationbyQuestion[2].sort()
+    conductExamScreen.respirationbyQuestion[3].sort()
+
 
     fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
     #fig,  axs= matplotlib.subplot_mosaic([['1', '2'], ['3', '2']],constrained_layout=True)
@@ -249,12 +253,12 @@ def showRespirationProbabilityDistribution(question):
     #baseline2question
     meanBaseline2 = statistics.mean(conductExamScreen.respirationbyQuestion[1])
     standardDeviationBaseline2 = statistics.stdev(conductExamScreen.respirationbyQuestion[1])
-    graph0.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    graph1.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
 
     #baseline3question
     meanBaseline3 = statistics.mean(conductExamScreen.respirationbyQuestion[2])
     standardDeviationBaseline3 = statistics.stdev(conductExamScreen.respirationbyQuestion[2])
-    graph0.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+    graph2.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
 
     #Test
     meanTest = statistics.mean(conductExamScreen.respirationbyQuestion[question])
@@ -266,19 +270,15 @@ def showRespirationProbabilityDistribution(question):
 
     conductZtest(question)
 
-    graph0.text(0.5, 0.25, 'Ztest results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
-    graph1.text(0.5, 0.25, 'Ztest results(%s)' % conductExamScreen.zTest2, horizontalalignment='center', verticalalignment='center',
-                transform=graph0.transAxes)
-    graph2.text(0.5, 0.25, 'Ztest results(%s)' % conductExamScreen.zTest3, horizontalalignment='center', verticalalignment='center',
-                transform=graph0.transAxes)
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2, horizontalalignment='center', verticalalignment='center',
+                transform=graph1.transAxes)
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3, horizontalalignment='center', verticalalignment='center',
+                transform=graph2.transAxes)
 
 
     matplotlib.pyplot.show()
-
-
-
-
 
 
 def startExam(window1):
