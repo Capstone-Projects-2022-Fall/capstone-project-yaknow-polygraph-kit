@@ -150,9 +150,9 @@ def startExam(window1):
             conductExamScreen.yn = False
         elif event == '-ENDED-':
             conductExamScreen.examFinished = True
-            graphResults.createGraphs()
-            graphResults.slider_position.on_changed(graphResults.update)
-            graphResults.plt.show()
+            #graphResults.createGraphs()
+            #graphResults.slider_position.on_changed(graphResults.update)
+            #graphResults.plt.show()
             frequencyGraph.createFrequencyGraphs()
             frequencyGraph.plt.show()
             examOver()
