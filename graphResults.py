@@ -47,6 +47,8 @@ def createGraphs():
 
     graph3.plot(x, y, color='b', marker='o')
     graph3.set_ylabel("BPM")
+    
+    graph3.set_xlabel("Time (seconds)")
 '''
 
 def update(val):
