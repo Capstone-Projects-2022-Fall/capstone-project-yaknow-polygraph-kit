@@ -10,7 +10,9 @@ import threading
 import time
 import tts
 import graphResults
+import frequencyGraph
 import homescreen
+
 
 import numpy as np
 import matplotlib.pyplot
@@ -205,6 +207,13 @@ def startExam(window1):
         elif event == '-NO-':
             conductExamScreen.yn = False
         elif event == '-ENDED-':
+            #FREQUENCY GRAPHING
+            #conductExamScreen.examFinished = True
+            #graphResults.createGraphs()
+            #graphResults.slider_position.on_changed(graphResults.update)
+            #graphResults.plt.show()
+            #frequencyGraph.createFrequencyGraphs()
+            #frequencyGraph.plt.show()
             examOver()
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
