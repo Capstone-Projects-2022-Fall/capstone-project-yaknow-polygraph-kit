@@ -1,7 +1,8 @@
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
 import arduino
-
+import matplotlib
+matplotlib.use('TKAgg')
 import conductExamScreen
 import PolygraphExamSetupScreen
 import ResultsDisplayScreen
@@ -10,45 +11,31 @@ import threading
 import time
 import tts
 import graphResults
-import homescreen
-
+from statsmodels.stats.weightstats import ztest as ztest
 import numpy as np
 import matplotlib.pyplot
 from scipy.stats import norm
 import statistics
 from multiprocessing import Process, Queue
-
 global window
-
 global examFinished
-
 global examTime
-
 global questionCounter
-
 global newQuestion
-
 global respirationRecordings
-
 global bloodPressureRecordings
-
 global pulseRecordings
-
 global skinConductivityRecordings
-
 global yn
-
 global thread
-
 global readyToStart
-
 global inQuestion
-
 global initialExamEnded
-
 global respirationbyQuestion
-
 global questionTimestamps
+global zTest1
+global zTest2
+global zTest3
 
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
@@ -170,14 +157,111 @@ def examOver():
             tempArray.append(respirationRecordings[x].measurement[0])
             x = x + 1
 
+
+def conductZtest(question):
+    '''
+    This function will return the z and p values from comparing a problematic question to a baseline
+    needs baselineData array/list and ProblematicQuestionData as input
+    :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
+    '''
+    baselineData1 = respirationbyQuestion[0]
+    baselineData2 = respirationbyQuestion[1]
+    baselineData3 = respirationbyQuestion[2]
+    questionData = respirationbyQuestion[question]
+    conductExamScreen.zTest1 = list(ztest(baselineData1, questionData))
+    # if zTest1[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+    conductExamScreen.zTest2 = list(ztest(baselineData2, questionData))
+    # if zTest2[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+    conductExamScreen.zTest3 = list(ztest(baselineData3, questionData))
+    # if zTest3[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+# return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
 def showRespirationProbabilityDistribution(question):
-
+    # mean1 = statistics.mean(cityA)
+    # sd1 = statistics.stdev(cityA)
+    #
+    # mean2 = statistics.mean(cityB)
+    # sd2 = statistics.stdev(cityB)
+    #
+    # # plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+    # #
+    #
+    #
+    #
+    # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
+    # plt.show()
+    for measurement in respirationbyQuestion[question]:
+        print(measurement)
     conductExamScreen.respirationbyQuestion[question].sort()
+    conductExamScreen.respirationbyQuestion[1].sort()
+    conductExamScreen.respirationbyQuestion[2].sort()
+    conductExamScreen.respirationbyQuestion[3].sort()
 
-    mean = statistics.mean(conductExamScreen.respirationbyQuestion[question])
-    standardDeviation= statistics.stdev(conductExamScreen.respirationbyQuestion[question])
+    # # subplot x and y axis
+    # ax = fig.add_subplot(111)
+    # ax.spines['top'].set_color('none')
+    # ax.spines['bottom'].set_color('none')
+    # ax.spines['left'].set_color('none')
+    # ax.spines['right'].set_color('none')
+    # ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+    # ax.set_xlabel('respiration')
+    # ax.set_ylabel('probability')
 
-    matplotlib.pyplot.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(conductExamScreen.respirationbyQuestion[question], mean, standardDeviation))
+    #   fig, (graph0, graph1, graph2, ax) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=False)
+    fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
+
+    # baseline1question
+    meanBaseline1 = statistics.mean(conductExamScreen.respirationbyQuestion[0])
+
+    standardDeviationBaseline1 = statistics.stdev(conductExamScreen.respirationbyQuestion[0])
+    #   graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
+    # baseline2question
+    meanBaseline2 = statistics.mean(conductExamScreen.respirationbyQuestion[1])
+    standardDeviationBaseline2 = statistics.stdev(conductExamScreen.respirationbyQuestion[1])
+    #  graph1.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    # baseline3question
+    meanBaseline3 = statistics.mean(conductExamScreen.respirationbyQuestion[2])
+    standardDeviationBaseline3 = statistics.stdev(conductExamScreen.respirationbyQuestion[2])
+    #   graph2.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+    # Test
+    meanTest = statistics.mean(conductExamScreen.respirationbyQuestion[question])
+    standardDeviationTest = statistics.stdev(conductExamScreen.respirationbyQuestion[question])
+    # plotting
+    graph0.plot(conductExamScreen.respirationbyQuestion[question],
+                norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph0.plot(conductExamScreen.respirationbyQuestion[0],
+                norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r', marker='o')
+    graph1.plot(conductExamScreen.respirationbyQuestion[question],
+                norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph1.plot(conductExamScreen.respirationbyQuestion[1],
+                norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    graph2.plot(conductExamScreen.respirationbyQuestion[question],
+                norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph2.plot(conductExamScreen.respirationbyQuestion[2],
+                norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+    # Subplot Titles
+    #     graph0[0, 0].title.set_text("Normal Distribution 1")
+    #     graph0[0, 1].title.set_text("Normal Distribution 2")
+    #     graph0[0, 2].title.set_text("Normal Distribution 3")
+
+    conductZtest(question)
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1, horizontalalignment='center',
+                verticalalignment='center',
+                transform=graph0.transAxes)
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2, horizontalalignment='center',
+                verticalalignment='center',
+                transform=graph1.transAxes)
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3, horizontalalignment='center',
+                verticalalignment='center',
+                transform=graph2.transAxes)
     matplotlib.pyplot.show()
 
 def startExam(window1):
@@ -223,22 +307,21 @@ def startExam(window1):
             conductExamScreen.window['-Test6G-'].update(visible=True)
 
         elif event == '-Test1R-':
-            showRespirationProbabilityDistribution(0)
-        elif event == '-Test2R-':
-            showRespirationProbabilityDistribution(1)
-        elif event == '-Test3R-':
-            showRespirationProbabilityDistribution(2)
-        elif event == '-Test4R-':
             showRespirationProbabilityDistribution(3)
-        elif event == '-Test5R-':
+        elif event == '-Test2R-':
             showRespirationProbabilityDistribution(4)
-        elif event == '-Test6R-':
+        elif event == '-Test3R-':
             showRespirationProbabilityDistribution(5)
-        elif event == '-Restart-':
+        elif event == '-Test4R-':
+            showRespirationProbabilityDistribution(6)
+        elif event == '-Test5R-':
+            showRespirationProbabilityDistribution(7)
+        elif event == '-Test6R-':
+            showRespirationProbabilityDistribution(8)
           #  newWindow = homescreen.make_window()
-            conductExamScreen.window.close()
-           # PolygraphExamSetupScreen.window = newWindow
-            homescreen.main()
+          #   conductExamScreen.window.close()
+          #  # PolygraphExamSetupScreen.window = newWindow
+          #   homescreen.main()
 
 
 
