@@ -25,6 +25,7 @@ logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG,
 
 
 def connectBloodPressureDevice():
+    time.sleep(5)
     from gdx2 import gdx
     theAPIs = gdx()
     connected = False
@@ -45,6 +46,7 @@ def connectBloodPressureDevice():
 
     #rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000
     theAPIs.start(100)
+    print("BloodPressure Started")
 
     listOfOscillations = []
     possibleBP = []
@@ -53,6 +55,7 @@ def connectBloodPressureDevice():
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
+    examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
         correctPressure = False
@@ -65,7 +68,7 @@ def connectBloodPressureDevice():
             while correctPressure == False:
                 measurements = theAPIs.read()
                 print("Recording Measurements: ", measurements[0])
-                currentTime = datetime.datetime.now()
+                currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
                 possibleBP.append(measurements)
                 listOfOscillations.append(measurements[1])
                 if measurements[1] > maxOsc:
@@ -85,11 +88,16 @@ def connectBloodPressureDevice():
                             if elem == maxOsc:
                                 finalMeasurement = prev_el
                                 #print("Your real mean arterial blood pressure is : " + str(prev_el))
-                    tempMeasurement = conductExamScreen.singularRecording(currentTime, finalMeasurement,conductExamScreen.newQuestion, conductExamScreen.yn)
+                    tempMeasurement = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
                     conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
+                    print("Added BP: ", tempMeasurement.measurement)
+                    print("Associated Time: ", tempMeasurement.timestamp)
+                    print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []
+
+    print("Blood Pressure: exited")
 
 
     #t1 = time.time()

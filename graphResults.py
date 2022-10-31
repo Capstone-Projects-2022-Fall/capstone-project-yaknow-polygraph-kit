@@ -20,6 +20,8 @@ def createGraphs():
     GSRTime = []
     RespirationMeasurement = []
     RespirationTime = []
+    bloodPressureMeasurement = []
+    bloodPressureTime = []
     '''with open('TestData.csv', 'r') as csvfile:
         lines = csv.reader(csvfile, delimiter=',')
         for row in lines:
@@ -41,6 +43,14 @@ def createGraphs():
 
     graph1.plot(GSRTime, GSRMeasurement, color='k', marker='o')
     graph1.set_ylabel("Siemens")
+
+    print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
+    for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
+        bloodPressureMeasurement.append(bloodPressureRecording.measurement)
+        bloodPressureTime.append(bloodPressureRecording.timestamp)
+
+    graph2.plot(bloodPressureTime, bloodPressureMeasurement, color='k', marker='o')
+    graph2.set_ylabel("Blood Pressure")
 '''
     graph2.plot(x, y, color='g', marker='o')
     graph2.set_ylabel("Respiration")

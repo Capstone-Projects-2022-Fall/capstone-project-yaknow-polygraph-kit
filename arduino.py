@@ -9,7 +9,7 @@ import conductExamScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem2101"
+arduino_port = "/dev/cu.usbmodem1101"
 arduino_port2 = "/dev/cu.usbmodem101"
 
 
@@ -55,6 +55,7 @@ def connectGSRSensor():
     print("GSR Exited")
 
 
+
 def connectGSRSensorIndividual():
     connected = False
     while connected == False:
@@ -79,6 +80,7 @@ def connectGSRSensorIndividual():
 
     sensor_data = []
     times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    print("GSR: Started")
     for i in range(times):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))
