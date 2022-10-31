@@ -268,9 +268,21 @@ def showRespirationProbabilityDistribution(question):
     graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
 
-    graph0[0,0].title.set_text("Normal Distribution 1")
+# Subplot Titles
+    graph0[0, 0].title.set_text("Normal Distribution 1")
     graph0[0, 1].title.set_text("Normal Distribution 2")
     graph0[0, 2].title.set_text("Normal Distribution 3")
+
+# subplot x and y axis
+    ax = fig.add_subplot(111)
+    ax.spines['top'].set_color('none')
+    ax.spines['bottom'].set_color('none')
+    ax.spines['left'].set_color('none')
+    ax.spines['right'].set_color('none')
+    ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+    ax.set_xlabel('respiration')
+    ax.set_ylabel('probability')
+
 
 
     conductZtest(question)
