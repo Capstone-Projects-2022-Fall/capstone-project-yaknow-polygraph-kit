@@ -49,7 +49,10 @@ def connectRespirationBelt():
             if measurements == None:
                 break
 
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
+            #if( (tempMeasurement.measurement == None) or (tempMeasurement.timestamp == None) or (tempMeasurement.question == None)):
+            #    continue
+            #else:
             conductExamScreen.respirationRecordings.append(tempMeasurement)
     print("Respiration Exited")
 

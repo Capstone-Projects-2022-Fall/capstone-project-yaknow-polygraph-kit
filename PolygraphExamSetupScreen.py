@@ -1,6 +1,8 @@
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+import matplotlib
+matplotlib.use("TkAgg")
 
 import bloodPressureDevice
 from read_write import create_question, read_database_file

@@ -43,15 +43,20 @@ def connectGSRSensor():
         rate = PolygraphExamSetupScreen.GSRSamplingRate
         examStartTime = datetime.datetime.now()
         while conductExamScreen.examFinished == False:
-            getData = ser.readline()
-            data = int(getData.decode('utf-8'))
-            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
-            final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading,
-                                                                  conductExamScreen.newQuestion, conductExamScreen.yn)
-            conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
-            time.sleep(rate)
-            print(final_reading)
+            if(conductExamScreen.inQuestion == True):
+                getData = ser.readline()
+                data = int(getData.decode('utf-8'))
+                currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+                final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading,conductExamScreen.newQuestion,conductExamScreen.yn)
+                if ((tempMeasurement.measurement == None) or (tempMeasurement.timestamp == None) or (tempMeasurement.question == None)):
+                    continue
+                else:
+                    conductExamScreen.respirationRecordings.append(tempMeasurement)
+
+                #conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
+                time.sleep(rate)
+                print(final_reading)
     print("GSR Exited")
 
 
