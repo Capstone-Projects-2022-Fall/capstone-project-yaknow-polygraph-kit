@@ -171,7 +171,7 @@ def examOver():
             conductExamScreen.respirationbyQuestion.append(tempArray)
             #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
-            tempArray.append(respirationRecordings[x].measurement)
+            tempArray.append(respirationRecordings[x].measurement[0])
             tempQuestion = respirationRecordings[x].question
             x = x + 1
         else:
@@ -230,13 +230,15 @@ def showRespirationProbabilityDistribution(question):
     # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
     # plt.show()
 
+    for measurement in respirationbyQuestion[question]:
+        print(measurement)
     conductExamScreen.respirationbyQuestion[question].sort()
 
     fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
-    fig, axs = matplotlib.subplot_mosaic([['1', '2'], ['3', '2']],constrained_layout=True)
-    for label, ax in axs.items():
-        ax.set_title('Probability Distribution for Respiration', fontstyle='italic')
-        ax.set_title(label, fontfamily='serif', loc='left', fontsize='medium')
+    #fig,  axs= matplotlib.subplot_mosaic([['1', '2'], ['3', '2']],constrained_layout=True)
+    #for label, ax in axs.items():
+    #    ax.set_title('Probability Distribution for Respiration', fontstyle='italic')
+    #    ax.set_title(label, fontfamily='serif', loc='left', fontsize='medium')
 
     #baseline1question
     meanBaseline1 = statistics.mean(conductExamScreen.respirationbyQuestion[0])
@@ -261,6 +263,8 @@ def showRespirationProbabilityDistribution(question):
     graph0.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+
+    conductZtest(question)
 
     graph0.text(0.5, 0.25, 'Ztest results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
