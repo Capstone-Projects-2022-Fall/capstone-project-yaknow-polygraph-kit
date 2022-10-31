@@ -50,6 +50,8 @@ global initialExamEnded
 
 global respirationbyQuestion
 
+global skinConductivitybyQuestion
+
 global questionTimestamps
 
 global zTest1
@@ -163,6 +165,7 @@ def examCounter():
 def examOver():
     print("Entered examOver")
     conductExamScreen.respirationbyQuestion = []
+    conductExamScreen.skinConductivitybyQuestion = []
     tempArray = []
     tempQuestion = conductExamScreen.respirationRecordings[0].question
     x = 0
@@ -171,12 +174,26 @@ def examOver():
             conductExamScreen.respirationbyQuestion.append(tempArray)
             #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
-            tempArray.append(respirationRecordings[x].measurement[0])
-            tempQuestion = respirationRecordings[x].question
+            tempArray.append(conductExamScreen.respirationRecordings[x].measurement[0])
+            tempQuestion = conductExamScreen.respirationRecordings[x].question
             x = x + 1
         else:
             tempArray.append(respirationRecordings[x].measurement[0])
             x = x + 1
+
+    tempArray = []
+    y = 0
+    while (y < len(conductExamScreen.skinConductivityRecordings)):
+        if ((tempQuestion != conductExamScreen.skinConductivityRecordings[y].question) or (y == (len(conductExamScreen.skinConductivityRecordings) - 1))):
+            conductExamScreen.skinConductivitybyQuestion.append(tempArray)
+            # print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
+            tempArray = []
+            tempArray.append(conductExamScreen.skinConductivityRecordings[y].measurement[0])
+            tempQuestion = conductExamScreen.skinConductivitybyRecordings[y].question
+            y = y + 1
+        else:
+            tempArray.append(conductExamScreen.skinConductivityRecordings[y].measurement[0])
+            y = y + 1
 
 def conductZtest(question):
     '''
@@ -308,6 +325,8 @@ def startExam(window1):
     conductExamScreen.questionTimestamps = []
 
     conductExamScreen.respirationbyQuestion = []
+
+    conductExamScreen.skinConductivitybyQuestion = []
 
     conductExamScreen.window = window1
 
