@@ -3,6 +3,7 @@ from matplotlib import pyplot as plt
 import conductExamScreen
 from collections import Counter
 import numpy as np
+import conductExamScreen
 
 fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1, sharex=True)
 plt.subplots_adjust(bottom=0.25)
@@ -47,6 +48,6 @@ def createFrequencyGraphs():
 # graph2.hist(y, bins=range(min(y), max(y) + binwidth, binwidth), color='pink', edgecolor='black')
 # graph3.hist(y, bins=range(min(y), max(y) + binwidth, binwidth), color='orange', edgecolor='black')
 
-createFrequencyGraphs()
+#createFrequencyGraphs()
 
-plt.show()
+#plt.show()

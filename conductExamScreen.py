@@ -10,6 +10,7 @@ import threading
 import time
 import tts
 import graphResults
+import frequencyGraph
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -152,4 +153,6 @@ def startExam(window1):
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show()
+            frequencyGraph.createFrequencyGraphs()
+            frequencyGraph.plt.show()
             examOver()
