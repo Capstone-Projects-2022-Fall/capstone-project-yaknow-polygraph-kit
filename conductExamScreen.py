@@ -237,18 +237,19 @@ def showRespirationProbabilityDistribution(question):
     conductExamScreen.respirationbyQuestion[2].sort()
     conductExamScreen.respirationbyQuestion[3].sort()
 
-    # subplot x and y axis
-    ax = fig.add_subplot(111)
-    ax.spines['top'].set_color('none')
-    ax.spines['bottom'].set_color('none')
-    ax.spines['left'].set_color('none')
-    ax.spines['right'].set_color('none')
-    ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
-    ax.set_xlabel('respiration')
-    ax.set_ylabel('probability')
+    # # subplot x and y axis
+    # ax = fig.add_subplot(111)
+    # ax.spines['top'].set_color('none')
+    # ax.spines['bottom'].set_color('none')
+    # ax.spines['left'].set_color('none')
+    # ax.spines['right'].set_color('none')
+    # ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+    # ax.set_xlabel('respiration')
+    # ax.set_ylabel('probability')
 
 
-    fig, (graph0, graph1, graph2, ax) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=False)
+ #   fig, (graph0, graph1, graph2, ax) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=False)
+    fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
 
     #baseline1question
     meanBaseline1 = statistics.mean(conductExamScreen.respirationbyQuestion[0])
