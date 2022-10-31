@@ -227,7 +227,7 @@ def conductZtestSkinConductivity(question):
     # else:
     #     print("We do not have reason to believe the data has any major differences")
 
-    conductExamScreen.zTestSkinConductivity = list(ztest(baselineData3, questionData))
+    conductExamScreen.zTest3SkinConductivity = list(ztest(baselineData3, questionData))
 
     # if zTest3[1] < .05:
     #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
