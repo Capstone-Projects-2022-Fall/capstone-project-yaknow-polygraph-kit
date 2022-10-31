@@ -11,7 +11,7 @@ import time
 import tts
 import graphResults
 
-import numpy as np
+import numpy
 import matplotlib.pyplot
 from scipy.stats import norm
 import statistics
@@ -47,6 +47,8 @@ global initialExamEnded
 
 global respirationbyQuestion
 
+global GSRbyQuestion
+
 global questionTimestamps
 
 class singularRecording:
@@ -78,15 +80,15 @@ def make_window():
     ]
     
     row4 = [
-        [gui.Text('         ', key='-B1placeHolder-'), gui.Text('', key='-B1MeanR-'), gui.Text('', key='-B1MeanGSRHeader-'),  gui.Text('', key='-B1MedianGSR-'),  gui.Text('', key='-B1BP-')]
+        [gui.Text('         ', key='-B1placeHolder-'), gui.Text('', key='-B1MeanR-'), gui.Text('', key='-B1MeanGSR-'),  gui.Text('', key='-B1MedianGSR-'),  gui.Text('', key='-B1BP-')]
     ]
     
     row5 = [
-         [gui.Text('         ', key='-B2placeHolder-'), gui.Text('', key='-B2MeanR-'), gui.Text('', key='-B1MeanGSRHeader-'),  gui.Text('', key='-B2MedianGSR-'),  gui.Text('', key='-B2BP-')]
+         [gui.Text('         ', key='-B2placeHolder-'), gui.Text('', key='-B2MeanR-'), gui.Text('', key='-B1MeanGSR-'),  gui.Text('', key='-B2MedianGSR-'),  gui.Text('', key='-B2BP-')]
     ]
     
     row6 = [
-        [gui.Text('         ', key='-B3placeHolder-'), gui.Text('', key='-B3MeanR-'), gui.Text('', key='-B3MeanGSRHeader-'),  gui.Text('', key='-B3MedianGSR-'),  gui.Text('', key='-B3BP-')]
+        [gui.Text('         ', key='-B3placeHolder-'), gui.Text('', key='-B3MeanR-'), gui.Text('', key='-B3MeanGSR-'),  gui.Text('', key='-B3MedianGSR-'),  gui.Text('', key='-B3BP-')]
     ]
     
     col3_1 = [
@@ -169,8 +171,8 @@ def make_window():
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=row3, title='', key='row3', visible=False)],
         [gui.Frame(layout=row4, title='', key='row4', visible=False)],
-        [gui.Frame(layout=row5, title='', key='row5'), visible=False],
-        [gui.Frame(layout=row6, title='', key='row6'), visible=False],
+        [gui.Frame(layout=row5, title='', key='row5', visible=False)],
+        [gui.Frame(layout=row6, title='', key='row6', visible=False)],
         [gui.Frame(layout=col3_1, title='', k='col3_1', visible=False), gui.Frame(layout=col3_2, title='', k='col3_2', visible=False), gui.Frame(layout=col3_3, title='', k='col3_3', visible=False), gui.Frame(layout=col3_4, title='', k='col3_4', visible=False), gui.Frame(layout=col3_5, title='', k='col3_5', visible=False), gui.Frame(layout=col3_6, title='', k='col3_6', visible=False), gui.Frame(layout=col3_7, title='', k='col3_7', visible=False)],
         [gui.Push(), gui.Frame(layout=row8, title='', key='row8'), gui.Push()],
         [gui.Push(), gui.Frame(layout=row9, title='', key='row9'), gui.Push()]
@@ -234,6 +236,19 @@ def examOver():
             tempArray.append(respirationRecordings[x].measurement[0])
             x = x + 1
 
+    y = 0
+    while (y < len(conductExamScreen.skinConductivityRecordings)):
+        if ((tempQuestion != conductExamScreen.skinConductivityRecordings[y].question) or (y == (len(conductExamScreen.skinConductivityRecordings) - 1))):
+            conductExamScreen.skinConductivityRecordings.append(tempArray)
+            # print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
+            tempArray = []
+            tempArray.append(conductExamScreen.skinConductivityRecordings[y].measurement)
+            tempQuestion = respirationRecordings[y].question
+            y = y + 1
+        else:
+            tempArray.append(conductExamScreen.skinConductivityRecordings[y].measurement[0])
+            y = y + 1
+
 def showRespirationProbabilityDistribution(question):
 
     conductExamScreen.respirationbyQuestion[question].sort()
@@ -285,18 +300,56 @@ def startExam(window1):
             conductExamScreen.window['col3_5'].update(visible=True)
             conductExamScreen.window['col3_6'].update(visible=True)
             conductExamScreen.window['col3_7'].update(visible=True)
-            #conductExamScreen.window['-Test1R-'].update(visible=True)
-            #conductExamScreen.window['-Test2R-'].update(visible=True)
-            #conductExamScreen.window['-Test3R-'].update(visible=True)
-            #conductExamScreen.window['-Test4R-'].update(visible=True)
-            #conductExamScreen.window['-Test5R-'].update(visible=True)
-            #conductExamScreen.window['-Test6R-'].update(visible=True)
-            #conductExamScreen.window['-Test1G-'].update(visible=True)
-            #conductExamScreen.window['-Test2G-'].update(visible=True)
-            #conductExamScreen.window['-Test3G-'].update(visible=True)
-            #conductExamScreen.window['-Test4G-'].update(visible=True)
-            #conductExamScreen.window['-Test5G-'].update(visible=True)
-            #conductExamScreen.window['-Test6G-'].update(visible=True)
+            conductExamScreen.window['-B1MeanR-'].update(statistics.mean(respirationbyQuestion[0]))
+            conductExamScreen.window['-B1MeanGSR-'].update(statistics.mean(GSRbyQuestion[0]))
+            conductExamScreen.window['-B1MedianR-'].update(numpy.median(respirationbyQuestion[0]))
+            conductExamScreen.window['-B1MedianGSR-'].update(numpy.median(GSRbyQuestion[0]))
+            conductExamScreen.windowp['-B1BP-'].update(bloodPressureRecordingsp[0])
+            conductExamScreen.window['-B2MeanR-'].update(statistics.mean(respirationbyQuestion[1]))
+            conductExamScreen.window['-B2MeanGSR-'].update(statistics.mean(GSRbyQuestion[1]))
+            conductExamScreen.window['-B2MedianR-'].update(numpy.median(respirationbyQuestion[1]))
+            conductExamScreen.window['-B2MedianGSR-'].update(numpy.median(GSRbyQuestion[1]))
+            conductExamScreen.window['-B2BP-'].update(bloodPressureRecordingsp[1])
+            conductExamScreen.window['-B3MeanR-'].update(statistics.mean(respirationbyQuestion[2]))
+            conductExamScreen.window['-B3MeanGSR-'].update(statistics.mean(GSRbyQuestion[2]))
+            conductExamScreen.window['-B3MedianR-'].update(numpy.median(respirationbyQuestion[2]))
+            conductExamScreen.window['-B3MedianGSR-'].update(numpy.median(GSRbyQuestion[2]))
+            conductExamScreen.window['-B3BP-'].update(bloodPressureRecordingsp[2])
+
+            conductExamScreen.window['-Test1MeanR-'].update(statistics.mean(respirationbyQuestion[3]))
+            conductExamScreen.window['-Test2MeanR-'].update(statistics.mean(respirationbyQuestion[4]))
+            conductExamScreen.window['-Test3MeanR-'].update(statistics.mean(respirationbyQuestion[5]))
+            conductExamScreen.window['-Test4MeanR-'].update(statistics.mean(respirationbyQuestion[6]))
+            conductExamScreen.window['-Test5MeanR-'].update(statistics.mean(respirationbyQuestion[7]))
+            conductExamScreen.window['-Test6MeanR-'].update(statistics.mean(respirationbyQuestion[8]))
+
+            conductExamScreen.window['-Test1MeanG-'].update(statistics.mean(GSRbyQuestion[3]))
+            conductExamScreen.window['-Test2MeanG-'].update(statistics.mean(GSRbyQuestion[4]))
+            conductExamScreen.window['-Test3MeanG-'].update(statistics.mean(GSRbyQuestion[5]))
+            conductExamScreen.window['-Test4MeanG-'].update(statistics.mean(GSRbyQuestion[6]))
+            conductExamScreen.window['-Test5MeanG-'].update(statistics.mean(GSRbyQuestion[7]))
+            conductExamScreen.window['-Test6MeanG-'].update(statistics.mean(GSRbyQuestion[6]))
+
+            conductExamScreen.window['-Test1MedianR-'].update(numpy.median(respirationbyQuestion[3]))
+            conductExamScreen.window['-Test2MedianR-'].update(numpy.median(respirationbyQuestion[4]))
+            conductExamScreen.window['-Test3MedianR-'].update(numpy.median(respirationbyQuestion[5]))
+            conductExamScreen.window['-Test4MedianR-'].update(numpy.median(respirationbyQuestion[6]))
+            conductExamScreen.window['-Test5MedianR-'].update(numpy.median(respirationbyQuestion[7]))
+            conductExamScreen.window['-Test6MedianR-'].update(numpy.median(respirationbyQuestion[8]))
+
+            conductExamScreen.window['-Test1MedianG-'].update(numpy.median(respirationbyQuestion[3]))
+            conductExamScreen.window['-Test2MedianG-'].update(numpy.median(respirationbyQuestion[4]))
+            conductExamScreen.window['-Test3MedianG-'].update(numpy.median(respirationbyQuestion[5]))
+            conductExamScreen.window['-Test4MedianG-'].update(numpy.median(respirationbyQuestion[6]))
+            conductExamScreen.window['-Test5MedianG-'].update(numpy.median(respirationbyQuestion[7]))
+            conductExamScreen.window['-Test6MedianG-'].update(numpy.median(respirationbyQuestion[8]))
+
+            conductExamScreen.window['-Test1BP-'].update(numpy.median(bloodPressureRecordingsp[3]))
+            conductExamScreen.window['-Test2BP-'].update(numpy.median(bloodPressureRecordingsp[4]))
+            conductExamScreen.window['-Test3BP-'].update(numpy.median(bloodPressureRecordingsp[5]))
+            conductExamScreen.window['-Test4BP-'].update(numpy.median(bloodPressureRecordingsp[6]))
+            conductExamScreen.window['-Test5BP-'].update(numpy.median(bloodPressureRecordingsp[7]))
+            conductExamScreen.window['-Test6BP-'].update(numpy.median(bloodPressureRecordingsp[8]))
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
         elif event == '-Test2R-':
