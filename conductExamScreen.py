@@ -150,7 +150,7 @@ def examOver():
             conductExamScreen.respirationbyQuestion.append(tempArray)
             #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
-            tempArray.append(respirationRecordings[x].measurement)
+            tempArray.append(respirationRecordings[x].measurement[0])
             tempQuestion = respirationRecordings[x].question
             x = x + 1
         else:
@@ -201,9 +201,9 @@ def showRespirationProbabilityDistribution(question):
     for measurement in respirationbyQuestion[question]:
         print(measurement)
     conductExamScreen.respirationbyQuestion[question].sort()
+    conductExamScreen.respirationbyQuestion[0].sort()
     conductExamScreen.respirationbyQuestion[1].sort()
     conductExamScreen.respirationbyQuestion[2].sort()
-    conductExamScreen.respirationbyQuestion[3].sort()
 
     # # subplot x and y axis
     # ax = fig.add_subplot(111)
