@@ -434,13 +434,13 @@ def showSkinConductivityProbabilityDistribution(question):
 
 
 
-    conductZtestRespiration(question)
+    conductZtestSkinConductivity(question)
 
-    graph0.text(0.5, 0.25, 'Ztest: results(%s)'% conductExamScreen.zTest1Respiration, horizontalalignment='center', verticalalignment='center',
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)'% conductExamScreen.zTest1SkinConductivity, horizontalalignment='center', verticalalignment='center',
                 transform=graph0.transAxes)
-    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2Respiration, horizontalalignment='center', verticalalignment='center',
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2SkinConductivity, horizontalalignment='center', verticalalignment='center',
                 transform=graph1.transAxes)
-    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3Respiration, horizontalalignment='center', verticalalignment='center',
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3SkinConductivity, horizontalalignment='center', verticalalignment='center',
                 transform=graph2.transAxes)
 
 
