@@ -221,6 +221,7 @@ def examCounter():
 def examOver():
     print("Entered examOver")
     conductExamScreen.respirationbyQuestion = []
+    conductExamScreen.GSRbyQuestion = []
     tempArray = []
     tempQuestion = conductExamScreen.respirationRecordings[0].question
     x = 0
@@ -269,6 +270,8 @@ def startExam(window1):
     conductExamScreen.questionTimestamps = []
 
     conductExamScreen.respirationbyQuestion = []
+
+    conductExamScreen.GSRbyQuestion = []
 
     conductExamScreen.window = window1
 
@@ -337,19 +340,19 @@ def startExam(window1):
             conductExamScreen.window['-Test5MedianR-'].update(numpy.median(respirationbyQuestion[7]))
             conductExamScreen.window['-Test6MedianR-'].update(numpy.median(respirationbyQuestion[8]))
 
-            conductExamScreen.window['-Test1MedianG-'].update(numpy.median(GSRbyQuestion[3]))
-            conductExamScreen.window['-Test2MedianG-'].update(numpy.median(GSRbyQuestion[4]))
-            conductExamScreen.window['-Test3MedianG-'].update(numpy.median(GSRbyQuestion[5]))
-            conductExamScreen.window['-Test4MedianG-'].update(numpy.median(GSRbyQuestion[6]))
-            conductExamScreen.window['-Test5MedianG-'].update(numpy.median(GSRbyQuestion[7]))
-            conductExamScreen.window['-Test6MedianG-'].update(numpy.median(GSRbyQuestion[8]))
+            #conductExamScreen.window['-Test1MedianG-'].update(numpy.median(GSRbyQuestion[3]))
+            #conductExamScreen.window['-Test2MedianG-'].update(numpy.median(GSRbyQuestion[4]))
+            #conductExamScreen.window['-Test3MedianG-'].update(numpy.median(GSRbyQuestion[5]))
+            #conductExamScreen.window['-Test4MedianG-'].update(numpy.median(GSRbyQuestion[6]))
+            #conductExamScreen.window['-Test5MedianG-'].update(numpy.median(GSRbyQuestion[7]))
+            #conductExamScreen.window['-Test6MedianG-'].update(numpy.median(GSRbyQuestion[8]))
 
-            conductExamScreen.window['-Test1BP-'].update(numpy.median(bloodPressureRecordings[3]))
-            conductExamScreen.window['-Test2BP-'].update(numpy.median(bloodPressureRecordings[4]))
-            conductExamScreen.window['-Test3BP-'].update(numpy.median(bloodPressureRecordings[5]))
-            conductExamScreen.window['-Test4BP-'].update(numpy.median(bloodPressureRecordings[6]))
-            conductExamScreen.window['-Test5BP-'].update(numpy.median(bloodPressureRecordings[7]))
-            conductExamScreen.window['-Test6BP-'].update(numpy.median(bloodPressureRecordings[8]))
+            conductExamScreen.window['-Test1BP-'].update(numpy.median(bloodPressureRecordings[3].measurement[0]))
+            conductExamScreen.window['-Test2BP-'].update(numpy.median(bloodPressureRecordings[4].measurement[0]))
+            conductExamScreen.window['-Test3BP-'].update(numpy.median(bloodPressureRecordings[5].measurement[0]))
+            conductExamScreen.window['-Test4BP-'].update(numpy.median(bloodPressureRecordings[6].measurement[0]))
+            conductExamScreen.window['-Test5BP-'].update(numpy.median(bloodPressureRecordings[7].measurement[0]))
+            conductExamScreen.window['-Test6BP-'].update(numpy.median(bloodPressureRecordings[8].measurement[0]))
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
         elif event == '-Test2R-':
