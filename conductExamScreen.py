@@ -13,6 +13,8 @@ import time
 import tts
 import graphResults
 from statsmodels.stats.weightstats import ztest as ztest
+import frequencyGraph
+import homescreen
 
 import numpy as np
 import matplotlib.pyplot
@@ -110,15 +112,15 @@ def make_window():
     ]
 
     row5 = [
-        [gui.Push(), gui.Button('Restart', key='-Restart-', visible='False'), gui.Button('Cancel Conversion', key='-cancelConversion-'),
+        [gui.Push(), gui.Button('Restart', key='-Restart-', visible=False), gui.Button('Cancel Conversion', key='-cancelConversion-'),
          gui.Push()]
     ]
 
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
-        [gui.VPush()],
+        #[gui.VPush()],
         [gui.Frame(layout=row1, title='', key='row1')],
-        [gui.VPush()],
+       # [gui.VPush()],
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=col3_1, title='', k='col3_1'), gui.Frame(layout=col3_2, title='', k='col3_2')],
         [gui.Push(), gui.Frame(layout=row4, title='', key='row4'), gui.Push()],
@@ -474,9 +476,17 @@ def startExam(window1):
         elif event == '-NO-':
             conductExamScreen.yn = False
         elif event == '-ENDED-':
+            #FREQUENCY GRAPHING
+            #conductExamScreen.examFinished = True
+            #graphResults.createGraphs()
+            #graphResults.slider_position.on_changed(graphResults.update)
+            #graphResults.plt.show()
+            #frequencyGraph.createFrequencyGraphs()
+            #frequencyGraph.plt.show()
             examOver()
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
+            conductExamScreen.window['-Restart-'].update(visible=True)
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
             conductExamScreen.window['-Test3R-'].update(visible=True)
@@ -489,6 +499,7 @@ def startExam(window1):
             conductExamScreen.window['-Test4G-'].update(visible=True)
             conductExamScreen.window['-Test5G-'].update(visible=True)
             conductExamScreen.window['-Test6G-'].update(visible=True)
+
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
         elif event == '-Test2R-':
@@ -513,7 +524,11 @@ def startExam(window1):
             showSkinConductivityProbabilityDistribution(7)
         elif event == '-Test6G-':
             showSkinConductivityProbabilityDistribution(8)
-        
+        elif event == '-Restart-':
+          #  newWindow = homescreen.make_window()
+            conductExamScreen.window.close()
+           # PolygraphExamSetupScreen.window = newWindow
+            homescreen.main()
 
         #graphResults.createGraphs()
         # plt.annotate('question 1', xy=(85, .03), arrowprops=dict(arrowstyle='-', connectionstyle='arc3,rad=0'),
