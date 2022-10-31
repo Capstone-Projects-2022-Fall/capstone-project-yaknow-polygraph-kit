@@ -268,6 +268,11 @@ def showRespirationProbabilityDistribution(question):
     graph1.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[question], norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
 
+    graph0[0,0].title.set_text("Normal Distribution 1")
+    graph0[0, 1].title.set_text("Normal Distribution 2")
+    graph0[0, 2].title.set_text("Normal Distribution 3")
+
+
     conductZtest(question)
 
     graph0.text(0.5, 0.25, 'Ztest: results(%s)'% conductExamScreen.zTest1, horizontalalignment='center', verticalalignment='center',
