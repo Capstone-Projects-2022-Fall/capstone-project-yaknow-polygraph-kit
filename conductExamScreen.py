@@ -229,7 +229,7 @@ def examOver():
             conductExamScreen.respirationbyQuestion.append(tempArray)
             #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
-            tempArray.append(respirationRecordings[x].measurement)
+            tempArray.append(respirationRecordings[x].measurement[0])
             tempQuestion = respirationRecordings[x].question
             x = x + 1
         else:
@@ -309,12 +309,12 @@ def startExam(window1):
             #conductExamScreen.window['-B2MeanGSR-'].update(statistics.mean(GSRbyQuestion[1]))
             conductExamScreen.window['-B2MedianR-'].update(numpy.median(respirationbyQuestion[1]))
             #conductExamScreen.window['-B2MedianGSR-'].update(numpy.median(GSRbyQuestion[1]))
-            conductExamScreen.window['-B2BP-'].update(bloodPressureRecordingsp[1])
+            conductExamScreen.window['-B2BP-'].update(bloodPressureRecordings[1])
             conductExamScreen.window['-B3MeanR-'].update(statistics.mean(respirationbyQuestion[2]))
             #conductExamScreen.window['-B3MeanGSR-'].update(statistics.mean(GSRbyQuestion[2]))
             conductExamScreen.window['-B3MedianR-'].update(numpy.median(respirationbyQuestion[2]))
             #conductExamScreen.window['-B3MedianGSR-'].update(numpy.median(GSRbyQuestion[2]))
-            conductExamScreen.window['-B3BP-'].update(bloodPressureRecordingsp[2])
+            conductExamScreen.window['-B3BP-'].update(bloodPressureRecordings[2])
 
             conductExamScreen.window['-Test1MeanR-'].update(statistics.mean(respirationbyQuestion[3]))
             conductExamScreen.window['-Test2MeanR-'].update(statistics.mean(respirationbyQuestion[4]))
