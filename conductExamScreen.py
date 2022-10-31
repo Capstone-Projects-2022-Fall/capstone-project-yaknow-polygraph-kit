@@ -16,6 +16,8 @@ import numpy as np
 import matplotlib.pyplot
 from scipy.stats import norm
 import statistics
+
+import frequencyGraph
 from multiprocessing import Process, Queue
 global window
 global examFinished
@@ -305,6 +307,10 @@ def startExam(window1):
             conductExamScreen.window['-Test4G-'].update(visible=True)
             conductExamScreen.window['-Test5G-'].update(visible=True)
             conductExamScreen.window['-Test6G-'].update(visible=True)
+
+            frequencyGraph.createFrequencyGraphs()
+            frequencyGraph.plt.show()
+
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show(block=False)
@@ -331,4 +337,7 @@ def startExam(window1):
 
 
 
+
+
         #examOver()
+
