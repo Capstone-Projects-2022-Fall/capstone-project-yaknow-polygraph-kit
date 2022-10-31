@@ -331,6 +331,10 @@ def startExam(window1):
             showRespirationProbabilityDistribution(8)
 
         #graphResults.createGraphs()
+        # plt.annotate('question 1', xy=(85, .03), arrowprops=dict(arrowstyle='-', connectionstyle='arc3,rad=0'),
+        #              xytext=(85, .01))
+        # plt.annotate('question 2', xy=(105.03, .02986), arrowprops=dict(arrowstyle='-', connectionstyle='arc3,rad=0'),
+        #              xytext=(105.03, .01))
         #graphResults.slider_position.on_changed(graphResults.update)
         #graphResults.plt.show(block=False)
         #examOver()
