@@ -305,6 +305,9 @@ def startExam(window1):
             conductExamScreen.window['-Test4G-'].update(visible=True)
             conductExamScreen.window['-Test5G-'].update(visible=True)
             conductExamScreen.window['-Test6G-'].update(visible=True)
+            graphResults.createGraphs()
+            graphResults.slider_position.on_changed(graphResults.update)
+            graphResults.plt.show(block=False)
 
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
@@ -327,7 +330,5 @@ def startExam(window1):
 
 
 
-        #graphResults.createGraphs()
-        #graphResults.slider_position.on_changed(graphResults.update)
-        #graphResults.plt.show(block=False)
+
         #examOver()
