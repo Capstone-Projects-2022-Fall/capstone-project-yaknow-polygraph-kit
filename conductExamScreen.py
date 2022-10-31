@@ -502,17 +502,17 @@ def startExam(window1):
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
         elif event == '-Test1G-':
-            showRespirationProbabilityDistribution(3)
+            showSkinConductivityProbabilityDistribution(3)
         elif event == '-Test2G-':
-            showRespirationProbabilityDistribution(4)
+            showSkinConductivityProbabilityDistribution(4)
         elif event == '-Test3G-':
-            showRespirationProbabilityDistribution(5)
+            showSkinConductivityProbabilityDistribution(5)
         elif event == '-Test4G-':
-            showRespirationProbabilityDistribution(6)
+            showSkinConductivityProbabilityDistribution(6)
         elif event == '-Test5G-':
-            showRespirationProbabilityDistribution(7)
+            showSkinConductivityProbabilityDistribution(7)
         elif event == '-Test6G-':
-            showRespirationProbabilityDistribution(8)
+            showSkinConductivityProbabilityDistribution(8)
         
 
         #graphResults.createGraphs()
