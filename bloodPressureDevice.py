@@ -45,6 +45,7 @@ def connectBloodPressureDevice():
 
     #rate = PolygraphExamSetupScreen.BloodPressureSamplingRate * 1000
     theAPIs.start(100)
+    print("BloodPressure Started")
 
     listOfOscillations = []
     possibleBP = []
@@ -94,6 +95,8 @@ def connectBloodPressureDevice():
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []
+
+    print("Blood Pressure: exited")
 
 
     #t1 = time.time()
