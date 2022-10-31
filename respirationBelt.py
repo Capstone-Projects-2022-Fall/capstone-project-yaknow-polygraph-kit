@@ -42,17 +42,14 @@ def connectRespirationBelt():
     theAPIs.start(rate)
     examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
-        measurements = theAPIs.read()
-        currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
-        if measurements == None:
-            break
-
-        tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
-        conductExamScreen.respirationRecordings.append(tempMeasurement)
-        #length = len(conductExamScreen.respirationRecordings)
-        #print(length)
-        #if(length > 3):
-            #print("First: ", conductExamScreen.respirationRecordings[length-1].timestamp, conductExamScreen.respirationRecordings[length-1].measurement, conductExamScreen.respirationRecordings[length-1].question, conductExamScreen.respirationRecordings[length-1].yn)
+        if(conductExamScreen.inQuestion == True):
+            print("Recording Respiration")
+            measurements = theAPIs.read()
+            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            if measurements is None:
+                break
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
+            conductExamScreen.respirationRecordings.append(tempMeasurement)
     print("Respiration Exited")
 
 
@@ -76,6 +73,7 @@ def connectRespirationBeltIndividual():
 
     rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
     theAPIs.start(rate)
+    print("Respiration Started")
 
     times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     for i in range(times):

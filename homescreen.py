@@ -11,7 +11,7 @@ global deviceSelected
 def make_window():
     welcomeText = "Welcome To yaKnow PolyGraph Test"
 
-    deviceMenu = ['', ['Respiration Belt', 'Skin Conductivity']]
+    deviceMenu = ['', ['Respiration Belt', 'Skin Conductivity', 'Blood Pressure Device']]
     # layouts are nested list. Layouts create the UI (texts, button).
     row0 = [
         [gui.Push(), gui.Text(welcomeText), gui.Push()]
@@ -64,6 +64,10 @@ def main():
             elif values['-DeviceSelection-'] == 'Skin Conductivity':
                 window['-DeviceSelection-'].update(button_text="Skin Conductivity")
                 homescreen.deviceSelected = 1
+                window.refresh()
+            elif values['-DeviceSelection-'] == 'Blood Pressure Device':
+                window['-DeviceSelection-'].update(button_text="Blood Pressure Device")
+                homescreen.deviceSelected = 2
                 window.refresh()
         elif event in 'Obtain Individual Sensor Measurements':
             newWindow = IndividualDeviceScreen.make_window()

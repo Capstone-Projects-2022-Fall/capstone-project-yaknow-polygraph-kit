@@ -1,6 +1,8 @@
 import PySimpleGUI
 import PySimpleGUI as gui
 from PIL import Image, ImageTk
+
+import bloodPressureDevice
 from read_write import create_question, read_database_file
 import PolygraphExamSetupScreen
 import ResultsDisplayScreen
@@ -158,10 +160,16 @@ def make_window():
     ]
 
     row3 = [
-        [gui.ButtonMenu('Select Blood Pressure Sampling Rate', BloodPressureSampling, k='-BPSampling-'),
-         gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
-         gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
+        [gui.Input(size=(20, 1), enable_events=True, key='-BPSampling-')],
+        [gui.Input(size=(20, 1), enable_events=True, key='-RSampling-')],
+        [gui.Input(size=(20, 1), enable_events=True, key='-RSampling-')]
     ]
+
+    #row3 = [
+    #    [gui.ButtonMenu('Select Blood Pressure Sampling Rate', BloodPressureSampling, k='-BPSampling-'),
+    #     gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
+    #     gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
+    #]
 
     col4 = [
         [gui.Listbox(global_overall_questions, size=(50, 15), enable_events=True, k='-OVERALLQUESTIONS-')]
@@ -224,8 +232,6 @@ def make_window():
         [gui.Button("Back", k='-BackButton-')]
     ]
 
-    #
-
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
@@ -273,6 +279,11 @@ def startExam(window1):
     thread2 = threading.Thread(target=arduino.connectGSRSensor)
     thread2.start()
 
+    # NEW FOR BLOOD PRESSURE
+    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
+    thread3.start()
+
+
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
         #print(event, values)
@@ -284,6 +295,7 @@ def startExam(window1):
             PolygraphExamSetupScreen.window = newWindow
             homescreen.main()
         elif event in ('Start Examination'):
+
 
             conductExamScreen.respirationRecordings = []
 
@@ -303,9 +315,13 @@ def startExam(window1):
 
             conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[0]
 
-            tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+            conductExamScreen.inQuestion = False
 
-            conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+            #tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+
+            #conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+
+            conductExamScreen.iterated = False
 
             PolygraphExamSetupScreen.examStarted = True
             newWindow = conductExamScreen.make_window()
@@ -324,25 +340,12 @@ def startExam(window1):
                 window['-EXAMINATIONTYPE-'].update(button_text="Guilty Knowledge Test")
                 window.refresh()
         elif event == '-RSampling-':
-            if values['-RSampling-'] == '1':
-                window['-RSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.RespirationSamplingRate = 1
-                window.refresh()
-            elif values['-RSampling-'] == '5':
-                window['-RSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.RespirationSamplingRate = 5
+                PolygraphExamSetupScreen.RespirationSamplingRate = values["-RSampling-"]
                 window.refresh()
         elif event == '-SCSampling-':
-            if values['-SCSampling-'] == '1':
-                window['-SCSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.GSRSamplingRate = 1
-                window.refresh()
-            elif values['-SCSampling-'] == '5':
-                window['-SCSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.GSRSamplingRate = 5
-                window.refresh()
+            PolygraphExamSetupScreen.GSRSamplingRate = values['-SCSampling-']
+            window.refresh()
+
 
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
