@@ -42,7 +42,6 @@ def createFrequencyGraphs():
     
     graph2.hist(BPMEASUREMENT, bins=np.arange(min(GSRMeasurement), max(GSRMeasurement) + binwidthBP, binwidthBP), color='pink', edgecolor='black')
     graph2.set_ylabel("Blood Pressure")
-
     graph3.hist(HEARTRATEMEASUREMENT, bins=range(min(HEARTRATEMEASUREMENT), max(HEARTRATEMEASUREMENT) + binwidth, binwidth), color='orange', edgecolor='black')
     graph3.set_ylabel("BPM")
     
@@ -65,6 +64,6 @@ def createFrequencyGraphs():
 # graph2.hist(y, bins=range(min(y), max(y) + binwidth, binwidth), color='pink', edgecolor='black')
 # graph3.hist(y, bins=range(min(y), max(y) + binwidth, binwidth), color='orange', edgecolor='black')
 
-createFrequencyGraphs()
+#createFrequencyGraphs()
 
-plt.show()
+#plt.show()
