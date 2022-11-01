@@ -25,7 +25,6 @@ logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG,
 
 
 def connectBloodPressureDevice():
-    time.sleep(5)
     from gdx2 import gdx
     theAPIs = gdx()
     connected = False
