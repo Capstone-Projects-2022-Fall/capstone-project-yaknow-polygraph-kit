@@ -1,9 +1,9 @@
 import PySimpleGUI as sg
 from gtts import gTTS
-from pygame import mixer
 import time
 import os
-
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+from pygame import mixer
 # try to remove the temp files. You'll likely be left with 1 to clean up
 
 

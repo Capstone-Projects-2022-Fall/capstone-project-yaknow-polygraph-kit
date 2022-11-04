@@ -44,7 +44,6 @@ class singularRecording:
         self.question = question
         self.yn = yn
 
-
 def make_window():
     # layout is a list of lists
     # the lists corresponds to how many rows there will be on the display
