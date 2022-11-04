@@ -139,16 +139,16 @@ def examCounter():
 
 
 
-def examOver():
-    print("Entered examOver")
+def separateByQuestion():
     conductExamScreen.respirationbyQuestion = []
     tempArray = []
     tempQuestion = conductExamScreen.respirationRecordings[0].question
     x = 0
     while(x < len(respirationRecordings)):
         if( (tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1) ) ):
+            if( x == (len(respirationRecordings) - 1) ):
+                tempArray.append(respirationRecordings[x].measurement[0])
             conductExamScreen.respirationbyQuestion.append(tempArray)
-            #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
             tempArray.append(respirationRecordings[x].measurement[0])
             tempQuestion = respirationRecordings[x].question
@@ -289,7 +289,7 @@ def startExam(window1):
         elif event == '-NO-':
             conductExamScreen.yn = False
         elif event == '-ENDED-':
-            examOver()
+            separateByQuestion()
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
             conductExamScreen.window['-Restart-'].update(visible=True)
@@ -325,10 +325,3 @@ def startExam(window1):
           #   conductExamScreen.window.close()
           #  # PolygraphExamSetupScreen.window = newWindow
           #   homescreen.main()
-
-
-
-
-
-
-        #examOver()
