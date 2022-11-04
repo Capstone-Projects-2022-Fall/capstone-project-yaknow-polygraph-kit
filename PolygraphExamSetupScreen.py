@@ -133,12 +133,12 @@ def make_window():
     ]
 
     row1 = [
-        [gui.ButtonMenu('Select Examination Type', menu, k='-EXAMINATIONTYPE-'), gui.Text('Blood Pressure Sensor'),
+        [gui.Text('Blood Pressure Sensor'),
          gui.Text('Skin Conductivity Sensor'), gui.Text('Respiration Sensor')]
     ]
 
     row2 = [
-        [gui.Text('                                              '), gui.Image(size=(50, 50), key='theImage1'),
+        [gui.Text('          '), gui.Image(size=(50, 50), key='theImage1'),
          gui.Text('                     '), gui.Image(size=(50, 50), key='theImage2'), gui.Text('                 '),
          gui.Image(size=(50, 50), key='theImage3')]
 

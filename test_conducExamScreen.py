@@ -4,10 +4,7 @@ import datetime
 import time
 import random
 
-class MyTestCase(unittest.TestCase):
-
-    def test_something(self):
-        self.assertEqual(True, True)  # add assertion here
+class conductExamScreenTest(unittest.TestCase):
 
     def testQuestionSeparation(self):
         conductExamScreen.respirationRecordings = []
