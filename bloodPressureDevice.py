@@ -51,7 +51,7 @@ def connectBloodPressureDevice():
     possibleBP = []
     maxOsc = 0
     conductExamScreen.inQuestion = False
-    prev = listOfOscillations[0] or 0.001
+    # prev = listOfOscillations[0] or 0.001
     threshold = 0.5
     peaks = []
 
@@ -76,7 +76,7 @@ def connectBloodPressureDevice():
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
         else:
-            BeginningTime = datetime.datetime.now()
+            beginningTime = datetime.datetime.now()
             conductExamScreen.inQuestion = True
             while correctPressure == False:
                 measurements = theAPIs.read()
@@ -90,6 +90,7 @@ def connectBloodPressureDevice():
                     endTime = datetime.datetime.now()
                     print("Less than 70")
                     listt = []
+                    prev = listOfOscillations[0] or 0.001
                     for inner_list in (possibleBP):
                         for element in (inner_list):
                             listt.append(element)
@@ -109,8 +110,8 @@ def connectBloodPressureDevice():
 
                     # print(peaks)
 
-                    currentTime = BeginningTime - endTime
-                    pulseRate = ((((len(peaks))) / currentTime) * 60)
+                    currentTime = endTime - beginningTime
+                    pulseRate = ((((len(peaks))) / currentTime.total_seconds()) * 60)
                     print("The pulse rate is: " + str(pulseRate))
                     tempMeasurementBP = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
                     tempMeasurementPR = conductExamScreen.singularRecording(currentTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
@@ -125,7 +126,7 @@ def connectBloodPressureDevice():
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []
-                    prev = listOfOscillations[0] or 0.001
+                    # prev = listOfOscillations[0] or 0.001
                     peaks = []
 
     print("Blood Pressure: exited")
