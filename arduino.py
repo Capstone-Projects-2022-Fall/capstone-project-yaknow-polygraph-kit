@@ -5,22 +5,21 @@ import time
 
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
+import conductExamScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem2101"
+arduino_port = "/dev/cu.usbmodem1101"
 arduino_port2 = "/dev/cu.usbmodem101"
 
 
 def connectGSRSensor():
     connected = False
-    while connected == False:
+    immediateExit = False
+    while ( (connected == False) and (immediateExit == False) ):
         try:
-            print("Test")
             ser = serial.Serial(arduino_port, baud)
-            print("Test2")
             connected = True
-            print("Test3")
         except Exception as e:
             print("Board Not Connected", e)
             try:
@@ -33,22 +32,28 @@ def connectGSRSensor():
             PolygraphExamSetupScreen.window['theImage2'].update(data=PolygraphExamSetupScreen.checkmarkImage)
             PolygraphExamSetupScreen.window.refresh()
             connected = True
+        if (PolygraphExamSetupScreen.examStarted == True):
+            immediateExit = True
         time.sleep(5)
-    while not PolygraphExamSetupScreen.examStarted:
+    while not ( (PolygraphExamSetupScreen.examStarted) and immediateExit == False):
         pass
 
-    sensor_data = []
-    rate = PolygraphExamSetupScreen.GSRSamplingRate
+    if(immediateExit == False):
+        sensor_data = []
+        rate = PolygraphExamSetupScreen.GSRSamplingRate
+        examStartTime = datetime.datetime.now()
+        while conductExamScreen.examFinished == False:
+            getData = ser.readline()
+            data = int(getData.decode('utf-8'))
+            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading,
+                                                                  conductExamScreen.newQuestion, conductExamScreen.yn)
+            conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
+            time.sleep(rate)
+            print(final_reading)
+    print("GSR Exited")
 
-    for i in range(12):
-        getData = ser.readline()
-        data = int(getData.decode('utf-8'))
-        currentTime = datetime.datetime.now()
-        final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-        print("Skin Conductivity Recording: ", currentTime, final_reading)
-        sensor_data.append(final_reading)
-        time.sleep(rate)
-    print(final_reading)
 
 
 def connectGSRSensorIndividual():
@@ -75,6 +80,7 @@ def connectGSRSensorIndividual():
 
     sensor_data = []
     times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    print("GSR: Started")
     for i in range(times):
         getData = ser.readline()
         data = int(getData.decode('utf-8'))

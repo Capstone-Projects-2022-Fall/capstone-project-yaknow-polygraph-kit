@@ -4,10 +4,12 @@
 import logging
 from PIL import Image, ImageTk
 import datetime
-
+import time
 import PolygraphExamSetupScreen
 
 import IndividualDeviceScreen
+
+import conductExamScreen
 
 with open('polygraphExamKitLogging.log', 'w'):
     pass
@@ -38,20 +40,17 @@ def connectRespirationBelt():
 
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
-
-    for i in range(12):
-        measurements = theAPIs.read()
-        currentTime = datetime.datetime.now()
-        if measurements == None:
-            break
-        print("Respiration Recordings: ", currentTime, measurements)
-    #if devicesFound is None:
-    #    logging.error('No Device connected.')
-    #else:
-    #    logging.info('Devices found:' + devicesFound)
-
-
-    #print("Hello World")
+    examStartTime = datetime.datetime.now()
+    while conductExamScreen.examFinished == False:
+        if(conductExamScreen.inQuestion == True):
+            print("Recording Respiration")
+            measurements = theAPIs.read()
+            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            if measurements is None:
+                break
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
+            conductExamScreen.respirationRecordings.append(tempMeasurement)
+    print("Respiration Exited")
 
 
 def connectRespirationBeltIndividual():
@@ -74,6 +73,7 @@ def connectRespirationBeltIndividual():
 
     rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
     theAPIs.start(rate)
+    print("Respiration Started")
 
     times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     for i in range(times):

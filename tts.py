@@ -14,7 +14,7 @@ def questionToSpeech(question, counter):
     # playback the speech
     mixer.music.load('speech{}.mp3'.format(counter % 2))
     mixer.music.play()
-    time.sleep(2)
+    #time.sleep(2)
     mixer.stop()
     #try:
     #    os.remove('speech{}.mp3'.format(counter % 2))
