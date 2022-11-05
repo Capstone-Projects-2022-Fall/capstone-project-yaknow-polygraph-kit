@@ -16,7 +16,8 @@ def add_question(question):
     :return: void
     '''
     with db.cursor() as mycursor:
-        mycursor.execute("INSERT INTO Question (question) VALUES (%s)", (question,))
+        # only add if question does not already exist
+        mycursor.execute("INSERT IGNORE INTO Question (question) VALUES (%s)", (question,))
         db.commit()
 
     db. close()

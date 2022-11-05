@@ -327,8 +327,10 @@ def startExam(window1):
                 questions = values['-PROBLEMATICQUESTIONS-']
                 # separate user questions based on "?"
                 questions_split = questions.split("?")
-                # strip white spaces
-                questions_split = [x.strip(' ') for x in questions_split]
+                # strip leading and trailing spaces
+                questions_split = [x.strip() for x in questions_split]
+                # strip new lines and tabs
+                questions_split = [x.strip('\t\n') for x in questions_split]
                 # for each question
                 for x in questions_split:
                     if x != '':
