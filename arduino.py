@@ -47,8 +47,7 @@ def connectGSRSensor():
             data = int(getData.decode('utf-8'))
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
             final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading,
-                                                                  conductExamScreen.newQuestion, conductExamScreen.yn)
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading, conductExamScreen.newQuestion, conductExamScreen.yn)
             conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
             time.sleep(rate)
             print(final_reading)

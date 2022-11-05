@@ -18,8 +18,6 @@ log_format = '%(asctime)s %(filename)s - %(levelname)s: %(message)s'
 
 logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG, force=True, format=log_format, datefmt='%H:%M:%S')
 
-
-
 def connectRespirationBelt():
     from gdx import gdx
     theAPIs = gdx()

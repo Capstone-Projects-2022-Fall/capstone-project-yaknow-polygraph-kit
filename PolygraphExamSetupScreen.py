@@ -137,12 +137,12 @@ def make_window():
     ]
 
     row1 = [
-        [gui.ButtonMenu('Select Examination Type', menu, k='-EXAMINATIONTYPE-'), gui.Text('Blood Pressure Sensor'),
+        [gui.Text('Blood Pressure Sensor'),
          gui.Text('Skin Conductivity Sensor'), gui.Text('Respiration Sensor')]
     ]
 
     row2 = [
-        [gui.Text('                                              '), gui.Image(size=(50, 50), key='theImage1'),
+        [gui.Text('          '), gui.Image(size=(50, 50), key='theImage1'),
          gui.Text('                     '), gui.Image(size=(50, 50), key='theImage2'), gui.Text('                 '),
          gui.Image(size=(50, 50), key='theImage3')]
 
@@ -167,9 +167,10 @@ def make_window():
     ]
 
     row3 = [
-        [gui.ButtonMenu('Select Blood Pressure Sampling Rate', BloodPressureSampling, k='-BPSampling-'),
-         gui.ButtonMenu('Select Skin Conductivity Sampling Rate', SkinConductivitySampling, k='-SCSampling-'),
-         gui.ButtonMenu('Select Respiration Sampling Rate', RespirationSampling, k='-RSampling-')]
+         [gui.Text('Skin Conductivity Sampling Rate'),
+          gui.Input(key='-SCSamplingRate-', enable_events=True),
+          gui.Text('Respiration Sampling Rate'),
+          gui.Input(key='-RSamplingRate-', enable_events=True)]
     ]
 
     col4 = [
@@ -258,7 +259,7 @@ def startExam(window1):
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
-        # print(event, values)
+        #print(event, values)
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event == '-BackButton-':
@@ -302,46 +303,12 @@ def startExam(window1):
 
             # you have to add a break here otherwise you get an error with PySimpleGUI saying key error not found when it does actually exists.
             break
-        elif event == '-EXAMINATIONTYPE-':
-            if values['-EXAMINATIONTYPE-'] == 'Control Question Technique':
-                window['-EXAMINATIONTYPE-'].update(button_text="Control Question Technique")
-                examination_type = values['-EXAMINATIONTYPE-']
-                window.refresh()
-            elif values['-EXAMINATIONTYPE-'] == 'Guilty Knowledge Test':
-                window['-EXAMINATIONTYPE-'].update(button_text="Guilty Knowledge Test")
-                window.refresh()
-        elif event == '-RSampling-':
-            if values['-RSampling-'] == '1':
-                window['-RSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.RespirationSamplingRate = 1
-                window.refresh()
-            elif values['-RSampling-'] == '5':
-                window['-RSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.RespirationSamplingRate = 5
-                window.refresh()
-        elif event == '-SCSampling-':
-            if values['-SCSampling-'] == '1':
-                window['-SCSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.GSRSamplingRate = 1
-                window.refresh()
-            elif values['-SCSampling-'] == '5':
-                window['-SCSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.GSRSamplingRate = 5
-                window.refresh()
-        # NEW FOR BLOOD PRESSURE // might need to update
-        elif event == '-BPSampling-':
-            if values['-BPSampling-'] == '1':
-                window['-BPSampling-'].update(button_text="1")
-                PolygraphExamSetupScreen.BloodPressureSamplingRate = 1
-                window.refresh()
-            elif values['-BPSampling-'] == '5':
-                window['-BPSampling-'].update(button_text="5")
-                problematic_questions = values['-PROBLEMATICQUESTIONS-']
-                PolygraphExamSetupScreen.BloodPressureSamplingRate = 5
-                window.refresh()
-
+        elif event == '-RSamplingRate-':
+            #Check User Input
+            PolygraphExamSetupScreen.RespirationSamplingRate = values['-RSamplingRate-']
+        elif event == '-SCSamplingRate-':
+            #Check User Input
+            PolygraphExamSetupScreen.GSRSamplingRate = values['-SCSamplingRate-']
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
             search_question = values['-SEARCHINPUT-']
