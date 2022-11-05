@@ -76,16 +76,18 @@ def connectBloodPressureDevice():
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
         else:
+            BeginningTime = datetime.datetime.now()
             conductExamScreen.inQuestion = True
             while correctPressure == False:
                 measurements = theAPIs.read()
                 print("Recording Measurements: ", measurements[0])
-                currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+ #               currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
                 possibleBP.append(measurements)
                 listOfOscillations.append(measurements[1])
                 if measurements[1] > maxOsc:
                     maxOsc = measurements[1]
                 if measurements[0] < 70:
+                    endTime = datetime.datetime.now()
                     print("Less than 70")
                     listt = []
                     for inner_list in (possibleBP):
@@ -107,19 +109,24 @@ def connectBloodPressureDevice():
 
                     # print(peaks)
 
-                    # pulseRate = ((((len(peaks))) / totalTime) * 60)
-                    # print("The pulse rate is: " + str(pulseRate))
+                    currentTime = BeginningTime - endTime
+                    pulseRate = ((((len(peaks))) / currentTime) * 60)
+                    print("The pulse rate is: " + str(pulseRate))
                     tempMeasurementBP = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
-                    tempMeasurementPR = conductExamScreen.singularRecording(currentTime, finalMeasurement,
-                                                                          conductExamScreen.newQuestion,
-                                                                          conductExamScreen.yn)
+                    tempMeasurementPR = conductExamScreen.singularRecording(currentTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
                     conductExamScreen.bloodPressureRecordings.append(tempMeasurementBP)
+                    conductExamScreen.pulseRecordings.append(tempMeasurementPR)
                     print("Added BP: ", tempMeasurementBP.measurement)
                     print("Associated Time: ", tempMeasurementBP.timestamp)
                     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
+                    print("Added PR: ", tempMeasurementPR.measurement)
+                    print("Associated Time: ", tempMeasurementPR.timestamp)
+                    print("PR Collections: ", len(conductExamScreen.pulseRecordings))
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []
+                    prev = listOfOscillations[0] or 0.001
+                    peaks = []
 
     print("Blood Pressure: exited")
 
