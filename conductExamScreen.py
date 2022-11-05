@@ -381,6 +381,8 @@ def startExam(window1):
             separateByQuestion()
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
+            conductExamScreen.window['col3_1'].update(visible=True)
+            conductExamScreen.window['col3_2'].update(visible=True)
             conductExamScreen.window['-Restart-'].update(visible=True)
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
