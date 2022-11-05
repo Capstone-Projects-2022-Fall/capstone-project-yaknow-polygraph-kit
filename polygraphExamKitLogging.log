@@ -1,0 +1,848 @@
+13:13:01 selector_events.py - DEBUG: Using selector: KqueueSelector
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManagerDidUpdateState_
+13:13:01 CentralManagerDelegate.py - DEBUG: Bluetooth powered on
+13:13:01 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device 4471570A-36AC-41F4-9157-5DCC8A114C33: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device C0BD28AE-638E-4F37-84AE-971F6750FAB4: None @ RSSI: -82 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device 5AEB83D3-843C-4ABA-9F22-CFD9681EC8C2: None @ RSSI: -70 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device 7D05B2A1-3866-4F6A-9EA9-3D108A0B4492: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device 896EB9C8-517E-46B7-A9B7-E6DEAD3E46BF: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:01 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:01 CentralManagerDelegate.py - DEBUG: Discovered device 9F66840F-4ED3-443E-8FFE-978F96115A8E: GDX-BP 141014A2 @ RSSI: -42 (kCBAdvData <nsdict_keys(['kCBAdvDataLocalName', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 323C7237-5FBD-4DD7-8682-52944055C653: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 6804BBA8-1E78-4107-9BA6-C85D56BE1365: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 7D71C7C4-3896-4C95-A69C-BC5B955B9C3F: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 990EEDD6-17FC-4361-9D57-5DF1289A42DC: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 05EC4B5B-024C-48AD-A038-B1275BFAB96D: None @ RSSI: -66 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataServiceData', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device C2D12213-35CA-4753-85F2-516B59E89599: None @ RSSI: -76 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 51CFFE1F-E86D-44AF-90F2-5C1625BDC4F6: None @ RSSI: -73 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 088FAE37-7D2F-4A93-9D31-752FCE6B0FC7: None @ RSSI: -66 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 5B288C2F-17DF-4966-8508-E7E99712763B: None @ RSSI: -46 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 64DBCBB0-00C0-4D24-B427-9197FB81BF53: None @ RSSI: -76 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 77146234-0658-48F3-82FE-27A7233CBE29: None @ RSSI: -72 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 8749E271-DC16-42CB-91F8-B87F5EA949CE: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 5FEBE284-8E3F-4845-8304-F370D77234A5: None @ RSSI: -63 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:02 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:02 CentralManagerDelegate.py - DEBUG: Discovered device 5C850454-29AD-47E2-AA2A-5CC2FD86ADF4: None @ RSSI: -83 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:03 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:03 CentralManagerDelegate.py - DEBUG: Discovered device 3F0BAA44-92BE-4087-81BA-E06C51E3DB74: None @ RSSI: -67 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:03 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:03 CentralManagerDelegate.py - DEBUG: Discovered device EB0E0293-C014-45BF-8267-2D2E1EA29748: None @ RSSI: -82 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:03 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:03 CentralManagerDelegate.py - DEBUG: Discovered device 5B5E5736-BCCA-459A-95DB-12CC4B9348CA: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:03 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:03 CentralManagerDelegate.py - DEBUG: Discovered device 853ED850-105C-4F5F-9E9E-1269E466DF70: None @ RSSI: -86 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataServiceData', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:03 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:03 CentralManagerDelegate.py - DEBUG: Discovered device 5C8CCD90-691D-43C9-B5DC-1159DCB26F23: None @ RSSI: -86 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:04 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:04 CentralManagerDelegate.py - DEBUG: Discovered device A1573925-BF1B-4DA7-A419-B726A21C5B33: None @ RSSI: -68 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:04 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:04 CentralManagerDelegate.py - DEBUG: Discovered device 7CDBFD9F-04EB-4E66-A963-4D5B4690F79A: None @ RSSI: -46 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:04 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:04 CentralManagerDelegate.py - DEBUG: Discovered device 6B7F1C0A-5FE1-4FEB-81D6-BAED4F35D232: None @ RSSI: -72 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:04 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:04 CentralManagerDelegate.py - DEBUG: Discovered device AD9EECDF-37F6-4371-8912-E43BFF6EE86E: None @ RSSI: -88 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device FE6E71A4-8CE8-4704-B2B7-8801A51EAE00: None @ RSSI: -78 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device BF706BA8-96AC-473E-B42E-370513229123: None @ RSSI: -74 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 4F198F82-97B4-4CCD-8A05-53CE3714E858: None @ RSSI: -86 (kCBAdvData <nsdict_keys(['kCBAdvDataServiceData', 'kCBAdvDataChannel', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 042C1298-AB16-4A21-B998-5837F6CA6497: None @ RSSI: -77 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device CD615104-C003-46B6-81F7-352685CD5938: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 2CE8EE1E-0CDF-47DD-807B-76B4E6886659: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataServiceData', 'kCBAdvDataChannel', 'kCBAdvDataServiceUUIDs', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device A4EE6537-0F7A-4186-B096-2F7890C63505: None @ RSSI: -66 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 4E8B4199-B3CC-401C-A76B-37E9BB0BCB03: None @ RSSI: -80 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 69C04CC8-4EAF-4C72-8059-B278B5C98C7F: None @ RSSI: -85 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataServiceData', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device B9AAFD47-E1D7-44C2-941E-5EB6D1A728A1: None @ RSSI: -70 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataTxPowerLevel', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 6D067584-8D8F-4873-BF3F-E484A7A5DDF4: None @ RSSI: -87 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:05 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:05 CentralManagerDelegate.py - DEBUG: Discovered device 39EBC040-C09F-418F-9B69-F47CBFE9E0F9: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:06 CentralManagerDelegate.py - DEBUG: Discovered device 68DE81D4-81CE-4511-A037-32F3E1BD9330: None @ RSSI: -70 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:06 CentralManagerDelegate.py - DEBUG: Discovered device 2B453E07-6712-46BB-8E1C-5423537CEBA4: None @ RSSI: -81 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f6105f00>
+13:13:06 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManagerDidUpdateState_
+13:13:06 CentralManagerDelegate.py - DEBUG: Bluetooth powered on
+13:13:06 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:06 CentralManagerDelegate.py - DEBUG: Discovered device 92909074-7E1D-4AA1-98DE-7FC644FECE42: None @ RSSI: -89 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f5b86c30>
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:06 CentralManagerDelegate.py - DEBUG: Discovered device CFAB68FB-D225-4D7A-AA7D-58B926A26C3E: None @ RSSI: -91 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f5b86c30>
+13:13:06 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:06 CentralManagerDelegate.py - DEBUG: Discovered device 5FEBE284-8E3F-4845-8304-F370D77234A5: None @ RSSI: -66 (kCBAdvData <nsdict_keys(['kCBAdvDataIsConnectable', 'kCBAdvDataChannel'])>) and Central: <CBCentralManager: 0x7ff6f5b86c30>
+13:13:07 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:07 CentralManagerDelegate.py - DEBUG: Discovered device 042C1298-AB16-4A21-B998-5837F6CA6497: None @ RSSI: -84 (kCBAdvData <nsdict_keys(['kCBAdvDataAppleMfgData', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f5b86c30>
+13:13:07 CentralManagerDelegate.py - DEBUG: centralManager_didDiscoverPeripheral_advertisementData_RSSI_
+13:13:07 CentralManagerDelegate.py - DEBUG: Discovered device 9F66840F-4ED3-443E-8FFE-978F96115A8E: GDX-BP 141014A2 @ RSSI: -48 (kCBAdvData <nsdict_keys(['kCBAdvDataLocalName', 'kCBAdvDataChannel', 'kCBAdvDataManufacturerData', 'kCBAdvDataIsConnectable'])>) and Central: <CBCentralManager: 0x7ff6f5b86c30>
+13:13:07 CentralManagerDelegate.py - DEBUG: 'isScanning' changed
+13:13:07 client.py - DEBUG: CentralManagerDelegate  at <CentralManagerDelegate: 0x7ff6f5a722d0>
+13:13:07 client.py - DEBUG: Connecting to BLE device @ 9F66840F-4ED3-443E-8FFE-978F96115A8E
+13:13:07 CentralManagerDelegate.py - DEBUG: centralManager_didConnectPeripheral_
+13:13:07 client.py - DEBUG: Retrieving services...
+13:13:07 CentralManagerDelegate.py - DEBUG: centralManager_didConnectPeripheral_
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverServices_
+13:13:07 PeripheralDelegate.py - DEBUG: Services discovered
+13:13:07 client.py - DEBUG: Retrieving characteristics for service 180A
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Characteristics discovered
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic 2A29
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 7
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic 2A25
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 9
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic 2A26
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 11
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic 2A28
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 13
+13:13:07 client.py - DEBUG: Retrieving characteristics for service 180F
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Characteristics discovered
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic 2A19
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 16
+13:13:07 client.py - DEBUG: Retrieving characteristics for service D91714EF-28B9-4F91-BA16-F0D9A604F112
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Characteristics discovered
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic F4BF14A6-C7D5-4B6D-8AA8-DF1A7C83ADCB
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 19
+13:13:07 client.py - DEBUG: Retrieving descriptors for characteristic B41E6675-A329-40E0-AA01-44D2F444BABE
+13:13:07 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:07 PeripheralDelegate.py - DEBUG: Descriptor discovered 21
+13:13:07 client.py - DEBUG: Retrieving characteristics for service 8E6F0F58-5819-11E6-8B77-86F30CA893D3
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverCharacteristicsForService_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Characteristics discovered
+13:13:08 client.py - DEBUG: Retrieving descriptors for characteristic 8E6F094A-5819-11E6-8B77-86F30CA893D3
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Descriptor discovered 25
+13:13:08 client.py - DEBUG: Retrieving descriptors for characteristic 9CEA5308-59A9-11E6-8B77-86F30CA893D3
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Descriptor discovered 27
+13:13:08 client.py - DEBUG: Retrieving descriptors for characteristic CF052904-5D95-11E6-8B77-86F30CA893D3
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Descriptor discovered 29
+13:13:08 client.py - DEBUG: Retrieving descriptors for characteristic 248D6F39-5819-11E6-8B77-86F30CA893D3
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didDiscoverDescriptorsForCharacteristic_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Descriptor discovered 31
+13:13:08 client.py - DEBUG: Services resolved for BleakClientCoreBluetooth (9F66840F-4ED3-443E-8FFE-978F96115A8E)
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateNotificationStateForCharacteristic_error_
+13:13:08 PeripheralDelegate.py - DEBUG: Character Notify Update
+13:13:08 device.py - DEBUG: GDX >> 58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C  43  0D  42  0E  41
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  19  FE  3F  1A  A5  4A  06  49  07  48  08  47  09  46  0A  45  0B  44  0C
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x19\xfe?\x1a\xa5J\x06I\x07H\x08G\tF\nE\x0bD\x0c'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 5 offset 20
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>43  0D  42  0E  41
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'C\rB\x0eA'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 25
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 26 Expected packet length: 26
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+13:13:08 device.py - DEBUG: GDX << B8  1A  00  E0  1A  FE  55  AA  56  A9  57  A8  58  A7  59  A6  5A  A5  5B  A4  5C  A3  5D  A2  5E  A1
+13:13:08 device.py - DEBUG: GDX >> 58  05  FD  6A  10
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FD  6A  10
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x05\xfdj\x10'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  12  01  C7  10  FD  00  00  05  00  00  00  04  01  00  00  05  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 18 Expected packet length: 18
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  12  01  C7  10  FD  00  00  05  00  00  00  04  01  00  00  05  00
+13:13:08 device.py - DEBUG: GDX << 98  12  01  C7  10  FD  00  00  05  00  00  00  04  01  00  00  05  00
+13:13:08 device.py - INFO: Device status:
+13:13:08 device.py - INFO:   Status: 0
+13:13:08 device.py - INFO:   Primary FW version: 5.0.0
+13:13:08 device.py - INFO:   Secondary FW version: 4.1.0
+13:13:08 device.py - INFO:   Battery percent: 5%
+13:13:08 device.py - INFO:   Charger state: 0
+13:13:08 device.py - DEBUG: GDX >> 58  05  FC  AE  55
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  05  FC  AE  55
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x05\xfc\xaeU'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 5
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9E  02  98  55  FC  47  44  58  2D  42  50  00  00  00  00  00  00  00  00  00  00  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  47  44  58  2D  42  50  20  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  0A  06  05  00  00  00  04  01  00  00  A8  DB  E4  EA  35  90  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  42  6C  6F  6F  64  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 158 Expected packet length: 158
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  9E  02  98  55  FC  47  44  58  2D  42  50  00  00  00  00  00  00  00  00  00  00  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  47  44  58  2D  42  50  20  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  0A  06  05  00  00  00  04  01  00  00  A8  DB  E4  EA  35  90  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  42  6C  6F  6F  64  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX << 98  9E  02  98  55  FC  47  44  58  2D  42  50  00  00  00  00  00  00  00  00  00  00  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  47  44  58  2D  42  50  20  31  34  31  30  31  34  41  32  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  08  00  E6  07  0A  06  05  00  00  00  04  01  00  00  A8  DB  E4  EA  35  90  00  20  00  00  47  6F  20  44  69  72  65  63  74  C2  AE  20  42  6C  6F  6F  64  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device.py - INFO: Device info:
+13:13:08 device.py - INFO:   Description: Go Direct® Blood Pressure                                      
+13:13:08 device.py - INFO:   Order code: GDX-BP          
+13:13:08 device.py - INFO:   Serial number: 141014A2        
+13:13:08 device.py - INFO:   Device name: GDX-BP 141014A2                 
+13:13:08 device.py - INFO:   Mfg ID: 8
+13:13:08 device.py - INFO:   Mfg Date: 10/6/2022
+13:13:08 device.py - INFO:   Primary FW version: 5.0.0
+13:13:08 device.py - INFO:   Secondary FW version: 4.1.0
+13:13:08 device.py - INFO:   BLE address: 90:35:ea:e4:db:a8
+13:13:08 device.py - INFO:   NVRAM size: 8192bytes
+13:13:08 device.py - DEBUG: GDX >> 58  06  FB  AA  50  01
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  06  FB  AA  50  01
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x06\xfb\xaaP\x01'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 6
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9A  03  DE  50  FB  01  00  11  02  00  00  00  00  43  75  66  66  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  FC  A9  F1  D2  4D  62  50  3F  00  00  00  00  00  00  00  00  00  00  00  00  00  C0  72  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 154 Expected packet length: 154
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  9A  03  DE  50  FB  01  00  11  02  00  00  00  00  43  75  66  66  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  FC  A9  F1  D2  4D  62  50  3F  00  00  00  00  00  00  00  00  00  00  00  00  00  C0  72  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX << 98  9A  03  DE  50  FB  01  00  11  02  00  00  00  00  43  75  66  66  20  50  72  65  73  73  75  72  65  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  FC  A9  F1  D2  4D  62  50  3F  00  00  00  00  00  00  00  00  00  00  00  00  00  C0  72  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device.py - INFO: Sensor[1] info:
+13:13:08 device.py - INFO:   Description: Cuff Pressure                                               
+13:13:08 device.py - INFO:   ID: 529
+13:13:08 device.py - INFO:   Measurement type: 0
+13:13:08 device.py - INFO:   Sampling mode: 0
+13:13:08 device.py - INFO:   Units: mmHg                            
+13:13:08 device.py - INFO:   Measurement uncertainty: 0
+13:13:08 device.py - INFO:   Measurement min: 0
+13:13:08 device.py - INFO:   Measurement max: 300
+13:13:08 device.py - INFO:   Period typical 20000
+13:13:08 device.py - INFO:   Period min: 2500
+13:13:08 device.py - INFO:   Period max: 3600000000
+13:13:08 device.py - INFO:   Period granularity: 100
+13:13:08 device.py - INFO:   Mutual exclusion mask: 0x0
+13:13:08 device.py - DEBUG: GDX >> 58  06  FA  AF  50  07
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  06  FA  AF  50  07
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x06\xfa\xafP\x07'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 6
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  9A  04  F5  50  FA  07  00  17  02  00  00  00  00  4F  73  63  69  6C  6C  61  74  69  6F  6E  73  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  CE  94  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  7B  14  AE  47  E1  7A  84  3F  00  00  00  00  00  00  14  C0  00  00  00  00  00  00  14  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 154 Expected packet length: 154
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  9A  04  F5  50  FA  07  00  17  02  00  00  00  00  4F  73  63  69  6C  6C  61  74  69  6F  6E  73  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  CE  94  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  7B  14  AE  47  E1  7A  84  3F  00  00  00  00  00  00  14  C0  00  00  00  00  00  00  14  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX << 98  9A  04  F5  50  FA  07  00  17  02  00  00  00  00  4F  73  63  69  6C  6C  61  74  69  6F  6E  73  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  CE  94  6D  6D  48  67  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  7B  14  AE  47  E1  7A  84  3F  00  00  00  00  00  00  14  C0  00  00  00  00  00  00  14  40  C4  09  00  00  00  A4  93  D6  00  00  00  00  20  4E  00  00  64  00  00  00  00  00  00  00
+13:13:08 device.py - INFO: Sensor[7] info:
+13:13:08 device.py - INFO:   Description: Oscillations                                                
+13:13:08 device.py - INFO:   ID: 535
+13:13:08 device.py - INFO:   Measurement type: 0
+13:13:08 device.py - INFO:   Sampling mode: 0
+13:13:08 device.py - INFO:   Units: ΔmmHg                          
+13:13:08 device.py - INFO:   Measurement uncertainty: 0
+13:13:08 device.py - INFO:   Measurement min: -5
+13:13:08 device.py - INFO:   Measurement max: 5
+13:13:08 device.py - INFO:   Period typical 20000
+13:13:08 device.py - INFO:   Period min: 2500
+13:13:08 device.py - INFO:   Period max: 3600000000
+13:13:08 device.py - INFO:   Period granularity: 100
+13:13:08 device.py - INFO:   Mutual exclusion mask: 0x0
+13:13:08 device.py - DEBUG: GDX >> 58  0F  F9  A1  1B  FF  00  A0  86  01  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  0F  F9  A1  1B  FF  00  A0  86  01  00  00  00  00  00
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x0f\xf9\xa1\x1b\xff\x00\xa0\x86\x01\x00\x00\x00\x00\x00'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 15
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  10  05  E7  1B  F9  FF  00  A0  86  01  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 16 Expected packet length: 16
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  10  05  E7  1B  F9  FF  00  A0  86  01  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX << 98  10  05  E7  1B  F9  FF  00  A0  86  01  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX >> 58  13  F8  FD  18  FF  01  82  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: BLE WRITE: >>>58  13  F8  FD  18  FF  01  82  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x13\xf8\xfd\x18\xff\x01\x82\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+13:13:08 device_bleak.py - DEBUG: lengthRemaining 0 offset 19
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  07  06  B5  18  F8  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 7 Expected packet length: 7
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<98  07  06  B5  18  F8  00
+13:13:08 device.py - DEBUG: GDX << 98  07  06  B5  18  F8  00
+13:13:08 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:08 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  11  00  BF  0C  82  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device_bleak.py - DEBUG: Receive buffer length: 17 Expected packet length: 17
+13:13:08 device_bleak.py - DEBUG: BLE READ: <<<20  11  00  BF  0C  82  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device.py - DEBUG: GDX << 20  11  00  BF  0C  82  00  00  00  00  00  00  00  00  00  00  00
+13:13:08 device.py - INFO: Ignoring non-supported measurement type
+13:13:09 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:09 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  01  44  06  82  00  05  F8  C1  06  89  42  00  00  00  00  91  6D  89  42  00  00  00  00  78  90  88  42  00  00  00  00  4D  2F  87  42  00  00  00  00  E2  51  86  42  00  00  00  00
+13:13:09 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:09 device_bleak.py - DEBUG: BLE READ: <<<20  31  01  44  06  82  00  05  F8  C1  06  89  42  00  00  00  00  91  6D  89  42  00  00  00  00  78  90  88  42  00  00  00  00  4D  2F  87  42  00  00  00  00  E2  51  86  42  00  00  00  00
+13:13:09 device.py - DEBUG: GDX << 20  31  01  44  06  82  00  05  F8  C1  06  89  42  00  00  00  00  91  6D  89  42  00  00  00  00  78  90  88  42  00  00  00  00  4D  2F  87  42  00  00  00  00  E2  51  86  42  00  00  00  00
+13:13:09 device.py - DEBUG: MEASUREMENT: 20  31  01  44  06  82  00  05  F8  C1  06  89  42  00  00  00  00  91  6D  89  42  00  00  00  00  78  90  88  42  00  00  00  00  4D  2F  87  42  00  00  00  00  E2  51  86  42  00  00  00  00
+13:13:09 device.py - DEBUG: REAL32: C1  06  89  42  00  00  00  00  91  6D  89  42  00  00  00  00  78  90  88  42  00  00  00  00  4D  2F  87  42  00  00  00  00  E2  51  86  42  00  00  00  00
+13:13:09 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:09 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  02  0D  06  82  00  05  F8  3C  50  86  42  00  00  00  00  26  32  84  42  00  00  00  00  A3  97  84  42  00  00  00  00  2E  67  83  42  00  00  00  00  8D  18  82  42  00  00  00  00
+13:13:09 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:09 device_bleak.py - DEBUG: BLE READ: <<<20  31  02  0D  06  82  00  05  F8  3C  50  86  42  00  00  00  00  26  32  84  42  00  00  00  00  A3  97  84  42  00  00  00  00  2E  67  83  42  00  00  00  00  8D  18  82  42  00  00  00  00
+13:13:09 device.py - DEBUG: GDX << 20  31  02  0D  06  82  00  05  F8  3C  50  86  42  00  00  00  00  26  32  84  42  00  00  00  00  A3  97  84  42  00  00  00  00  2E  67  83  42  00  00  00  00  8D  18  82  42  00  00  00  00
+13:13:09 device.py - DEBUG: MEASUREMENT: 20  31  02  0D  06  82  00  05  F8  3C  50  86  42  00  00  00  00  26  32  84  42  00  00  00  00  A3  97  84  42  00  00  00  00  2E  67  83  42  00  00  00  00  8D  18  82  42  00  00  00  00
+13:13:09 device.py - DEBUG: REAL32: 3C  50  86  42  00  00  00  00  26  32  84  42  00  00  00  00  A3  97  84  42  00  00  00  00  2E  67  83  42  00  00  00  00  8D  18  82  42  00  00  00  00
+13:13:10 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:10 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  03  6F  06  82  00  05  F8  A0  0F  82  42  00  00  00  00  2B  1C  82  42  00  00  00  00  65  91  80  42  00  00  00  00  E8  39  A3  42  00  00  00  00  7A  E3  BB  42  00  00  00  00
+13:13:10 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:10 device_bleak.py - DEBUG: BLE READ: <<<20  31  03  6F  06  82  00  05  F8  A0  0F  82  42  00  00  00  00  2B  1C  82  42  00  00  00  00  65  91  80  42  00  00  00  00  E8  39  A3  42  00  00  00  00  7A  E3  BB  42  00  00  00  00
+13:13:10 device.py - DEBUG: GDX << 20  31  03  6F  06  82  00  05  F8  A0  0F  82  42  00  00  00  00  2B  1C  82  42  00  00  00  00  65  91  80  42  00  00  00  00  E8  39  A3  42  00  00  00  00  7A  E3  BB  42  00  00  00  00
+13:13:10 device.py - DEBUG: MEASUREMENT: 20  31  03  6F  06  82  00  05  F8  A0  0F  82  42  00  00  00  00  2B  1C  82  42  00  00  00  00  65  91  80  42  00  00  00  00  E8  39  A3  42  00  00  00  00  7A  E3  BB  42  00  00  00  00
+13:13:10 device.py - DEBUG: REAL32: A0  0F  82  42  00  00  00  00  2B  1C  82  42  00  00  00  00  65  91  80  42  00  00  00  00  E8  39  A3  42  00  00  00  00  7A  E3  BB  42  00  00  00  00
+13:13:10 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:10 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  04  E5  06  82  00  05  F8  C5  98  B6  42  00  00  00  00  CB  4A  B2  42  00  00  00  00  8F  1A  AF  42  00  00  00  00  D1  AD  AA  42  00  00  00  00  34  8B  A8  42  00  00  00  00
+13:13:10 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:10 device_bleak.py - DEBUG: BLE READ: <<<20  31  04  E5  06  82  00  05  F8  C5  98  B6  42  00  00  00  00  CB  4A  B2  42  00  00  00  00  8F  1A  AF  42  00  00  00  00  D1  AD  AA  42  00  00  00  00  34  8B  A8  42  00  00  00  00
+13:13:10 device.py - DEBUG: GDX << 20  31  04  E5  06  82  00  05  F8  C5  98  B6  42  00  00  00  00  CB  4A  B2  42  00  00  00  00  8F  1A  AF  42  00  00  00  00  D1  AD  AA  42  00  00  00  00  34  8B  A8  42  00  00  00  00
+13:13:10 device.py - DEBUG: MEASUREMENT: 20  31  04  E5  06  82  00  05  F8  C5  98  B6  42  00  00  00  00  CB  4A  B2  42  00  00  00  00  8F  1A  AF  42  00  00  00  00  D1  AD  AA  42  00  00  00  00  34  8B  A8  42  00  00  00  00
+13:13:10 device.py - DEBUG: REAL32: C5  98  B6  42  00  00  00  00  CB  4A  B2  42  00  00  00  00  8F  1A  AF  42  00  00  00  00  D1  AD  AA  42  00  00  00  00  34  8B  A8  42  00  00  00  00
+13:13:11 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:11 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  05  C7  06  82  00  05  F8  9B  47  CA  42  00  00  00  00  52  BD  E0  42  00  00  00  00  F6  C1  D9  42  00  00  00  00  D3  38  D6  42  00  00  00  00  01  C3  D2  42  00  00  00  00
+13:13:11 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:11 device_bleak.py - DEBUG: BLE READ: <<<20  31  05  C7  06  82  00  05  F8  9B  47  CA  42  00  00  00  00  52  BD  E0  42  00  00  00  00  F6  C1  D9  42  00  00  00  00  D3  38  D6  42  00  00  00  00  01  C3  D2  42  00  00  00  00
+13:13:11 device.py - DEBUG: GDX << 20  31  05  C7  06  82  00  05  F8  9B  47  CA  42  00  00  00  00  52  BD  E0  42  00  00  00  00  F6  C1  D9  42  00  00  00  00  D3  38  D6  42  00  00  00  00  01  C3  D2  42  00  00  00  00
+13:13:11 device.py - DEBUG: MEASUREMENT: 20  31  05  C7  06  82  00  05  F8  9B  47  CA  42  00  00  00  00  52  BD  E0  42  00  00  00  00  F6  C1  D9  42  00  00  00  00  D3  38  D6  42  00  00  00  00  01  C3  D2  42  00  00  00  00
+13:13:11 device.py - DEBUG: REAL32: 9B  47  CA  42  00  00  00  00  52  BD  E0  42  00  00  00  00  F6  C1  D9  42  00  00  00  00  D3  38  D6  42  00  00  00  00  01  C3  D2  42  00  00  00  00
+13:13:11 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:11 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  06  F0  06  82  00  05  F8  3C  17  CE  42  00  00  00  00  22  B2  CC  42  00  00  00  00  C8  6D  CA  42  00  00  00  00  B2  26  E0  42  00  00  00  00  91  C0  00  43  00  00  00  00
+13:13:11 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:11 device_bleak.py - DEBUG: BLE READ: <<<20  31  06  F0  06  82  00  05  F8  3C  17  CE  42  00  00  00  00  22  B2  CC  42  00  00  00  00  C8  6D  CA  42  00  00  00  00  B2  26  E0  42  00  00  00  00  91  C0  00  43  00  00  00  00
+13:13:11 device.py - DEBUG: GDX << 20  31  06  F0  06  82  00  05  F8  3C  17  CE  42  00  00  00  00  22  B2  CC  42  00  00  00  00  C8  6D  CA  42  00  00  00  00  B2  26  E0  42  00  00  00  00  91  C0  00  43  00  00  00  00
+13:13:11 device.py - DEBUG: MEASUREMENT: 20  31  06  F0  06  82  00  05  F8  3C  17  CE  42  00  00  00  00  22  B2  CC  42  00  00  00  00  C8  6D  CA  42  00  00  00  00  B2  26  E0  42  00  00  00  00  91  C0  00  43  00  00  00  00
+13:13:11 device.py - DEBUG: REAL32: 3C  17  CE  42  00  00  00  00  22  B2  CC  42  00  00  00  00  C8  6D  CA  42  00  00  00  00  B2  26  E0  42  00  00  00  00  91  C0  00  43  00  00  00  00
+13:13:12 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:12 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  07  63  06  82  00  05  F8  DC  E5  FB  42  00  00  00  00  71  AA  F6  42  00  00  00  00  4E  97  F5  42  00  00  00  00  09  80  F2  42  00  00  00  00  FA  32  EE  42  00  00  00  00
+13:13:12 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:12 device_bleak.py - DEBUG: BLE READ: <<<20  31  07  63  06  82  00  05  F8  DC  E5  FB  42  00  00  00  00  71  AA  F6  42  00  00  00  00  4E  97  F5  42  00  00  00  00  09  80  F2  42  00  00  00  00  FA  32  EE  42  00  00  00  00
+13:13:12 device.py - DEBUG: GDX << 20  31  07  63  06  82  00  05  F8  DC  E5  FB  42  00  00  00  00  71  AA  F6  42  00  00  00  00  4E  97  F5  42  00  00  00  00  09  80  F2  42  00  00  00  00  FA  32  EE  42  00  00  00  00
+13:13:12 device.py - DEBUG: MEASUREMENT: 20  31  07  63  06  82  00  05  F8  DC  E5  FB  42  00  00  00  00  71  AA  F6  42  00  00  00  00  4E  97  F5  42  00  00  00  00  09  80  F2  42  00  00  00  00  FA  32  EE  42  00  00  00  00
+13:13:12 device.py - DEBUG: REAL32: DC  E5  FB  42  00  00  00  00  71  AA  F6  42  00  00  00  00  4E  97  F5  42  00  00  00  00  09  80  F2  42  00  00  00  00  FA  32  EE  42  00  00  00  00
+13:13:12 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:12 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  08  BA  06  82  00  05  F8  C0  5E  EB  42  00  00  00  00  83  8F  E8  42  00  00  00  00  2E  0E  FF  42  00  00  00  00  74  9E  0E  43  00  00  00  00  EF  38  0B  43  00  00  00  00
+13:13:12 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:12 device_bleak.py - DEBUG: BLE READ: <<<20  31  08  BA  06  82  00  05  F8  C0  5E  EB  42  00  00  00  00  83  8F  E8  42  00  00  00  00  2E  0E  FF  42  00  00  00  00  74  9E  0E  43  00  00  00  00  EF  38  0B  43  00  00  00  00
+13:13:12 device.py - DEBUG: GDX << 20  31  08  BA  06  82  00  05  F8  C0  5E  EB  42  00  00  00  00  83  8F  E8  42  00  00  00  00  2E  0E  FF  42  00  00  00  00  74  9E  0E  43  00  00  00  00  EF  38  0B  43  00  00  00  00
+13:13:12 device.py - DEBUG: MEASUREMENT: 20  31  08  BA  06  82  00  05  F8  C0  5E  EB  42  00  00  00  00  83  8F  E8  42  00  00  00  00  2E  0E  FF  42  00  00  00  00  74  9E  0E  43  00  00  00  00  EF  38  0B  43  00  00  00  00
+13:13:12 device.py - DEBUG: REAL32: C0  5E  EB  42  00  00  00  00  83  8F  E8  42  00  00  00  00  2E  0E  FF  42  00  00  00  00  74  9E  0E  43  00  00  00  00  EF  38  0B  43  00  00  00  00
+13:13:13 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:13 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  09  AD  06  82  00  05  F8  E9  A1  08  43  00  00  00  00  4D  35  07  43  00  00  00  00  FA  EA  05  43  00  00  00  00  10  D4  04  43  00  00  00  00  37  58  04  43  00  00  00  00
+13:13:13 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:13 device_bleak.py - DEBUG: BLE READ: <<<20  31  09  AD  06  82  00  05  F8  E9  A1  08  43  00  00  00  00  4D  35  07  43  00  00  00  00  FA  EA  05  43  00  00  00  00  10  D4  04  43  00  00  00  00  37  58  04  43  00  00  00  00
+13:13:13 device.py - DEBUG: GDX << 20  31  09  AD  06  82  00  05  F8  E9  A1  08  43  00  00  00  00  4D  35  07  43  00  00  00  00  FA  EA  05  43  00  00  00  00  10  D4  04  43  00  00  00  00  37  58  04  43  00  00  00  00
+13:13:13 device.py - DEBUG: MEASUREMENT: 20  31  09  AD  06  82  00  05  F8  E9  A1  08  43  00  00  00  00  4D  35  07  43  00  00  00  00  FA  EA  05  43  00  00  00  00  10  D4  04  43  00  00  00  00  37  58  04  43  00  00  00  00
+13:13:13 device.py - DEBUG: REAL32: E9  A1  08  43  00  00  00  00  4D  35  07  43  00  00  00  00  FA  EA  05  43  00  00  00  00  10  D4  04  43  00  00  00  00  37  58  04  43  00  00  00  00
+13:13:13 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:13 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0A  15  06  82  00  05  F8  C6  0F  04  43  00  00  00  00  BD  BA  02  43  00  00  00  00  D2  00  02  43  00  00  00  00  EB  60  06  43  00  00  00  00  9D  B9  19  43  00  00  00  00
+13:13:13 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:13 device_bleak.py - DEBUG: BLE READ: <<<20  31  0A  15  06  82  00  05  F8  C6  0F  04  43  00  00  00  00  BD  BA  02  43  00  00  00  00  D2  00  02  43  00  00  00  00  EB  60  06  43  00  00  00  00  9D  B9  19  43  00  00  00  00
+13:13:13 device.py - DEBUG: GDX << 20  31  0A  15  06  82  00  05  F8  C6  0F  04  43  00  00  00  00  BD  BA  02  43  00  00  00  00  D2  00  02  43  00  00  00  00  EB  60  06  43  00  00  00  00  9D  B9  19  43  00  00  00  00
+13:13:13 device.py - DEBUG: MEASUREMENT: 20  31  0A  15  06  82  00  05  F8  C6  0F  04  43  00  00  00  00  BD  BA  02  43  00  00  00  00  D2  00  02  43  00  00  00  00  EB  60  06  43  00  00  00  00  9D  B9  19  43  00  00  00  00
+13:13:13 device.py - DEBUG: REAL32: C6  0F  04  43  00  00  00  00  BD  BA  02  43  00  00  00  00  D2  00  02  43  00  00  00  00  EB  60  06  43  00  00  00  00  9D  B9  19  43  00  00  00  00
+13:13:14 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:14 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0B  91  06  82  00  05  F8  56  57  17  43  00  00  00  00  0A  9C  15  43  00  00  00  00  1A  93  13  43  00  00  00  00  EF  E0  11  43  00  00  00  00  FC  36  10  43  00  00  00  00
+13:13:14 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:14 device_bleak.py - DEBUG: BLE READ: <<<20  31  0B  91  06  82  00  05  F8  56  57  17  43  00  00  00  00  0A  9C  15  43  00  00  00  00  1A  93  13  43  00  00  00  00  EF  E0  11  43  00  00  00  00  FC  36  10  43  00  00  00  00
+13:13:14 device.py - DEBUG: GDX << 20  31  0B  91  06  82  00  05  F8  56  57  17  43  00  00  00  00  0A  9C  15  43  00  00  00  00  1A  93  13  43  00  00  00  00  EF  E0  11  43  00  00  00  00  FC  36  10  43  00  00  00  00
+13:13:14 device.py - DEBUG: MEASUREMENT: 20  31  0B  91  06  82  00  05  F8  56  57  17  43  00  00  00  00  0A  9C  15  43  00  00  00  00  1A  93  13  43  00  00  00  00  EF  E0  11  43  00  00  00  00  FC  36  10  43  00  00  00  00
+13:13:14 device.py - DEBUG: REAL32: 56  57  17  43  00  00  00  00  0A  9C  15  43  00  00  00  00  1A  93  13  43  00  00  00  00  EF  E0  11  43  00  00  00  00  FC  36  10  43  00  00  00  00
+13:13:14 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:14 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0C  CB  06  82  00  05  F8  22  84  0E  43  00  00  00  00  0A  24  0C  43  00  00  00  00  94  DC  0A  43  00  00  00  00  1F  B7  07  43  00  00  00  00  0F  42  04  43  00  00  00  00
+13:13:14 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:14 device_bleak.py - DEBUG: BLE READ: <<<20  31  0C  CB  06  82  00  05  F8  22  84  0E  43  00  00  00  00  0A  24  0C  43  00  00  00  00  94  DC  0A  43  00  00  00  00  1F  B7  07  43  00  00  00  00  0F  42  04  43  00  00  00  00
+13:13:14 device.py - DEBUG: GDX << 20  31  0C  CB  06  82  00  05  F8  22  84  0E  43  00  00  00  00  0A  24  0C  43  00  00  00  00  94  DC  0A  43  00  00  00  00  1F  B7  07  43  00  00  00  00  0F  42  04  43  00  00  00  00
+13:13:14 device.py - DEBUG: MEASUREMENT: 20  31  0C  CB  06  82  00  05  F8  22  84  0E  43  00  00  00  00  0A  24  0C  43  00  00  00  00  94  DC  0A  43  00  00  00  00  1F  B7  07  43  00  00  00  00  0F  42  04  43  00  00  00  00
+13:13:14 device.py - DEBUG: REAL32: 22  84  0E  43  00  00  00  00  0A  24  0C  43  00  00  00  00  94  DC  0A  43  00  00  00  00  1F  B7  07  43  00  00  00  00  0F  42  04  43  00  00  00  00
+13:13:15 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:15 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0D  4F  06  82  00  05  F8  0C  AA  01  43  00  00  00  00  ED  E6  00  43  00  00  00  00  3B  43  00  43  00  00  00  00  A1  75  00  43  00  00  00  00  C6  3B  FF  42  00  00  00  00
+13:13:15 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:15 device_bleak.py - DEBUG: BLE READ: <<<20  31  0D  4F  06  82  00  05  F8  0C  AA  01  43  00  00  00  00  ED  E6  00  43  00  00  00  00  3B  43  00  43  00  00  00  00  A1  75  00  43  00  00  00  00  C6  3B  FF  42  00  00  00  00
+13:13:15 device.py - DEBUG: GDX << 20  31  0D  4F  06  82  00  05  F8  0C  AA  01  43  00  00  00  00  ED  E6  00  43  00  00  00  00  3B  43  00  43  00  00  00  00  A1  75  00  43  00  00  00  00  C6  3B  FF  42  00  00  00  00
+13:13:15 device.py - DEBUG: MEASUREMENT: 20  31  0D  4F  06  82  00  05  F8  0C  AA  01  43  00  00  00  00  ED  E6  00  43  00  00  00  00  3B  43  00  43  00  00  00  00  A1  75  00  43  00  00  00  00  C6  3B  FF  42  00  00  00  00
+13:13:15 device.py - DEBUG: REAL32: 0C  AA  01  43  00  00  00  00  ED  E6  00  43  00  00  00  00  3B  43  00  43  00  00  00  00  A1  75  00  43  00  00  00  00  C6  3B  FF  42  00  00  00  00
+13:13:15 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:15 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0E  D8  06  82  00  05  F8  B6  88  FD  42  00  00  00  00  AF  16  FD  42  00  00  00  00  AE  2D  FC  42  00  00  00  00  7E  8B  FB  42  00  00  00  00  9C  39  FD  42  00  00  00  00
+13:13:15 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:15 device_bleak.py - DEBUG: BLE READ: <<<20  31  0E  D8  06  82  00  05  F8  B6  88  FD  42  00  00  00  00  AF  16  FD  42  00  00  00  00  AE  2D  FC  42  00  00  00  00  7E  8B  FB  42  00  00  00  00  9C  39  FD  42  00  00  00  00
+13:13:15 device.py - DEBUG: GDX << 20  31  0E  D8  06  82  00  05  F8  B6  88  FD  42  00  00  00  00  AF  16  FD  42  00  00  00  00  AE  2D  FC  42  00  00  00  00  7E  8B  FB  42  00  00  00  00  9C  39  FD  42  00  00  00  00
+13:13:15 device.py - DEBUG: MEASUREMENT: 20  31  0E  D8  06  82  00  05  F8  B6  88  FD  42  00  00  00  00  AF  16  FD  42  00  00  00  00  AE  2D  FC  42  00  00  00  00  7E  8B  FB  42  00  00  00  00  9C  39  FD  42  00  00  00  00
+13:13:15 device.py - DEBUG: REAL32: B6  88  FD  42  00  00  00  00  AF  16  FD  42  00  00  00  00  AE  2D  FC  42  00  00  00  00  7E  8B  FB  42  00  00  00  00  9C  39  FD  42  00  00  00  00
+13:13:16 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:16 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  0F  E8  06  82  00  05  F8  14  2C  FC  42  B8  1E  05  BF  94  B4  FA  42  E1  7A  94  BF  50  95  FA  42  52  B8  5E  BF  B8  B2  F9  42  0A  D7  83  BF  A3  0B  F9  42  85  EB  91  BF
+13:13:16 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:16 device_bleak.py - DEBUG: BLE READ: <<<20  31  0F  E8  06  82  00  05  F8  14  2C  FC  42  B8  1E  05  BF  94  B4  FA  42  E1  7A  94  BF  50  95  FA  42  52  B8  5E  BF  B8  B2  F9  42  0A  D7  83  BF  A3  0B  F9  42  85  EB  91  BF
+13:13:16 device.py - DEBUG: GDX << 20  31  0F  E8  06  82  00  05  F8  14  2C  FC  42  B8  1E  05  BF  94  B4  FA  42  E1  7A  94  BF  50  95  FA  42  52  B8  5E  BF  B8  B2  F9  42  0A  D7  83  BF  A3  0B  F9  42  85  EB  91  BF
+13:13:16 device.py - DEBUG: MEASUREMENT: 20  31  0F  E8  06  82  00  05  F8  14  2C  FC  42  B8  1E  05  BF  94  B4  FA  42  E1  7A  94  BF  50  95  FA  42  52  B8  5E  BF  B8  B2  F9  42  0A  D7  83  BF  A3  0B  F9  42  85  EB  91  BF
+13:13:16 device.py - DEBUG: REAL32: 14  2C  FC  42  B8  1E  05  BF  94  B4  FA  42  E1  7A  94  BF  50  95  FA  42  52  B8  5E  BF  B8  B2  F9  42  0A  D7  83  BF  A3  0B  F9  42  85  EB  91  BF
+13:13:16 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:16 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  10  9D  06  82  00  05  F8  07  8B  F9  42  EC  51  38  BF  4A  89  F9  42  2A  5C  0F  BE  62  66  F8  42  52  B8  5E  BF  56  C4  F7  42  14  AE  87  BF  82  0E  F7  42  14  AE  87  BF
+13:13:16 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:16 device_bleak.py - DEBUG: BLE READ: <<<20  31  10  9D  06  82  00  05  F8  07  8B  F9  42  EC  51  38  BF  4A  89  F9  42  2A  5C  0F  BE  62  66  F8  42  52  B8  5E  BF  56  C4  F7  42  14  AE  87  BF  82  0E  F7  42  14  AE  87  BF
+13:13:16 device.py - DEBUG: GDX << 20  31  10  9D  06  82  00  05  F8  07  8B  F9  42  EC  51  38  BF  4A  89  F9  42  2A  5C  0F  BE  62  66  F8  42  52  B8  5E  BF  56  C4  F7  42  14  AE  87  BF  82  0E  F7  42  14  AE  87  BF
+13:13:16 device.py - DEBUG: MEASUREMENT: 20  31  10  9D  06  82  00  05  F8  07  8B  F9  42  EC  51  38  BF  4A  89  F9  42  2A  5C  0F  BE  62  66  F8  42  52  B8  5E  BF  56  C4  F7  42  14  AE  87  BF  82  0E  F7  42  14  AE  87  BF
+13:13:16 device.py - DEBUG: REAL32: 07  8B  F9  42  EC  51  38  BF  4A  89  F9  42  2A  5C  0F  BE  62  66  F8  42  52  B8  5E  BF  56  C4  F7  42  14  AE  87  BF  82  0E  F7  42  14  AE  87  BF
+13:13:17 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:17 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  11  F7  06  82  00  05  F8  A4  28  F6  42  AE  47  A1  BF  6A  90  F5  42  7B  14  8E  BF  54  8D  F6  42  71  3D  0A  BF  F1  0A  F7  42  90  C2  F5  3C  76  FB  F4  42  7B  14  6E  BF
+13:13:17 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:17 device_bleak.py - DEBUG: BLE READ: <<<20  31  11  F7  06  82  00  05  F8  A4  28  F6  42  AE  47  A1  BF  6A  90  F5  42  7B  14  8E  BF  54  8D  F6  42  71  3D  0A  BF  F1  0A  F7  42  90  C2  F5  3C  76  FB  F4  42  7B  14  6E  BF
+13:13:17 device.py - DEBUG: GDX << 20  31  11  F7  06  82  00  05  F8  A4  28  F6  42  AE  47  A1  BF  6A  90  F5  42  7B  14  8E  BF  54  8D  F6  42  71  3D  0A  BF  F1  0A  F7  42  90  C2  F5  3C  76  FB  F4  42  7B  14  6E  BF
+13:13:17 device.py - DEBUG: MEASUREMENT: 20  31  11  F7  06  82  00  05  F8  A4  28  F6  42  AE  47  A1  BF  6A  90  F5  42  7B  14  8E  BF  54  8D  F6  42  71  3D  0A  BF  F1  0A  F7  42  90  C2  F5  3C  76  FB  F4  42  7B  14  6E  BF
+13:13:17 device.py - DEBUG: REAL32: A4  28  F6  42  AE  47  A1  BF  6A  90  F5  42  7B  14  8E  BF  54  8D  F6  42  71  3D  0A  BF  F1  0A  F7  42  90  C2  F5  3C  76  FB  F4  42  7B  14  6E  BF
+13:13:17 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:17 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  12  C7  06  82  00  05  F8  F1  AB  F4  42  7B  14  6E  BF  AD  EA  F3  42  0A  D7  83  BF  C1  13  F3  42  7B  14  8E  BF  CD  7E  F2  42  33  33  93  BF  B4  3B  F4  42  CC  CC  CC  BD
+13:13:17 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:17 device_bleak.py - DEBUG: BLE READ: <<<20  31  12  C7  06  82  00  05  F8  F1  AB  F4  42  7B  14  6E  BF  AD  EA  F3  42  0A  D7  83  BF  C1  13  F3  42  7B  14  8E  BF  CD  7E  F2  42  33  33  93  BF  B4  3B  F4  42  CC  CC  CC  BD
+13:13:17 device.py - DEBUG: GDX << 20  31  12  C7  06  82  00  05  F8  F1  AB  F4  42  7B  14  6E  BF  AD  EA  F3  42  0A  D7  83  BF  C1  13  F3  42  7B  14  8E  BF  CD  7E  F2  42  33  33  93  BF  B4  3B  F4  42  CC  CC  CC  BD
+13:13:17 device.py - DEBUG: MEASUREMENT: 20  31  12  C7  06  82  00  05  F8  F1  AB  F4  42  7B  14  6E  BF  AD  EA  F3  42  0A  D7  83  BF  C1  13  F3  42  7B  14  8E  BF  CD  7E  F2  42  33  33  93  BF  B4  3B  F4  42  CC  CC  CC  BD
+13:13:17 device.py - DEBUG: REAL32: F1  AB  F4  42  7B  14  6E  BF  AD  EA  F3  42  0A  D7  83  BF  C1  13  F3  42  7B  14  8E  BF  CD  7E  F2  42  33  33  93  BF  B4  3B  F4  42  CC  CC  CC  BD
+13:13:18 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:18 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  13  CB  06  82  00  05  F8  AF  C2  F2  42  F6  28  DC  BE  D7  81  F1  42  29  5C  8F  BF  49  46  F1  42  8F  C2  75  BF  73  3A  F0  42  85  EB  91  BF  9C  BC  EF  42  33  33  93  BF
+13:13:18 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:18 device_bleak.py - DEBUG: BLE READ: <<<20  31  13  CB  06  82  00  05  F8  AF  C2  F2  42  F6  28  DC  BE  D7  81  F1  42  29  5C  8F  BF  49  46  F1  42  8F  C2  75  BF  73  3A  F0  42  85  EB  91  BF  9C  BC  EF  42  33  33  93  BF
+13:13:18 device.py - DEBUG: GDX << 20  31  13  CB  06  82  00  05  F8  AF  C2  F2  42  F6  28  DC  BE  D7  81  F1  42  29  5C  8F  BF  49  46  F1  42  8F  C2  75  BF  73  3A  F0  42  85  EB  91  BF  9C  BC  EF  42  33  33  93  BF
+13:13:18 device.py - DEBUG: MEASUREMENT: 20  31  13  CB  06  82  00  05  F8  AF  C2  F2  42  F6  28  DC  BE  D7  81  F1  42  29  5C  8F  BF  49  46  F1  42  8F  C2  75  BF  73  3A  F0  42  85  EB  91  BF  9C  BC  EF  42  33  33  93  BF
+13:13:18 device.py - DEBUG: REAL32: AF  C2  F2  42  F6  28  DC  BE  D7  81  F1  42  29  5C  8F  BF  49  46  F1  42  8F  C2  75  BF  73  3A  F0  42  85  EB  91  BF  9C  BC  EF  42  33  33  93  BF
+13:13:18 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:18 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  14  C1  06  82  00  05  F8  81  1F  EF  42  9A  99  99  BF  FF  E2  F0  42  08  D7  23  3D  7C  29  EF  42  9A  99  19  BF  8E  1D  EE  42  E1  7A  94  BF  31  A3  ED  42  7B  14  6E  BF
+13:13:18 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:18 device_bleak.py - DEBUG: BLE READ: <<<20  31  14  C1  06  82  00  05  F8  81  1F  EF  42  9A  99  99  BF  FF  E2  F0  42  08  D7  23  3D  7C  29  EF  42  9A  99  19  BF  8E  1D  EE  42  E1  7A  94  BF  31  A3  ED  42  7B  14  6E  BF
+13:13:18 device.py - DEBUG: GDX << 20  31  14  C1  06  82  00  05  F8  81  1F  EF  42  9A  99  99  BF  FF  E2  F0  42  08  D7  23  3D  7C  29  EF  42  9A  99  19  BF  8E  1D  EE  42  E1  7A  94  BF  31  A3  ED  42  7B  14  6E  BF
+13:13:18 device.py - DEBUG: MEASUREMENT: 20  31  14  C1  06  82  00  05  F8  81  1F  EF  42  9A  99  99  BF  FF  E2  F0  42  08  D7  23  3D  7C  29  EF  42  9A  99  19  BF  8E  1D  EE  42  E1  7A  94  BF  31  A3  ED  42  7B  14  6E  BF
+13:13:18 device.py - DEBUG: REAL32: 81  1F  EF  42  9A  99  99  BF  FF  E2  F0  42  08  D7  23  3D  7C  29  EF  42  9A  99  19  BF  8E  1D  EE  42  E1  7A  94  BF  31  A3  ED  42  7B  14  6E  BF
+13:13:19 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:19 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  15  17  06  82  00  05  F8  1A  DB  EC  42  9A  99  99  BF  AA  27  EC  42  8F  C2  95  BF  F7  14  ED  42  A4  70  BD  BE  D2  D2  EC  42  71  3D  8A  BE  61  30  EB  42  9A  99  99  BF
+13:13:19 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:19 device_bleak.py - DEBUG: BLE READ: <<<20  31  15  17  06  82  00  05  F8  1A  DB  EC  42  9A  99  99  BF  AA  27  EC  42  8F  C2  95  BF  F7  14  ED  42  A4  70  BD  BE  D2  D2  EC  42  71  3D  8A  BE  61  30  EB  42  9A  99  99  BF
+13:13:19 device.py - DEBUG: GDX << 20  31  15  17  06  82  00  05  F8  1A  DB  EC  42  9A  99  99  BF  AA  27  EC  42  8F  C2  95  BF  F7  14  ED  42  A4  70  BD  BE  D2  D2  EC  42  71  3D  8A  BE  61  30  EB  42  9A  99  99  BF
+13:13:19 device.py - DEBUG: MEASUREMENT: 20  31  15  17  06  82  00  05  F8  1A  DB  EC  42  9A  99  99  BF  AA  27  EC  42  8F  C2  95  BF  F7  14  ED  42  A4  70  BD  BE  D2  D2  EC  42  71  3D  8A  BE  61  30  EB  42  9A  99  99  BF
+13:13:19 device.py - DEBUG: REAL32: 1A  DB  EC  42  9A  99  99  BF  AA  27  EC  42  8F  C2  95  BF  F7  14  ED  42  A4  70  BD  BE  D2  D2  EC  42  71  3D  8A  BE  61  30  EB  42  9A  99  99  BF
+13:13:19 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:19 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  16  53  06  82  00  05  F8  3B  EE  EA  42  7B  14  6E  BF  99  66  EA  42  C3  F5  68  BF  B4  93  E9  42  3D  0A  97  BF  0A  AC  EA  42  0A  D7  A3  BE  FB  B0  EA  42  0C  D7  A3  BC
+13:13:19 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:19 device_bleak.py - DEBUG: BLE READ: <<<20  31  16  53  06  82  00  05  F8  3B  EE  EA  42  7B  14  6E  BF  99  66  EA  42  C3  F5  68  BF  B4  93  E9  42  3D  0A  97  BF  0A  AC  EA  42  0A  D7  A3  BE  FB  B0  EA  42  0C  D7  A3  BC
+13:13:19 device.py - DEBUG: GDX << 20  31  16  53  06  82  00  05  F8  3B  EE  EA  42  7B  14  6E  BF  99  66  EA  42  C3  F5  68  BF  B4  93  E9  42  3D  0A  97  BF  0A  AC  EA  42  0A  D7  A3  BE  FB  B0  EA  42  0C  D7  A3  BC
+13:13:19 device.py - DEBUG: MEASUREMENT: 20  31  16  53  06  82  00  05  F8  3B  EE  EA  42  7B  14  6E  BF  99  66  EA  42  C3  F5  68  BF  B4  93  E9  42  3D  0A  97  BF  0A  AC  EA  42  0A  D7  A3  BE  FB  B0  EA  42  0C  D7  A3  BC
+13:13:19 device.py - DEBUG: REAL32: 3B  EE  EA  42  7B  14  6E  BF  99  66  EA  42  C3  F5  68  BF  B4  93  E9  42  3D  0A  97  BF  0A  AC  EA  42  0A  D7  A3  BE  FB  B0  EA  42  0C  D7  A3  BC
+13:13:20 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:20 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  17  2C  06  82  00  05  F8  DA  E6  E8  42  0A  D7  83  BF  C5  E1  E8  42  D7  A3  30  BF  C9  35  E8  42  85  EB  51  BF  02  80  E7  42  00  00  80  BF  1F  1A  E9  42  90  C2  F5  BC
+13:13:20 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:20 device_bleak.py - DEBUG: BLE READ: <<<20  31  17  2C  06  82  00  05  F8  DA  E6  E8  42  0A  D7  83  BF  C5  E1  E8  42  D7  A3  30  BF  C9  35  E8  42  85  EB  51  BF  02  80  E7  42  00  00  80  BF  1F  1A  E9  42  90  C2  F5  BC
+13:13:20 device.py - DEBUG: GDX << 20  31  17  2C  06  82  00  05  F8  DA  E6  E8  42  0A  D7  83  BF  C5  E1  E8  42  D7  A3  30  BF  C9  35  E8  42  85  EB  51  BF  02  80  E7  42  00  00  80  BF  1F  1A  E9  42  90  C2  F5  BC
+13:13:20 device.py - DEBUG: MEASUREMENT: 20  31  17  2C  06  82  00  05  F8  DA  E6  E8  42  0A  D7  83  BF  C5  E1  E8  42  D7  A3  30  BF  C9  35  E8  42  85  EB  51  BF  02  80  E7  42  00  00  80  BF  1F  1A  E9  42  90  C2  F5  BC
+13:13:20 device.py - DEBUG: REAL32: DA  E6  E8  42  0A  D7  83  BF  C5  E1  E8  42  D7  A3  30  BF  C9  35  E8  42  85  EB  51  BF  02  80  E7  42  00  00  80  BF  1F  1A  E9  42  90  C2  F5  BC
+13:13:20 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:20 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  18  3B  06  82  00  05  F8  22  94  E8  42  0A  D7  A3  BD  93  B6  E7  42  29  5C  0F  BF  F4  63  E7  42  00  00  00  BF  00  A9  E6  42  48  E1  3A  BF  41  AA  E5  42  0A  D7  83  BF
+13:13:20 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:20 device_bleak.py - DEBUG: BLE READ: <<<20  31  18  3B  06  82  00  05  F8  22  94  E8  42  0A  D7  A3  BD  93  B6  E7  42  29  5C  0F  BF  F4  63  E7  42  00  00  00  BF  00  A9  E6  42  48  E1  3A  BF  41  AA  E5  42  0A  D7  83  BF
+13:13:20 device.py - DEBUG: GDX << 20  31  18  3B  06  82  00  05  F8  22  94  E8  42  0A  D7  A3  BD  93  B6  E7  42  29  5C  0F  BF  F4  63  E7  42  00  00  00  BF  00  A9  E6  42  48  E1  3A  BF  41  AA  E5  42  0A  D7  83  BF
+13:13:20 device.py - DEBUG: MEASUREMENT: 20  31  18  3B  06  82  00  05  F8  22  94  E8  42  0A  D7  A3  BD  93  B6  E7  42  29  5C  0F  BF  F4  63  E7  42  00  00  00  BF  00  A9  E6  42  48  E1  3A  BF  41  AA  E5  42  0A  D7  83  BF
+13:13:20 device.py - DEBUG: REAL32: 22  94  E8  42  0A  D7  A3  BD  93  B6  E7  42  29  5C  0F  BF  F4  63  E7  42  00  00  00  BF  00  A9  E6  42  48  E1  3A  BF  41  AA  E5  42  0A  D7  83  BF
+13:13:21 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:21 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  19  61  06  82  00  05  F8  60  9A  E7  42  71  3D  8A  3E  79  DF  E6  42  0A  D7  A3  BD  32  F6  E5  42  29  5C  0F  BF  16  72  E5  42  9A  99  19  BF  3A  7D  E4  42  C3  F5  68  BF
+13:13:21 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:21 device_bleak.py - DEBUG: BLE READ: <<<20  31  19  61  06  82  00  05  F8  60  9A  E7  42  71  3D  8A  3E  79  DF  E6  42  0A  D7  A3  BD  32  F6  E5  42  29  5C  0F  BF  16  72  E5  42  9A  99  19  BF  3A  7D  E4  42  C3  F5  68  BF
+13:13:21 device.py - DEBUG: GDX << 20  31  19  61  06  82  00  05  F8  60  9A  E7  42  71  3D  8A  3E  79  DF  E6  42  0A  D7  A3  BD  32  F6  E5  42  29  5C  0F  BF  16  72  E5  42  9A  99  19  BF  3A  7D  E4  42  C3  F5  68  BF
+13:13:21 device.py - DEBUG: MEASUREMENT: 20  31  19  61  06  82  00  05  F8  60  9A  E7  42  71  3D  8A  3E  79  DF  E6  42  0A  D7  A3  BD  32  F6  E5  42  29  5C  0F  BF  16  72  E5  42  9A  99  19  BF  3A  7D  E4  42  C3  F5  68  BF
+13:13:21 device.py - DEBUG: REAL32: 60  9A  E7  42  71  3D  8A  3E  79  DF  E6  42  0A  D7  A3  BD  32  F6  E5  42  29  5C  0F  BF  16  72  E5  42  9A  99  19  BF  3A  7D  E4  42  C3  F5  68  BF
+13:13:21 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:21 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1A  46  06  82  00  05  F8  60  B6  E3  42  CD  CC  8C  BF  72  B2  E5  42  71  3D  8A  3E  54  2A  E4  42  A4  70  3D  BF  14  92  E3  42  48  E1  3A  BF  B8  96  E2  42  0A  D7  C3  BF
+13:13:21 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:21 device_bleak.py - DEBUG: BLE READ: <<<20  31  1A  46  06  82  00  05  F8  60  B6  E3  42  CD  CC  8C  BF  72  B2  E5  42  71  3D  8A  3E  54  2A  E4  42  A4  70  3D  BF  14  92  E3  42  48  E1  3A  BF  B8  96  E2  42  0A  D7  C3  BF
+13:13:21 device.py - DEBUG: GDX << 20  31  1A  46  06  82  00  05  F8  60  B6  E3  42  CD  CC  8C  BF  72  B2  E5  42  71  3D  8A  3E  54  2A  E4  42  A4  70  3D  BF  14  92  E3  42  48  E1  3A  BF  B8  96  E2  42  0A  D7  C3  BF
+13:13:21 device.py - DEBUG: MEASUREMENT: 20  31  1A  46  06  82  00  05  F8  60  B6  E3  42  CD  CC  8C  BF  72  B2  E5  42  71  3D  8A  3E  54  2A  E4  42  A4  70  3D  BF  14  92  E3  42  48  E1  3A  BF  B8  96  E2  42  0A  D7  C3  BF
+13:13:21 device.py - DEBUG: REAL32: 60  B6  E3  42  CD  CC  8C  BF  72  B2  E5  42  71  3D  8A  3E  54  2A  E4  42  A4  70  3D  BF  14  92  E3  42  48  E1  3A  BF  B8  96  E2  42  0A  D7  C3  BF
+13:13:22 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:22 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1B  FC  06  82  00  05  F8  1F  94  E0  42  52  B8  FE  BF  17  99  E0  42  C3  F5  A8  BF  EA  41  E1  42  48  E1  3A  BF  9E  1A  E2  42  EC  51  B8  3D  72  4D  E1  42  C3  F5  A8  BE
+13:13:22 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:22 device_bleak.py - DEBUG: BLE READ: <<<20  31  1B  FC  06  82  00  05  F8  1F  94  E0  42  52  B8  FE  BF  17  99  E0  42  C3  F5  A8  BF  EA  41  E1  42  48  E1  3A  BF  9E  1A  E2  42  EC  51  B8  3D  72  4D  E1  42  C3  F5  A8  BE
+13:13:22 device.py - DEBUG: GDX << 20  31  1B  FC  06  82  00  05  F8  1F  94  E0  42  52  B8  FE  BF  17  99  E0  42  C3  F5  A8  BF  EA  41  E1  42  48  E1  3A  BF  9E  1A  E2  42  EC  51  B8  3D  72  4D  E1  42  C3  F5  A8  BE
+13:13:22 device.py - DEBUG: MEASUREMENT: 20  31  1B  FC  06  82  00  05  F8  1F  94  E0  42  52  B8  FE  BF  17  99  E0  42  C3  F5  A8  BF  EA  41  E1  42  48  E1  3A  BF  9E  1A  E2  42  EC  51  B8  3D  72  4D  E1  42  C3  F5  A8  BE
+13:13:22 device.py - DEBUG: REAL32: 1F  94  E0  42  52  B8  FE  BF  17  99  E0  42  C3  F5  A8  BF  EA  41  E1  42  48  E1  3A  BF  9E  1A  E2  42  EC  51  B8  3D  72  4D  E1  42  C3  F5  A8  BE
+13:13:22 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:22 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1C  5B  06  82  00  05  F8  6A  18  E0  42  29  5C  4F  BF  99  1C  DF  42  14  AE  87  BF  63  D5  DD  42  A4  70  BD  BF  C3  0E  DD  42  9A  99  B9  BF  C2  A6  DC  42  5C  8F  A2  BF
+13:13:22 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:22 device_bleak.py - DEBUG: BLE READ: <<<20  31  1C  5B  06  82  00  05  F8  6A  18  E0  42  29  5C  4F  BF  99  1C  DF  42  14  AE  87  BF  63  D5  DD  42  A4  70  BD  BF  C3  0E  DD  42  9A  99  B9  BF  C2  A6  DC  42  5C  8F  A2  BF
+13:13:22 device.py - DEBUG: GDX << 20  31  1C  5B  06  82  00  05  F8  6A  18  E0  42  29  5C  4F  BF  99  1C  DF  42  14  AE  87  BF  63  D5  DD  42  A4  70  BD  BF  C3  0E  DD  42  9A  99  B9  BF  C2  A6  DC  42  5C  8F  A2  BF
+13:13:22 device.py - DEBUG: MEASUREMENT: 20  31  1C  5B  06  82  00  05  F8  6A  18  E0  42  29  5C  4F  BF  99  1C  DF  42  14  AE  87  BF  63  D5  DD  42  A4  70  BD  BF  C3  0E  DD  42  9A  99  B9  BF  C2  A6  DC  42  5C  8F  A2  BF
+13:13:22 device.py - DEBUG: REAL32: 6A  18  E0  42  29  5C  4F  BF  99  1C  DF  42  14  AE  87  BF  63  D5  DD  42  A4  70  BD  BF  C3  0E  DD  42  9A  99  B9  BF  C2  A6  DC  42  5C  8F  A2  BF
+13:13:23 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:23 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1D  22  06  82  00  05  F8  C5  43  DD  42  CD  CC  4C  BF  E0  61  DE  42  3D  0A  57  3E  87  6E  DD  42  9A  99  99  BE  6C  83  DC  42  EC  51  38  BF  E5  9D  DB  42  D7  A3  70  BF
+13:13:23 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:23 device_bleak.py - DEBUG: BLE READ: <<<20  31  1D  22  06  82  00  05  F8  C5  43  DD  42  CD  CC  4C  BF  E0  61  DE  42  3D  0A  57  3E  87  6E  DD  42  9A  99  99  BE  6C  83  DC  42  EC  51  38  BF  E5  9D  DB  42  D7  A3  70  BF
+13:13:23 device.py - DEBUG: GDX << 20  31  1D  22  06  82  00  05  F8  C5  43  DD  42  CD  CC  4C  BF  E0  61  DE  42  3D  0A  57  3E  87  6E  DD  42  9A  99  99  BE  6C  83  DC  42  EC  51  38  BF  E5  9D  DB  42  D7  A3  70  BF
+13:13:23 device.py - DEBUG: MEASUREMENT: 20  31  1D  22  06  82  00  05  F8  C5  43  DD  42  CD  CC  4C  BF  E0  61  DE  42  3D  0A  57  3E  87  6E  DD  42  9A  99  99  BE  6C  83  DC  42  EC  51  38  BF  E5  9D  DB  42  D7  A3  70  BF
+13:13:23 device.py - DEBUG: REAL32: C5  43  DD  42  CD  CC  4C  BF  E0  61  DE  42  3D  0A  57  3E  87  6E  DD  42  9A  99  99  BE  6C  83  DC  42  EC  51  38  BF  E5  9D  DB  42  D7  A3  70  BF
+13:13:23 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:23 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1E  B9  06  82  00  05  F8  19  6A  DA  42  71  3D  AA  BF  F8  9C  D9  42  D7  A3  B0  BF  12  30  D9  42  AE  47  A1  BF  52  11  DB  42  EC  51  B8  3D  43  81  DA  42  EC  51  38  BE
+13:13:23 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:23 device_bleak.py - DEBUG: BLE READ: <<<20  31  1E  B9  06  82  00  05  F8  19  6A  DA  42  71  3D  AA  BF  F8  9C  D9  42  D7  A3  B0  BF  12  30  D9  42  AE  47  A1  BF  52  11  DB  42  EC  51  B8  3D  43  81  DA  42  EC  51  38  BE
+13:13:23 device.py - DEBUG: GDX << 20  31  1E  B9  06  82  00  05  F8  19  6A  DA  42  71  3D  AA  BF  F8  9C  D9  42  D7  A3  B0  BF  12  30  D9  42  AE  47  A1  BF  52  11  DB  42  EC  51  B8  3D  43  81  DA  42  EC  51  38  BE
+13:13:23 device.py - DEBUG: MEASUREMENT: 20  31  1E  B9  06  82  00  05  F8  19  6A  DA  42  71  3D  AA  BF  F8  9C  D9  42  D7  A3  B0  BF  12  30  D9  42  AE  47  A1  BF  52  11  DB  42  EC  51  B8  3D  43  81  DA  42  EC  51  38  BE
+13:13:23 device.py - DEBUG: REAL32: 19  6A  DA  42  71  3D  AA  BF  F8  9C  D9  42  D7  A3  B0  BF  12  30  D9  42  AE  47  A1  BF  52  11  DB  42  EC  51  B8  3D  43  81  DA  42  EC  51  38  BE
+13:13:24 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:24 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  1F  C1  06  82  00  05  F8  ED  41  D9  42  A4  70  3D  BF  97  97  D8  42  85  EB  51  BF  FB  8B  D7  42  33  33  93  BF  5E  93  D6  42  C3  F5  A8  BF  13  49  D6  42  33  33  93  BF
+13:13:24 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:24 device_bleak.py - DEBUG: BLE READ: <<<20  31  1F  C1  06  82  00  05  F8  ED  41  D9  42  A4  70  3D  BF  97  97  D8  42  85  EB  51  BF  FB  8B  D7  42  33  33  93  BF  5E  93  D6  42  C3  F5  A8  BF  13  49  D6  42  33  33  93  BF
+13:13:24 device.py - DEBUG: GDX << 20  31  1F  C1  06  82  00  05  F8  ED  41  D9  42  A4  70  3D  BF  97  97  D8  42  85  EB  51  BF  FB  8B  D7  42  33  33  93  BF  5E  93  D6  42  C3  F5  A8  BF  13  49  D6  42  33  33  93  BF
+13:13:24 device.py - DEBUG: MEASUREMENT: 20  31  1F  C1  06  82  00  05  F8  ED  41  D9  42  A4  70  3D  BF  97  97  D8  42  85  EB  51  BF  FB  8B  D7  42  33  33  93  BF  5E  93  D6  42  C3  F5  A8  BF  13  49  D6  42  33  33  93  BF
+13:13:24 device.py - DEBUG: REAL32: ED  41  D9  42  A4  70  3D  BF  97  97  D8  42  85  EB  51  BF  FB  8B  D7  42  33  33  93  BF  5E  93  D6  42  C3  F5  A8  BF  13  49  D6  42  33  33  93  BF
+13:13:24 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:24 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  20  A9  06  82  00  05  F8  CF  9C  D8  42  EC  51  B8  3E  05  40  D8  42  8F  C2  F5  3D  D7  4A  D7  42  CD  CC  CC  BE  10  16  D7  42  0A  D7  A3  BE  EA  DD  D5  42  3D  0A  57  BF
+13:13:24 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:24 device_bleak.py - DEBUG: BLE READ: <<<20  31  20  A9  06  82  00  05  F8  CF  9C  D8  42  EC  51  B8  3E  05  40  D8  42  8F  C2  F5  3D  D7  4A  D7  42  CD  CC  CC  BE  10  16  D7  42  0A  D7  A3  BE  EA  DD  D5  42  3D  0A  57  BF
+13:13:24 device.py - DEBUG: GDX << 20  31  20  A9  06  82  00  05  F8  CF  9C  D8  42  EC  51  B8  3E  05  40  D8  42  8F  C2  F5  3D  D7  4A  D7  42  CD  CC  CC  BE  10  16  D7  42  0A  D7  A3  BE  EA  DD  D5  42  3D  0A  57  BF
+13:13:24 device.py - DEBUG: MEASUREMENT: 20  31  20  A9  06  82  00  05  F8  CF  9C  D8  42  EC  51  B8  3E  05  40  D8  42  8F  C2  F5  3D  D7  4A  D7  42  CD  CC  CC  BE  10  16  D7  42  0A  D7  A3  BE  EA  DD  D5  42  3D  0A  57  BF
+13:13:24 device.py - DEBUG: REAL32: CF  9C  D8  42  EC  51  B8  3E  05  40  D8  42  8F  C2  F5  3D  D7  4A  D7  42  CD  CC  CC  BE  10  16  D7  42  0A  D7  A3  BE  EA  DD  D5  42  3D  0A  57  BF
+13:13:25 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:25 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  21  09  06  82  00  05  F8  0B  FB  D4  42  7B  14  8E  BF  39  45  D4  42  8F  C2  95  BF  74  5E  D6  42  5C  8F  42  3E  0E  D8  D5  42  8E  C2  75  BD  98  DE  D3  42  48  E1  9A  BF
+13:13:25 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:25 device_bleak.py - DEBUG: BLE READ: <<<20  31  21  09  06  82  00  05  F8  0B  FB  D4  42  7B  14  8E  BF  39  45  D4  42  8F  C2  95  BF  74  5E  D6  42  5C  8F  42  3E  0E  D8  D5  42  8E  C2  75  BD  98  DE  D3  42  48  E1  9A  BF
+13:13:25 device.py - DEBUG: GDX << 20  31  21  09  06  82  00  05  F8  0B  FB  D4  42  7B  14  8E  BF  39  45  D4  42  8F  C2  95  BF  74  5E  D6  42  5C  8F  42  3E  0E  D8  D5  42  8E  C2  75  BD  98  DE  D3  42  48  E1  9A  BF
+13:13:25 device.py - DEBUG: MEASUREMENT: 20  31  21  09  06  82  00  05  F8  0B  FB  D4  42  7B  14  8E  BF  39  45  D4  42  8F  C2  95  BF  74  5E  D6  42  5C  8F  42  3E  0E  D8  D5  42  8E  C2  75  BD  98  DE  D3  42  48  E1  9A  BF
+13:13:25 device.py - DEBUG: REAL32: 0B  FB  D4  42  7B  14  8E  BF  39  45  D4  42  8F  C2  95  BF  74  5E  D6  42  5C  8F  42  3E  0E  D8  D5  42  8E  C2  75  BD  98  DE  D3  42  48  E1  9A  BF
+13:13:25 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:25 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  22  9B  06  82  00  05  F8  27  BA  D3  42  3D  0A  57  BF  54  89  D2  42  E1  7A  94  BF  C3  49  D1  42  71  3D  CA  BF  33  4A  D2  42  71  3D  4A  BF  52  6A  D3  42  0A  D7  23  3E
+13:13:25 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:25 device_bleak.py - DEBUG: BLE READ: <<<20  31  22  9B  06  82  00  05  F8  27  BA  D3  42  3D  0A  57  BF  54  89  D2  42  E1  7A  94  BF  C3  49  D1  42  71  3D  CA  BF  33  4A  D2  42  71  3D  4A  BF  52  6A  D3  42  0A  D7  23  3E
+13:13:25 device.py - DEBUG: GDX << 20  31  22  9B  06  82  00  05  F8  27  BA  D3  42  3D  0A  57  BF  54  89  D2  42  E1  7A  94  BF  C3  49  D1  42  71  3D  CA  BF  33  4A  D2  42  71  3D  4A  BF  52  6A  D3  42  0A  D7  23  3E
+13:13:25 device.py - DEBUG: MEASUREMENT: 20  31  22  9B  06  82  00  05  F8  27  BA  D3  42  3D  0A  57  BF  54  89  D2  42  E1  7A  94  BF  C3  49  D1  42  71  3D  CA  BF  33  4A  D2  42  71  3D  4A  BF  52  6A  D3  42  0A  D7  23  3E
+13:13:25 device.py - DEBUG: REAL32: 27  BA  D3  42  3D  0A  57  BF  54  89  D2  42  E1  7A  94  BF  C3  49  D1  42  71  3D  CA  BF  33  4A  D2  42  71  3D  4A  BF  52  6A  D3  42  0A  D7  23  3E
+13:13:26 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:26 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  23  9B  06  82  00  05  F8  23  95  D2  42  AE  47  61  BE  6B  66  D1  42  85  EB  51  BF  D3  BD  D0  42  66  66  66  BF  BC  6D  CF  42  0A  D7  A3  BF  04  6C  CE  42  E1  7A  B4  BF
+13:13:26 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:26 device_bleak.py - DEBUG: BLE READ: <<<20  31  23  9B  06  82  00  05  F8  23  95  D2  42  AE  47  61  BE  6B  66  D1  42  85  EB  51  BF  D3  BD  D0  42  66  66  66  BF  BC  6D  CF  42  0A  D7  A3  BF  04  6C  CE  42  E1  7A  B4  BF
+13:13:26 device.py - DEBUG: GDX << 20  31  23  9B  06  82  00  05  F8  23  95  D2  42  AE  47  61  BE  6B  66  D1  42  85  EB  51  BF  D3  BD  D0  42  66  66  66  BF  BC  6D  CF  42  0A  D7  A3  BF  04  6C  CE  42  E1  7A  B4  BF
+13:13:26 device.py - DEBUG: MEASUREMENT: 20  31  23  9B  06  82  00  05  F8  23  95  D2  42  AE  47  61  BE  6B  66  D1  42  85  EB  51  BF  D3  BD  D0  42  66  66  66  BF  BC  6D  CF  42  0A  D7  A3  BF  04  6C  CE  42  E1  7A  B4  BF
+13:13:26 device.py - DEBUG: REAL32: 23  95  D2  42  AE  47  61  BE  6B  66  D1  42  85  EB  51  BF  D3  BD  D0  42  66  66  66  BF  BC  6D  CF  42  0A  D7  A3  BF  04  6C  CE  42  E1  7A  B4  BF
+13:13:26 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:26 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  24  64  06  82  00  05  F8  20  B5  D0  42  10  D7  A3  3C  4D  9A  D0  42  0A  D7  23  3D  0A  FE  CE  42  A4  70  3D  BF  8B  22  CE  42  00  00  80  BF  6E  3D  CD  42  8F  C2  95  BF
+13:13:26 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:26 device_bleak.py - DEBUG: BLE READ: <<<20  31  24  64  06  82  00  05  F8  20  B5  D0  42  10  D7  A3  3C  4D  9A  D0  42  0A  D7  23  3D  0A  FE  CE  42  A4  70  3D  BF  8B  22  CE  42  00  00  80  BF  6E  3D  CD  42  8F  C2  95  BF
+13:13:26 device.py - DEBUG: GDX << 20  31  24  64  06  82  00  05  F8  20  B5  D0  42  10  D7  A3  3C  4D  9A  D0  42  0A  D7  23  3D  0A  FE  CE  42  A4  70  3D  BF  8B  22  CE  42  00  00  80  BF  6E  3D  CD  42  8F  C2  95  BF
+13:13:26 device.py - DEBUG: MEASUREMENT: 20  31  24  64  06  82  00  05  F8  20  B5  D0  42  10  D7  A3  3C  4D  9A  D0  42  0A  D7  23  3D  0A  FE  CE  42  A4  70  3D  BF  8B  22  CE  42  00  00  80  BF  6E  3D  CD  42  8F  C2  95  BF
+13:13:26 device.py - DEBUG: REAL32: 20  B5  D0  42  10  D7  A3  3C  4D  9A  D0  42  0A  D7  23  3D  0A  FE  CE  42  A4  70  3D  BF  8B  22  CE  42  00  00  80  BF  6E  3D  CD  42  8F  C2  95  BF
+13:13:27 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:27 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  25  E9  06  82  00  05  F8  1A  2C  CC  42  E1  7A  B4  BF  ED  6D  CC  42  66  66  86  BF  16  29  CE  42  B8  1E  85  3E  2D  F2  CC  42  9A  99  99  BE  E3  85  CB  42  00  00  80  BF
+13:13:27 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:27 device_bleak.py - DEBUG: BLE READ: <<<20  31  25  E9  06  82  00  05  F8  1A  2C  CC  42  E1  7A  B4  BF  ED  6D  CC  42  66  66  86  BF  16  29  CE  42  B8  1E  85  3E  2D  F2  CC  42  9A  99  99  BE  E3  85  CB  42  00  00  80  BF
+13:13:27 device.py - DEBUG: GDX << 20  31  25  E9  06  82  00  05  F8  1A  2C  CC  42  E1  7A  B4  BF  ED  6D  CC  42  66  66  86  BF  16  29  CE  42  B8  1E  85  3E  2D  F2  CC  42  9A  99  99  BE  E3  85  CB  42  00  00  80  BF
+13:13:27 device.py - DEBUG: MEASUREMENT: 20  31  25  E9  06  82  00  05  F8  1A  2C  CC  42  E1  7A  B4  BF  ED  6D  CC  42  66  66  86  BF  16  29  CE  42  B8  1E  85  3E  2D  F2  CC  42  9A  99  99  BE  E3  85  CB  42  00  00  80  BF
+13:13:27 device.py - DEBUG: REAL32: 1A  2C  CC  42  E1  7A  B4  BF  ED  6D  CC  42  66  66  86  BF  16  29  CE  42  B8  1E  85  3E  2D  F2  CC  42  9A  99  99  BE  E3  85  CB  42  00  00  80  BF
+13:13:27 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:27 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  26  9E  06  82  00  05  F8  AC  E5  CA  42  14  AE  87  BF  91  C0  C9  42  C3  F5  A8  BF  7A  E5  C8  42  00  00  E0  BF  37  DF  CA  42  10  D7  23  BC  4B  89  CA  42  EC  51  B8  BD
+13:13:27 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:27 device_bleak.py - DEBUG: BLE READ: <<<20  31  26  9E  06  82  00  05  F8  AC  E5  CA  42  14  AE  87  BF  91  C0  C9  42  C3  F5  A8  BF  7A  E5  C8  42  00  00  E0  BF  37  DF  CA  42  10  D7  23  BC  4B  89  CA  42  EC  51  B8  BD
+13:13:27 device.py - DEBUG: GDX << 20  31  26  9E  06  82  00  05  F8  AC  E5  CA  42  14  AE  87  BF  91  C0  C9  42  C3  F5  A8  BF  7A  E5  C8  42  00  00  E0  BF  37  DF  CA  42  10  D7  23  BC  4B  89  CA  42  EC  51  B8  BD
+13:13:27 device.py - DEBUG: MEASUREMENT: 20  31  26  9E  06  82  00  05  F8  AC  E5  CA  42  14  AE  87  BF  91  C0  C9  42  C3  F5  A8  BF  7A  E5  C8  42  00  00  E0  BF  37  DF  CA  42  10  D7  23  BC  4B  89  CA  42  EC  51  B8  BD
+13:13:27 device.py - DEBUG: REAL32: AC  E5  CA  42  14  AE  87  BF  91  C0  C9  42  C3  F5  A8  BF  7A  E5  C8  42  00  00  E0  BF  37  DF  CA  42  10  D7  23  BC  4B  89  CA  42  EC  51  B8  BD
+13:13:28 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:28 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  27  3E  06  82  00  05  F8  64  E6  C8  42  AE  47  61  BF  12  44  C8  42  00  00  80  BF  45  71  C7  42  7B  14  8E  BF  9E  5F  C6  42  1F  85  AB  BF  F8  2E  C8  42  3C  0A  57  BE
+13:13:28 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:28 device_bleak.py - DEBUG: BLE READ: <<<20  31  27  3E  06  82  00  05  F8  64  E6  C8  42  AE  47  61  BF  12  44  C8  42  00  00  80  BF  45  71  C7  42  7B  14  8E  BF  9E  5F  C6  42  1F  85  AB  BF  F8  2E  C8  42  3C  0A  57  BE
+13:13:28 device.py - DEBUG: GDX << 20  31  27  3E  06  82  00  05  F8  64  E6  C8  42  AE  47  61  BF  12  44  C8  42  00  00  80  BF  45  71  C7  42  7B  14  8E  BF  9E  5F  C6  42  1F  85  AB  BF  F8  2E  C8  42  3C  0A  57  BE
+13:13:28 device.py - DEBUG: MEASUREMENT: 20  31  27  3E  06  82  00  05  F8  64  E6  C8  42  AE  47  61  BF  12  44  C8  42  00  00  80  BF  45  71  C7  42  7B  14  8E  BF  9E  5F  C6  42  1F  85  AB  BF  F8  2E  C8  42  3C  0A  57  BE
+13:13:28 device.py - DEBUG: REAL32: 64  E6  C8  42  AE  47  61  BF  12  44  C8  42  00  00  80  BF  45  71  C7  42  7B  14  8E  BF  9E  5F  C6  42  1F  85  AB  BF  F8  2E  C8  42  3C  0A  57  BE
+13:13:28 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:28 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  28  56  06  82  00  05  F8  7A  29  C8  42  0A  D7  23  3D  96  CF  C6  42  9A  99  19  BF  E0  70  C6  42  D7  A3  30  BF  E9  C6  C5  42  14  AE  47  BF  7F  89  C4  42  8F  C2  95  BF
+13:13:28 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:28 device_bleak.py - DEBUG: BLE READ: <<<20  31  28  56  06  82  00  05  F8  7A  29  C8  42  0A  D7  23  3D  96  CF  C6  42  9A  99  19  BF  E0  70  C6  42  D7  A3  30  BF  E9  C6  C5  42  14  AE  47  BF  7F  89  C4  42  8F  C2  95  BF
+13:13:28 device.py - DEBUG: GDX << 20  31  28  56  06  82  00  05  F8  7A  29  C8  42  0A  D7  23  3D  96  CF  C6  42  9A  99  19  BF  E0  70  C6  42  D7  A3  30  BF  E9  C6  C5  42  14  AE  47  BF  7F  89  C4  42  8F  C2  95  BF
+13:13:28 device.py - DEBUG: MEASUREMENT: 20  31  28  56  06  82  00  05  F8  7A  29  C8  42  0A  D7  23  3D  96  CF  C6  42  9A  99  19  BF  E0  70  C6  42  D7  A3  30  BF  E9  C6  C5  42  14  AE  47  BF  7F  89  C4  42  8F  C2  95  BF
+13:13:28 device.py - DEBUG: REAL32: 7A  29  C8  42  0A  D7  23  3D  96  CF  C6  42  9A  99  19  BF  E0  70  C6  42  D7  A3  30  BF  E9  C6  C5  42  14  AE  47  BF  7F  89  C4  42  8F  C2  95  BF
+13:13:29 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:29 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  29  1F  06  82  00  05  F8  DD  B9  C5  42  8F  C2  F5  BE  0F  71  C6  42  B8  1E  85  3E  93  B3  C4  42  33  33  33  BF  6C  F0  C3  42  F6  28  5C  BF  15  73  C3  42  29  5C  4F  BF
+13:13:29 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:29 device_bleak.py - DEBUG: BLE READ: <<<20  31  29  1F  06  82  00  05  F8  DD  B9  C5  42  8F  C2  F5  BE  0F  71  C6  42  B8  1E  85  3E  93  B3  C4  42  33  33  33  BF  6C  F0  C3  42  F6  28  5C  BF  15  73  C3  42  29  5C  4F  BF
+13:13:29 device.py - DEBUG: GDX << 20  31  29  1F  06  82  00  05  F8  DD  B9  C5  42  8F  C2  F5  BE  0F  71  C6  42  B8  1E  85  3E  93  B3  C4  42  33  33  33  BF  6C  F0  C3  42  F6  28  5C  BF  15  73  C3  42  29  5C  4F  BF
+13:13:29 device.py - DEBUG: MEASUREMENT: 20  31  29  1F  06  82  00  05  F8  DD  B9  C5  42  8F  C2  F5  BE  0F  71  C6  42  B8  1E  85  3E  93  B3  C4  42  33  33  33  BF  6C  F0  C3  42  F6  28  5C  BF  15  73  C3  42  29  5C  4F  BF
+13:13:29 device.py - DEBUG: REAL32: DD  B9  C5  42  8F  C2  F5  BE  0F  71  C6  42  B8  1E  85  3E  93  B3  C4  42  33  33  33  BF  6C  F0  C3  42  F6  28  5C  BF  15  73  C3  42  29  5C  4F  BF
+13:13:29 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:29 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2A  BC  06  82  00  05  F8  47  4B  C2  42  85  EB  91  BF  CD  ED  C1  42  85  EB  91  BF  9C  25  C4  42  CD  CC  CC  3E  09  5F  C3  42  08  D7  23  BC  C5  D5  C1  42  71  3D  4A  BF
+13:13:29 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:29 device_bleak.py - DEBUG: BLE READ: <<<20  31  2A  BC  06  82  00  05  F8  47  4B  C2  42  85  EB  91  BF  CD  ED  C1  42  85  EB  91  BF  9C  25  C4  42  CD  CC  CC  3E  09  5F  C3  42  08  D7  23  BC  C5  D5  C1  42  71  3D  4A  BF
+13:13:29 device.py - DEBUG: GDX << 20  31  2A  BC  06  82  00  05  F8  47  4B  C2  42  85  EB  91  BF  CD  ED  C1  42  85  EB  91  BF  9C  25  C4  42  CD  CC  CC  3E  09  5F  C3  42  08  D7  23  BC  C5  D5  C1  42  71  3D  4A  BF
+13:13:29 device.py - DEBUG: MEASUREMENT: 20  31  2A  BC  06  82  00  05  F8  47  4B  C2  42  85  EB  91  BF  CD  ED  C1  42  85  EB  91  BF  9C  25  C4  42  CD  CC  CC  3E  09  5F  C3  42  08  D7  23  BC  C5  D5  C1  42  71  3D  4A  BF
+13:13:29 device.py - DEBUG: REAL32: 47  4B  C2  42  85  EB  91  BF  CD  ED  C1  42  85  EB  91  BF  9C  25  C4  42  CD  CC  CC  3E  09  5F  C3  42  08  D7  23  BC  C5  D5  C1  42  71  3D  4A  BF
+13:13:30 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:30 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2B  D9  06  82  00  05  F8  C7  75  C1  42  CD  CC  4C  BF  07  84  C0  42  00  00  80  BF  80  70  BF  42  0A  D7  A3  BF  28  92  C1  42  08  D7  23  3D  68  42  BF  42  20  85  EB  BE
+13:13:30 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:30 device_bleak.py - DEBUG: BLE READ: <<<20  31  2B  D9  06  82  00  05  F8  C7  75  C1  42  CD  CC  4C  BF  07  84  C0  42  00  00  80  BF  80  70  BF  42  0A  D7  A3  BF  28  92  C1  42  08  D7  23  3D  68  42  BF  42  20  85  EB  BE
+13:13:30 device.py - DEBUG: GDX << 20  31  2B  D9  06  82  00  05  F8  C7  75  C1  42  CD  CC  4C  BF  07  84  C0  42  00  00  80  BF  80  70  BF  42  0A  D7  A3  BF  28  92  C1  42  08  D7  23  3D  68  42  BF  42  20  85  EB  BE
+13:13:30 device.py - DEBUG: MEASUREMENT: 20  31  2B  D9  06  82  00  05  F8  C7  75  C1  42  CD  CC  4C  BF  07  84  C0  42  00  00  80  BF  80  70  BF  42  0A  D7  A3  BF  28  92  C1  42  08  D7  23  3D  68  42  BF  42  20  85  EB  BE
+13:13:30 device.py - DEBUG: REAL32: C7  75  C1  42  CD  CC  4C  BF  07  84  C0  42  00  00  80  BF  80  70  BF  42  0A  D7  A3  BF  28  92  C1  42  08  D7  23  3D  68  42  BF  42  20  85  EB  BE
+13:13:30 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:30 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2C  BE  06  82  00  05  F8  97  CA  BF  42  F6  28  1C  BF  28  2C  BF  42  29  5C  4F  BF  CE  78  BE  42  9A  99  59  BF  FA  46  BD  42  F6  28  9C  BF  E1  1B  BE  42  EC  51  38  BF
+13:13:30 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:30 device_bleak.py - DEBUG: BLE READ: <<<20  31  2C  BE  06  82  00  05  F8  97  CA  BF  42  F6  28  1C  BF  28  2C  BF  42  29  5C  4F  BF  CE  78  BE  42  9A  99  59  BF  FA  46  BD  42  F6  28  9C  BF  E1  1B  BE  42  EC  51  38  BF
+13:13:30 device.py - DEBUG: GDX << 20  31  2C  BE  06  82  00  05  F8  97  CA  BF  42  F6  28  1C  BF  28  2C  BF  42  29  5C  4F  BF  CE  78  BE  42  9A  99  59  BF  FA  46  BD  42  F6  28  9C  BF  E1  1B  BE  42  EC  51  38  BF
+13:13:30 device.py - DEBUG: MEASUREMENT: 20  31  2C  BE  06  82  00  05  F8  97  CA  BF  42  F6  28  1C  BF  28  2C  BF  42  29  5C  4F  BF  CE  78  BE  42  9A  99  59  BF  FA  46  BD  42  F6  28  9C  BF  E1  1B  BE  42  EC  51  38  BF
+13:13:30 device.py - DEBUG: REAL32: 97  CA  BF  42  F6  28  1C  BF  28  2C  BF  42  29  5C  4F  BF  CE  78  BE  42  9A  99  59  BF  FA  46  BD  42  F6  28  9C  BF  E1  1B  BE  42  EC  51  38  BF
+13:13:31 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:31 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2D  14  06  82  00  05  F8  80  02  BF  42  5C  8F  42  3E  E2  C7  BD  42  CD  CC  CC  BE  83  B1  BC  42  D7  A3  70  BF  6E  10  BC  42  C3  F5  68  BF  56  21  BB  42  E1  7A  94  BF
+13:13:31 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:31 device_bleak.py - DEBUG: BLE READ: <<<20  31  2D  14  06  82  00  05  F8  80  02  BF  42  5C  8F  42  3E  E2  C7  BD  42  CD  CC  CC  BE  83  B1  BC  42  D7  A3  70  BF  6E  10  BC  42  C3  F5  68  BF  56  21  BB  42  E1  7A  94  BF
+13:13:31 device.py - DEBUG: GDX << 20  31  2D  14  06  82  00  05  F8  80  02  BF  42  5C  8F  42  3E  E2  C7  BD  42  CD  CC  CC  BE  83  B1  BC  42  D7  A3  70  BF  6E  10  BC  42  C3  F5  68  BF  56  21  BB  42  E1  7A  94  BF
+13:13:31 device.py - DEBUG: MEASUREMENT: 20  31  2D  14  06  82  00  05  F8  80  02  BF  42  5C  8F  42  3E  E2  C7  BD  42  CD  CC  CC  BE  83  B1  BC  42  D7  A3  70  BF  6E  10  BC  42  C3  F5  68  BF  56  21  BB  42  E1  7A  94  BF
+13:13:31 device.py - DEBUG: REAL32: 80  02  BF  42  5C  8F  42  3E  E2  C7  BD  42  CD  CC  CC  BE  83  B1  BC  42  D7  A3  70  BF  6E  10  BC  42  C3  F5  68  BF  56  21  BB  42  E1  7A  94  BF
+13:13:31 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:31 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2E  45  06  82  00  05  F8  86  A0  BA  42  5C  8F  A2  BF  CE  1E  BC  42  0A  D7  A3  3C  91  68  BB  42  29  5C  8F  BE  CB  EA  B9  42  71  3D  8A  BF  93  5E  B9  42  1F  85  6B  BF
+13:13:31 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:31 device_bleak.py - DEBUG: BLE READ: <<<20  31  2E  45  06  82  00  05  F8  86  A0  BA  42  5C  8F  A2  BF  CE  1E  BC  42  0A  D7  A3  3C  91  68  BB  42  29  5C  8F  BE  CB  EA  B9  42  71  3D  8A  BF  93  5E  B9  42  1F  85  6B  BF
+13:13:31 device.py - DEBUG: GDX << 20  31  2E  45  06  82  00  05  F8  86  A0  BA  42  5C  8F  A2  BF  CE  1E  BC  42  0A  D7  A3  3C  91  68  BB  42  29  5C  8F  BE  CB  EA  B9  42  71  3D  8A  BF  93  5E  B9  42  1F  85  6B  BF
+13:13:31 device.py - DEBUG: MEASUREMENT: 20  31  2E  45  06  82  00  05  F8  86  A0  BA  42  5C  8F  A2  BF  CE  1E  BC  42  0A  D7  A3  3C  91  68  BB  42  29  5C  8F  BE  CB  EA  B9  42  71  3D  8A  BF  93  5E  B9  42  1F  85  6B  BF
+13:13:31 device.py - DEBUG: REAL32: 86  A0  BA  42  5C  8F  A2  BF  CE  1E  BC  42  0A  D7  A3  3C  91  68  BB  42  29  5C  8F  BE  CB  EA  B9  42  71  3D  8A  BF  93  5E  B9  42  1F  85  6B  BF
+13:13:32 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:32 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  2F  0E  06  82  00  05  F8  6E  D5  B8  42  66  66  86  BF  04  13  B8  42  E1  7A  94  BF  6C  0A  BA  42  3D  0A  57  3E  FE  2B  B9  42  3D  0A  57  BE  3F  2D  B8  42  14  AE  47  BF
+13:13:32 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:32 device_bleak.py - DEBUG: BLE READ: <<<20  31  2F  0E  06  82  00  05  F8  6E  D5  B8  42  66  66  86  BF  04  13  B8  42  E1  7A  94  BF  6C  0A  BA  42  3D  0A  57  3E  FE  2B  B9  42  3D  0A  57  BE  3F  2D  B8  42  14  AE  47  BF
+13:13:32 device.py - DEBUG: GDX << 20  31  2F  0E  06  82  00  05  F8  6E  D5  B8  42  66  66  86  BF  04  13  B8  42  E1  7A  94  BF  6C  0A  BA  42  3D  0A  57  3E  FE  2B  B9  42  3D  0A  57  BE  3F  2D  B8  42  14  AE  47  BF
+13:13:32 device.py - DEBUG: MEASUREMENT: 20  31  2F  0E  06  82  00  05  F8  6E  D5  B8  42  66  66  86  BF  04  13  B8  42  E1  7A  94  BF  6C  0A  BA  42  3D  0A  57  3E  FE  2B  B9  42  3D  0A  57  BE  3F  2D  B8  42  14  AE  47  BF
+13:13:32 device.py - DEBUG: REAL32: 6E  D5  B8  42  66  66  86  BF  04  13  B8  42  E1  7A  94  BF  6C  0A  BA  42  3D  0A  57  3E  FE  2B  B9  42  3D  0A  57  BE  3F  2D  B8  42  14  AE  47  BF
+13:13:32 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:32 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  30  23  06  82  00  05  F8  15  8E  B7  42  EC  51  38  BF  77  CE  B6  42  66  66  66  BF  15  10  B6  42  F6  28  9C  BF  99  55  B7  42  0A  D7  23  BD  E4  C3  B6  42  0A  D7  A3  BE
+13:13:32 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:32 device_bleak.py - DEBUG: BLE READ: <<<20  31  30  23  06  82  00  05  F8  15  8E  B7  42  EC  51  38  BF  77  CE  B6  42  66  66  66  BF  15  10  B6  42  F6  28  9C  BF  99  55  B7  42  0A  D7  23  BD  E4  C3  B6  42  0A  D7  A3  BE
+13:13:32 device.py - DEBUG: GDX << 20  31  30  23  06  82  00  05  F8  15  8E  B7  42  EC  51  38  BF  77  CE  B6  42  66  66  66  BF  15  10  B6  42  F6  28  9C  BF  99  55  B7  42  0A  D7  23  BD  E4  C3  B6  42  0A  D7  A3  BE
+13:13:32 device.py - DEBUG: MEASUREMENT: 20  31  30  23  06  82  00  05  F8  15  8E  B7  42  EC  51  38  BF  77  CE  B6  42  66  66  66  BF  15  10  B6  42  F6  28  9C  BF  99  55  B7  42  0A  D7  23  BD  E4  C3  B6  42  0A  D7  A3  BE
+13:13:32 device.py - DEBUG: REAL32: 15  8E  B7  42  EC  51  38  BF  77  CE  B6  42  66  66  66  BF  15  10  B6  42  F6  28  9C  BF  99  55  B7  42  0A  D7  23  BD  E4  C3  B6  42  0A  D7  A3  BE
+13:13:33 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:33 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  31  3A  06  82  00  05  F8  15  C3  B5  42  14  AE  47  BF  01  16  B5  42  A4  70  3D  BF  E4  77  B4  42  A4  70  7D  BF  CB  5C  B4  42  D7  A3  70  BF  77  77  B5  42  EC  51  B8  3D
+13:13:33 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:33 device_bleak.py - DEBUG: BLE READ: <<<20  31  31  3A  06  82  00  05  F8  15  C3  B5  42  14  AE  47  BF  01  16  B5  42  A4  70  3D  BF  E4  77  B4  42  A4  70  7D  BF  CB  5C  B4  42  D7  A3  70  BF  77  77  B5  42  EC  51  B8  3D
+13:13:33 device.py - DEBUG: GDX << 20  31  31  3A  06  82  00  05  F8  15  C3  B5  42  14  AE  47  BF  01  16  B5  42  A4  70  3D  BF  E4  77  B4  42  A4  70  7D  BF  CB  5C  B4  42  D7  A3  70  BF  77  77  B5  42  EC  51  B8  3D
+13:13:33 device.py - DEBUG: MEASUREMENT: 20  31  31  3A  06  82  00  05  F8  15  C3  B5  42  14  AE  47  BF  01  16  B5  42  A4  70  3D  BF  E4  77  B4  42  A4  70  7D  BF  CB  5C  B4  42  D7  A3  70  BF  77  77  B5  42  EC  51  B8  3D
+13:13:33 device.py - DEBUG: REAL32: 15  C3  B5  42  14  AE  47  BF  01  16  B5  42  A4  70  3D  BF  E4  77  B4  42  A4  70  7D  BF  CB  5C  B4  42  D7  A3  70  BF  77  77  B5  42  EC  51  B8  3D
+13:13:33 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:33 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  32  CF  06  82  00  05  F8  8C  BB  B4  42  52  B8  9E  BE  3E  C7  B3  42  00  00  40  BF  6C  18  B3  42  14  AE  47  BF  22  54  B2  42  A4  70  7D  BF  3D  56  B2  42  D7  A3  70  BF
+13:13:33 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:33 device_bleak.py - DEBUG: BLE READ: <<<20  31  32  CF  06  82  00  05  F8  8C  BB  B4  42  52  B8  9E  BE  3E  C7  B3  42  00  00  40  BF  6C  18  B3  42  14  AE  47  BF  22  54  B2  42  A4  70  7D  BF  3D  56  B2  42  D7  A3  70  BF
+13:13:33 device.py - DEBUG: GDX << 20  31  32  CF  06  82  00  05  F8  8C  BB  B4  42  52  B8  9E  BE  3E  C7  B3  42  00  00  40  BF  6C  18  B3  42  14  AE  47  BF  22  54  B2  42  A4  70  7D  BF  3D  56  B2  42  D7  A3  70  BF
+13:13:33 device.py - DEBUG: MEASUREMENT: 20  31  32  CF  06  82  00  05  F8  8C  BB  B4  42  52  B8  9E  BE  3E  C7  B3  42  00  00  40  BF  6C  18  B3  42  14  AE  47  BF  22  54  B2  42  A4  70  7D  BF  3D  56  B2  42  D7  A3  70  BF
+13:13:33 device.py - DEBUG: REAL32: 8C  BB  B4  42  52  B8  9E  BE  3E  C7  B3  42  00  00  40  BF  6C  18  B3  42  14  AE  47  BF  22  54  B2  42  A4  70  7D  BF  3D  56  B2  42  D7  A3  70  BF
+13:13:34 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:34 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  33  11  06  82  00  05  F8  B3  E5  B2  42  8F  C2  F5  BD  15  0C  B2  42  8F  C2  F5  BE  3A  4B  B1  42  CD  CC  4C  BF  F2  D5  B0  42  A4  70  3D  BF  52  E8  AF  42  A4  70  7D  BF
+13:13:34 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:34 device_bleak.py - DEBUG: BLE READ: <<<20  31  33  11  06  82  00  05  F8  B3  E5  B2  42  8F  C2  F5  BD  15  0C  B2  42  8F  C2  F5  BE  3A  4B  B1  42  CD  CC  4C  BF  F2  D5  B0  42  A4  70  3D  BF  52  E8  AF  42  A4  70  7D  BF
+13:13:34 device.py - DEBUG: GDX << 20  31  33  11  06  82  00  05  F8  B3  E5  B2  42  8F  C2  F5  BD  15  0C  B2  42  8F  C2  F5  BE  3A  4B  B1  42  CD  CC  4C  BF  F2  D5  B0  42  A4  70  3D  BF  52  E8  AF  42  A4  70  7D  BF
+13:13:34 device.py - DEBUG: MEASUREMENT: 20  31  33  11  06  82  00  05  F8  B3  E5  B2  42  8F  C2  F5  BD  15  0C  B2  42  8F  C2  F5  BE  3A  4B  B1  42  CD  CC  4C  BF  F2  D5  B0  42  A4  70  3D  BF  52  E8  AF  42  A4  70  7D  BF
+13:13:34 device.py - DEBUG: REAL32: B3  E5  B2  42  8F  C2  F5  BD  15  0C  B2  42  8F  C2  F5  BE  3A  4B  B1  42  CD  CC  4C  BF  F2  D5  B0  42  A4  70  3D  BF  52  E8  AF  42  A4  70  7D  BF
+13:13:34 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:34 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  34  48  06  82  00  05  F8  FE  51  AF  42  66  66  86  BF  43  95  B0  42  0A  D7  A3  BD  D0  ED  AF  42  3D  0A  D7  BE  7D  51  AF  42  7B  14  2E  BF  34  A1  AE  42  33  33  33  BF
+13:13:34 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:34 device_bleak.py - DEBUG: BLE READ: <<<20  31  34  48  06  82  00  05  F8  FE  51  AF  42  66  66  86  BF  43  95  B0  42  0A  D7  A3  BD  D0  ED  AF  42  3D  0A  D7  BE  7D  51  AF  42  7B  14  2E  BF  34  A1  AE  42  33  33  33  BF
+13:13:34 device.py - DEBUG: GDX << 20  31  34  48  06  82  00  05  F8  FE  51  AF  42  66  66  86  BF  43  95  B0  42  0A  D7  A3  BD  D0  ED  AF  42  3D  0A  D7  BE  7D  51  AF  42  7B  14  2E  BF  34  A1  AE  42  33  33  33  BF
+13:13:34 device.py - DEBUG: MEASUREMENT: 20  31  34  48  06  82  00  05  F8  FE  51  AF  42  66  66  86  BF  43  95  B0  42  0A  D7  A3  BD  D0  ED  AF  42  3D  0A  D7  BE  7D  51  AF  42  7B  14  2E  BF  34  A1  AE  42  33  33  33  BF
+13:13:34 device.py - DEBUG: REAL32: FE  51  AF  42  66  66  86  BF  43  95  B0  42  0A  D7  A3  BD  D0  ED  AF  42  3D  0A  D7  BE  7D  51  AF  42  7B  14  2E  BF  34  A1  AE  42  33  33  33  BF
+13:13:35 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:35 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  35  FB  06  82  00  05  F8  76  0A  AE  42  F6  28  5C  BF  A9  A1  AE  42  00  00  00  BF  E5  7B  AE  42  29  5C  0F  BE  45  A8  AD  42  48  E1  FA  BE  B1  1B  AD  42  EC  51  38  BF
+13:13:35 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:35 device_bleak.py - DEBUG: BLE READ: <<<20  31  35  FB  06  82  00  05  F8  76  0A  AE  42  F6  28  5C  BF  A9  A1  AE  42  00  00  00  BF  E5  7B  AE  42  29  5C  0F  BE  45  A8  AD  42  48  E1  FA  BE  B1  1B  AD  42  EC  51  38  BF
+13:13:35 device.py - DEBUG: GDX << 20  31  35  FB  06  82  00  05  F8  76  0A  AE  42  F6  28  5C  BF  A9  A1  AE  42  00  00  00  BF  E5  7B  AE  42  29  5C  0F  BE  45  A8  AD  42  48  E1  FA  BE  B1  1B  AD  42  EC  51  38  BF
+13:13:35 device.py - DEBUG: MEASUREMENT: 20  31  35  FB  06  82  00  05  F8  76  0A  AE  42  F6  28  5C  BF  A9  A1  AE  42  00  00  00  BF  E5  7B  AE  42  29  5C  0F  BE  45  A8  AD  42  48  E1  FA  BE  B1  1B  AD  42  EC  51  38  BF
+13:13:35 device.py - DEBUG: REAL32: 76  0A  AE  42  F6  28  5C  BF  A9  A1  AE  42  00  00  00  BF  E5  7B  AE  42  29  5C  0F  BE  45  A8  AD  42  48  E1  FA  BE  B1  1B  AD  42  EC  51  38  BF
+13:13:35 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:35 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  36  C1  06  82  00  05  F8  60  53  AC  42  CD  CC  4C  BF  F3  8E  AB  42  66  66  86  BF  DF  1E  AC  42  85  EB  11  BF  5E  32  AC  42  0A  D7  23  BE  9B  64  AB  42  B8  1E  05  BF
+13:13:35 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:35 device_bleak.py - DEBUG: BLE READ: <<<20  31  36  C1  06  82  00  05  F8  60  53  AC  42  CD  CC  4C  BF  F3  8E  AB  42  66  66  86  BF  DF  1E  AC  42  85  EB  11  BF  5E  32  AC  42  0A  D7  23  BE  9B  64  AB  42  B8  1E  05  BF
+13:13:35 device.py - DEBUG: GDX << 20  31  36  C1  06  82  00  05  F8  60  53  AC  42  CD  CC  4C  BF  F3  8E  AB  42  66  66  86  BF  DF  1E  AC  42  85  EB  11  BF  5E  32  AC  42  0A  D7  23  BE  9B  64  AB  42  B8  1E  05  BF
+13:13:35 device.py - DEBUG: MEASUREMENT: 20  31  36  C1  06  82  00  05  F8  60  53  AC  42  CD  CC  4C  BF  F3  8E  AB  42  66  66  86  BF  DF  1E  AC  42  85  EB  11  BF  5E  32  AC  42  0A  D7  23  BE  9B  64  AB  42  B8  1E  05  BF
+13:13:35 device.py - DEBUG: REAL32: 60  53  AC  42  CD  CC  4C  BF  F3  8E  AB  42  66  66  86  BF  DF  1E  AC  42  85  EB  11  BF  5E  32  AC  42  0A  D7  23  BE  9B  64  AB  42  B8  1E  05  BF
+13:13:36 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:36 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  37  BD  06  82  00  05  F8  39  B3  AA  42  A4  70  3D  BF  50  04  AA  42  85  EB  51  BF  D6  0B  A9  42  7B  14  8E  BF  A5  64  A9  42  14  AE  47  BF  D3  57  A9  42  A4  70  BD  BE
+13:13:36 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:36 device_bleak.py - DEBUG: BLE READ: <<<20  31  37  BD  06  82  00  05  F8  39  B3  AA  42  A4  70  3D  BF  50  04  AA  42  85  EB  51  BF  D6  0B  A9  42  7B  14  8E  BF  A5  64  A9  42  14  AE  47  BF  D3  57  A9  42  A4  70  BD  BE
+13:13:36 device.py - DEBUG: GDX << 20  31  37  BD  06  82  00  05  F8  39  B3  AA  42  A4  70  3D  BF  50  04  AA  42  85  EB  51  BF  D6  0B  A9  42  7B  14  8E  BF  A5  64  A9  42  14  AE  47  BF  D3  57  A9  42  A4  70  BD  BE
+13:13:36 device.py - DEBUG: MEASUREMENT: 20  31  37  BD  06  82  00  05  F8  39  B3  AA  42  A4  70  3D  BF  50  04  AA  42  85  EB  51  BF  D6  0B  A9  42  7B  14  8E  BF  A5  64  A9  42  14  AE  47  BF  D3  57  A9  42  A4  70  BD  BE
+13:13:36 device.py - DEBUG: REAL32: 39  B3  AA  42  A4  70  3D  BF  50  04  AA  42  85  EB  51  BF  D6  0B  A9  42  7B  14  8E  BF  A5  64  A9  42  14  AE  47  BF  D3  57  A9  42  A4  70  BD  BE
+13:13:36 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:36 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  38  71  06  82  00  05  F8  2F  88  A8  42  7B  14  2E  BF  29  24  A8  42  A4  70  3D  BF  AB  89  A7  42  85  EB  51  BF  BD  90  A6  42  14  AE  87  BF  19  1C  A6  42  14  AE  87  BF
+13:13:36 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:36 device_bleak.py - DEBUG: BLE READ: <<<20  31  38  71  06  82  00  05  F8  2F  88  A8  42  7B  14  2E  BF  29  24  A8  42  A4  70  3D  BF  AB  89  A7  42  85  EB  51  BF  BD  90  A6  42  14  AE  87  BF  19  1C  A6  42  14  AE  87  BF
+13:13:36 device.py - DEBUG: GDX << 20  31  38  71  06  82  00  05  F8  2F  88  A8  42  7B  14  2E  BF  29  24  A8  42  A4  70  3D  BF  AB  89  A7  42  85  EB  51  BF  BD  90  A6  42  14  AE  87  BF  19  1C  A6  42  14  AE  87  BF
+13:13:36 device.py - DEBUG: MEASUREMENT: 20  31  38  71  06  82  00  05  F8  2F  88  A8  42  7B  14  2E  BF  29  24  A8  42  A4  70  3D  BF  AB  89  A7  42  85  EB  51  BF  BD  90  A6  42  14  AE  87  BF  19  1C  A6  42  14  AE  87  BF
+13:13:36 device.py - DEBUG: REAL32: 2F  88  A8  42  7B  14  2E  BF  29  24  A8  42  A4  70  3D  BF  AB  89  A7  42  85  EB  51  BF  BD  90  A6  42  14  AE  87  BF  19  1C  A6  42  14  AE  87  BF
+13:13:37 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:37 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  39  07  06  82  00  05  F8  A6  E5  A6  42  00  00  80  BE  CE  19  A6  42  CD  CC  0C  BF  F7  AE  A5  42  33  33  33  BF  CF  F0  A4  42  29  5C  4F  BF  91  1F  A4  42  48  E1  7A  BF
+13:13:37 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:37 device_bleak.py - DEBUG: BLE READ: <<<20  31  39  07  06  82  00  05  F8  A6  E5  A6  42  00  00  80  BE  CE  19  A6  42  CD  CC  0C  BF  F7  AE  A5  42  33  33  33  BF  CF  F0  A4  42  29  5C  4F  BF  91  1F  A4  42  48  E1  7A  BF
+13:13:37 device.py - DEBUG: GDX << 20  31  39  07  06  82  00  05  F8  A6  E5  A6  42  00  00  80  BE  CE  19  A6  42  CD  CC  0C  BF  F7  AE  A5  42  33  33  33  BF  CF  F0  A4  42  29  5C  4F  BF  91  1F  A4  42  48  E1  7A  BF
+13:13:37 device.py - DEBUG: MEASUREMENT: 20  31  39  07  06  82  00  05  F8  A6  E5  A6  42  00  00  80  BE  CE  19  A6  42  CD  CC  0C  BF  F7  AE  A5  42  33  33  33  BF  CF  F0  A4  42  29  5C  4F  BF  91  1F  A4  42  48  E1  7A  BF
+13:13:37 device.py - DEBUG: REAL32: A6  E5  A6  42  00  00  80  BE  CE  19  A6  42  CD  CC  0C  BF  F7  AE  A5  42  33  33  33  BF  CF  F0  A4  42  29  5C  4F  BF  91  1F  A4  42  48  E1  7A  BF
+13:13:37 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:37 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3A  F0  06  82  00  05  F8  86  4D  A3  42  85  EB  91  BF  09  6F  A4  42  8F  C2  75  BE  3F  CB  A3  42  F6  28  DC  BE  B0  2D  A3  42  7B  14  2E  BF  0C  78  A2  42  F6  28  5C  BF
+13:13:37 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:37 device_bleak.py - DEBUG: BLE READ: <<<20  31  3A  F0  06  82  00  05  F8  86  4D  A3  42  85  EB  91  BF  09  6F  A4  42  8F  C2  75  BE  3F  CB  A3  42  F6  28  DC  BE  B0  2D  A3  42  7B  14  2E  BF  0C  78  A2  42  F6  28  5C  BF
+13:13:37 device.py - DEBUG: GDX << 20  31  3A  F0  06  82  00  05  F8  86  4D  A3  42  85  EB  91  BF  09  6F  A4  42  8F  C2  75  BE  3F  CB  A3  42  F6  28  DC  BE  B0  2D  A3  42  7B  14  2E  BF  0C  78  A2  42  F6  28  5C  BF
+13:13:37 device.py - DEBUG: MEASUREMENT: 20  31  3A  F0  06  82  00  05  F8  86  4D  A3  42  85  EB  91  BF  09  6F  A4  42  8F  C2  75  BE  3F  CB  A3  42  F6  28  DC  BE  B0  2D  A3  42  7B  14  2E  BF  0C  78  A2  42  F6  28  5C  BF
+13:13:37 device.py - DEBUG: REAL32: 86  4D  A3  42  85  EB  91  BF  09  6F  A4  42  8F  C2  75  BE  3F  CB  A3  42  F6  28  DC  BE  B0  2D  A3  42  7B  14  2E  BF  0C  78  A2  42  F6  28  5C  BF
+13:13:38 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:38 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3B  AF  06  82  00  05  F8  89  C1  A1  42  9A  99  59  BF  E6  53  A1  42  EC  51  78  BF  83  FF  A1  42  AE  47  61  BE  7A  45  A1  42  48  E1  FA  BE  76  7A  A0  42  14  AE  47  BF
+13:13:38 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:38 device_bleak.py - DEBUG: BLE READ: <<<20  31  3B  AF  06  82  00  05  F8  89  C1  A1  42  9A  99  59  BF  E6  53  A1  42  EC  51  78  BF  83  FF  A1  42  AE  47  61  BE  7A  45  A1  42  48  E1  FA  BE  76  7A  A0  42  14  AE  47  BF
+13:13:38 device.py - DEBUG: GDX << 20  31  3B  AF  06  82  00  05  F8  89  C1  A1  42  9A  99  59  BF  E6  53  A1  42  EC  51  78  BF  83  FF  A1  42  AE  47  61  BE  7A  45  A1  42  48  E1  FA  BE  76  7A  A0  42  14  AE  47  BF
+13:13:38 device.py - DEBUG: MEASUREMENT: 20  31  3B  AF  06  82  00  05  F8  89  C1  A1  42  9A  99  59  BF  E6  53  A1  42  EC  51  78  BF  83  FF  A1  42  AE  47  61  BE  7A  45  A1  42  48  E1  FA  BE  76  7A  A0  42  14  AE  47  BF
+13:13:38 device.py - DEBUG: REAL32: 89  C1  A1  42  9A  99  59  BF  E6  53  A1  42  EC  51  78  BF  83  FF  A1  42  AE  47  61  BE  7A  45  A1  42  48  E1  FA  BE  76  7A  A0  42  14  AE  47  BF
+13:13:38 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:38 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3C  0E  06  82  00  05  F8  20  FD  9F  42  CD  CC  4C  BF  DC  14  9F  42  00  00  80  BF  EE  C4  9E  42  B8  1E  85  BF  9C  4C  9F  42  C3  F5  A8  BE  00  20  9E  42  71  3D  4A  BF
+13:13:38 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:38 device_bleak.py - DEBUG: BLE READ: <<<20  31  3C  0E  06  82  00  05  F8  20  FD  9F  42  CD  CC  4C  BF  DC  14  9F  42  00  00  80  BF  EE  C4  9E  42  B8  1E  85  BF  9C  4C  9F  42  C3  F5  A8  BE  00  20  9E  42  71  3D  4A  BF
+13:13:38 device.py - DEBUG: GDX << 20  31  3C  0E  06  82  00  05  F8  20  FD  9F  42  CD  CC  4C  BF  DC  14  9F  42  00  00  80  BF  EE  C4  9E  42  B8  1E  85  BF  9C  4C  9F  42  C3  F5  A8  BE  00  20  9E  42  71  3D  4A  BF
+13:13:38 device.py - DEBUG: MEASUREMENT: 20  31  3C  0E  06  82  00  05  F8  20  FD  9F  42  CD  CC  4C  BF  DC  14  9F  42  00  00  80  BF  EE  C4  9E  42  B8  1E  85  BF  9C  4C  9F  42  C3  F5  A8  BE  00  20  9E  42  71  3D  4A  BF
+13:13:38 device.py - DEBUG: REAL32: 20  FD  9F  42  CD  CC  4C  BF  DC  14  9F  42  00  00  80  BF  EE  C4  9E  42  B8  1E  85  BF  9C  4C  9F  42  C3  F5  A8  BE  00  20  9E  42  71  3D  4A  BF
+13:13:39 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:39 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3D  86  06  82  00  05  F8  82  7F  9D  42  8F  C2  75  BF  C1  14  9D  42  85  EB  51  BF  23  6F  9C  42  C3  F5  68  BF  17  A9  9C  42  48  E1  3A  BF  A4  96  9C  42  EC  51  B8  BE
+13:13:39 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:39 device_bleak.py - DEBUG: BLE READ: <<<20  31  3D  86  06  82  00  05  F8  82  7F  9D  42  8F  C2  75  BF  C1  14  9D  42  85  EB  51  BF  23  6F  9C  42  C3  F5  68  BF  17  A9  9C  42  48  E1  3A  BF  A4  96  9C  42  EC  51  B8  BE
+13:13:39 device.py - DEBUG: GDX << 20  31  3D  86  06  82  00  05  F8  82  7F  9D  42  8F  C2  75  BF  C1  14  9D  42  85  EB  51  BF  23  6F  9C  42  C3  F5  68  BF  17  A9  9C  42  48  E1  3A  BF  A4  96  9C  42  EC  51  B8  BE
+13:13:39 device.py - DEBUG: MEASUREMENT: 20  31  3D  86  06  82  00  05  F8  82  7F  9D  42  8F  C2  75  BF  C1  14  9D  42  85  EB  51  BF  23  6F  9C  42  C3  F5  68  BF  17  A9  9C  42  48  E1  3A  BF  A4  96  9C  42  EC  51  B8  BE
+13:13:39 device.py - DEBUG: REAL32: 82  7F  9D  42  8F  C2  75  BF  C1  14  9D  42  85  EB  51  BF  23  6F  9C  42  C3  F5  68  BF  17  A9  9C  42  48  E1  3A  BF  A4  96  9C  42  EC  51  B8  BE
+13:13:39 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:39 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3E  95  06  82  00  05  F8  39  8C  9B  42  71  3D  4A  BF  6C  F3  9A  42  52  B8  5E  BF  25  7E  9A  42  3D  0A  57  BF  17  94  99  42  B8  1E  85  BF  4C  46  9A  42  3D  0A  D7  BE
+13:13:39 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:39 device_bleak.py - DEBUG: BLE READ: <<<20  31  3E  95  06  82  00  05  F8  39  8C  9B  42  71  3D  4A  BF  6C  F3  9A  42  52  B8  5E  BF  25  7E  9A  42  3D  0A  57  BF  17  94  99  42  B8  1E  85  BF  4C  46  9A  42  3D  0A  D7  BE
+13:13:39 device.py - DEBUG: GDX << 20  31  3E  95  06  82  00  05  F8  39  8C  9B  42  71  3D  4A  BF  6C  F3  9A  42  52  B8  5E  BF  25  7E  9A  42  3D  0A  57  BF  17  94  99  42  B8  1E  85  BF  4C  46  9A  42  3D  0A  D7  BE
+13:13:39 device.py - DEBUG: MEASUREMENT: 20  31  3E  95  06  82  00  05  F8  39  8C  9B  42  71  3D  4A  BF  6C  F3  9A  42  52  B8  5E  BF  25  7E  9A  42  3D  0A  57  BF  17  94  99  42  B8  1E  85  BF  4C  46  9A  42  3D  0A  D7  BE
+13:13:39 device.py - DEBUG: REAL32: 39  8C  9B  42  71  3D  4A  BF  6C  F3  9A  42  52  B8  5E  BF  25  7E  9A  42  3D  0A  57  BF  17  94  99  42  B8  1E  85  BF  4C  46  9A  42  3D  0A  D7  BE
+13:13:40 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:40 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  3F  A9  06  82  00  05  F8  41  EC  99  42  CD  CC  CC  BE  7E  C4  98  42  F6  28  5C  BF  CF  83  98  42  14  AE  47  BF  17  D0  97  42  52  B8  5E  BF  2B  12  97  42  0A  D7  83  BF
+13:13:40 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:40 device_bleak.py - DEBUG: BLE READ: <<<20  31  3F  A9  06  82  00  05  F8  41  EC  99  42  CD  CC  CC  BE  7E  C4  98  42  F6  28  5C  BF  CF  83  98  42  14  AE  47  BF  17  D0  97  42  52  B8  5E  BF  2B  12  97  42  0A  D7  83  BF
+13:13:40 device.py - DEBUG: GDX << 20  31  3F  A9  06  82  00  05  F8  41  EC  99  42  CD  CC  CC  BE  7E  C4  98  42  F6  28  5C  BF  CF  83  98  42  14  AE  47  BF  17  D0  97  42  52  B8  5E  BF  2B  12  97  42  0A  D7  83  BF
+13:13:40 device.py - DEBUG: MEASUREMENT: 20  31  3F  A9  06  82  00  05  F8  41  EC  99  42  CD  CC  CC  BE  7E  C4  98  42  F6  28  5C  BF  CF  83  98  42  14  AE  47  BF  17  D0  97  42  52  B8  5E  BF  2B  12  97  42  0A  D7  83  BF
+13:13:40 device.py - DEBUG: REAL32: 41  EC  99  42  CD  CC  CC  BE  7E  C4  98  42  F6  28  5C  BF  CF  83  98  42  14  AE  47  BF  17  D0  97  42  52  B8  5E  BF  2B  12  97  42  0A  D7  83  BF
+13:13:40 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:40 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  40  B6  06  82  00  05  F8  B2  DE  97  42  0A  D7  A3  BE  A7  29  97  42  B8  1E  05  BF  6E  BA  95  42  EC  51  78  BF  6E  FA  95  42  14  AE  47  BF  3C  D6  94  42  A4  70  7D  BF
+13:13:40 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:40 device_bleak.py - DEBUG: BLE READ: <<<20  31  40  B6  06  82  00  05  F8  B2  DE  97  42  0A  D7  A3  BE  A7  29  97  42  B8  1E  05  BF  6E  BA  95  42  EC  51  78  BF  6E  FA  95  42  14  AE  47  BF  3C  D6  94  42  A4  70  7D  BF
+13:13:40 device.py - DEBUG: GDX << 20  31  40  B6  06  82  00  05  F8  B2  DE  97  42  0A  D7  A3  BE  A7  29  97  42  B8  1E  05  BF  6E  BA  95  42  EC  51  78  BF  6E  FA  95  42  14  AE  47  BF  3C  D6  94  42  A4  70  7D  BF
+13:13:40 device.py - DEBUG: MEASUREMENT: 20  31  40  B6  06  82  00  05  F8  B2  DE  97  42  0A  D7  A3  BE  A7  29  97  42  B8  1E  05  BF  6E  BA  95  42  EC  51  78  BF  6E  FA  95  42  14  AE  47  BF  3C  D6  94  42  A4  70  7D  BF
+13:13:40 device.py - DEBUG: REAL32: B2  DE  97  42  0A  D7  A3  BE  A7  29  97  42  B8  1E  05  BF  6E  BA  95  42  EC  51  78  BF  6E  FA  95  42  14  AE  47  BF  3C  D6  94  42  A4  70  7D  BF
+13:13:41 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:41 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  41  DE  06  82  00  05  F8  F8  0D  95  42  D7  A3  30  BF  82  20  95  42  00  00  00  BF  2D  1F  94  42  A4  70  3D  BF  44  05  94  42  D7  A3  30  BF  45  77  93  42  00  00  40  BF
+13:13:41 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:41 device_bleak.py - DEBUG: BLE READ: <<<20  31  41  DE  06  82  00  05  F8  F8  0D  95  42  D7  A3  30  BF  82  20  95  42  00  00  00  BF  2D  1F  94  42  A4  70  3D  BF  44  05  94  42  D7  A3  30  BF  45  77  93  42  00  00  40  BF
+13:13:41 device.py - DEBUG: GDX << 20  31  41  DE  06  82  00  05  F8  F8  0D  95  42  D7  A3  30  BF  82  20  95  42  00  00  00  BF  2D  1F  94  42  A4  70  3D  BF  44  05  94  42  D7  A3  30  BF  45  77  93  42  00  00  40  BF
+13:13:41 device.py - DEBUG: MEASUREMENT: 20  31  41  DE  06  82  00  05  F8  F8  0D  95  42  D7  A3  30  BF  82  20  95  42  00  00  00  BF  2D  1F  94  42  A4  70  3D  BF  44  05  94  42  D7  A3  30  BF  45  77  93  42  00  00  40  BF
+13:13:41 device.py - DEBUG: REAL32: F8  0D  95  42  D7  A3  30  BF  82  20  95  42  00  00  00  BF  2D  1F  94  42  A4  70  3D  BF  44  05  94  42  D7  A3  30  BF  45  77  93  42  00  00  40  BF
+13:13:41 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:41 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  42  37  06  82  00  05  F8  40  6B  92  42  A4  70  7D  BF  B2  32  93  42  3D  0A  D7  BE  B6  8C  92  42  52  B8  1E  BF  41  BD  91  42  14  AE  47  BF  5D  8C  91  42  D7  A3  30  BF
+13:13:41 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:41 device_bleak.py - DEBUG: BLE READ: <<<20  31  42  37  06  82  00  05  F8  40  6B  92  42  A4  70  7D  BF  B2  32  93  42  3D  0A  D7  BE  B6  8C  92  42  52  B8  1E  BF  41  BD  91  42  14  AE  47  BF  5D  8C  91  42  D7  A3  30  BF
+13:13:41 device.py - DEBUG: GDX << 20  31  42  37  06  82  00  05  F8  40  6B  92  42  A4  70  7D  BF  B2  32  93  42  3D  0A  D7  BE  B6  8C  92  42  52  B8  1E  BF  41  BD  91  42  14  AE  47  BF  5D  8C  91  42  D7  A3  30  BF
+13:13:41 device.py - DEBUG: MEASUREMENT: 20  31  42  37  06  82  00  05  F8  40  6B  92  42  A4  70  7D  BF  B2  32  93  42  3D  0A  D7  BE  B6  8C  92  42  52  B8  1E  BF  41  BD  91  42  14  AE  47  BF  5D  8C  91  42  D7  A3  30  BF
+13:13:41 device.py - DEBUG: REAL32: 40  6B  92  42  A4  70  7D  BF  B2  32  93  42  3D  0A  D7  BE  B6  8C  92  42  52  B8  1E  BF  41  BD  91  42  14  AE  47  BF  5D  8C  91  42  D7  A3  30  BF
+13:13:42 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:42 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  43  53  06  82  00  05  F8  6A  DE  90  42  85  EB  51  BF  E7  F6  90  42  5C  8F  02  BF  0A  C3  90  42  AE  47  E1  BE  78  EA  8F  42  00  00  40  BF  80  6D  8F  42  48  E1  3A  BF
+13:13:42 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:42 device_bleak.py - DEBUG: BLE READ: <<<20  31  43  53  06  82  00  05  F8  6A  DE  90  42  85  EB  51  BF  E7  F6  90  42  5C  8F  02  BF  0A  C3  90  42  AE  47  E1  BE  78  EA  8F  42  00  00  40  BF  80  6D  8F  42  48  E1  3A  BF
+13:13:42 device.py - DEBUG: GDX << 20  31  43  53  06  82  00  05  F8  6A  DE  90  42  85  EB  51  BF  E7  F6  90  42  5C  8F  02  BF  0A  C3  90  42  AE  47  E1  BE  78  EA  8F  42  00  00  40  BF  80  6D  8F  42  48  E1  3A  BF
+13:13:42 device.py - DEBUG: MEASUREMENT: 20  31  43  53  06  82  00  05  F8  6A  DE  90  42  85  EB  51  BF  E7  F6  90  42  5C  8F  02  BF  0A  C3  90  42  AE  47  E1  BE  78  EA  8F  42  00  00  40  BF  80  6D  8F  42  48  E1  3A  BF
+13:13:42 device.py - DEBUG: REAL32: 6A  DE  90  42  85  EB  51  BF  E7  F6  90  42  5C  8F  02  BF  0A  C3  90  42  AE  47  E1  BE  78  EA  8F  42  00  00  40  BF  80  6D  8F  42  48  E1  3A  BF
+13:13:42 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:42 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  44  74  06  82  00  05  F8  13  FD  8E  42  CD  CC  4C  BF  54  2B  8E  42  00  00  80  BF  8E  78  8E  42  8F  C2  F5  BE  B2  F1  8D  42  AE  47  21  BF  FB  71  8D  42  5C  8F  42  BF
+13:13:42 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:42 device_bleak.py - DEBUG: BLE READ: <<<20  31  44  74  06  82  00  05  F8  13  FD  8E  42  CD  CC  4C  BF  54  2B  8E  42  00  00  80  BF  8E  78  8E  42  8F  C2  F5  BE  B2  F1  8D  42  AE  47  21  BF  FB  71  8D  42  5C  8F  42  BF
+13:13:42 device.py - DEBUG: GDX << 20  31  44  74  06  82  00  05  F8  13  FD  8E  42  CD  CC  4C  BF  54  2B  8E  42  00  00  80  BF  8E  78  8E  42  8F  C2  F5  BE  B2  F1  8D  42  AE  47  21  BF  FB  71  8D  42  5C  8F  42  BF
+13:13:42 device.py - DEBUG: MEASUREMENT: 20  31  44  74  06  82  00  05  F8  13  FD  8E  42  CD  CC  4C  BF  54  2B  8E  42  00  00  80  BF  8E  78  8E  42  8F  C2  F5  BE  B2  F1  8D  42  AE  47  21  BF  FB  71  8D  42  5C  8F  42  BF
+13:13:42 device.py - DEBUG: REAL32: 13  FD  8E  42  CD  CC  4C  BF  54  2B  8E  42  00  00  80  BF  8E  78  8E  42  8F  C2  F5  BE  B2  F1  8D  42  AE  47  21  BF  FB  71  8D  42  5C  8F  42  BF
+13:13:43 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:43 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  45  78  06  82  00  05  F8  EE  03  8D  42  D7  A3  30  BF  76  39  8C  42  52  B8  5E  BF  CE  69  8C  42  CD  CC  0C  BF  45  DD  8B  42  71  3D  0A  BF  C2  46  8B  42  5C  8F  42  BF
+13:13:43 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:43 device_bleak.py - DEBUG: BLE READ: <<<20  31  45  78  06  82  00  05  F8  EE  03  8D  42  D7  A3  30  BF  76  39  8C  42  52  B8  5E  BF  CE  69  8C  42  CD  CC  0C  BF  45  DD  8B  42  71  3D  0A  BF  C2  46  8B  42  5C  8F  42  BF
+13:13:43 device.py - DEBUG: GDX << 20  31  45  78  06  82  00  05  F8  EE  03  8D  42  D7  A3  30  BF  76  39  8C  42  52  B8  5E  BF  CE  69  8C  42  CD  CC  0C  BF  45  DD  8B  42  71  3D  0A  BF  C2  46  8B  42  5C  8F  42  BF
+13:13:43 device.py - DEBUG: MEASUREMENT: 20  31  45  78  06  82  00  05  F8  EE  03  8D  42  D7  A3  30  BF  76  39  8C  42  52  B8  5E  BF  CE  69  8C  42  CD  CC  0C  BF  45  DD  8B  42  71  3D  0A  BF  C2  46  8B  42  5C  8F  42  BF
+13:13:43 device.py - DEBUG: REAL32: EE  03  8D  42  D7  A3  30  BF  76  39  8C  42  52  B8  5E  BF  CE  69  8C  42  CD  CC  0C  BF  45  DD  8B  42  71  3D  0A  BF  C2  46  8B  42  5C  8F  42  BF
+13:13:43 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:43 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  46  67  06  82  00  05  F8  FE  E6  8A  42  14  AE  47  BF  C8  4D  8A  42  71  3D  4A  BF  3C  1A  8A  42  14  AE  47  BF  65  1D  8A  42  1F  85  EB  BE  5D  36  89  42  33  33  33  BF
+13:13:43 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:43 device_bleak.py - DEBUG: BLE READ: <<<20  31  46  67  06  82  00  05  F8  FE  E6  8A  42  14  AE  47  BF  C8  4D  8A  42  71  3D  4A  BF  3C  1A  8A  42  14  AE  47  BF  65  1D  8A  42  1F  85  EB  BE  5D  36  89  42  33  33  33  BF
+13:13:43 device.py - DEBUG: GDX << 20  31  46  67  06  82  00  05  F8  FE  E6  8A  42  14  AE  47  BF  C8  4D  8A  42  71  3D  4A  BF  3C  1A  8A  42  14  AE  47  BF  65  1D  8A  42  1F  85  EB  BE  5D  36  89  42  33  33  33  BF
+13:13:43 device.py - DEBUG: MEASUREMENT: 20  31  46  67  06  82  00  05  F8  FE  E6  8A  42  14  AE  47  BF  C8  4D  8A  42  71  3D  4A  BF  3C  1A  8A  42  14  AE  47  BF  65  1D  8A  42  1F  85  EB  BE  5D  36  89  42  33  33  33  BF
+13:13:43 device.py - DEBUG: REAL32: FE  E6  8A  42  14  AE  47  BF  C8  4D  8A  42  71  3D  4A  BF  3C  1A  8A  42  14  AE  47  BF  65  1D  8A  42  1F  85  EB  BE  5D  36  89  42  33  33  33  BF
+13:13:44 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:44 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  47  D3  06  82  00  05  F8  F7  EA  88  42  33  33  33  BF  AD  60  88  42  CD  CC  4C  BF  51  4B  87  42  EC  51  78  BF  A7  E8  87  42  71  3D  0A  BF  54  7A  87  42  F6  28  1C  BF
+13:13:44 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:44 device_bleak.py - DEBUG: BLE READ: <<<20  31  47  D3  06  82  00  05  F8  F7  EA  88  42  33  33  33  BF  AD  60  88  42  CD  CC  4C  BF  51  4B  87  42  EC  51  78  BF  A7  E8  87  42  71  3D  0A  BF  54  7A  87  42  F6  28  1C  BF
+13:13:44 device.py - DEBUG: GDX << 20  31  47  D3  06  82  00  05  F8  F7  EA  88  42  33  33  33  BF  AD  60  88  42  CD  CC  4C  BF  51  4B  87  42  EC  51  78  BF  A7  E8  87  42  71  3D  0A  BF  54  7A  87  42  F6  28  1C  BF
+13:13:44 device.py - DEBUG: MEASUREMENT: 20  31  47  D3  06  82  00  05  F8  F7  EA  88  42  33  33  33  BF  AD  60  88  42  CD  CC  4C  BF  51  4B  87  42  EC  51  78  BF  A7  E8  87  42  71  3D  0A  BF  54  7A  87  42  F6  28  1C  BF
+13:13:44 device.py - DEBUG: REAL32: F7  EA  88  42  33  33  33  BF  AD  60  88  42  CD  CC  4C  BF  51  4B  87  42  EC  51  78  BF  A7  E8  87  42  71  3D  0A  BF  54  7A  87  42  F6  28  1C  BF
+13:13:44 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:44 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  48  D8  06  82  00  05  F8  9F  C1  86  42  00  00  40  BF  3E  6B  86  42  33  33  33  BF  F6  A7  85  42  7B  14  6E  BF  84  82  85  42  48  E1  3A  BF  B4  35  85  42  9A  99  19  BF
+13:13:44 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:44 device_bleak.py - DEBUG: BLE READ: <<<20  31  48  D8  06  82  00  05  F8  9F  C1  86  42  00  00  40  BF  3E  6B  86  42  33  33  33  BF  F6  A7  85  42  7B  14  6E  BF  84  82  85  42  48  E1  3A  BF  B4  35  85  42  9A  99  19  BF
+13:13:44 device.py - DEBUG: GDX << 20  31  48  D8  06  82  00  05  F8  9F  C1  86  42  00  00  40  BF  3E  6B  86  42  33  33  33  BF  F6  A7  85  42  7B  14  6E  BF  84  82  85  42  48  E1  3A  BF  B4  35  85  42  9A  99  19  BF
+13:13:44 device.py - DEBUG: MEASUREMENT: 20  31  48  D8  06  82  00  05  F8  9F  C1  86  42  00  00  40  BF  3E  6B  86  42  33  33  33  BF  F6  A7  85  42  7B  14  6E  BF  84  82  85  42  48  E1  3A  BF  B4  35  85  42  9A  99  19  BF
+13:13:44 device.py - DEBUG: REAL32: 9F  C1  86  42  00  00  40  BF  3E  6B  86  42  33  33  33  BF  F6  A7  85  42  7B  14  6E  BF  84  82  85  42  48  E1  3A  BF  B4  35  85  42  9A  99  19  BF
+13:13:45 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:45 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  49  76  06  82  00  05  F8  F7  98  84  42  5C  8F  42  BF  2B  FA  83  42  71  3D  4A  BF  1C  84  83  42  85  EB  51  BF  C2  EA  82  42  C3  F5  68  BF  D4  0E  83  42  B8  1E  05  BF
+13:13:45 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:45 device_bleak.py - DEBUG: BLE READ: <<<20  31  49  76  06  82  00  05  F8  F7  98  84  42  5C  8F  42  BF  2B  FA  83  42  71  3D  4A  BF  1C  84  83  42  85  EB  51  BF  C2  EA  82  42  C3  F5  68  BF  D4  0E  83  42  B8  1E  05  BF
+13:13:45 device.py - DEBUG: GDX << 20  31  49  76  06  82  00  05  F8  F7  98  84  42  5C  8F  42  BF  2B  FA  83  42  71  3D  4A  BF  1C  84  83  42  85  EB  51  BF  C2  EA  82  42  C3  F5  68  BF  D4  0E  83  42  B8  1E  05  BF
+13:13:45 device.py - DEBUG: MEASUREMENT: 20  31  49  76  06  82  00  05  F8  F7  98  84  42  5C  8F  42  BF  2B  FA  83  42  71  3D  4A  BF  1C  84  83  42  85  EB  51  BF  C2  EA  82  42  C3  F5  68  BF  D4  0E  83  42  B8  1E  05  BF
+13:13:45 device.py - DEBUG: REAL32: F7  98  84  42  5C  8F  42  BF  2B  FA  83  42  71  3D  4A  BF  1C  84  83  42  85  EB  51  BF  C2  EA  82  42  C3  F5  68  BF  D4  0E  83  42  B8  1E  05  BF
+13:13:45 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:45 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4A  7A  06  82  00  05  F8  7F  8B  82  42  1F  85  2B  BF  50  4A  82  42  9A  99  19  BF  BC  25  82  42  00  00  00  BF  BE  91  81  42  9A  99  19  BF  92  ED  81  42  29  5C  8F  BE
+13:13:45 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:45 device_bleak.py - DEBUG: BLE READ: <<<20  31  4A  7A  06  82  00  05  F8  7F  8B  82  42  1F  85  2B  BF  50  4A  82  42  9A  99  19  BF  BC  25  82  42  00  00  00  BF  BE  91  81  42  9A  99  19  BF  92  ED  81  42  29  5C  8F  BE
+13:13:45 device.py - DEBUG: GDX << 20  31  4A  7A  06  82  00  05  F8  7F  8B  82  42  1F  85  2B  BF  50  4A  82  42  9A  99  19  BF  BC  25  82  42  00  00  00  BF  BE  91  81  42  9A  99  19  BF  92  ED  81  42  29  5C  8F  BE
+13:13:45 device.py - DEBUG: MEASUREMENT: 20  31  4A  7A  06  82  00  05  F8  7F  8B  82  42  1F  85  2B  BF  50  4A  82  42  9A  99  19  BF  BC  25  82  42  00  00  00  BF  BE  91  81  42  9A  99  19  BF  92  ED  81  42  29  5C  8F  BE
+13:13:45 device.py - DEBUG: REAL32: 7F  8B  82  42  1F  85  2B  BF  50  4A  82  42  9A  99  19  BF  BC  25  82  42  00  00  00  BF  BE  91  81  42  9A  99  19  BF  92  ED  81  42  29  5C  8F  BE
+13:13:46 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:46 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4B  DD  06  82  00  05  F8  83  23  81  42  5C  8F  02  BF  EF  69  80  42  14  AE  47  BF  2E  E3  7F  42  71  3D  4A  BF  C8  B4  7E  42  29  5C  4F  BF  7E  B3  7E  42  7B  14  2E  BF
+13:13:46 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:46 device_bleak.py - DEBUG: BLE READ: <<<20  31  4B  DD  06  82  00  05  F8  83  23  81  42  5C  8F  02  BF  EF  69  80  42  14  AE  47  BF  2E  E3  7F  42  71  3D  4A  BF  C8  B4  7E  42  29  5C  4F  BF  7E  B3  7E  42  7B  14  2E  BF
+13:13:46 device.py - DEBUG: GDX << 20  31  4B  DD  06  82  00  05  F8  83  23  81  42  5C  8F  02  BF  EF  69  80  42  14  AE  47  BF  2E  E3  7F  42  71  3D  4A  BF  C8  B4  7E  42  29  5C  4F  BF  7E  B3  7E  42  7B  14  2E  BF
+13:13:46 device.py - DEBUG: MEASUREMENT: 20  31  4B  DD  06  82  00  05  F8  83  23  81  42  5C  8F  02  BF  EF  69  80  42  14  AE  47  BF  2E  E3  7F  42  71  3D  4A  BF  C8  B4  7E  42  29  5C  4F  BF  7E  B3  7E  42  7B  14  2E  BF
+13:13:46 device.py - DEBUG: REAL32: 83  23  81  42  5C  8F  02  BF  EF  69  80  42  14  AE  47  BF  2E  E3  7F  42  71  3D  4A  BF  C8  B4  7E  42  29  5C  4F  BF  7E  B3  7E  42  7B  14  2E  BF
+13:13:46 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:46 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4C  18  06  82  00  05  F8  3E  4E  7E  42  00  00  00  BF  96  D5  7C  42  C3  F5  28  BF  07  5F  7C  42  1F  85  2B  BF  8D  32  7B  42  A4  70  3D  BF  92  CA  79  42  1F  85  6B  BF
+13:13:46 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:46 device_bleak.py - DEBUG: BLE READ: <<<20  31  4C  18  06  82  00  05  F8  3E  4E  7E  42  00  00  00  BF  96  D5  7C  42  C3  F5  28  BF  07  5F  7C  42  1F  85  2B  BF  8D  32  7B  42  A4  70  3D  BF  92  CA  79  42  1F  85  6B  BF
+13:13:46 device.py - DEBUG: GDX << 20  31  4C  18  06  82  00  05  F8  3E  4E  7E  42  00  00  00  BF  96  D5  7C  42  C3  F5  28  BF  07  5F  7C  42  1F  85  2B  BF  8D  32  7B  42  A4  70  3D  BF  92  CA  79  42  1F  85  6B  BF
+13:13:46 device.py - DEBUG: MEASUREMENT: 20  31  4C  18  06  82  00  05  F8  3E  4E  7E  42  00  00  00  BF  96  D5  7C  42  C3  F5  28  BF  07  5F  7C  42  1F  85  2B  BF  8D  32  7B  42  A4  70  3D  BF  92  CA  79  42  1F  85  6B  BF
+13:13:46 device.py - DEBUG: REAL32: 3E  4E  7E  42  00  00  00  BF  96  D5  7C  42  C3  F5  28  BF  07  5F  7C  42  1F  85  2B  BF  8D  32  7B  42  A4  70  3D  BF  92  CA  79  42  1F  85  6B  BF
+13:13:47 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:47 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4D  18  06  82  00  05  F8  9C  78  7A  42  1F  85  EB  BE  FC  C4  79  42  8F  C2  F5  BE  15  5C  78  42  0A  D7  23  BF  72  80  77  42  D7  A3  30  BF  97  51  76  42  71  3D  4A  BF
+13:13:47 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:47 device_bleak.py - DEBUG: BLE READ: <<<20  31  4D  18  06  82  00  05  F8  9C  78  7A  42  1F  85  EB  BE  FC  C4  79  42  8F  C2  F5  BE  15  5C  78  42  0A  D7  23  BF  72  80  77  42  D7  A3  30  BF  97  51  76  42  71  3D  4A  BF
+13:13:47 device.py - DEBUG: GDX << 20  31  4D  18  06  82  00  05  F8  9C  78  7A  42  1F  85  EB  BE  FC  C4  79  42  8F  C2  F5  BE  15  5C  78  42  0A  D7  23  BF  72  80  77  42  D7  A3  30  BF  97  51  76  42  71  3D  4A  BF
+13:13:47 device.py - DEBUG: MEASUREMENT: 20  31  4D  18  06  82  00  05  F8  9C  78  7A  42  1F  85  EB  BE  FC  C4  79  42  8F  C2  F5  BE  15  5C  78  42  0A  D7  23  BF  72  80  77  42  D7  A3  30  BF  97  51  76  42  71  3D  4A  BF
+13:13:47 device.py - DEBUG: REAL32: 9C  78  7A  42  1F  85  EB  BE  FC  C4  79  42  8F  C2  F5  BE  15  5C  78  42  0A  D7  23  BF  72  80  77  42  D7  A3  30  BF  97  51  76  42  71  3D  4A  BF
+13:13:47 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:47 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4E  76  06  82  00  05  F8  C2  73  75  42  3D  0A  57  BF  35  B3  75  42  66  66  E6  BE  68  A6  74  42  E1  7A  14  BF  33  A0  73  42  D7  A3  30  BF  B1  A2  72  42  A4  70  3D  BF
+13:13:47 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:47 device_bleak.py - DEBUG: BLE READ: <<<20  31  4E  76  06  82  00  05  F8  C2  73  75  42  3D  0A  57  BF  35  B3  75  42  66  66  E6  BE  68  A6  74  42  E1  7A  14  BF  33  A0  73  42  D7  A3  30  BF  B1  A2  72  42  A4  70  3D  BF
+13:13:47 device.py - DEBUG: GDX << 20  31  4E  76  06  82  00  05  F8  C2  73  75  42  3D  0A  57  BF  35  B3  75  42  66  66  E6  BE  68  A6  74  42  E1  7A  14  BF  33  A0  73  42  D7  A3  30  BF  B1  A2  72  42  A4  70  3D  BF
+13:13:47 device.py - DEBUG: MEASUREMENT: 20  31  4E  76  06  82  00  05  F8  C2  73  75  42  3D  0A  57  BF  35  B3  75  42  66  66  E6  BE  68  A6  74  42  E1  7A  14  BF  33  A0  73  42  D7  A3  30  BF  B1  A2  72  42  A4  70  3D  BF
+13:13:47 device.py - DEBUG: REAL32: C2  73  75  42  3D  0A  57  BF  35  B3  75  42  66  66  E6  BE  68  A6  74  42  E1  7A  14  BF  33  A0  73  42  D7  A3  30  BF  B1  A2  72  42  A4  70  3D  BF
+13:13:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<20  31  4F  B1  06  82  00  05  F8  03  0C  71  42  AE  47  61  BF  16  FA  6F  42  A4  70  7D  BF  A3  BC  70  42  8F  C2  F5  BE  1D  A3  6F  42  F6  28  1C  BF  CD  74  6E  42  EC  51  38  BF
+13:13:48 device_bleak.py - DEBUG: Receive buffer length: 49 Expected packet length: 49
+13:13:48 device_bleak.py - DEBUG: BLE READ: <<<20  31  4F  B1  06  82  00  05  F8  03  0C  71  42  AE  47  61  BF  16  FA  6F  42  A4  70  7D  BF  A3  BC  70  42  8F  C2  F5  BE  1D  A3  6F  42  F6  28  1C  BF  CD  74  6E  42  EC  51  38  BF
+13:13:48 device.py - DEBUG: GDX << 20  31  4F  B1  06  82  00  05  F8  03  0C  71  42  AE  47  61  BF  16  FA  6F  42  A4  70  7D  BF  A3  BC  70  42  8F  C2  F5  BE  1D  A3  6F  42  F6  28  1C  BF  CD  74  6E  42  EC  51  38  BF
+13:13:48 device.py - DEBUG: MEASUREMENT: 20  31  4F  B1  06  82  00  05  F8  03  0C  71  42  AE  47  61  BF  16  FA  6F  42  A4  70  7D  BF  A3  BC  70  42  8F  C2  F5  BE  1D  A3  6F  42  F6  28  1C  BF  CD  74  6E  42  EC  51  38  BF
+13:13:48 device.py - DEBUG: REAL32: 03  0C  71  42  AE  47  61  BF  16  FA  6F  42  A4  70  7D  BF  A3  BC  70  42  8F  C2  F5  BE  1D  A3  6F  42  F6  28  1C  BF  CD  74  6E  42  EC  51  38  BF
+13:13:48 device.py - DEBUG: GDX >> 58  0B  F7  6E  19  FF  00  FF  FF  FF  FF
+13:13:48 device_bleak.py - DEBUG: BLE WRITE: >>>58  0B  F7  6E  19  FF  00  FF  FF  FF  FF
+13:13:48 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x0b\xf7n\x19\xff\x00\xff\xff\xff\xff'
+13:13:48 device_bleak.py - DEBUG: lengthRemaining 0 offset 11
+13:13:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  07  07  B6  19  F7  00
+13:13:48 device_bleak.py - DEBUG: Receive buffer length: 7 Expected packet length: 7
+13:13:48 device_bleak.py - DEBUG: BLE READ: <<<98  07  07  B6  19  F7  00
+13:13:48 device.py - DEBUG: GDX << 98  07  07  B6  19  F7  00
+13:13:48 device.py - DEBUG: GDX >> 58  0B  F6  6D  19  FF  00  FF  FF  FF  FF
+13:13:48 device_bleak.py - DEBUG: BLE WRITE: >>>58  0B  F6  6D  19  FF  00  FF  FF  FF  FF
+13:13:48 client.py - DEBUG: Write Characteristic f4bf14a6-c7d5-4b6d-8aa8-df1a7c83adcb : b'X\x0b\xf6m\x19\xff\x00\xff\xff\xff\xff'
+13:13:48 device_bleak.py - DEBUG: lengthRemaining 0 offset 11
+13:13:48 PeripheralDelegate.py - DEBUG: peripheral_didUpdateValueForCharacteristic_error_
+13:13:48 device_bleak.py - DEBUG: BLE NOTIFY: <<<98  07  08  B6  19  F6  00
+13:13:48 device_bleak.py - DEBUG: Receive buffer length: 7 Expected packet length: 7
+13:13:48 device_bleak.py - DEBUG: BLE READ: <<<98  07  08  B6  19  F6  00
+13:13:48 device.py - DEBUG: GDX << 98  07  08  B6  19  F6  00

@@ -62,7 +62,7 @@ def main():
         listOfOscillations.append(measurements[1])
         if measurements[1] > maxOsc:
             maxOsc = measurements[1]
-        if measurements[0] < 500:
+        if measurements[0] < 60:
             correctPressure = True
 
     t1 = time.time()
@@ -73,11 +73,22 @@ def main():
 
     print("the time it took to find blood pressure: " + str(totalTime))
 
-    oscillationPeaks = (find_peaks(listOfOscillations))
-    # x = np.linspace()
-    peak_pos = [oscillationPeaks[0]]
-    print(peak_pos)
-    oscillationPeaksList = (list(oscillationPeaks))
+    # oscillationPeaks = (find_peaks(listOfOscillations))
+    # # x = np.linspace()
+    # peak_pos = [oscillationPeaks[0]]
+    # print(peak_pos)
+    # oscillationPeaksList = (list(oscillationPeaks))
+
+    prev = listOfOscillations[0] or 0.001
+    threshold = 0.5
+    peaks = []
+
+    for num, i in enumerate(listOfOscillations[1:], 1):
+        if (i - prev) / prev > threshold:
+            peaks.append(num)
+        prev = i or 0.001
+
+    print(peaks)
 
     #   print(oscillationPeaks.sum())
     #   print(oscillationPeaks[0].size)
@@ -87,9 +98,9 @@ def main():
 
     #  print("Length of number of peaks: " + str(len(find_peaks(listOfOscillations))))
     #  print("Length of number of peaks: " + str(np.count_nonzero((find_peaks(listOfOscillations)))))
-    print("Length of number of peaks: " + str(len([peak_pos])))
+    print("Length of number of peaks: " + str(peaks))
 
-    pulseRate = ((((len(peak_pos))) / totalTime) * 60)
+    pulseRate = ((((len(peaks))) / totalTime) * 60)
     print("The pulse rate is: " + str(pulseRate))
 
     #  print(possibleBP)
