@@ -79,6 +79,8 @@ def main():
     # print(peak_pos)
     # oscillationPeaksList = (list(oscillationPeaks))
 
+
+# Pulse rate math
     prev = listOfOscillations[0] or 0.001
     threshold = 0.5
     peaks = []
