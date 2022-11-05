@@ -61,6 +61,9 @@ def connectBloodPressureDevice():
     #     prev = i or 0.001
     #
     # print(peaks)
+
+    # pulseRate = ((((len(peaks))) / totalTime) * 60)
+    # print("The pulse rate is: " + str(pulseRate))
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
@@ -97,10 +100,22 @@ def connectBloodPressureDevice():
                             if elem == maxOsc:
                                 finalMeasurement = prev_el
                                 #print("Your real mean arterial blood pressure is : " + str(prev_el))
-                    tempMeasurement = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
-                    conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
-                    print("Added BP: ", tempMeasurement.measurement)
-                    print("Associated Time: ", tempMeasurement.timestamp)
+                    for num, i in enumerate(listOfOscillations[1:], 1):
+                        if (i - prev) / prev > threshold:
+                            peaks.append(num)
+                        prev = i or 0.001
+
+                    # print(peaks)
+
+                    # pulseRate = ((((len(peaks))) / totalTime) * 60)
+                    # print("The pulse rate is: " + str(pulseRate))
+                    tempMeasurementBP = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
+                    tempMeasurementPR = conductExamScreen.singularRecording(currentTime, finalMeasurement,
+                                                                          conductExamScreen.newQuestion,
+                                                                          conductExamScreen.yn)
+                    conductExamScreen.bloodPressureRecordings.append(tempMeasurementBP)
+                    print("Added BP: ", tempMeasurementBP.measurement)
+                    print("Associated Time: ", tempMeasurementBP.timestamp)
                     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
                     correctPressure = True
                     listOfOscillations = []
