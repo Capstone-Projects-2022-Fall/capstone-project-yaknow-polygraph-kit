@@ -383,6 +383,11 @@ def startExam(window1):
             conductExamScreen.examFinished = True
             conductExamScreen.window['col3_1'].update(visible=True)
             conductExamScreen.window['col3_2'].update(visible=True)
+            conductExamScreen.window['col3_3'].update(visible=True)
+            conductExamScreen.window['col3_4'].update(visible=True)
+            conductExamScreen.window['col3_5'].update(visible=True)
+            conductExamScreen.window['col3_6'].update(visible=True)
+            conductExamScreen.window['col3_7'].update(visible=True)
             conductExamScreen.window['-Restart-'].update(visible=True)
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
