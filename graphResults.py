@@ -23,6 +23,9 @@ def createGraphs():
     RespirationTime = []
     bloodPressureMeasurement = []
     bloodPressureTime = []
+    pulseRateMeasurement = []
+    pulseRateTime = []
+
     # with open('TestData.csv', 'r') as csvfile:
     #    lines = csv.reader(csvfile, delimiter=',')
     #    for row in lines:
@@ -50,6 +53,14 @@ def createGraphs():
 
     graph2.plot(bloodPressureTime, bloodPressureMeasurement, color='k', marker='o')
     graph2.set_ylabel("Blood Pressure")
+
+    print("Pulse Rate Collections: ", len(conductExamScreen.pulseRecordings))
+    for pulseRateRecording in conductExamScreen.pulseRecordings:
+        pulseRateMeasurement.append(pulseRateRecording.measurement)
+        pulseRateTime.append(pulseRateRecording.timestamp)
+
+    graph3.plot(pulseRateTime, pulseRateMeasurement, color='k', marker='o')
+    graph3.set_ylabel("Pulse Rate")
 
     # runs through a loop of each question timestamp and prints a red line indicating the data for the question
     #for i in conductExamScreen.questionTime:
