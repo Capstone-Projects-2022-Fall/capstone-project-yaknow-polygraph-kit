@@ -51,6 +51,16 @@ def connectBloodPressureDevice():
     possibleBP = []
     maxOsc = 0
     conductExamScreen.inQuestion = False
+    prev = listOfOscillations[0] or 0.001
+    threshold = 0.5
+    peaks = []
+
+    # for num, i in enumerate(listOfOscillations[1:], 1):
+    #     if (i - prev) / prev > threshold:
+    #         peaks.append(num)
+    #     prev = i or 0.001
+    #
+    # print(peaks)
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
@@ -119,6 +129,8 @@ def connectBloodPressureDevice():
     #     if measurements == None:
     #         break
     #     print("Blood Pressure Recordings: ", currentTime, measurements)
+
+
 
 
 
