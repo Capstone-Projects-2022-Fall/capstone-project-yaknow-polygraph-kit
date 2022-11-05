@@ -94,12 +94,12 @@ def update(val):
     graph3.axis([current_value, current_value + 10, 0, 100])
     fig.canvas.draw()
 
-ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
+#ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
 
 # createGraphs()
 # slider_position.on_changed(update)
 
-plt.show()
+#plt.show()
 
 
 
