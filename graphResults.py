@@ -25,12 +25,14 @@ def createGraphs():
     bloodPressureTime = []
     pulseRateMeasurement = []
     pulseRateTime = []
+    x = []
+    y = []
 
-    # with open('TestData.csv', 'r') as csvfile:
-    #    lines = csv.reader(csvfile, delimiter=',')
-    #    for row in lines:
-    #        x.append(row[0])
-    #        y.append(int(row[1]))
+    with open('TestData.csv', 'r') as csvfile:
+       lines = csv.reader(csvfile, delimiter=',')
+       for row in lines:
+           x.append(row[0])
+           y.append(int(row[1]))
 
     for respirationRecording in conductExamScreen.respirationRecordings:
         RespirationMeasurement.append(respirationRecording.measurement)
