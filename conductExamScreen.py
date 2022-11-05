@@ -145,6 +145,15 @@ def make_window():
         [gui.Text('', key='-Test5BP-', visible=True)],
         [gui.Text('', key='-Test6BP-', visible=True)]
     ]
+    
+    col3_8 = [
+        [gui.Text('', key='-Test1Pulse-', visible=True)],
+        [gui.Text('', key='-Test2Pulse-', visible=True)],
+        [gui.Text('', key='-Test3Pulse-', visible=True)],
+        [gui.Text('', key='-Test4Pulse-', visible=True)],
+        [gui.Text('', key='-Test5Pulse-', visible=True)],
+        [gui.Text('', key='-Test6Pulse-', visible=True)]
+    ]
 
     row8 = [
         [gui.Button('YES', key='-YES-'), gui.Button('NO', key='-NO-')]
@@ -182,7 +191,8 @@ def make_window():
          gui.Frame(layout=col3_4, title='', k='col3_4', visible=False),
          gui.Frame(layout=col3_5, title='', k='col3_5', visible=False),
          gui.Frame(layout=col3_6, title='', k='col3_6', visible=False),
-         gui.Frame(layout=col3_7, title='', k='col3_7', visible=False)],
+         gui.Frame(layout=col3_7, title='', k='col3_7', visible=False),
+        gui.Frame(layout=col3_8, title='', k='col3_8', visible=False)],
         [gui.Push(), gui.Frame(layout=row8, title='', key='row8'), gui.Push()],
         [gui.Push(), gui.Frame(layout=row9, title='', key='row9'), gui.Push()]
     ]
@@ -388,6 +398,7 @@ def startExam(window1):
             conductExamScreen.window['col3_5'].update(visible=True)
             conductExamScreen.window['col3_6'].update(visible=True)
             conductExamScreen.window['col3_7'].update(visible=True)
+            conductExamScreen.window['col3_8'].update(visible=True)
             conductExamScreen.window['-Restart-'].update(visible=True)
             conductExamScreen.window['-Test1R-'].update(visible=True)
             conductExamScreen.window['-Test2R-'].update(visible=True)
@@ -451,6 +462,13 @@ def startExam(window1):
             conductExamScreen.window['-Test4BP-'].update(bloodPressureRecordings[6].measurement)
             conductExamScreen.window['-Test5BP-'].update(bloodPressureRecordings[7].measurement)
             conductExamScreen.window['-Test6BP-'].update(bloodPressureRecordings[8].measurement)
+            
+            conductExamScreen.window['-Test1Pulse-'].update(pulseRecordings[3].measurement)
+            conductExamScreen.window['-Test2Pulse-'].update(pulseRecordings[4].measurement)
+            conductExamScreen.window['-Test3Pulse-'].update(pulseRecordings[5].measurement)
+            conductExamScreen.window['-Test4Pulse-'].update(pulseRecordings[6].measurement)
+            conductExamScreen.window['-Test5Pulse-'].update(pulseRecordings[7].measurement)
+            conductExamScreen.window['-Test6Pulse-'].update(pulseRecordings[8].measurement)
             
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
