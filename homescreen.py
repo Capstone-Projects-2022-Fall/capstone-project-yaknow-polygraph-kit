@@ -47,7 +47,6 @@ def main():
 
     while True:
         event, values = window.read()
-
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
