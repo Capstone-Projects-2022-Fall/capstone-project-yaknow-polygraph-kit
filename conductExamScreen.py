@@ -2,6 +2,9 @@ import PySimpleGUI as gui
 from PIL import Image, ImageTk
 import arduino
 import matplotlib
+
+import homescreen
+
 matplotlib.use('TKAgg')
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -370,6 +373,10 @@ def startExam(window1):
     while True:
         #event, values = PolygraphExamSetupScreen.window.read()
         event, values = conductExamScreen.window.read()
+        if event == '-Restart-':
+            conductExamScreen.window.close()
+
+            homescreen.main()
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
@@ -416,3 +423,5 @@ def startExam(window1):
           #   conductExamScreen.window.close()
           #  # PolygraphExamSetupScreen.window = newWindow
           #   homescreen.main()
+
+
