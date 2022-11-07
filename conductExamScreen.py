@@ -355,9 +355,9 @@ def uploadDataToDataBase():
     for x in respirationRecordings:
         if currentTimeStamp == 0:
             currentTimeStamp = x.timestamp
-            numOfTime = +1
+            numOfTime += 1
         if x.timestamp > currentTimeStamp:
-            numOfTime = +1
+            numOfTime += 1
             currentTimeStamp = x.timestamp
     # in one big loop for the number of readings, gather all the variables needed to update the db table ~line 350
     # initilaize them using appropriate readings and update and initialize to default values and then decrement numOfTime
@@ -375,7 +375,6 @@ def uploadDataToDataBase():
     bp = ""
     label = ""
 
-
     resp_index = 0
     skinCon_index = 0
     bp_index = 0
@@ -388,7 +387,7 @@ def uploadDataToDataBase():
         skinCon_data = skinConductivityRecordings[skinCon_index]
         pulse_data = pulseRecordings[pulse_index]
 
-        questionID = +1
+        questionID += 1
         question = respiration_Data.question
         response = respiration_Data.yn
         time_stamp = respiration_Data.timestamp
@@ -416,5 +415,6 @@ def uploadDataToDataBase():
 
         numOfTime -= 1
 
-        SingularRecordingsDB.add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con,respiration, bp, label)
+        SingularRecordingsDB.add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con,
+                                                respiration, bp, label)
 # examOver()

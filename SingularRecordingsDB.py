@@ -30,8 +30,7 @@ def add_singularRecord(examID, questionID, question, response, time_stamp, pulse
     db.close()
 
 
-def delete_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
-                          prediction, accuracy, label):
+def delete_singularRecord(examID):
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -48,10 +47,7 @@ def delete_singularRecord(examID, questionID, question, response, time_stamp, pu
     '''
     try:
         with db.cursor() as mycursor:
-            mycursor.execute("DELETE FROM SingularRecording Where (exmaID, questionID, question, response, tsStamp , pulse, skin_conductivity, respiration_belt, blood_pressure, ML_Prediction ,ML_Accuracy, actual_ans) IN (%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s)",
-                             (examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
-                              prediction, accuracy, label))
-
+            mycursor.execute("DELETE FROM SingularRecording Where exmaID = (%s)", (examID,))
             db.commit()
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_TABLEACCESS_DENIED_ERROR:

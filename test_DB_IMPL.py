@@ -1,20 +1,34 @@
+from numpy import random
+
 import SingularRecordingsDB
 import time
 
-exam_ID =11
+exam_ID = SingularRecordingsDB.get_singularRecords()[0] + 1
 question_ID = 0
-question = "How old are you?"
-response = "y"
+question = "Initial Test Question"
+response = "n"
 timeStamp = time.time()
-pulse = "12"
+pulse = 70
 skin_con = 3
-respBel = "34"
-bp = "43"
+respBel = 34
+bp = 111
 
+i = 5
+counter = 0
+while i > 0:
+    i -= 1
+    counter += 1
+    question_ID = counter
+    skin_con = skin_con + random.randint(-2, 5)
+    pulse = pulse + random.randint(-2, 5)
+    bp = bp + random.randint(-2, 5)
+    respBel = respBel + random.randint(-2, 5)
+    question = f'question part {str(counter)}'
+    SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response,
+                                            timeStamp, pulse,
+                                            skin_con, respBel, bp, "F")
 
-
-#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, question, response, timeStamp, pulse, skin_con, respBel, bp, "T")
-#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
-print(SingularRecordingsDB.get_singularRecords()[0])
-
-
+#SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response, timeStamp, pulse, skin_con, respBel,  bp, "T")
+# SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
+#SingularRecordingsDB.delete_singularRecord('12')
+# print(SingularRecordingsDB.get_singularRecords()[0])
