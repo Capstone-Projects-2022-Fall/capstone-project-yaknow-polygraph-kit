@@ -2,6 +2,7 @@ import PySimpleGUI as gui
 from PIL import Image, ImageTk
 import arduino
 import matplotlib
+
 matplotlib.use('TKAgg')
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -16,7 +17,9 @@ import numpy as np
 import matplotlib.pyplot
 from scipy.stats import norm
 import statistics
+import SingularRecordingsDB
 from multiprocessing import Process, Queue
+
 global window
 global examFinished
 global examTime
@@ -36,6 +39,7 @@ global questionTimestamps
 global zTest1
 global zTest2
 global zTest3
+
 
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
@@ -84,15 +88,16 @@ def make_window():
     ]
 
     row5 = [
-        [gui.Push(), gui.Button('Restart', key='-Restart-', visible=False), gui.Button('Cancel Conversion', key='-cancelConversion-'),
+        [gui.Push(), gui.Button('Restart', key='-Restart-', visible=False),
+         gui.Button('Cancel Conversion', key='-cancelConversion-'),
          gui.Push()]
     ]
 
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
-        #[gui.VPush()],
+        # [gui.VPush()],
         [gui.Frame(layout=row1, title='', key='row1')],
-       # [gui.VPush()],
+        # [gui.VPush()],
         [gui.Frame(layout=row2, title='', key='row2')],
         [gui.Frame(layout=col3_1, title='', k='col3_1'), gui.Frame(layout=col3_2, title='', k='col3_2')],
         [gui.Push(), gui.Frame(layout=row4, title='', key='row4'), gui.Push()],
@@ -107,22 +112,23 @@ def make_window():
 
 def examCounter():
     while conductExamScreen.examFinished == False:
-        if(conductExamScreen.inQuestion == True):
+        if (conductExamScreen.inQuestion == True):
             conductExamScreen.examTime = conductExamScreen.examTime + 1
             conductExamScreen.window['-Time-'].update(examTime)
-            if(conductExamScreen.iterated == False):
+            if (conductExamScreen.iterated == False):
                 conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
-                #for respirationRecording in conductExamScreen.respirationRecordings:
+                # for respirationRecording in conductExamScreen.respirationRecordings:
                 #    if respirationRecording.yn == None:
                 #        respirationRecording.yn = conductExamScreen.yn
                 conductExamScreen.yn = None
-                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
+                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[
+                    conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
                 if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
-                    while(len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions) ):
-                        #print("BP SIZE: ", len(bloodPressureRecordings) )
-                        #print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
+                    while (len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions)):
+                        # print("BP SIZE: ", len(bloodPressureRecordings) )
+                        # print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
                         conductExamScreen.examTime = conductExamScreen.examTime + 1
                         conductExamScreen.window['-Time-'].update(examTime)
                         time.sleep(1)
@@ -138,17 +144,16 @@ def examCounter():
             time.sleep(1)
 
 
-
 def examOver():
     print("Entered examOver")
     conductExamScreen.respirationbyQuestion = []
     tempArray = []
     tempQuestion = conductExamScreen.respirationRecordings[0].question
     x = 0
-    while(x < len(respirationRecordings)):
-        if( (tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1) ) ):
+    while (x < len(respirationRecordings)):
+        if ((tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1))):
             conductExamScreen.respirationbyQuestion.append(tempArray)
-            #print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
+            # print(respirationbyQuestion[0][0], respirationbyQuestion[0][1])
             tempArray = []
             tempArray.append(respirationRecordings[x].measurement[0])
             tempQuestion = respirationRecordings[x].question
@@ -183,6 +188,8 @@ def conductZtest(question):
     #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
     # else:
     #     print("We do not have reason to believe the data has any major differences")
+
+
 # return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
 def showRespirationProbabilityDistribution(question):
     # mean1 = statistics.mean(cityA)
@@ -264,8 +271,8 @@ def showRespirationProbabilityDistribution(question):
                 transform=graph2.transAxes)
     matplotlib.pyplot.show()
 
-def startExam(window1):
 
+def startExam(window1):
     conductExamScreen.justRespirationRate = []
 
     conductExamScreen.questionTimestamps = []
@@ -290,6 +297,7 @@ def startExam(window1):
             conductExamScreen.yn = False
         elif event == '-ENDED-':
             examOver()
+            # get data from all the snesors and send them all to the db
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
             conductExamScreen.window['-Restart-'].update(visible=True)
@@ -321,14 +329,92 @@ def startExam(window1):
             showRespirationProbabilityDistribution(7)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
-          #  newWindow = homescreen.make_window()
-          #   conductExamScreen.window.close()
-          #  # PolygraphExamSetupScreen.window = newWindow
-          #   homescreen.main()
+        #  newWindow = homescreen.make_window()
+        #   conductExamScreen.window.close()
+        #  # PolygraphExamSetupScreen.window = newWindow
+        #   homescreen.main()
 
 
+def uploadDataToDataBase():
+    # respiration
+    # gsr sensor
+    # pulse
+    #
+
+    '''class singularRecording:
+        def __init__(self, timestamp, measurement, question, yn):
+            self.timestamp = timestamp
+            self.measurement = measurement
+            self.question = question
+            self.yn = yn'''
+    # examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, label
+    numOfTime = 0;
+    currentTimeStamp = 0;
+    ''''increments the variable numOfTime for every change in the time recorded in the objects of respirationReadings 
+    '''
+    for x in respirationRecordings:
+        if currentTimeStamp == 0:
+            currentTimeStamp = x.timestamp
+            numOfTime = +1
+        if x.timestamp > currentTimeStamp:
+            numOfTime = +1
+            currentTimeStamp = x.timestamp
+    # in one big loop for the number of readings, gather all the variables needed to update the db table ~line 350
+    # initilaize them using appropriate readings and update and initialize to default values and then decrement numOfTime
+    #  implemented to the be last entry into db exmaID column +1
+    examID = SingularRecordingsDB.get_singularRecords()[0] + 1
+    #  implemented to the be last entry into db exmaID column +1
+
+    questionID = 0
+    question = ""
+    response = ""
+    time_stamp = ""
+    pulse = ""
+    skin_Con = 0
+    respiration = ""
+    bp = ""
+    label = ""
 
 
+    resp_index = 0
+    skinCon_index = 0
+    bp_index = 0
+    pulse_index = 0
+    while numOfTime:
+        # we will make the assumption that all y/n readings from the sensor are the same
 
+        respiration_Data = respirationRecordings[resp_index + 1]
+        bp_data = bloodPressureRecordings[bp_index]
+        skinCon_data = skinConductivityRecordings[skinCon_index]
+        pulse_data = pulseRecordings[pulse_index]
 
-        #examOver()
+        questionID = +1
+        question = respiration_Data.question
+        response = respiration_Data.yn
+        time_stamp = respiration_Data.timestamp
+        respiration = respiration_Data.measurement
+
+        if ((time_stamp - bp_data.timestamp) < 0.01) and respiration_Data.question == bp_data.question:
+            '''they are in the same data range and for the same question'''
+            time_stamp = bp_data.timestamp
+            bp = bp_data.measurement
+            bp_index += 1
+
+        if ((time_stamp - pulse_data.timestamp) < 0.01) and respiration_Data.question == pulse_data.question:
+            '''they are in the same data range and for the same question'''
+            pulse = pulse_data.measurement
+            pulse_index += 1
+
+        if ((time_stamp - skinCon_data.timestamp) < 0.01) and respiration_Data.question == skinCon_data.question:
+            '''they are in the same data range and for the same question'''
+            skin_Con = skinCon_data.measurement
+            skinCon_index += 1
+
+        label = "false"
+
+        # if the time recording < x different,
+
+        numOfTime -= 1
+
+        SingularRecordingsDB.add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con,respiration, bp, label)
+# examOver()

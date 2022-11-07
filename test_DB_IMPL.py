@@ -1,7 +1,7 @@
-import testUpdateSingularRecording
+import SingularRecordingsDB
 import time
 
-exam_ID = 9
+exam_ID =11
 question_ID = 0
 question = "How old are you?"
 response = "y"
@@ -13,4 +13,8 @@ bp = "43"
 
 
 
-testUpdateSingularRecording.add_singularRecord(exam_ID,  question_ID, question, response, timeStamp, pulse, skin_con, respBel, bp, "T")
+#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, question, response, timeStamp, pulse, skin_con, respBel, bp, "T")
+#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
+print(SingularRecordingsDB.get_singularRecords()[0])
+
+

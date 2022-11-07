@@ -6,7 +6,6 @@ from conductExamScreen import singularRecording
 
 
 def add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, label):
-
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -20,17 +19,19 @@ def add_singularRecord(examID, questionID, question, response, time_stamp, pulse
     :return: void
     '''
     with db.cursor() as mycursor:
-
-        #mycursor.execute("INSERT INTO SingularRecording(exmaID, questionID, question, response, timeStamp, pulse,  skin_conductivity, respiration_belt, blood_pressure) VALUES (%s, %s, %s,%s,%s,%s,%s,%s,%s), ())
-        mycursor.execute("INSERT INTO SingularRecording (exmaID, questionID, question, response, tsStamp , pulse, skin_conductivity, respiration_belt, blood_pressure, ML_Prediction ,ML_Accuracy, actual_ans) VALUES (%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s)", (examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, "null", "null", label,))
-
+        # mycursor.execute("INSERT INTO SingularRecording(exmaID, questionID, question, response, timeStamp, pulse,  skin_conductivity, respiration_belt, blood_pressure) VALUES (%s, %s, %s,%s,%s,%s,%s,%s,%s), ())
+        mycursor.execute(
+            "INSERT INTO SingularRecording (exmaID, questionID, question, response, tsStamp , pulse, skin_conductivity, respiration_belt, blood_pressure, ML_Prediction ,ML_Accuracy, actual_ans) VALUES (%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s)",
+            (examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, "null", "null",
+             label,))
 
         db.commit()
 
     db.close()
 
 
-def delete_singularRecord(examID, questionID, question, response, timestamp, pulse, skin_Con, respiration, bp):
+def delete_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
+                          prediction, accuracy, label):
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -47,8 +48,10 @@ def delete_singularRecord(examID, questionID, question, response, timestamp, pul
     '''
     try:
         with db.cursor() as mycursor:
-            mycursor.execute("DELETE FROM SingularRecording Where S = (%d, %d, %s, %s, %s, %s, %d, %s, %s )",
-                             (examID, questionID, question, response, timestamp, pulse, skin_Con, respiration, bp,))
+            mycursor.execute("DELETE FROM SingularRecording Where (exmaID, questionID, question, response, tsStamp , pulse, skin_conductivity, respiration_belt, blood_pressure, ML_Prediction ,ML_Accuracy, actual_ans) IN (%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s)",
+                             (examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
+                              prediction, accuracy, label))
+
             db.commit()
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_TABLEACCESS_DENIED_ERROR:
@@ -98,14 +101,15 @@ def get_singularRecords():
     # convert list of tuples to just a list
     list_singularRecord = [item for t in questions for item in t]
     # change to lowercase
-    list_singularRecords_lower = [x.lower() for x in list_singularRecord]
+    #list_singularRecords_lower = [x.lower() for x in list_singularRecord]
     # remove leading and trailing spaces and new lines
-    list_singularRecords_clean = [x.strip().replace("\n", "") for x in list_singularRecords_lower]
+    #list_singularRecords_clean = [x.strip().replace("\n", "") for x in list_singularRecords_lower]
     db.close()
-    return list_singularRecords_clean
+    #return list_singularRecords_clean
+    return list_singularRecord
 
 
-def uploadableSingularRecording(self, examID, questionID, question, response, timestamp, pulse, skin_Con, respiration,
+'''def uploadableSingularRecording(self, examID, questionID, question, response, timestamp, pulse, skin_Con, respiration,
                                 bp):
     self.examID = examID
     self.questionID = questionID
@@ -115,4 +119,4 @@ def uploadableSingularRecording(self, examID, questionID, question, response, ti
     self.pulse = pulse
     self.skin_Con = skin_Con
     self.respiration = respiration
-    self.bp = bp
+    self.bp = bp'''
