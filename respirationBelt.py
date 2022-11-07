@@ -32,6 +32,7 @@ def connectRespirationBelt():
         else:
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
+        time.sleep(1)
         pass
 
     theAPIs.select_sensors([1])
