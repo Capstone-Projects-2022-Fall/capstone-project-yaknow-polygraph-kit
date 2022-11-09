@@ -13,6 +13,8 @@ import time
 
 from scipy.signal import find_peaks
 
+from progressBar import manually_updated_meter_test
+
 # import numpy as np
 
 
