@@ -12,7 +12,7 @@ import time
 import tts
 import graphResults
 from statsmodels.stats.weightstats import ztest as ztest
-import numpy as np
+import numpy
 import matplotlib.pyplot
 from scipy.stats import norm
 import statistics
@@ -22,10 +22,23 @@ global examFinished
 global examTime
 global questionCounter
 global newQuestion
+
 global respirationRecordings
-global bloodPressureRecordings
-global pulseRecordings
+global respirationMeasurements
+global respirationTimings
+
 global skinConductivityRecordings
+global skinConductivityMeasurements
+global skinConductivityTimings
+
+global bloodPressureRecordings
+global bloodPressureMeasurements
+global bloodPressureTimings
+
+global pulseRecordings
+global pulseMeasurements
+global pulseTimings
+
 global yn
 global thread
 global readyToStart
@@ -36,6 +49,9 @@ global questionTimestamps
 global zTest1
 global zTest2
 global zTest3
+import pyformulas
+
+
 
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
@@ -84,21 +100,21 @@ def make_window():
     ]
 
     col3_1 = [
-        [gui.Button('Test 1 Respiration', key='-Test1R-', visible=False)],
-        [gui.Button('Test 2 Respiration', key='-Test2R-', visible=False)],
-        [gui.Button('Test 3 Respiration', key='-Test3R-', visible=False)],
-        [gui.Button('Test 4 Respiration', key='-Test4R-', visible=False)],
-        [gui.Button('Test 5 Respiration', key='-Test5R-', visible=False)],
-        [gui.Button('Test 6 Respiration', key='-Test6R-', visible=False)]
+        [gui.Button('Test 1 Respiration', key='-Test1R-', visible=True)],
+        [gui.Button('Test 2 Respiration', key='-Test2R-', visible=True)],
+        [gui.Button('Test 3 Respiration', key='-Test3R-', visible=True)],
+        [gui.Button('Test 4 Respiration', key='-Test4R-', visible=True)],
+        [gui.Button('Test 5 Respiration', key='-Test5R-', visible=True)],
+        [gui.Button('Test 6 Respiration', key='-Test6R-', visible=True)]
     ]
 
     col3_2 = [
-        [gui.Button('Test 1 GSR', key='-Test1G-', visible=False)],
-        [gui.Button('Test 2 GSR', key='-Test2G-', visible=False)],
-        [gui.Button('Test 3 GSR', key='-Test3G-', visible=False)],
-        [gui.Button('Test 4 GSR', key='-Test4G-', visible=False)],
-        [gui.Button('Test 5 GSR', key='-Test5G-', visible=False)],
-        [gui.Button('Test 6 GSR', key='-Test6G-', visible=False)]
+        [gui.Button('Test 1 GSR', key='-Test1G-', visible=True)],
+        [gui.Button('Test 2 GSR', key='-Test2G-', visible=True)],
+        [gui.Button('Test 3 GSR', key='-Test3G-', visible=True)],
+        [gui.Button('Test 4 GSR', key='-Test4G-', visible=True)],
+        [gui.Button('Test 5 GSR', key='-Test5G-', visible=True)],
+        [gui.Button('Test 6 GSR', key='-Test6G-', visible=True)]
     ]
 
     col3_3 = [
@@ -364,9 +380,18 @@ def startExam(window1):
 
     conductExamScreen.initialExamEnded = False
 
+    conductExamScreen.liveGraph, (conductExamScreen.respirationLiveGraph, conductExamScreen.gsrLiveGraph, conductExamScreen.bpLiveGraph, conductExamScreen.pulseLiveGraph) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=True)
+    matplotlib.pyplot.subplots_adjust(bottom=0.25)
+
+    conductExamScreen.liveGraphInArray = numpy.zeros((1, 1)) #Prepares numpy array to hold snapshot of live graphing data
+    conductExamScreen.liveGraphScreen = pyformulas.screen(conductExamScreen.liveGraphInArray, 'Live Readings') #Creates a numpy canvas compatible with numpy graph created above
+    conductExamScreen.liveGraphingWidth, conductExamScreen.liveGraphingHeight = conductExamScreen.liveGraph.canvas.get_width_height()  # Gets the width and height of the numpy canas used for live graphing
+
+    print("Live Graphing Width: ", conductExamScreen.liveGraphingWidth)
+    print("Live Graphing Height: ", conductExamScreen.liveGraphingHeight)
+
     thread = threading.Thread(target=conductExamScreen.examCounter)
     thread.start()
-
     while True:
         #event, values = PolygraphExamSetupScreen.window.read()
         event, values = conductExamScreen.window.read()
@@ -379,23 +404,15 @@ def startExam(window1):
             conductExamScreen.yn = False
         elif event == '-ENDED-':
             separateByQuestion()
-            print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
             conductExamScreen.window['col3_1'].update(visible=True)
             conductExamScreen.window['col3_2'].update(visible=True)
+            #conductExamScreen.window['col3_3'].update(visible=True)
+            #conductExamScreen.window['col3_4'].update(visible=True)
+            #conductExamScreen.window['col3_5'].update(visible=True)
+            #conductExamScreen.window['col3_6'].update(visible=True)
+            #conductExamScreen.window['col3_7'].update(visible=True)
             conductExamScreen.window['-Restart-'].update(visible=True)
-            conductExamScreen.window['-Test1R-'].update(visible=True)
-            conductExamScreen.window['-Test2R-'].update(visible=True)
-            conductExamScreen.window['-Test3R-'].update(visible=True)
-            conductExamScreen.window['-Test4R-'].update(visible=True)
-            conductExamScreen.window['-Test5R-'].update(visible=True)
-            conductExamScreen.window['-Test6R-'].update(visible=True)
-            conductExamScreen.window['-Test1G-'].update(visible=True)
-            conductExamScreen.window['-Test2G-'].update(visible=True)
-            conductExamScreen.window['-Test3G-'].update(visible=True)
-            conductExamScreen.window['-Test4G-'].update(visible=True)
-            conductExamScreen.window['-Test5G-'].update(visible=True)
-            conductExamScreen.window['-Test6G-'].update(visible=True)
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show(block=False)
@@ -412,7 +429,33 @@ def startExam(window1):
             showRespirationProbabilityDistribution(7)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
+        elif event == '-UPDATED-':
+            updateTime = time.time() - conductExamScreen.startTime
+            conductExamScreen.respirationLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
+            conductExamScreen.respirationLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings, conductExamScreen.respirationMeasurements, c='black')
+
+            conductExamScreen.gsrLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
+            conductExamScreen.gsrLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.gsrLiveGraph.plot(conductExamScreen.skinConductivityTimings, conductExamScreen.skinConductivityMeasurements, c='black')
+
+            conductExamScreen.bpLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
+            conductExamScreen.bpLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.bpLiveGraph.plot(conductExamScreen.bloodPressureTimings, conductExamScreen.bloodPressureMeasurements,c='black')
+
+            conductExamScreen.pulseLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
+            conductExamScreen.pulseLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.pulseLiveGraph.plot(conductExamScreen.pulseTimings, conductExamScreen.pulseMeasurements, c='black')
+
+            conductExamScreen.liveGraph.canvas.draw() #Creates the new numpy live graphing snapshot
+
+            liveGraphingSnapshot = numpy.array(list(conductExamScreen.liveGraph.canvas.tostring_rgb()), 'uint8') #Gets a snapshot of the new live graphing as unsigned integers
+            liveGraphingSnapshot = liveGraphingSnapshot.reshape(conductExamScreen.liveGraphingHeight, conductExamScreen.liveGraphingWidth, 3) #Reformats the above snapshot into arrays needed to update numpy canvas 3 unsigned ints in each of 480 arrays, each inside 640 arrays
+
+            conductExamScreen.liveGraphScreen.update(liveGraphingSnapshot) #updates the numpy canvas
+
           #  newWindow = homescreen.make_window()
           #   conductExamScreen.window.close()
           #  # PolygraphExamSetupScreen.window = newWindow
           #   homescreen.main()
+

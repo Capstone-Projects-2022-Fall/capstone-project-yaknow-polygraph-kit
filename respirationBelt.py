@@ -47,8 +47,12 @@ def connectRespirationBelt():
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
             if measurements is None:
                 break
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements, conductExamScreen.newQuestion, conductExamScreen.yn)
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
             conductExamScreen.respirationRecordings.append(tempMeasurement)
+            conductExamScreen.respirationTimings.append(currentTime)
+            conductExamScreen.respirationMeasurements.append(measurements[0])
+            conductExamScreen.window.write_event_value('-UPDATED-', None)
+
     print("Respiration Exited")
 
 

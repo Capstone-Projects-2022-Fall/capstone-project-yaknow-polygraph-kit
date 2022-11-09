@@ -85,32 +85,17 @@ def createGraphs():
     graph3.set_xlabel("Time (seconds)")
 '''
 
-x = []
-y = []
-
-def animate(i, x, y):
-    with open('TestData.csv', 'r') as csvfile:
-       lines = csv.reader(csvfile, delimiter=',')
-       for row in lines:
-           x.append(row[0])
-           y.append(int(row[1]))
-    x = x[-20:]
-    y = y[-20:]
-
-    graph1.clear()
-    graph1.plot(x, y, color='purple', marker='o')
-
 def update(val):
     current_value = slider_position.val
     graph3.axis([current_value, current_value + 10, 0, 100])
     fig.canvas.draw()
 
-ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
+#ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
 
 # createGraphs()
 # slider_position.on_changed(update)
 
-plt.show()
+#plt.show()
 
 
 

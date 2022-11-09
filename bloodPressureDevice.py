@@ -124,6 +124,11 @@ def connectBloodPressureDevice():
                     print("Added PR: ", tempMeasurementPR.measurement)
                     print("Associated Time: ", tempMeasurementPR.timestamp)
                     print("PR Collections: ", len(conductExamScreen.pulseRecordings))
+                    conductExamScreen.bloodPressureMeasurements.append(finalMeasurement)
+                    conductExamScreen.bloodPressureTimings.append(currentTime)
+                    conductExamScreen.pulseMeasurements.append(pulseRate)
+                    conductExamScreen.pulseTimings.append(currentTime)
+                    conductExamScreen.window.write_event_value('-UPDATED-', None)
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []

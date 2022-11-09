@@ -4,6 +4,11 @@ import datetime
 import time
 import random
 import PolygraphExamSetupScreen
+import matplotlib
+import graphResults
+import threading
+
+import time
 
 class conductExamScreenTest(unittest.TestCase):
 
@@ -30,7 +35,6 @@ class conductExamScreenTest(unittest.TestCase):
         for y in range(9):
             assert (len(conductExamScreen.respirationbyQuestion[y]) == 3)
 
-
     def testDataTable(self):
         conductExamScreen.respirationRecordings = []
         conductExamScreen.skinConductivityRecordings = []
@@ -50,11 +54,12 @@ class conductExamScreenTest(unittest.TestCase):
         tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion, None)
         conductExamScreen.pulseRecordings.append(tempMeasurement)
 
+        currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
         for x in range(27):
             respirationMeasurements = []
             bpMeasurements = []
             pulseMeasurements = []
-            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            currentTime = currentTime + 3
             if (((x % 3) == 0) and (x != 0)):
                 bpMeasurements.append(random.random())
                 pulseMeasurements.append(random.random())
@@ -79,8 +84,11 @@ class conductExamScreenTest(unittest.TestCase):
         conductExamScreen.examFinished = False
         conductExamScreen.inQuestion = True
         newWindow = conductExamScreen.make_window()
-        #PolygraphExamSetupScreen.window = newWindow
         conductExamScreen.startExam(newWindow)
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
