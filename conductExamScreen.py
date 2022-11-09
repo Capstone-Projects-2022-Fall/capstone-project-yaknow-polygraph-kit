@@ -297,6 +297,7 @@ def startExam(window1):
             conductExamScreen.yn = False
         elif event == '-ENDED-':
             examOver()
+            uploadDataToDataBase()
             # get data from all the snesors and send them all to the db
             print("Respiration by Question: ", len(conductExamScreen.respirationbyQuestion))
             conductExamScreen.examFinished = True
@@ -348,8 +349,8 @@ def uploadDataToDataBase():
             self.question = question
             self.yn = yn'''
     # examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, label
-    numOfTime = 0;
-    currentTimeStamp = 0;
+    numOfTime = 0
+    currentTimeStamp = 0
     ''''increments the variable numOfTime for every change in the time recorded in the objects of respirationReadings 
     '''
     for x in respirationRecordings:
@@ -379,19 +380,24 @@ def uploadDataToDataBase():
     skinCon_index = 0
     bp_index = 0
     pulse_index = 0
-    while numOfTime:
+    while numOfTime > 0:
         # we will make the assumption that all y/n readings from the sensor are the same
+        resp_index += 1
+        bp_index +=1
+        skinCon_index+=1
+        pulse_index +=1
 
-        respiration_Data = respirationRecordings[resp_index + 1]
+        respiration_Data = respirationRecordings[resp_index]
         bp_data = bloodPressureRecordings[bp_index]
         skinCon_data = skinConductivityRecordings[skinCon_index]
-        pulse_data = pulseRecordings[pulse_index]
+        # pulse_data = pulseRecordings[pulse_index]
+        pulse_data = 0
 
         questionID += 1
         question = respiration_Data.question
         response = respiration_Data.yn
         time_stamp = respiration_Data.timestamp
-        respiration = respiration_Data.measurement
+        respiration = respiration_Data.measurement[0]
 
         if ((time_stamp - bp_data.timestamp) < 0.01) and respiration_Data.question == bp_data.question:
             '''they are in the same data range and for the same question'''
@@ -399,9 +405,14 @@ def uploadDataToDataBase():
             bp = bp_data.measurement
             bp_index += 1
 
-        if ((time_stamp - pulse_data.timestamp) < 0.01) and respiration_Data.question == pulse_data.question:
+        """if ((time_stamp - pulse_data.timestamp) < 0.01) and respiration_Data.question == pulse_data.question:
             '''they are in the same data range and for the same question'''
             pulse = pulse_data.measurement
+            pulse_index += 1"""
+
+        if True:
+            '''they are in the same data range and for the same question'''
+            pulse = 0
             pulse_index += 1
 
         if ((time_stamp - skinCon_data.timestamp) < 0.01) and respiration_Data.question == skinCon_data.question:

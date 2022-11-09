@@ -2,7 +2,6 @@
 # YouTube channel: https://www.youtube.com/c/TechWithTim
 import mysql.connector
 from mysql.connector import errorcode
-from conductExamScreen import singularRecording
 
 
 def add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp, label):

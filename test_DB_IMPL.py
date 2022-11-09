@@ -2,6 +2,7 @@ from numpy import random
 
 import SingularRecordingsDB
 import time
+import database
 
 exam_ID = SingularRecordingsDB.get_singularRecords()[0] + 1
 question_ID = 0
@@ -15,7 +16,7 @@ bp = 111
 
 i = 5
 counter = 0
-while i > 0:
+"""while i > 0:
     i -= 1
     counter += 1
     question_ID = counter
@@ -27,6 +28,10 @@ while i > 0:
     SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response,
                                             timeStamp, pulse,
                                             skin_con, respBel, bp, "F")
+"""
+
+SingularRecordingsDB.delete_singularRecord(1)
+
 
 #SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response, timeStamp, pulse, skin_con, respBel,  bp, "T")
 # SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
