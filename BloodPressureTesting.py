@@ -62,7 +62,7 @@ def main():
         listOfOscillations.append(measurements[1])
         if measurements[1] > maxOsc:
             maxOsc = measurements[1]
-        if measurements[0] < 500:
+        if measurements[0] < 50:
             correctPressure = True
 
     t1 = time.time()
