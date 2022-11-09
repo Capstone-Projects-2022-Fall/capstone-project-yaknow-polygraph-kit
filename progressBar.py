@@ -61,17 +61,17 @@ def manually_updated_meter_test():
     # Get the element to make updating easier
     progress_bar = window['progress']
     connected = False
-    theAPIs = gdx()
-    connected = False
-    while connected == False:
-        devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
-        #        devicesFound = theAPIs.open_usb()
-        if devicesFound == True:
-            connected = True
-
-    theAPIs.select_sensors([1, 7])
-    theAPIs.start(100)
-    measurements = theAPIs.read()
+    # theAPIs = gdx()
+    # connected = False
+    # while connected == False:
+    #     devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+    #     #        devicesFound = theAPIs.open_usb()
+    #     if devicesFound == True:
+    #         connected = True
+    #
+    # theAPIs.select_sensors([1, 7])
+    # theAPIs.start(100)
+    #
     correctPressure = False
     while correctPressure == False:
         measurements = theAPIs.read()
@@ -169,6 +169,18 @@ def manually_updated_meter_test():
 #     if measurements[0] < 10:
 #         correctPressure = True
 #
+
+theAPIs = gdx()
+connected = False
+while connected == False:
+    devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
+    #        devicesFound = theAPIs.open_usb()
+    if devicesFound == True:
+        connected = True
+
+theAPIs.select_sensors([1, 7])
+theAPIs.start(100)
+
 
 manually_updated_meter_test()
 #custom_meter_example()

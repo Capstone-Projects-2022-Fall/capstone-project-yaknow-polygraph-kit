@@ -59,6 +59,7 @@ def connectBloodPressureDevice():
         measurements = theAPIs.read()
         correctPressure = False
         conductExamScreen.inQuestion = False
+        manually_updated_meter_test()
         if ( (measurements[0] < 150)):
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
