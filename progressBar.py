@@ -83,8 +83,7 @@ def manually_updated_meter_test():
             progress_bar.update_bar(1)         # show 10% complete
             # sleep(2)
 
-        # more of your code.... perhaps pages and pages of code.
-        # Spot #2 to indicate progress
+
         if measurements[0] > 30:
             print("you made it to 20 percent")
             progress_bar.update_bar(2)         # show 20% complete
@@ -92,16 +91,16 @@ def manually_updated_meter_test():
             # sleep(2)
         if measurements[0] > 45:
             print("you made it to 30 percent")
-            progress_bar.update_bar(3)         # show 10% complete
+            progress_bar.update_bar(3)         # show 30% complete
             # sleep(2)
 
         if measurements[0] > 60:
             print("you made it to 40 percent")
-            progress_bar.update_bar(4)         # show 10% complete
+            progress_bar.update_bar(4)         # show 40% complete
             # sleep(2)
         if measurements[0] > 75:
             print("you made it to 50 percent")
-            progress_bar.update_bar(5)         # show 10% complete
+            progress_bar.update_bar(5)         # show 50% complete
             # sleep(2)
 
         if measurements[0] > 90:
@@ -110,15 +109,15 @@ def manually_updated_meter_test():
             # sleep(2)
         if measurements[0] > 105:
             print("you made it to 70 percent")
-            progress_bar.update_bar(7)         # show 10% complete
+            progress_bar.update_bar(7)         # show 70% complete
             # sleep(2)
         if measurements[0] > 120:
             print("you made it to 80 percent")
-            progress_bar.update_bar(8)         # show 10% complete
+            progress_bar.update_bar(8)         # show 80% complete
             # sleep(2)
         if measurements[0] > 135:
             print("you made it to 90 percent")
-            progress_bar.update_bar(9)         # show 10% complete
+            progress_bar.update_bar(9)         # show 90% complete
             # sleep(2)
 
         if measurements[0] > 150:
