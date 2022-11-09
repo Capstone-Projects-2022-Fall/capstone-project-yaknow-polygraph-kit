@@ -128,48 +128,6 @@ def manually_updated_meter_test():
             window.close()
 
 
-
-
-# connected = False
-# theAPIs = gdx()
-# connected = False
-# while connected == False:
-#     devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
-#         #        devicesFound = theAPIs.open_usb()
-#     if devicesFound == True:
-#         connected = True
-#
-#
-# theAPIs.select_sensors([1])
-# theAPIs.start(1000)
-# measurements = theAPIs.read()
-# for i in range(1000):
-#     print(measurements[0])
-
-
-# theAPIs = gdx()
-# connected = False
-# while connected == False:
-#     devicesFound = theAPIs.open_ble('GDX-BP 141014A2')
-#     #        devicesFound = theAPIs.open_usb()
-#     if devicesFound == True:
-#         connected = True
-#
-# theAPIs.select_sensors([1, 7])
-# theAPIs.start(100)
-# measurements = theAPIs.read()
-# correctPressure = False
-# while correctPressure == False:
-#     measurements = theAPIs.read()
-#     print(measurements)
-# #    possibleBP.append(measurements)
-# #    listOfOscillations.append(measurements[1])
-#     # if measurements[1] > maxOsc:
-#     #     maxOsc = measurements[1]
-#     if measurements[0] < 10:
-#         correctPressure = True
-#
-
 theAPIs = gdx()
 connected = False
 while connected == False:
