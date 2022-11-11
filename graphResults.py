@@ -47,7 +47,7 @@ def createGraphs():
 
     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
     for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
-        bloodPressureMeasurement.append(bloodPressureRecording.measurement[0])
+        bloodPressureMeasurement.append(bloodPressureRecording.measurement)
         bloodPressureTime.append(bloodPressureRecording.timestamp)
 
     graph2.plot(bloodPressureTime, bloodPressureMeasurement, color='k', marker='o')

@@ -44,10 +44,8 @@ class conductExamScreenTest(unittest.TestCase):
         questions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
         questionIterator = 0
         currentQuestion = questions[questionIterator]
-        bpMeasurements = []
-        bpMeasurements.append(random.random())
-        pulseMeasurements = []
-        pulseMeasurements.append(random.random())
+        bpMeasurements = (random.random())
+        pulseMeasurements = (random.random())
         currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
         tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion, None)
         conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
@@ -56,20 +54,17 @@ class conductExamScreenTest(unittest.TestCase):
 
         currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
         for x in range(27):
-            respirationMeasurements = []
-            bpMeasurements = []
-            pulseMeasurements = []
             currentTime = currentTime + 3
             if (((x % 3) == 0) and (x != 0)):
-                bpMeasurements.append(random.random())
-                pulseMeasurements.append(random.random())
+                bpMeasurements = (random.random())
+                pulseMeasurements = (random.random())
                 tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion, None)
                 conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
                 tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion, None)
                 conductExamScreen.pulseRecordings.append(tempMeasurement)
                 questionIterator = questionIterator + 1
                 currentQuestion = questions[questionIterator]
-            respirationMeasurements.append(random.random())
+            respirationMeasurements = (random.random())
             tempMeasurement = conductExamScreen.singularRecording(currentTime, respirationMeasurements, currentQuestion, None)
             conductExamScreen.respirationRecordings.append(tempMeasurement)
             scMeasurements = random.random()
