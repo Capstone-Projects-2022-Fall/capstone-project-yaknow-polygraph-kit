@@ -18,8 +18,6 @@ log_format = '%(asctime)s %(filename)s - %(levelname)s: %(message)s'
 
 logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG, force=True, format=log_format, datefmt='%H:%M:%S')
 
-
-
 def connectRespirationBelt():
     from gdx import gdx
     theAPIs = gdx()
@@ -34,6 +32,7 @@ def connectRespirationBelt():
         else:
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
+        time.sleep(1)
         pass
 
     theAPIs.select_sensors([1])
@@ -46,14 +45,14 @@ def connectRespirationBelt():
             print("Recording Respiration")
             measurements = theAPIs.read()
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
-            if measurements == None:
+            if measurements is None:
                 break
-
             tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
-            #if( (tempMeasurement.measurement == None) or (tempMeasurement.timestamp == None) or (tempMeasurement.question == None)):
-            #    continue
-            #else:
             conductExamScreen.respirationRecordings.append(tempMeasurement)
+            conductExamScreen.respirationTimings.append(currentTime)
+            conductExamScreen.respirationMeasurements.append(measurements[0])
+            conductExamScreen.window.write_event_value('-UPDATED-', None)
+
     print("Respiration Exited")
 
 
@@ -77,6 +76,7 @@ def connectRespirationBeltIndividual():
 
     rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
     theAPIs.start(rate)
+    print("Respiration Started")
 
     times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     for i in range(times):

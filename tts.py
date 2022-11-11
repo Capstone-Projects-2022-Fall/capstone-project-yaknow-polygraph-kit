@@ -1,9 +1,9 @@
 import PySimpleGUI as sg
 from gtts import gTTS
-from pygame import mixer
 import time
 import os
-
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+from pygame import mixer
 # try to remove the temp files. You'll likely be left with 1 to clean up
 
 
@@ -14,7 +14,7 @@ def questionToSpeech(question, counter):
     # playback the speech
     mixer.music.load('speech{}.mp3'.format(counter % 2))
     mixer.music.play()
-    time.sleep(2)
+    #time.sleep(2)
     mixer.stop()
     #try:
     #    os.remove('speech{}.mp3'.format(counter % 2))
