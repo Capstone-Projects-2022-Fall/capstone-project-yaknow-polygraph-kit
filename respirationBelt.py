@@ -38,7 +38,7 @@ def connectRespirationBelt():
     theAPIs.select_sensors([1])
 
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
-    theAPIs.start(rate)
+    theAPIs.start(int(rate))
     examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         if(conductExamScreen.inQuestion == True):
