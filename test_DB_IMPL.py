@@ -30,10 +30,10 @@ counter = 0
                                             skin_con, respBel, bp, "F")
 """
 
-SingularRecordingsDB.delete_singularRecord(1)
+#SingularRecordingsDB.delete_singularRecord(1)
 
 
 #SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response, timeStamp, pulse, skin_con, respBel,  bp, "T")
-# SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
+SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
 #SingularRecordingsDB.delete_singularRecord('12')
 # print(SingularRecordingsDB.get_singularRecords()[0])
