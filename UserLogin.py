@@ -30,7 +30,7 @@ def new_user_login():
                 if password == confirmPassword:
                     break
                 elif password != confirmPassword:
-                    gui.popup("Error", font=16)
+                    gui.popup("Please retype password. Passwords to not match", font=16)
                     continue
         window.close()
 
@@ -56,3 +56,5 @@ def existing_user():
                     gui.popup("Incorrect password", font=16)
                     continue
         window.close()
+
+new_user_login()
