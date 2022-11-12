@@ -83,7 +83,7 @@ def make_window():
     ]
     
     row3 = [
-        [gui.Text('                                                   ', key='-placeHolder-'), gui.Text('Mean Respiration', key='-MeanRHeader-'), gui.Text('        MeanGSR', key='-MeanGSRHeader-'),  gui.Text('         MedianRespiration', key='-MedianRHeader-'), gui.Text('        MedianGSR', key='MedianGSRHeader'), gui.Text('        Blood Pressure', key='-BPHeader-'),  gui.Text('        Pulse', key='-PHeader-')]
+        [gui.Text('                                             ', key='-placeHolder-'), gui.Text('Mean Respiration (N)', key='-MeanRHeader-'), gui.Text('      MeanGSR (S)', key='-MeanGSRHeader-'),  gui.Text('MedianRespiration (N)', key='-MedianRHeader-'), gui.Text('     MedianGSR (S)', key='MedianGSRHeader'), gui.Text('  Blood Pressure (mmHg)', key='-BPHeader-'),  gui.Text('Pulse (BPM)', key='-PHeader-')]
     ]
     
     row4 = [
@@ -421,25 +421,12 @@ def startExam(window1):
             conductExamScreen.window['row6'].update(visible=True)
             conductExamScreen.window['col3_1'].update(visible=True)
             conductExamScreen.window['col3_2'].update(visible=True)
+            conductExamScreen.window['col3_3'].update(visible=True)
             conductExamScreen.window['col3_4'].update(visible=True)
             conductExamScreen.window['col3_5'].update(visible=True)
             conductExamScreen.window['col3_6'].update(visible=True)
             conductExamScreen.window['col3_7'].update(visible=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            conductExamScreen.window['col3_8'].update(visible=True)
 
             conductExamScreen.window['-B1MeanR-'].update(round(statistics.mean(respirationbyQuestion[0]), 3))
             conductExamScreen.window['-B2MeanR-'].update(round(statistics.mean(respirationbyQuestion[1]), 3))
@@ -454,47 +441,57 @@ def startExam(window1):
             conductExamScreen.window['-B1MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[0]), 3)))
             conductExamScreen.window['-B2MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[1]), 3)))
             conductExamScreen.window['-B3MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MeanG-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test1MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
 
             conductExamScreen.window['-B1MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[0]), 3)))
-            conductExamScreen.window['-B2MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[1]), 3)))
+            conductExamScreen.window['-B2MedianR-'].update("                      " + str(round(numpy.median(respirationbyQuestion[1]), 3)))
             conductExamScreen.window['-B3MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[8]), 3)))
+            conductExamScreen.window['-Test1MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[8]), 3)))
 
-            conductExamScreen.window['-B1MedianGSR-'].update("                      " + str(round(numpy.median(GSRbyQuestion[0]), 3)))
-            conductExamScreen.window['-B2MedianGSR-'].update("                      " + str(round(numpy.median(GSRbyQuestion[1]), 3)))
-            conductExamScreen.window['-B3MedianGSR-'].update("                      " + str(round(numpy.median(GSRbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MedianG-'].update("                      " + str(round(numpy.median(GSRbyQuestion[8]), 3)))
+            conductExamScreen.window['-B1MedianGSR-'].update("                       " + str(round(numpy.median(GSRbyQuestion[0]), 3)))
+            conductExamScreen.window['-B2MedianGSR-'].update("                       " + str(round(numpy.median(GSRbyQuestion[1]), 3)))
+            conductExamScreen.window['-B3MedianGSR-'].update("                        " + str(round(numpy.median(GSRbyQuestion[2]), 3)))
+            conductExamScreen.window['-Test1MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[8]), 3)))
 
             conductExamScreen.window['-B1BP-'].update("                 " + str(round(bloodPressureRecordings[0].measurement, 3)))
             conductExamScreen.window['-B2BP-'].update("                 " + str(round(bloodPressureRecordings[1].measurement, 3)))
             conductExamScreen.window['-B3BP-'].update("                 " + str(round(bloodPressureRecordings[2].measurement, 3)))
-            conductExamScreen.window['-Test1BP-'].update("                 " + str(round(bloodPressureRecordings[3].measurement, 3)))
-            conductExamScreen.window['-Test2BP-'].update("                 " + str(round(bloodPressureRecordings[4].measurement, 3)))
-            conductExamScreen.window['-Test3BP-'].update("                 " + str(round(bloodPressureRecordings[5].measurement, 3)))
-            conductExamScreen.window['-Test4BP-'].update("                 " + str(round(bloodPressureRecordings[6].measurement, 3)))
-            conductExamScreen.window['-Test5BP-'].update("                 " + str(round(bloodPressureRecordings[7].measurement, 3)))
-            conductExamScreen.window['-Test6BP-'].update("                 " + str(round(bloodPressureRecordings[8].measurement, 3)))
+            conductExamScreen.window['-Test1BP-'].update("              " + str(round(bloodPressureRecordings[3].measurement, 3)))
+            conductExamScreen.window['-Test2BP-'].update("              " + str(round(bloodPressureRecordings[4].measurement, 3)))
+            conductExamScreen.window['-Test3BP-'].update("              " + str(round(bloodPressureRecordings[5].measurement, 3)))
+            conductExamScreen.window['-Test4BP-'].update("              " + str(round(bloodPressureRecordings[6].measurement, 3)))
+            conductExamScreen.window['-Test5BP-'].update("              " + str(round(bloodPressureRecordings[7].measurement, 3)))
+            conductExamScreen.window['-Test6BP-'].update("              " + str(round(bloodPressureRecordings[8].measurement, 3)))
+
+            conductExamScreen.window['-B1P-'].update("                  " + str(round(pulseRecordings[0].measurement, 3)))
+            conductExamScreen.window['-B2P-'].update("                 " + str(round(pulseRecordings[1].measurement, 3)))
+            conductExamScreen.window['-B3P-'].update("                 " + str(round(pulseRecordings[2].measurement, 3)))
+            conductExamScreen.window['-Test1P-'].update("               " + str(round(pulseRecordings[3].measurement, 3)))
+            conductExamScreen.window['-Test2P-'].update("               " + str(round(pulseRecordings[4].measurement, 3)))
+            conductExamScreen.window['-Test3P-'].update("               " + str(round(pulseRecordings[5].measurement, 3)))
+            conductExamScreen.window['-Test4P-'].update("               " + str(round(pulseRecordings[6].measurement, 3)))
+            conductExamScreen.window['-Test5P-'].update("               " + str(round(pulseRecordings[7].measurement, 3)))
+            conductExamScreen.window['-Test6P-'].update("               " + str(round(pulseRecordings[8].measurement, 3)))
 
             conductExamScreen.window['-Restart-'].update(visible=True)
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
-            graphResults.plt.show(block=False)
+            graphResults.plt.show(block=True)
 
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
