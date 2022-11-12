@@ -202,9 +202,13 @@ def make_window():
 
 def examCounter():
     while conductExamScreen.examFinished == False:
+        if( (conductExamScreen.examTime % 5) == 0):
+            print("Fired")
+            conductExamScreen.window.write_event_value('-UPDATED-', None)
         if(conductExamScreen.inQuestion == True):
             conductExamScreen.examTime = conductExamScreen.examTime + 1
             conductExamScreen.window['-Time-'].update(examTime)
+            print("Failed Yet1")
             if(conductExamScreen.iterated == False):
                 conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
@@ -214,6 +218,7 @@ def examCounter():
                 conductExamScreen.yn = None
                 conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
+                print("Failed Yet2")
                 if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
                     while(len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions) ):
                         #print("BP SIZE: ", len(bloodPressureRecordings) )
@@ -226,6 +231,7 @@ def examCounter():
                 else:
                     conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
                     conductExamScreen.window['-Text-'].update(newQuestion)
+            print("Failed Yet3")
             time.sleep(1)
         else:
             print("Pausing")
@@ -400,8 +406,12 @@ def startExam(window1):
     print("Live Graphing Width: ", conductExamScreen.liveGraphingWidth)
     print("Live Graphing Height: ", conductExamScreen.liveGraphingHeight)
 
+    PolygraphExamSetupScreen.examStarted = True
+
     thread = threading.Thread(target=conductExamScreen.examCounter)
     thread.start()
+
+
     while True:
         #event, values = PolygraphExamSetupScreen.window.read()
         event, values = conductExamScreen.window.read()
@@ -506,21 +516,34 @@ def startExam(window1):
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
         elif event == '-UPDATED-':
-            updateTime = time.time() - conductExamScreen.startTime
+            print("Respiration Timings: ")
+            print(conductExamScreen.respirationTimings)
+            print(conductExamScreen.respirationMeasurements)
+            print("Skin Conductivity Timings: ")
+            print(conductExamScreen.skinConductivityTimings)
+            print(conductExamScreen.skinConductivityMeasurements)
+            print(conductExamScreen.bloodPressureTimings)
+            print(conductExamScreen.bloodPressureMeasurements)
+            print(conductExamScreen.pulseTimings)
+            print(conductExamScreen.pulseMeasurements)
+            updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
+            #updateTime = time.time() - conductExamScreen.startTime
+            print("Update Time: ")
+            print(updateTime)
             conductExamScreen.respirationLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
-            conductExamScreen.respirationLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.respirationLiveGraph.axis(ymin=-20, ymax=20)
             conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings, conductExamScreen.respirationMeasurements, c='black')
 
             conductExamScreen.gsrLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
-            conductExamScreen.gsrLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.gsrLiveGraph.axis(ymin=20100, ymax=20800)
             conductExamScreen.gsrLiveGraph.plot(conductExamScreen.skinConductivityTimings, conductExamScreen.skinConductivityMeasurements, c='black')
 
             conductExamScreen.bpLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
-            conductExamScreen.bpLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.bpLiveGraph.axis(ymin=70, ymax=150)
             conductExamScreen.bpLiveGraph.plot(conductExamScreen.bloodPressureTimings, conductExamScreen.bloodPressureMeasurements,c='black')
 
             conductExamScreen.pulseLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
-            conductExamScreen.pulseLiveGraph.axis(ymin=-3, ymax=3)
+            conductExamScreen.pulseLiveGraph.axis(ymin=40, ymax=130)
             conductExamScreen.pulseLiveGraph.plot(conductExamScreen.pulseTimings, conductExamScreen.pulseMeasurements, c='black')
 
             conductExamScreen.liveGraph.canvas.draw() #Creates the new numpy live graphing snapshot
@@ -530,6 +553,7 @@ def startExam(window1):
 
             conductExamScreen.liveGraphScreen.update(liveGraphingSnapshot) #updates the numpy canvas
 
+            print("Update Finsished")
           #  newWindow = homescreen.make_window()
           #   conductExamScreen.window.close()
           #  # PolygraphExamSetupScreen.window = newWindow

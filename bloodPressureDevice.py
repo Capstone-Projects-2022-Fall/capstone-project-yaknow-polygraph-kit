@@ -128,7 +128,7 @@ def connectBloodPressureDevice():
                     conductExamScreen.bloodPressureTimings.append(currentTime)
                     conductExamScreen.pulseMeasurements.append(pulseRate)
                     conductExamScreen.pulseTimings.append(currentTime)
-                    conductExamScreen.window.write_event_value('-UPDATED-', None)
+                    #conductExamScreen.window.write_event_value('-UPDATED-', None)
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []

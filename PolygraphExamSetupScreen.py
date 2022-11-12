@@ -16,6 +16,7 @@ import itertools
 from threading import Timer
 import homescreen
 import tts
+import time
 
 import database
 import os
@@ -271,6 +272,19 @@ def startExam(window1):
             homescreen.main()
         elif event in ('Start Examination'):
 
+            conductExamScreen.respirationMeasurements = []
+            conductExamScreen.respirationTimings = []
+
+            conductExamScreen.skinConductivityMeasurements = []
+            conductExamScreen.skinConductivityTimings = []
+
+            conductExamScreen.bloodPressureMeasurements = []
+            conductExamScreen.bloodPressureTimings = []
+            conductExamScreen.bloodPressureRecordings = []
+
+            conductExamScreen.pulseMeasurements = []
+            conductExamScreen.pulseTimings = []
+
             conductExamScreen.respirationRecordings = []
 
             conductExamScreen.bloodPressureRecordings = []
@@ -297,10 +311,9 @@ def startExam(window1):
 
             conductExamScreen.iterated = False
 
-            PolygraphExamSetupScreen.examStarted = True
             newWindow = conductExamScreen.make_window()
             PolygraphExamSetupScreen.window.close()
-            PolygraphExamSetupScreen.window = newWindow
+            conductExamScreen.window = newWindow
             conductExamScreen.startExam(newWindow)
 
             # you have to add a break here otherwise you get an error with PySimpleGUI saying key error not found when it does actually exists.
