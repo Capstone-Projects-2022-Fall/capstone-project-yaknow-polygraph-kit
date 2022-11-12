@@ -437,7 +437,7 @@ def uploadDataToDataBase():
     pulseIndex = 0
     bpIndex = 0
 
-    examID = SingularRecordingsDB.get_singularRecords()[0] + 1
+    examID = SingularRecordingsDB.getLastExamNumber().pop() + 1
     questionID = 0
     question = ""
     response = ""
@@ -448,6 +448,8 @@ def uploadDataToDataBase():
     bp = ""
     label = ""
 
+    questionList =  []
+
     while numberOfMeasurements > 0:  # while there is still something to be read
         respData = respirationRecordings[respIndex]
         skinConData = skinConductivityRecordings[skinConIndex]
@@ -457,8 +459,12 @@ def uploadDataToDataBase():
         respiration = respData.measurement[0]
 
         if respData.question != question:  # when the respData question changes, update the stored q as well ass qID
-            question = respData.question
-            questionID += 1
+            if not respData.question in questionList:
+                questionList.append(question)
+                question = respData.question
+                questionID += 1
+
+
 
         time_stamp = respData.timestamp
         if abs(pulseData.timestamp - time_stamp) < 0.2 and question == pulseData.question:  # if pulse time is < 0.2 of different consider it

@@ -104,6 +104,34 @@ def get_singularRecords():
     return list_singularRecord
 
 
+def getLastExamNumber():
+    db = mysql.connector.connect(
+        host="173.255.232.150",
+        user="cis4398",
+        passwd="dNC=IK~9)7",
+        database="Questions"
+    )
+    '''
+    This function returns the contents in table SingularRecording
+    :return: questions in tuples
+    '''
+
+    questions = []
+    with db.cursor() as mycursor:
+        mycursor.execute("SELECT exmaID FROM SingularRecording ORDER BY exmaID DESC LIMIT 1")
+        questions = mycursor.fetchall()
+
+    # convert list of tuples to just a list
+    list_singularRecord = [item for t in questions for item in t]
+    # change to lowercase
+    #list_singularRecords_lower = [x.lower() for x in list_singularRecord]
+    # remove leading and trailing spaces and new lines
+    #list_singularRecords_clean = [x.strip().replace("\n", "") for x in list_singularRecords_lower]
+    db.close()
+    #return list_singularRecords_clean
+    return list_singularRecord
+
+
 '''def uploadableSingularRecording(self, examID, questionID, question, response, timestamp, pulse, skin_Con, respiration,
                                 bp):
     self.examID = examID

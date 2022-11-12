@@ -4,7 +4,7 @@ import SingularRecordingsDB
 import time
 import database
 
-exam_ID = SingularRecordingsDB.get_singularRecords()[0] + 1
+exam_ID = SingularRecordingsDB.getLastExamNumber().pop() +1
 question_ID = 0
 question = "Initial Test Question"
 response = "n"
@@ -31,9 +31,17 @@ counter = 0
 """
 
 #SingularRecordingsDB.delete_singularRecord(1)
-
-
+#var =  SingularRecordingsDB.getLastExamNumber().pop() +1
+#print(var)
 #SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response, timeStamp, pulse, skin_con, respBel,  bp, "T")
-SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
+#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
+SingularRecordingsDB.delete_singularRecord(0)
+SingularRecordingsDB.delete_singularRecord(1)
+SingularRecordingsDB.delete_singularRecord(2)
+SingularRecordingsDB.delete_singularRecord(3)
+SingularRecordingsDB.delete_singularRecord(4)
+SingularRecordingsDB.delete_singularRecord(5)
+SingularRecordingsDB.delete_singularRecord(6)
+
 #SingularRecordingsDB.delete_singularRecord('12')
 # print(SingularRecordingsDB.get_singularRecords()[0])
