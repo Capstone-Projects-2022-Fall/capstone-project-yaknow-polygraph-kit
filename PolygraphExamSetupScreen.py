@@ -377,8 +377,10 @@ def startExam(window1):
                     if x != '':
                         # add the question mark back in and create that question in mysql database
                         database.add_question(x + "?")
-                        # add the question mark back in and append to the overall list
-                        global_overall_questions.append(x + "?")
+                        # check if question exist in global_overall_question, if not, add question to list
+                        if x + "?" not in PolygraphExamSetupScreen.global_overall_questions:
+                            # add the question mark back in and append to the overall list
+                            PolygraphExamSetupScreen.global_overall_questions.append(x + "?")
 
             # user input has been added to database and overall list, now clear user input for questions
             window['-PROBLEMATICQUESTIONS-'].update('')
