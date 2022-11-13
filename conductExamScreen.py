@@ -2,9 +2,11 @@ import PySimpleGUI as gui
 from PIL import Image, ImageTk
 import arduino
 import matplotlib
-
+import os
+import atexit
+import graphResults
+import tkinter as tk
 import homescreen
-
 matplotlib.use('TKAgg')
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -13,7 +15,6 @@ import respirationBelt
 import threading
 import time
 import tts
-import graphResults
 from statsmodels.stats.weightstats import ztest as ztest
 import numpy as np
 import matplotlib.pyplot
@@ -39,6 +40,8 @@ global questionTimestamps
 global zTest1
 global zTest2
 global zTest3
+global restart_clicked
+restart_clicked = False
 
 class singularRecording:
     def __init__(self, timestamp, measurement, question, yn):
@@ -48,6 +51,10 @@ class singularRecording:
         self.yn = yn
 
 def make_window():
+    # sets the theme, background color and creates a window
+    gui.theme('Dark Amber')
+    gui.theme_background_color('#000000')
+
     # layout is a list of lists
     # the lists corresponds to how many rows there will be on the display
 
@@ -355,8 +362,22 @@ def showRespirationProbabilityDistribution(question):
                 transform=graph2.transAxes)
     matplotlib.pyplot.show()
 
-def startExam(window1):
+def task():
+    os.system('Python3 homescreen.py')
 
+@atexit.register
+def run_something():
+    # if restart button was clicked, make a new thread to run task
+    if conductExamScreen.restart_clicked == True:
+        try:
+            tk.Tk.destroy()
+        except:
+            pass
+        thread2 = threading.Thread(target=task, daemon=True)
+        thread2.start()
+        thread2.join()
+
+def startExam(window1):
     conductExamScreen.justRespirationRate = []
 
     conductExamScreen.questionTimestamps = []
@@ -367,18 +388,17 @@ def startExam(window1):
 
     conductExamScreen.initialExamEnded = False
 
-    thread = threading.Thread(target=conductExamScreen.examCounter)
+    thread = threading.Thread(target=conductExamScreen.examCounter, daemon=True)
     thread.start()
 
     while True:
-        #event, values = PolygraphExamSetupScreen.window.read()
         event, values = conductExamScreen.window.read()
+        #print(event, values)
         if event == '-Restart-':
+            conductExamScreen.restart_clicked = True
             conductExamScreen.window.close()
-
-            homescreen.main()
-        # if user clicks Start Examination button go to next page
-        if event in (gui.WIN_CLOSED, 'EXIT'):
+            break
+        elif event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event == '-YES-':
             conductExamScreen.yn = True
@@ -406,7 +426,6 @@ def startExam(window1):
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show(block=False)
-
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
         elif event == '-Test2R-':
@@ -419,9 +438,3 @@ def startExam(window1):
             showRespirationProbabilityDistribution(7)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
-          #  newWindow = homescreen.make_window()
-          #   conductExamScreen.window.close()
-          #  # PolygraphExamSetupScreen.window = newWindow
-          #   homescreen.main()
-
-

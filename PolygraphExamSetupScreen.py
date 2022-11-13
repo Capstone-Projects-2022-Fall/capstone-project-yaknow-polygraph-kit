@@ -115,6 +115,10 @@ def is_duplicate(list):
             return True
     return False
 def make_window():
+    # sets the theme, background color and creates a window
+    gui.theme('Dark Amber')
+    gui.theme_background_color('#000000')
+
     # this is the variable that will store the questions read from the MySQL database
     PolygraphExamSetupScreen.this_data = database.get_questions()
     header = ['yaKnow - Polygraph Exam Startup']
@@ -217,7 +221,6 @@ def make_window():
          gui.Frame(layout=col3_2, title='', k='col3_2')],
         [gui.Frame(layout=row3, title='', key='row3')],
         [gui.Frame(layout=col5, title='', key='row5'), gui.Frame(layout=col6, title='', k='col6')],
-        [gui.Frame(layout=row_restart, title='', key='row_restart')]
         [gui.Frame(layout=col4, title='Selected Questions. Click on Selected Questions to deselect', key='col4'), gui.Frame(layout=col7, title='', k='col7'), gui.Frame(layout=col7_2, title='', k='col7_2')],
         [gui.Frame(layout=row7, title='', key='row7')]
     ]
@@ -252,22 +255,19 @@ def startExam(window1):
     alreadyChanged = False
     PolygraphExamSetupScreen.respirationConnected = False
 
-    thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt)
+    thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt, daemon=True)
     thread1.start()
 
-    thread2 = threading.Thread(target=arduino.connectGSRSensor)
+    thread2 = threading.Thread(target=arduino.connectGSRSensor, daemon=True)
     thread2.start()
 
     # NEW FOR BLOOD PRESSURE
-    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
+    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice, daemon=True)
     thread3.start()
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
         #print(event, values)
-        if event == '-Restart-':
-            homescreen.RESTART_BUTTON = True
-            print(homescreen.RESTART_BUTTON)
 
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
@@ -294,7 +294,7 @@ def startExam(window1):
 
             conductExamScreen.examTime = 1
 
-            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[0]
+            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[0]
 
             conductExamScreen.inQuestion = False
 
@@ -448,6 +448,7 @@ def startExam(window1):
             #print('user_order_to_int', user_order_to_int)
             #print(PolygraphExamSetupScreen.global_overall_questions)
 
+    #print('exiting PolygraphExamSetupScreen.py')
 
 
 if __name__ == '__main__':
