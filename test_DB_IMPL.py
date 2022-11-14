@@ -1,21 +1,30 @@
+import mysql
 from numpy import random
-
+import pandas as pd
 import SingularRecordingsDB
 import time
+from sqlite3 import connect
 import database
+from sqlalchemy import create_engine
 
-exam_ID = SingularRecordingsDB.getLastExamNumber().pop() +1
-question_ID = 0
-question = "Initial Test Question"
-response = "n"
-timeStamp = time.time()
-pulse = 70
-skin_con = 3
-respBel = 34
-bp = 111
+db_con = mysql.connector.connect(
+    host="173.255.232.150",
+    user="cis4398",
+    passwd="dNC=IK~9)7",
+    database="Questions"
+)
 
-i = 5
-counter = 0
+
+
+df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse, skin_conductivity, respiration_belt, blood_pressure, actual_ans  FROM SingularRecording;", db_con)
+
+#pd.set_option('display.expand_frame_repr', False)
+
+print(df)
+
+db_con.close()
+
+
 """while i > 0:
     i -= 1
     counter += 1
@@ -30,18 +39,3 @@ counter = 0
                                             skin_con, respBel, bp, "F")
 """
 
-#SingularRecordingsDB.delete_singularRecord(1)
-#var =  SingularRecordingsDB.getLastExamNumber().pop() +1
-#print(var)
-#SingularRecordingsDB.add_singularRecord(exam_ID, question_ID, question, response, timeStamp, pulse, skin_con, respBel,  bp, "T")
-#SingularRecordingsDB.add_singularRecord(exam_ID,  question_ID, "TEST", response, timeStamp, pulse, skin_con, respBel, bp, "F")
-SingularRecordingsDB.delete_singularRecord(0)
-SingularRecordingsDB.delete_singularRecord(1)
-SingularRecordingsDB.delete_singularRecord(2)
-SingularRecordingsDB.delete_singularRecord(3)
-SingularRecordingsDB.delete_singularRecord(4)
-SingularRecordingsDB.delete_singularRecord(5)
-SingularRecordingsDB.delete_singularRecord(6)
-
-#SingularRecordingsDB.delete_singularRecord('12')
-# print(SingularRecordingsDB.get_singularRecords()[0])
