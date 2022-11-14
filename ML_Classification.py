@@ -22,7 +22,7 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "db_Nov13_v3.csv", na_values=['NA', '?'])
+    "db_Nov13_v4.csv", na_values=['NA', '?'])
 
 # Convert to numpy classificatin
 x = df[['response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
