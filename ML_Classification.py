@@ -1,6 +1,6 @@
-import mysql
+# import mysql
 import pandas as pd
-import SingularRecordingsDB
+# import SingularRecordingsDB - UNCOMMENT WHEN USING DB IN SERVER, MUST ADD ADD THE FILE TO SERVER AS WELL
 import io
 import requests
 import numpy as np
@@ -9,8 +9,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import accuracy_score
+import os
 
-#TODO, ask Thomos to install mysql-shell package on the server or ask for permission to do it your self
+# TODO, ask Thomos to install mysql-shell package on the server or ask for permission to do it your self
 '''db_con = mysql.connector.connect(
     host="173.255.232.150",
     user="cis4398",
@@ -21,18 +22,11 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "",
-    na_values=['NA', '?'])
+    "db_Nov13.csv")
 
-
-#Convert to numpy classificatin
-x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt', 'blood_pressure']].values
-dummies = pd.get_dummies(df['actual_ans']) # Classification (labelling)
+# Convert to numpy classificatin
+x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
+        'blood_pressure']].values
+dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
 y = dummies.values
-
-
-
-
-
-
