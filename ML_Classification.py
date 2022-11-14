@@ -22,10 +22,10 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "db_Nov13_v2.csv", na_values=['0'])
+    "db_Nov13_v3.csv", na_values=['NA', '?'])
 
 # Convert to numpy classificatin
-x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
+x = df[['question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
         'blood_pressure']].values
 dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
@@ -38,8 +38,7 @@ model.add(Dense(25, activation='relu')) # Hidden 2
 model.add(Dense(y.shape[1],activation='softmax')) # Output
 
 model.compile(loss='categorical_crossentropy', optimizer='adam')
-#x_array = np.asarray(x).astype('float128')
-print(x)
-#model.fit(x,y,verbose=2,epochs=100)
+
+model.fit(x,y,verbose=2,epochs=100)
 
 print(species)
