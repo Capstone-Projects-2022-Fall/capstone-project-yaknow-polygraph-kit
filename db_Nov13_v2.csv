@@ -1,0 +1,933 @@
+exmaID,questionID,question,response,tsStamp,pulse,skin_conductivity,respiration_belt,blood_pressure,ML_Prediction,ML_Accuracy,actual_ans,i
+7,1,is the number 1?,,24.355031,,0,42.51392365,,null,null,FALSE,477
+7,1,is the number 1?,,24.355107,,0,35.24750519,,null,null,FALSE,478
+7,1,is the number 1?,,24.355172,,0,19.85107422,,null,null,FALSE,479
+7,1,is the number 1?,,24.355237,,0,17.61289597,,null,null,FALSE,480
+7,1,is the number 1?,,24.355301,,0,17.81729507,,null,null,FALSE,481
+7,1,is the number 1?,,24.355373,,0,15.9444809,,null,null,FALSE,482
+7,1,is the number 1?,,24.355437,,0,7.771034241,,null,null,FALSE,483
+7,1,is the number 1?,,24.355507,,0,11.93057251,,null,null,FALSE,484
+7,1,is the number 1?,,24.355569,,0,9.947898865,,null,null,FALSE,485
+7,1,is the number 1?,,24.355632,,0,8.767486572,,null,null,FALSE,486
+7,1,is the number 1?,,24.355694,,0,7.36479187,,null,null,FALSE,487
+7,1,is the number 1?,,24.355756,,0,9.521209717,,null,null,FALSE,488
+7,1,is the number 1?,,24.355819,,0,9.73072052,,null,null,FALSE,489
+7,1,is the number 1?,,24.355882,,0,6.984092712,,null,null,FALSE,490
+7,1,is the number 1?,,24.355947,,0,12.97557068,,null,null,FALSE,491
+7,1,is the number 1?,,24.356011,,0,7.622848511,,null,null,FALSE,492
+7,1,is the number 1?,,24.356075,,0,11.94335175,,null,null,FALSE,493
+7,1,is the number 1?,,24.356143,,0,7.806808472,,null,null,FALSE,494
+7,1,is the number 1?,,24.356207,,0,11.27905273,,null,null,FALSE,495
+7,1,is the number 1?,,24.356271,,0,9.148178101,,null,null,FALSE,496
+7,1,is the number 1?,,24.356336,,0,11.67507935,,null,null,FALSE,497
+7,1,is the number 1?,,24.3564,,0,23.28244019,,null,null,FALSE,498
+7,1,is the number 1?,,24.356471,,0,13.24895477,,null,null,FALSE,499
+7,1,is the number 1?,,24.356535,,0,8.609077454,,null,null,FALSE,500
+7,1,is the number 1?,,24.356602,,0,12.04299927,,null,null,FALSE,501
+7,2,is your name riley?,,24.998688,,0,7.418449402,,null,null,FALSE,502
+7,2,is your name riley?,,25.98811,,0,11.12064362,,null,null,FALSE,503
+7,2,is your name riley?,,27.043522,,0,10.037323,,null,null,FALSE,504
+7,2,is your name riley?,,28.011844,,0,13.3256073,,null,null,FALSE,505
+7,2,is your name riley?,,29.010715,,0,8.614189148,,null,null,FALSE,506
+7,2,is your name riley?,,29.999467,,0,14.17897415,,null,null,FALSE,507
+7,2,is your name riley?,,31.018519,,0,12.26272583,,null,null,FALSE,508
+7,2,is your name riley?,,31.996726,,0,14.88159943,,null,null,FALSE,509
+7,2,is your name riley?,,33.000017,,0,18.91083527,,null,null,FALSE,510
+7,2,is your name riley?,,34.03338,,0,15.60466385,,null,null,FALSE,511
+7,2,is your name riley?,,35.001331,,0,11.19984436,,null,null,FALSE,512
+7,2,is your name riley?,,35.99428,,0,11.76194763,,null,null,FALSE,513
+7,2,is your name riley?,,37.023809,,0,12.81716156,,null,null,FALSE,514
+7,2,is your name riley?,,37.987664,,0,19.02325439,,null,null,FALSE,515
+7,2,is your name riley?,,38.992699,,0,45.78432465,,null,null,FALSE,516
+7,2,is your name riley?,,40.010762,,0,13.83660507,,null,null,FALSE,517
+7,2,is your name riley?,,41.030052,,0,7.702049255,,null,null,FALSE,518
+7,2,is your name riley?,,42.006424,,0,8.391899109,,null,null,FALSE,519
+7,2,is your name riley?,,43.005876,,0,10.43845367,,null,null,FALSE,520
+7,2,is your name riley?,,44.02917,,0,8.310142517,,null,null,FALSE,521
+7,2,is your name riley?,,44.993805,,0,7.09651947,,null,null,FALSE,522
+7,2,is your name riley?,,46.004254,,0,9.309143066,,null,null,FALSE,523
+7,2,is your name riley?,,47.027259,,0,6.848678589,,null,null,FALSE,524
+7,2,is your name riley?,,48.001928,,0,8.793037415,,null,null,FALSE,525
+7,2,is your name riley?,,48.99477,,0,19.87151718,,null,null,FALSE,526
+7,2,is your name riley?,,50.00453,,0,12.40325165,,null,null,FALSE,527
+7,2,is your name riley?,,51.000612,,0,6.411773682,,null,null,FALSE,528
+7,2,is your name riley?,,52.012763,,0,7.638175964,,null,null,FALSE,529
+7,2,is your name riley?,,53.002643,,0,9.779266357,,null,null,FALSE,530
+7,2,is your name riley?,,53.999615,,0,6.230369568,,null,null,FALSE,531
+7,2,is your name riley?,,55.007607,,0,7.229377747,,null,null,FALSE,532
+7,2,is your name riley?,,56.032945,,0,17.40594101,,null,null,FALSE,533
+7,2,is your name riley?,,57.006503,,0,28.1548233,,null,null,FALSE,534
+7,2,is your name riley?,,58.00736,,0,21.36363602,,null,null,FALSE,535
+7,2,is your name riley?,,58.999256,,0,9.117523193,,null,null,FALSE,536
+7,2,is your name riley?,,59.995751,,0,7.165504456,,null,null,FALSE,537
+7,2,is your name riley?,,60.99309,,0,10.08841705,,null,null,FALSE,538
+7,2,is your name riley?,,61.991203,,0,7.09651947,,null,null,FALSE,539
+7,2,is your name riley?,,62.994222,,0,10.12674713,,null,null,FALSE,540
+7,2,is your name riley?,,63.990599,,0,7.868125916,,null,null,FALSE,541
+7,2,is your name riley?,,65.031783,,0,10.42057037,,null,null,FALSE,542
+7,2,is your name riley?,,66.006969,,0,8.052085876,,null,null,FALSE,543
+7,2,is your name riley?,,69.888324,,0,9.988777161,,null,null,FALSE,544
+7,2,is your name riley?,,69.888754,,0,7.94733429,,null,null,FALSE,545
+7,2,is your name riley?,,69.888827,,0,7.630508423,,null,null,FALSE,546
+7,2,is your name riley?,,69.987795,,0,10.36946869,,null,null,FALSE,547
+7,3,Is temple playing?,,71.003615,,0,6.442436218,,null,null,FALSE,548
+7,3,Is temple playing?,,71.995343,,0,10.66074371,,null,null,FALSE,549
+7,3,Is temple playing?,,73.003932,,0,8.448112488,,null,null,FALSE,550
+7,3,Is temple playing?,,73.996548,,0,7.07862854,,null,null,FALSE,551
+7,3,Is temple playing?,,74.990194,,0,13.6986351,,null,null,FALSE,552
+7,3,Is temple playing?,,76.003079,,0,6.488426208,,null,null,FALSE,553
+7,3,Is temple playing?,,77.00102,,0,8.864578247,,null,null,FALSE,554
+7,3,Is temple playing?,,77.999717,,0,9.449668884,,null,null,FALSE,555
+7,3,Is temple playing?,,78.998371,,0,11.33270264,,null,null,FALSE,556
+7,3,Is temple playing?,,80.005745,,0,25.19613647,,null,null,FALSE,557
+7,3,Is temple playing?,,80.99737,,0,20.0478096,,null,null,FALSE,558
+7,3,Is temple playing?,,81.990029,,0,7.855354309,,null,null,FALSE,559
+7,3,Is temple playing?,,82.987809,,0,7.806808472,,null,null,FALSE,560
+7,3,Is temple playing?,,84.015266,,0,11.22028351,,null,null,FALSE,561
+7,3,Is temple playing?,,84.993903,,0,7.740379333,,null,null,FALSE,562
+7,3,Is temple playing?,,85.990789,,0,11.02866364,,null,null,FALSE,563
+7,3,Is temple playing?,,87.008654,,0,7.41078186,,null,null,FALSE,564
+7,3,Is temple playing?,,87.998667,,0,11.30970764,,null,null,FALSE,565
+7,3,Is temple playing?,,88.995203,,0,7.229377747,,null,null,FALSE,566
+7,3,Is temple playing?,,90.031474,,0,10.65052032,,null,null,FALSE,567
+7,3,Is temple playing?,,90.989671,,0,8.478767395,,null,null,FALSE,568
+7,3,Is temple playing?,,91.996698,,0,18.36917496,,null,null,FALSE,569
+7,3,Is temple playing?,,93.032147,,0,26.40209579,,null,null,FALSE,570
+7,3,Is temple playing?,,93.993815,,0,11.82070923,,null,null,FALSE,571
+7,3,Is temple playing?,,94.992582,,0,6.549743652,,null,null,FALSE,572
+7,3,Is temple playing?,,95.988887,,0,11.08998108,,null,null,FALSE,573
+7,3,Is temple playing?,,96.981382,,0,7.863014221,,null,null,FALSE,574
+7,3,Is temple playing?,,98.002951,,0,9.434341431,,null,null,FALSE,575
+7,3,Is temple playing?,,99.023871,,0,8.780258179,,null,null,FALSE,576
+7,3,Is temple playing?,,100.003573,,0,9.981109619,,null,null,FALSE,577
+7,3,Is temple playing?,,101.013646,,0,8.836471558,,null,null,FALSE,578
+7,3,Is temple playing?,,102.001932,,0,10.0322113,,null,null,FALSE,579
+7,3,Is temple playing?,,102.991377,,0,10.20339966,,null,null,FALSE,580
+7,3,Is temple playing?,,104.009855,,0,9.066421509,,null,null,FALSE,581
+7,3,Is temple playing?,,104.996093,,0,6.899780273,,null,null,FALSE,582
+7,3,Is temple playing?,,105.989579,,0,9.117523193,,null,null,FALSE,583
+7,3,Is temple playing?,,107.002203,,0,5.527748108,,null,null,FALSE,584
+7,3,Is temple playing?,,107.987456,,0,9.664291382,,null,null,FALSE,585
+7,3,Is temple playing?,,109.00594,,0,23.61970139,,null,null,FALSE,586
+7,3,Is temple playing?,,110.007442,,0,26.67292404,,null,null,FALSE,587
+7,3,Is temple playing?,,111.021965,,0,14.02312088,,null,null,FALSE,588
+7,3,Is temple playing?,,111.996689,,0,6.227813721,,null,null,FALSE,589
+7,3,Is temple playing?,,112.996027,,0,7.111846924,,null,null,FALSE,590
+7,3,Is temple playing?,,114.031788,,0,11.2075119,,null,null,FALSE,591
+7,3,Is temple playing?,,114.998062,,0,8.241157532,,null,null,FALSE,592
+7,3,Is temple playing?,,118.364357,,0,10.16251373,,null,null,FALSE,593
+7,3,Is temple playing?,,118.364454,,0,9.958114624,,null,null,FALSE,594
+7,3,Is temple playing?,,118.364533,,0,8.869682312,,null,null,FALSE,595
+7,4,Is today Friday?,,118.979916,,0,11.36847687,,null,null,TRUE,596
+7,4,Is today Friday?,,119.998696,,0,7.709716797,,null,null,TRUE,597
+7,4,Is today Friday?,,121.004005,,0,11.94335175,,null,null,TRUE,598
+7,4,Is today Friday?,,121.999707,,0,10.5329895,,null,null,TRUE,599
+7,4,Is today Friday?,,122.999369,,0,7.63306427,,null,null,TRUE,600
+7,4,Is today Friday?,,123.992414,,0,12.36747742,,null,null,TRUE,601
+7,4,Is today Friday?,,124.993966,,0,6.85634613,,null,null,TRUE,602
+7,4,Is today Friday?,,125.989342,,0,11.40935516,,null,null,TRUE,603
+7,4,Is today Friday?,,126.982109,,0,7.972877502,,null,null,TRUE,604
+7,4,Is today Friday?,,127.99406,,0,9.516098022,,null,null,TRUE,605
+7,4,Is today Friday?,,128.993716,,0,9.863578796,,null,null,TRUE,606
+7,4,Is today Friday?,,129.992158,,0,3.297233582,,null,null,TRUE,607
+7,4,Is today Friday?,,131.000091,,0,14.41659164,,null,null,TRUE,608
+7,4,Is today Friday?,,131.999324,,0,17.7023201,,null,null,TRUE,609
+7,4,Is today Friday?,,132.997998,,0,8.747047424,,null,null,TRUE,610
+7,4,Is today Friday?,,133.997391,,0,13.26173019,,null,null,TRUE,611
+7,4,Is today Friday?,,134.99373,,0,6.169052124,,null,null,TRUE,612
+7,4,Is today Friday?,,135.997436,,0,15.66854095,,null,null,TRUE,613
+7,4,Is today Friday?,,136.996947,,0,14.84327698,,null,null,TRUE,614
+7,4,Is today Friday?,,137.993525,,0,8.504318237,,null,null,TRUE,615
+7,4,Is today Friday?,,138.983863,,0,11.47067261,,null,null,TRUE,616
+7,4,Is today Friday?,,139.983197,,0,12.06854248,,null,null,TRUE,617
+7,4,Is today Friday?,,141.003209,,0,8.800697327,,null,null,TRUE,618
+7,4,Is today Friday?,,142.006589,,0,11.9407959,,null,null,TRUE,619
+7,4,Is today Friday?,,143.019108,,0,7.755706787,,null,null,TRUE,620
+7,4,Is today Friday?,,143.997146,,0,10.93668365,,null,null,TRUE,621
+7,4,Is today Friday?,,144.998344,,0,9.426673889,,null,null,TRUE,622
+7,4,Is today Friday?,,146.016503,,0,7.79914093,,null,null,TRUE,623
+7,4,Is today Friday?,,147.014568,,0,12.1503067,,null,null,TRUE,624
+7,4,Is today Friday?,,147.990973,,0,8.83391571,,null,null,TRUE,625
+7,4,Is today Friday?,,148.983493,,0,10.50999451,,null,null,TRUE,626
+7,4,Is today Friday?,,149.990701,,0,24.02339172,,null,null,TRUE,627
+7,4,Is today Friday?,,151.000461,,0,31.73693466,,null,null,TRUE,628
+7,4,Is today Friday?,,152.001238,,0,18.46115494,,null,null,TRUE,629
+7,4,Is today Friday?,,153.000773,,0,8.591194153,,null,null,TRUE,630
+7,4,Is today Friday?,,154.006202,,0,9.574867249,,null,null,TRUE,631
+7,4,Is today Friday?,,154.989692,,0,12.58721161,,null,null,TRUE,632
+7,4,Is today Friday?,,155.997583,,0,9.582527161,,null,null,TRUE,633
+7,4,Is today Friday?,,156.994103,,0,12.43391418,,null,null,TRUE,634
+7,4,Is today Friday?,,157.98571,,0,8.828804016,,null,null,TRUE,635
+7,4,Is today Friday?,,158.984342,,0,12.34959412,,null,null,TRUE,636
+7,4,Is today Friday?,,159.985725,,0,9.625968933,,null,null,TRUE,637
+7,4,Is today Friday?,,161.030017,,0,9.825256348,,null,null,TRUE,638
+7,4,Is today Friday?,,161.994803,,0,8.128738403,,null,null,TRUE,639
+7,4,Is today Friday?,,162.990319,,0,8.422561646,,null,null,TRUE,640
+7,4,Is today Friday?,,164.017071,,0,9.043426514,,null,null,TRUE,641
+7,4,Is today Friday?,,164.997195,,0,6.9585495,,null,null,TRUE,642
+7,4,Is today Friday?,,165.988067,,0,12.00722504,,null,null,TRUE,643
+7,4,Is today Friday?,,167.024926,,0,6.743927002,,null,null,TRUE,644
+7,4,Is today Friday?,,167.988062,,0,9.807373047,,null,null,TRUE,645
+7,4,Is today Friday?,,172.355531,,0,7.847686768,,null,null,TRUE,646
+7,4,Is today Friday?,,172.355663,,0,15.86527634,,null,null,TRUE,647
+7,4,Is today Friday?,,172.35577,,0,23.25944519,,null,null,TRUE,648
+7,4,Is today Friday?,,172.355846,,0,22.69734573,,null,null,TRUE,649
+7,4,Is today Friday?,,173.002504,,0,9.145622253,,null,null,TRUE,650
+7,4,Is today Friday?,,173.998112,,0,6.726043701,,null,null,TRUE,651
+7,4,Is today Friday?,,174.988757,,0,12.72006989,,null,null,TRUE,652
+7,4,Is today Friday?,,175.990233,,0,9.577423096,,null,null,TRUE,653
+7,4,Is today Friday?,,176.995054,,0,12.23717499,,null,null,TRUE,654
+7,4,Is today Friday?,,177.981581,,0,10.69395447,,null,null,TRUE,655
+7,4,Is today Friday?,,178.979834,,0,7.737823486,,null,null,TRUE,656
+7,4,Is today Friday?,,179.979744,,0,11.81815338,,null,null,TRUE,657
+7,4,Is today Friday?,,180.996285,,0,10.34647369,,null,null,TRUE,658
+7,4,Is today Friday?,,181.997627,,0,10.98777771,,null,null,TRUE,659
+7,4,Is today Friday?,,182.992626,,0,11.54988098,,null,null,TRUE,660
+7,4,Is today Friday?,,183.989906,,0,12.23973083,,null,null,TRUE,661
+7,4,Is today Friday?,,184.985999,,0,10.04753876,,null,null,TRUE,662
+7,4,Is today Friday?,,185.991555,,0,10.62496948,,null,null,TRUE,663
+7,4,Is today Friday?,,186.983294,,0,12.36237335,,null,null,TRUE,664
+7,4,Is today Friday?,,187.986793,,0,7.758262634,,null,null,TRUE,665
+7,4,Is today Friday?,,188.976677,,0,12.77372742,,null,null,TRUE,666
+7,4,Is today Friday?,,189.975156,,0,8.836471558,,null,null,TRUE,667
+7,4,Is today Friday?,,190.976166,,0,10.79615784,,null,null,TRUE,668
+7,4,Is today Friday?,,191.99338,,0,11.25861359,,null,null,TRUE,669
+7,4,Is today Friday?,,192.989521,,0,8.018867493,,null,null,TRUE,670
+7,4,Is today Friday?,,193.996561,,0,13.97457504,,null,null,TRUE,671
+7,4,Is today Friday?,,194.995825,,0,8.703613281,,null,null,TRUE,672
+7,4,Is today Friday?,,195.981438,,0,12.84782028,,null,null,TRUE,673
+7,4,Is today Friday?,,196.986594,,0,11.23306274,,null,null,TRUE,674
+7,4,Is today Friday?,,197.997798,,0,8.767486572,,null,null,TRUE,675
+7,4,Is today Friday?,,198.982205,,0,13.5708847,,null,null,TRUE,676
+7,4,Is today Friday?,,199.990114,,0,16.3864975,,null,null,TRUE,677
+7,4,Is today Friday?,,201.027488,,0,17.89905548,,null,null,TRUE,678
+7,4,Is today Friday?,,201.989337,,0,10.68118286,,null,null,TRUE,679
+7,4,Is today Friday?,,202.995801,,0,12.45179749,,null,null,TRUE,680
+7,4,Is today Friday?,,204.032647,,0,12.36237335,,null,null,TRUE,681
+7,4,Is today Friday?,,204.989423,,0,8.305030823,,null,null,TRUE,682
+7,4,Is today Friday?,,205.991127,,0,7.081184387,,null,null,TRUE,683
+7,4,Is today Friday?,,206.993151,,0,9.830368042,,null,null,TRUE,684
+7,4,Is today Friday?,,207.980971,,0,6.473098755,,null,null,TRUE,685
+7,4,Is today Friday?,,208.97849,,0,6.409217834,,null,null,TRUE,686
+7,4,Is today Friday?,,209.980035,,0,5.903327942,,null,null,TRUE,687
+7,4,Is today Friday?,,227.855116,,0,17.52857971,,null,null,TRUE,688
+7,4,Is today Friday?,,227.855205,,0,13.0931015,,null,null,TRUE,689
+7,4,Is today Friday?,,227.855274,,0,10.66840363,,null,null,TRUE,690
+7,4,Is today Friday?,,227.855346,,0,9.260597229,,null,null,TRUE,691
+7,4,Is today Friday?,,227.855413,,0,7.972877502,,null,null,TRUE,692
+7,4,Is today Friday?,,227.855477,,0,8.828804016,,null,null,TRUE,693
+7,4,Is today Friday?,,227.855546,,0,12.6740799,,null,null,TRUE,694
+7,4,Is today Friday?,,227.855608,,0,14.26073456,,null,null,TRUE,695
+7,4,Is today Friday?,,227.855671,,0,14.93525696,,null,null,TRUE,696
+7,4,Is today Friday?,,227.855738,,0,16.07733917,,null,null,TRUE,697
+7,4,Is today Friday?,,227.855801,,0,15.11410522,,null,null,TRUE,698
+7,4,Is today Friday?,,227.855898,,0,7.303474426,,null,null,TRUE,699
+7,4,Is today Friday?,,227.855968,,0,10.37202454,,null,null,TRUE,700
+7,4,Is today Friday?,,227.856046,,0,10.9571228,,null,null,TRUE,701
+7,4,Is today Friday?,,227.856108,,0,16.5321312,,null,null,TRUE,702
+7,4,Is today Friday?,,227.85617,,0,16.33795166,,null,null,TRUE,703
+7,4,Is today Friday?,,227.85623,,0,14.47790909,,null,null,TRUE,704
+7,4,Is today Friday?,,227.977652,,0,6.88445282,,null,null,TRUE,705
+7,5,is the number 2?,,229.004404,,0,16.49124908,,null,null,FALSE,706
+7,5,is the number 2?,,229.996218,,0,9.608078003,,null,null,FALSE,707
+7,5,is the number 2?,,231.020226,,0,11.62397766,,null,null,FALSE,708
+7,5,is the number 2?,,231.988,,0,12.4364624,,null,null,FALSE,709
+7,5,is the number 2?,,232.989527,,0,11.14108276,,null,null,FALSE,710
+7,5,is the number 2?,,234.023833,,0,14.63376617,,null,null,FALSE,711
+7,5,is the number 2?,,234.981301,,0,11.39402771,,null,null,FALSE,712
+7,5,is the number 2?,,235.984322,,0,15.50757599,,null,null,FALSE,713
+7,5,is the number 2?,,236.980539,,0,12.04810333,,null,null,FALSE,714
+7,5,is the number 2?,,238.000404,,0,14.95314026,,null,null,FALSE,715
+7,5,is the number 2?,,238.992943,,0,14.12021255,,null,null,FALSE,716
+7,5,is the number 2?,,239.991718,,0,15.65832138,,null,null,FALSE,717
+7,5,is the number 2?,,240.990558,,0,19.16122437,,null,null,FALSE,718
+7,5,is the number 2?,,241.996411,,0,17.05335236,,null,null,FALSE,719
+7,5,is the number 2?,,242.991442,,0,19.56747055,,null,null,FALSE,720
+7,5,is the number 2?,,243.984112,,0,13.19274521,,null,null,FALSE,721
+7,5,is the number 2?,,244.98775,,0,10.34391785,,null,null,FALSE,722
+7,5,is the number 2?,,245.977181,,0,7.525756836,,null,null,FALSE,723
+7,5,is the number 2?,,246.972927,,0,14.8560524,,null,null,FALSE,724
+7,5,is the number 2?,,247.995179,,0,19.90983963,,null,null,FALSE,725
+7,5,is the number 2?,,248.999779,,0,20.16789627,,null,null,FALSE,726
+7,5,is the number 2?,,250.013018,,0,20.08102417,,null,null,FALSE,727
+7,5,is the number 2?,,250.991871,,0,16.01602173,,null,null,FALSE,728
+7,5,is the number 2?,,251.985236,,0,18.42794037,,null,null,FALSE,729
+7,5,is the number 2?,,253.021884,,0,15.50757599,,null,null,FALSE,730
+7,5,is the number 2?,,253.983937,,0,9.293815613,,null,null,FALSE,731
+7,5,is the number 2?,,254.974899,,0,21.92317963,,null,null,FALSE,732
+7,5,is the number 2?,,255.972504,,0,21.89507675,,null,null,FALSE,733
+7,5,is the number 2?,,256.993848,,0,10.90602112,,null,null,FALSE,734
+7,5,is the number 2?,,257.991535,,0,17.37017059,,null,null,FALSE,735
+7,5,is the number 2?,,259.009731,,0,16.02112961,,null,null,FALSE,736
+7,5,is the number 2?,,259.989066,,0,16.85661697,,null,null,FALSE,737
+7,5,is the number 2?,,260.986202,,0,15.18564606,,null,null,FALSE,738
+7,5,is the number 2?,,261.987778,,0,11.83859253,,null,null,FALSE,739
+7,5,is the number 2?,,262.978263,,0,15.91126633,,null,null,FALSE,740
+7,5,is the number 2?,,263.976558,,0,15.47180557,,null,null,FALSE,741
+7,5,is the number 2?,,264.975671,,0,19.25320435,,null,null,FALSE,742
+7,5,is the number 2?,,265.984434,,0,13.73696136,,null,null,FALSE,743
+7,5,is the number 2?,,267.001653,,0,20.0069313,,null,null,FALSE,744
+7,5,is the number 2?,,267.989303,,0,19.4831543,,null,null,FALSE,745
+7,5,is the number 2?,,273.34909,,0,17.76874924,,null,null,FALSE,746
+7,5,is the number 2?,,273.349168,,0,14.84072113,,null,null,FALSE,747
+7,5,is the number 2?,,273.349238,,0,14.4089241,,null,null,FALSE,748
+7,5,is the number 2?,,273.349304,,0,17.57201385,,null,null,FALSE,749
+7,5,is the number 2?,,273.349369,,0,13.32049561,,null,null,FALSE,750
+7,5,is the number 2?,,273.980016,,0,17.84284592,,null,null,FALSE,751
+7,6,is the number 3?,,274.986987,,0,14.35016251,,null,null,FALSE,752
+7,6,is the number 3?,,275.994068,,0,17.90161133,,null,null,FALSE,753
+7,6,is the number 3?,,276.990397,,0,12.77627945,,null,null,FALSE,754
+7,6,is the number 3?,,277.989335,,0,14.33738708,,null,null,FALSE,755
+7,6,is the number 3?,,278.97814,,0,16.34050751,,null,null,FALSE,756
+7,6,is the number 3?,,279.980068,,0,14.98124695,,null,null,FALSE,757
+7,6,is the number 3?,,280.975526,,0,12.56932831,,null,null,FALSE,758
+7,6,is the number 3?,,281.968573,,0,16.75186157,,null,null,FALSE,759
+7,6,is the number 3?,,282.989158,,0,18.7728653,,null,null,FALSE,760
+7,6,is the number 3?,,283.987267,,0,15.79117966,,null,null,FALSE,761
+7,6,is the number 3?,,284.985557,,0,15.31850433,,null,null,FALSE,762
+7,6,is the number 3?,,285.984859,,0,17.69210052,,null,null,FALSE,763
+7,6,is the number 3?,,286.980876,,0,19.00281525,,null,null,FALSE,764
+7,6,is the number 3?,,287.977711,,0,15.90359879,,null,null,FALSE,765
+7,6,is the number 3?,,288.97678,,0,9.789482117,,null,null,FALSE,766
+7,6,is the number 3?,,289.970763,,0,16.6317749,,null,null,FALSE,767
+7,6,is the number 3?,,290.969387,,0,13.19018936,,null,null,FALSE,768
+7,6,is the number 3?,,291.99916,,0,12.30104828,,null,null,FALSE,769
+7,6,is the number 3?,,292.991706,,0,16.65732574,,null,null,FALSE,770
+7,6,is the number 3?,,293.989455,,0,19.17144394,,null,null,FALSE,771
+7,6,is the number 3?,,294.999966,,0,9.756271362,,null,null,FALSE,772
+7,6,is the number 3?,,295.986138,,0,12.26272583,,null,null,FALSE,773
+7,6,is the number 3?,,296.982416,,0,18.91083527,,null,null,FALSE,774
+7,6,is the number 3?,,297.995146,,0,17.49025726,,null,null,FALSE,775
+7,6,is the number 3?,,298.975096,,0,15.01701736,,null,null,FALSE,776
+7,6,is the number 3?,,299.972729,,0,15.7988472,,null,null,FALSE,777
+7,6,is the number 3?,,300.98891,,0,17.13255692,,null,null,FALSE,778
+7,6,is the number 3?,,301.988199,,0,15.44881058,,null,null,FALSE,779
+7,6,is the number 3?,,302.992376,,0,15.75285721,,null,null,FALSE,780
+7,6,is the number 3?,,303.988018,,0,11.26116943,,null,null,FALSE,781
+7,6,is the number 3?,,304.977361,,0,18.2720871,,null,null,FALSE,782
+7,6,is the number 3?,,305.986174,,0,12.32404327,,null,null,FALSE,783
+7,6,is the number 3?,,306.994615,,0,18.18777084,,null,null,FALSE,784
+7,6,is the number 3?,,307.972115,,0,13.8442688,,null,null,FALSE,785
+7,6,is the number 3?,,308.990914,,0,17.06612396,,null,null,FALSE,786
+7,6,is the number 3?,,309.996331,,0,14.33483124,,null,null,FALSE,787
+7,6,is the number 3?,,310.989182,,0,14.48302078,,null,null,FALSE,788
+7,6,is the number 3?,,311.983186,,0,28.71181488,,null,null,FALSE,789
+7,6,is the number 3?,,312.98065,,0,20.17811584,,null,null,FALSE,790
+7,6,is the number 3?,,313.978082,,0,14.08188629,,null,null,FALSE,791
+7,6,is the number 3?,,314.980654,,0,17.6793251,,null,null,FALSE,792
+7,6,is the number 3?,,315.973754,,0,14.26073456,,null,null,FALSE,793
+7,6,is the number 3?,,316.97847,,0,17.26030731,,null,null,FALSE,794
+7,6,is the number 3?,,317.99017,,0,14.15597916,,null,null,FALSE,795
+7,6,is the number 3?,,318.979689,,0,26.66781616,,null,null,FALSE,796
+7,6,is the number 3?,,319.983445,,0,26.14915085,,null,null,FALSE,797
+7,6,is the number 3?,,320.984517,,0,14.23007584,,null,null,FALSE,798
+7,6,is the number 3?,,321.979835,,0,12.72262573,,null,null,FALSE,799
+7,6,is the number 3?,,322.973021,,0,16.22808456,,null,null,FALSE,800
+7,6,is the number 3?,,323.974045,,0,11.6852951,,null,null,FALSE,801
+7,6,is the number 3?,,324.97394,,0,17.48770142,,null,null,FALSE,802
+7,6,is the number 3?,,325.987111,,0,23.56093597,,null,null,FALSE,803
+7,6,is the number 3?,,327.026337,,0,35.73040009,,null,null,FALSE,804
+7,6,is the number 3?,,328.013752,,0,32.06652832,,null,null,FALSE,805
+7,6,is the number 3?,,328.977721,,0,18.06002045,,null,null,FALSE,806
+7,6,is the number 3?,,329.983198,,0,13.38692474,,null,null,FALSE,807
+7,6,is the number 3?,,333.817481,,0,18.01403046,,null,null,FALSE,808
+7,6,is the number 3?,,333.817589,,0,13.44313431,,null,null,FALSE,809
+7,6,is the number 3?,,333.817669,,0,17.77896881,,null,null,FALSE,810
+7,6,is the number 3?,,333.995403,,0,15.05789566,,null,null,FALSE,811
+7,7,is your number 4?,,334.993432,,0,17.85050964,,null,null,FALSE,812
+7,7,is your number 4?,,335.990502,,0,16.24852371,,null,null,FALSE,813
+7,7,is your number 4?,,336.988129,,0,18.06257629,,null,null,FALSE,814
+7,7,is your number 4?,,337.980165,,0,15.54079056,,null,null,FALSE,815
+7,7,is your number 4?,,338.978354,,0,16.58322906,,null,null,FALSE,816
+7,7,is your number 4?,,339.97454,,0,18.0344696,,null,null,FALSE,817
+7,7,is your number 4?,,340.979917,,0,16.02112961,,null,null,FALSE,818
+7,7,is your number 4?,,341.967098,,0,17.79430008,,null,null,FALSE,819
+7,7,is your number 4?,,342.981378,,0,14.09466171,,null,null,FALSE,820
+7,7,is your number 4?,,343.985283,,0,18.83929443,,null,null,FALSE,821
+7,7,is your number 4?,,344.975987,,0,15.1013298,,null,null,FALSE,822
+7,7,is your number 4?,,345.974145,,0,15.32361603,,null,null,FALSE,823
+7,7,is your number 4?,,346.979802,,0,19.75143051,,null,null,FALSE,824
+7,7,is your number 4?,,347.966965,,0,14.42681122,,null,null,FALSE,825
+7,7,is your number 4?,,348.974265,,0,20.62268448,,null,null,FALSE,826
+7,7,is your number 4?,,349.97018,,0,17.03290939,,null,null,FALSE,827
+7,7,is your number 4?,,350.984381,,0,19.04624939,,null,null,FALSE,828
+7,7,is your number 4?,,351.981007,,0,14.61843491,,null,null,FALSE,829
+7,7,is your number 4?,,352.981543,,0,25.76845551,,null,null,FALSE,830
+7,7,is your number 4?,,353.975762,,0,25.35710144,,null,null,FALSE,831
+7,7,is your number 4?,,354.973586,,0,14.65931702,,null,null,FALSE,832
+7,7,is your number 4?,,355.970248,,0,18.94916153,,null,null,FALSE,833
+7,7,is your number 4?,,356.968182,,0,17.08145523,,null,null,FALSE,834
+7,7,is your number 4?,,357.971071,,0,13.58621597,,null,null,FALSE,835
+7,7,is your number 4?,,358.991783,,0,18.3717308,,null,null,FALSE,836
+7,7,is your number 4?,,359.990465,,0,15.59955597,,null,null,FALSE,837
+7,7,is your number 4?,,360.987967,,0,17.27563477,,null,null,FALSE,838
+7,7,is your number 4?,,361.98478,,0,14.98379898,,null,null,FALSE,839
+7,7,is your number 4?,,362.982614,,0,18.82651901,,null,null,FALSE,840
+7,7,is your number 4?,,363.97319,,0,13.31027603,,null,null,FALSE,841
+7,7,is your number 4?,,364.967584,,0,19.32474518,,null,null,FALSE,842
+7,7,is your number 4?,,365.991958,,0,14.01800919,,null,null,FALSE,843
+7,7,is your number 4?,,366.97976,,0,26.67037201,,null,null,FALSE,844
+7,7,is your number 4?,,367.987163,,0,48.87076569,,null,null,FALSE,845
+7,7,is your number 4?,,368.998111,,0,29.1896019,,null,null,FALSE,846
+7,7,is your number 4?,,369.974743,,0,12.48245239,,null,null,FALSE,847
+7,7,is your number 4?,,370.970877,,0,10.63008118,,null,null,FALSE,848
+7,7,is your number 4?,,371.973739,,0,13.83404922,,null,null,FALSE,849
+7,7,is your number 4?,,372.967441,,0,11.37103271,,null,null,FALSE,850
+7,7,is your number 4?,,373.964961,,0,14.91226196,,null,null,FALSE,851
+7,7,is your number 4?,,374.99185,,0,12.30104828,,null,null,FALSE,852
+7,7,is your number 4?,,375.988434,,0,16.66498947,,null,null,FALSE,853
+7,7,is your number 4?,,376.985184,,0,11.66230011,,null,null,FALSE,854
+7,7,is your number 4?,,377.978702,,0,13.21318436,,null,null,FALSE,855
+7,7,is your number 4?,,382.313591,,0,11.37614441,,null,null,FALSE,856
+7,7,is your number 4?,,382.313683,,0,9.661735535,,null,null,FALSE,857
+7,7,is your number 4?,,382.313758,,0,12.66641617,,null,null,FALSE,858
+7,7,is your number 4?,,382.313832,,0,10.71439362,,null,null,FALSE,859
+7,7,is your number 4?,,382.981349,,0,9.751159668,,null,null,FALSE,860
+7,8,is the number 5?,,383.976187,,0,13.31538391,,null,null,FALSE,861
+7,8,is the number 5?,,384.974689,,0,13.33837891,,null,null,FALSE,862
+7,8,is the number 5?,,385.981357,,0,15.48202515,,null,null,FALSE,863
+7,8,is the number 5?,,386.974881,,0,14.69253159,,null,null,FALSE,864
+7,8,is the number 5?,,387.965689,,0,14.75896072,,null,null,FALSE,865
+7,8,is the number 5?,,388.971566,,0,15.11410522,,null,null,FALSE,866
+7,8,is the number 5?,,389.982809,,0,14.06911087,,null,null,FALSE,867
+7,8,is the number 5?,,390.979958,,0,13.8033905,,null,null,FALSE,868
+7,8,is the number 5?,,391.981407,,0,20.48215866,,null,null,FALSE,869
+7,8,is the number 5?,,392.978641,,0,25.22935104,,null,null,FALSE,870
+7,8,is the number 5?,,393.978737,,0,12.98579025,,null,null,FALSE,871
+7,8,is the number 5?,,394.971915,,0,17.06612396,,null,null,FALSE,872
+7,8,is the number 5?,,395.968161,,0,14.60565948,,null,null,FALSE,873
+7,8,is the number 5?,,396.965017,,0,9.608078003,,null,null,FALSE,874
+7,8,is the number 5?,,397.977293,,0,8.30758667,,null,null,FALSE,875
+7,8,is the number 5?,,398.991095,,0,9.539093018,,null,null,FALSE,876
+7,8,is the number 5?,,399.979696,,0,15.37982559,,null,null,FALSE,877
+7,8,is the number 5?,,400.977749,,0,9.362800598,,null,null,FALSE,878
+7,8,is the number 5?,,401.982782,,0,12.49267578,,null,null,FALSE,879
+7,8,is the number 5?,,402.972177,,0,28.21870041,,null,null,FALSE,880
+7,8,is the number 5?,,403.971711,,0,27.5314064,,null,null,FALSE,881
+7,8,is the number 5?,,404.968974,,0,25.88853836,,null,null,FALSE,882
+7,8,is the number 5?,,405.988417,,0,25.62282181,,null,null,FALSE,883
+7,8,is the number 5?,,406.985809,,0,25.0760498,,null,null,FALSE,884
+7,8,is the number 5?,,407.978753,,0,24.98918152,,null,null,FALSE,885
+7,8,is the number 5?,,408.980728,,0,24.69024658,,null,null,FALSE,886
+7,8,is the number 5?,,410.000549,,0,18.25164413,,null,null,FALSE,887
+7,8,is the number 5?,,410.973248,,0,14.26073456,,null,null,FALSE,888
+7,8,is the number 5?,,411.965972,,0,27.62338638,,null,null,FALSE,889
+7,8,is the number 5?,,413.000933,,0,14.06399918,,null,null,FALSE,890
+7,8,is the number 5?,,413.989419,,0,7.426109314,,null,null,FALSE,891
+7,8,is the number 5?,,414.980151,,0,16.06201172,,null,null,FALSE,892
+7,8,is the number 5?,,416.001371,,0,19.18677521,,null,null,FALSE,893
+7,8,is the number 5?,,416.982575,,0,16.85916901,,null,null,FALSE,894
+7,8,is the number 5?,,417.971862,,0,16.8234024,,null,null,FALSE,895
+7,8,is the number 5?,,419.00645,,0,16.64455032,,null,null,FALSE,896
+7,8,is the number 5?,,419.968368,,0,16.44525909,,null,null,FALSE,897
+7,8,is the number 5?,,420.970807,,0,13.63731384,,null,null,FALSE,898
+7,8,is the number 5?,,421.981315,,0,10.51766205,,null,null,FALSE,899
+7,8,is the number 5?,,422.987303,,0,9.85080719,,null,null,FALSE,900
+7,8,is the number 5?,,423.978158,,0,18.28741455,,null,null,FALSE,901
+7,8,is the number 5?,,424.977,,0,19.06413651,,null,null,FALSE,902
+7,8,is the number 5?,,425.975628,,0,18.97982025,,null,null,FALSE,903
+7,8,is the number 5?,,426.970852,,0,18.8367424,,null,null,FALSE,904
+7,8,is the number 5?,,430.845266,,0,16.21786499,,null,null,FALSE,905
+7,8,is the number 5?,,430.845383,,0,13.76506424,,null,null,FALSE,906
+7,8,is the number 5?,,430.845465,,0,13.1160965,,null,null,FALSE,907
+7,8,is the number 5?,,430.97736,,0,34.57043076,,null,null,FALSE,908
+7,9,is the number 6?,,431.976002,,0,27.36788559,,null,null,FALSE,909
+7,9,is the number 6?,,432.978943,,0,10.88047028,,null,null,FALSE,910
+7,9,is the number 6?,,433.97801,,0,14.59543991,,null,null,FALSE,911
+7,9,is the number 6?,,434.972122,,0,13.45080185,,null,null,FALSE,912
+7,9,is the number 6?,,435.963301,,0,14.11510086,,null,null,FALSE,913
+7,9,is the number 6?,,436.966938,,0,15.60466385,,null,null,FALSE,914
+7,9,is the number 6?,,437.987899,,0,14.38082123,,null,null,FALSE,915
+7,9,is the number 6?,,438.972712,,0,14.92248154,,null,null,FALSE,916
+7,9,is the number 6?,,439.970453,,0,14.61332703,,null,null,FALSE,917
+7,9,is the number 6?,,440.972357,,0,14.64398575,,null,null,FALSE,918
+7,9,is the number 6?,,441.967294,,0,15.40793228,,null,null,FALSE,919
+7,9,is the number 6?,,442.96768,,0,14.45491409,,null,null,FALSE,920
+7,9,is the number 6?,,443.966383,,0,14.80239487,,null,null,FALSE,921
+7,9,is the number 6?,,444.988214,,0,18.91083527,,null,null,FALSE,922
+7,9,is the number 6?,,445.986848,,0,33.33892059,,null,null,FALSE,923
+7,9,is the number 6?,,446.992642,,0,28.03984833,,null,null,FALSE,924
+7,9,is the number 6?,,447.979157,,0,14.29906082,,null,null,FALSE,925
+7,9,is the number 6?,,448.973213,,0,15.24185562,,null,null,FALSE,926
+7,9,is the number 6?,,449.967723,,0,13.56832886,,null,null,FALSE,927
+7,9,is the number 6?,,450.965875,,0,15.21630478,,null,null,FALSE,928
+7,9,is the number 6?,,451.962912,,0,12.93724442,,null,null,FALSE,929
+7,9,is the number 6?,,452.981531,,0,15.34149933,,null,null,FALSE,930
+7,9,is the number 6?,,453.988319,,0,13.05733109,,null,null,FALSE,931
+7,9,is the number 6?,,454.995471,,0,18.36406708,,null,null,FALSE,932
+7,9,is the number 6?,,455.975742,,0,8.948890686,,null,null,FALSE,933
+7,9,is the number 6?,,456.970557,,0,10.44867706,,null,null,FALSE,934
+7,9,is the number 6?,,457.994605,,0,26.86710358,,null,null,FALSE,935
+7,9,is the number 6?,,458.975451,,0,19.14844894,,null,null,FALSE,936
+7,9,is the number 6?,,459.973631,,0,15.44625473,,null,null,FALSE,937
+7,9,is the number 6?,,460.983351,,0,15.44881058,,null,null,FALSE,938
+7,9,is the number 6?,,461.974531,,0,16.47592163,,null,null,FALSE,939
+7,9,is the number 6?,,462.975268,,0,15.95470047,,null,null,FALSE,940
+7,9,is the number 6?,,463.984035,,0,18.80352402,,null,null,FALSE,941
+7,9,is the number 6?,,464.974392,,0,16.71353531,,null,null,FALSE,942
+7,9,is the number 6?,,465.970491,,0,17.36250687,,null,null,FALSE,943
+7,9,is the number 6?,,466.993338,,0,17.28585434,,null,null,FALSE,944
+7,9,is the number 6?,,467.957809,,0,28.14971542,,null,null,FALSE,945
+7,9,is the number 6?,,468.980106,,0,16.82595444,,null,null,FALSE,946
+7,9,is the number 6?,,469.993579,,0,16.67010117,,null,null,FALSE,947
+7,9,is the number 6?,,470.973853,,0,16.718647,,null,null,FALSE,948
+7,9,is the number 6?,,471.971444,,0,17.3420639,,null,null,FALSE,949
+7,9,is the number 6?,,472.987916,,0,17.40338516,,null,null,FALSE,950
+7,9,is the number 6?,,473.968636,,0,27.6540451,,null,null,FALSE,951
+7,9,is the number 6?,,474.96395,,0,16.85406113,,null,null,FALSE,952
+7,9,is the number 6?,,475.983535,,0,19.55469513,,null,null,FALSE,953
+7,9,is the number 6?,,476.983757,,0,17.79430008,,null,null,FALSE,954
+7,9,is the number 6?,,477.97092,,0,17.81985092,,null,null,FALSE,955
+7,9,is the number 6?,,478.988597,,0,18.99259567,,null,null,FALSE,956
+7,9,is the number 6?,,479.976688,,0,30.99598312,,null,null,FALSE,957
+7,9,is the number 6?,,480.963521,,0,38.0298996,,null,null,FALSE,958
+7,9,is the number 6?,,481.992804,,0,37.51889801,,null,null,FALSE,959
+9,1,are you 24?,,17.39968,,0,-4.347328186,,null,null,FALSE,1575
+9,1,are you 24?,,17.400051,,0,-3.815887451,,null,null,FALSE,1576
+9,1,are you 24?,,17.400405,,0,-4.416313171,,null,null,FALSE,1577
+9,1,are you 24?,,17.400751,,0,-4.533843994,,null,null,FALSE,1578
+9,1,are you 24?,,17.401141,,0,-4.48274231,,null,null,FALSE,1579
+9,1,are you 24?,,17.401473,,0,-4.57472229,,null,null,FALSE,1580
+9,1,are you 24?,,17.401768,,0,-3.46585083,,null,null,FALSE,1581
+9,1,are you 24?,,17.402062,,0,-3.082603455,,null,null,FALSE,1582
+9,1,are you 24?,,17.402394,,0,-3.723907471,,null,null,FALSE,1583
+9,1,are you 24?,,17.402689,,0,-4.411201477,,null,null,FALSE,1584
+9,1,are you 24?,,17.402985,,0,-3.228240967,,null,null,FALSE,1585
+9,1,are you 24?,,17.403295,,0,-3.550170898,,null,null,FALSE,1586
+9,1,are you 24?,,17.40365,,0,-4.237464905,,null,null,FALSE,1587
+9,1,are you 24?,,17.404016,,0,-4.127601624,,null,null,FALSE,1588
+9,1,are you 24?,,17.404382,,0,-3.39176178,,null,null,FALSE,1589
+9,1,are you 24?,,17.404895,,0,-3.838882446,,null,null,FALSE,1590
+9,1,are you 24?,,17.405264,,0,-4.339660645,,null,null,FALSE,1591
+9,1,are you 24?,,17.405585,,0,-3.749458313,,null,null,FALSE,1592
+9,1,are you 24?,,18.011224,,0,-3.588493347,,null,null,FALSE,1593
+9,1,are you 24?,,19.015618,,0,-4.18636322,,null,null,FALSE,1594
+9,1,are you 24?,,20.01482,,0,-4.303894043,,null,null,FALSE,1595
+9,1,are you 24?,,21.015771,,0,-3.588493347,,null,null,FALSE,1596
+9,1,are you 24?,,22.019931,,0,-3.775009155,,null,null,FALSE,1597
+9,1,are you 24?,,23.013934,,0,-3.92830658,,null,null,FALSE,1598
+9,1,are you 24?,,24.0065,,0,-3.94618988,,null,null,FALSE,1599
+9,1,are you 24?,,25.011895,,0,-3.989631653,,null,null,FALSE,1600
+9,1,are you 24?,,26.007869,,0,-4.02028656,,null,null,FALSE,1601
+9,1,are you 24?,,27.021101,,0,-4.107154846,,null,null,FALSE,1602
+9,1,are you 24?,,28.01729,,0,-4.2604599,,null,null,FALSE,1603
+9,1,are you 24?,,29.010902,,0,-4.181251526,,null,null,FALSE,1604
+9,1,are you 24?,,30.001425,,0,-3.836326599,,null,null,FALSE,1605
+9,1,are you 24?,,30.995372,,0,-4.546615601,,null,null,FALSE,1606
+9,1,are you 24?,,32.000998,,0,-4.536399841,,null,null,FALSE,1607
+9,1,are you 24?,,32.989035,,0,-4.30644989,,null,null,FALSE,1608
+9,1,are you 24?,,34.012453,,0,-3.616600037,,null,null,FALSE,1609
+9,1,are you 24?,,35.000066,,0,-3.37387085,,null,null,FALSE,1610
+9,1,are you 24?,,35.997125,,0,-3.534835815,,null,null,FALSE,1611
+9,1,are you 24?,,37.004237,,0,-3.690696716,,null,null,FALSE,1612
+9,1,are you 24?,,37.999062,,0,-4.089271545,,null,null,FALSE,1613
+9,1,are you 24?,,38.999927,,0,-4.329444885,,null,null,FALSE,1614
+9,1,are you 24?,,40.00527,,0,-4.273231506,,null,null,FALSE,1615
+9,1,are you 24?,,41.005297,,0,-3.46585083,,null,null,FALSE,1616
+9,1,are you 24?,,42.01063,,0,-2.773445129,,null,null,FALSE,1617
+9,1,are you 24?,,43.023541,,0,-3.235900879,,null,null,FALSE,1618
+9,1,are you 24?,,44.001522,,0,-3.851661682,,null,null,FALSE,1619
+9,1,are you 24?,,45.010893,,0,-4.30644989,,null,null,FALSE,1620
+9,1,are you 24?,,46.007331,,0,-4.715248108,,null,null,FALSE,1621
+9,1,are you 24?,,47.009419,,0,-4.970748901,,null,null,FALSE,1622
+9,1,are you 24?,,48.011658,,0,-4.567054749,,null,null,FALSE,1623
+9,1,are you 24?,,48.994553,64.77558989,0,-3.608932495,108.972168,null,null,FALSE,1624
+9,1,are you 24?,,54.913395,64.77558989,0,-3.266563416,108.972168,null,null,FALSE,1625
+9,1,are you 24?,,54.913859,64.77558989,0,-3.473518372,108.972168,null,null,FALSE,1626
+9,1,are you 24?,,54.914367,64.77558989,0,-4.283454895,108.972168,null,null,FALSE,1627
+9,1,are you 24?,,54.914764,64.77558989,0,-4.641151428,108.972168,null,null,FALSE,1628
+9,1,are you 24?,,54.915229,64.77558989,0,-4.027954102,108.972168,null,null,FALSE,1629
+9,1,are you 24?,,54.999124,64.77558989,0,-3.851661682,108.972168,null,null,FALSE,1630
+9,2,is your favorite color red?,,55.989354,64.77558989,0,-4.602828979,108.972168,null,null,FALSE,1631
+9,2,is your favorite color red?,,57.012215,64.77558989,0,-4.712692261,108.972168,null,null,FALSE,1632
+9,2,is your favorite color red?,,57.999381,64.77558989,0,-4.567054749,108.972168,null,null,FALSE,1633
+9,2,is your favorite color red?,,58.999627,64.77558989,0,-3.892539978,108.972168,null,null,FALSE,1634
+9,2,is your favorite color red?,,59.992811,64.77558989,0,-3.491401672,108.972168,null,null,FALSE,1635
+9,2,is your favorite color red?,,60.999646,64.77558989,0,-2.842430115,108.972168,null,null,FALSE,1636
+9,2,is your favorite color red?,,62.002036,64.77558989,0,-3.815887451,108.972168,null,null,FALSE,1637
+9,2,is your favorite color red?,,63.004996,64.77558989,0,-4.441864014,108.972168,null,null,FALSE,1638
+9,2,is your favorite color red?,,63.997911,64.77558989,0,-4.88899231,108.972168,null,null,FALSE,1639
+9,2,is your favorite color red?,,64.99404,64.77558989,0,-5.03717804,108.972168,null,null,FALSE,1640
+9,2,is your favorite color red?,,65.997366,64.77558989,0,-5.052505493,108.972168,null,null,FALSE,1641
+9,2,is your favorite color red?,,66.989299,64.77558989,0,-4.947753906,108.972168,null,null,FALSE,1642
+9,2,is your favorite color red?,,68.010923,64.77558989,0,-4.209358215,108.972168,null,null,FALSE,1643
+9,2,is your favorite color red?,,69.07989,64.77558989,0,-3.251235962,108.972168,null,null,FALSE,1644
+9,2,is your favorite color red?,,70.003754,64.77558989,0,-2.926750183,108.972168,null,null,FALSE,1645
+9,2,is your favorite color red?,,70.999571,64.77558989,0,-3.580825806,108.972168,null,null,FALSE,1646
+9,2,is your favorite color red?,,71.983804,64.77558989,0,-4.137817383,108.972168,null,null,FALSE,1647
+9,2,is your favorite color red?,,73.010484,64.77558989,0,-4.794456482,108.972168,null,null,FALSE,1648
+9,2,is your favorite color red?,,74.002626,64.77558989,0,-5.060173035,108.972168,null,null,FALSE,1649
+9,2,is your favorite color red?,,74.998215,64.77558989,0,-5.003967285,108.972168,null,null,FALSE,1650
+9,2,is your favorite color red?,,75.999496,64.77558989,0,-4.998855591,108.972168,null,null,FALSE,1651
+9,2,is your favorite color red?,,76.994459,64.77558989,0,-4.487854004,108.972168,null,null,FALSE,1652
+9,2,is your favorite color red?,,78.016279,64.77558989,0,-3.432640076,108.972168,null,null,FALSE,1653
+9,2,is your favorite color red?,,79.005123,64.77558989,0,-3.412200928,108.972168,null,null,FALSE,1654
+9,2,is your favorite color red?,,80.000147,64.77558989,0,-4.015174866,108.972168,null,null,FALSE,1655
+9,2,is your favorite color red?,,80.993287,64.77558989,0,-4.595161438,108.972168,null,null,FALSE,1656
+9,2,is your favorite color red?,,82.000037,64.77558989,0,-4.840446472,108.972168,null,null,FALSE,1657
+9,2,is your favorite color red?,,82.987146,64.77558989,0,-4.876213074,108.972168,null,null,FALSE,1658
+9,2,is your favorite color red?,,84.006351,64.77558989,0,-3.866989136,108.972168,null,null,FALSE,1659
+9,2,is your favorite color red?,,85.000537,64.77558989,0,-3.074935913,108.972168,null,null,FALSE,1660
+9,2,is your favorite color red?,,85.997663,64.77558989,0,-3.593605042,108.972168,null,null,FALSE,1661
+9,2,is your favorite color red?,,86.997662,64.77558989,0,-4.344772339,108.972168,null,null,FALSE,1662
+9,2,is your favorite color red?,,87.9928,64.77558989,0,-4.797012329,108.972168,null,null,FALSE,1663
+9,2,is your favorite color red?,,89.001023,64.77558989,0,-4.78678894,108.972168,null,null,FALSE,1664
+9,2,is your favorite color red?,,90.008019,64.77558989,0,-3.795448303,108.972168,null,null,FALSE,1665
+9,2,is your favorite color red?,,91.016065,64.77558989,0,-3.591049194,108.972168,null,null,FALSE,1666
+9,2,is your favorite color red?,,91.99991,64.77558989,0,-4.278343201,108.972168,null,null,FALSE,1667
+9,2,is your favorite color red?,,92.997061,64.77558989,0,-4.610496521,108.972168,null,null,FALSE,1668
+9,2,is your favorite color red?,,94.012312,64.77558989,0,-4.738243103,108.972168,null,null,FALSE,1669
+9,2,is your favorite color red?,,95.010374,64.54912027,0,-4.610496521,159.7681122,null,null,FALSE,1670
+9,2,is your favorite color red?,,102.41438,64.54912027,0,-3.578269958,159.7681122,null,null,FALSE,1671
+9,2,is your favorite color red?,,102.414929,64.54912027,0,-3.021286011,159.7681122,null,null,FALSE,1672
+9,2,is your favorite color red?,,102.415317,64.54912027,0,-3.731575012,159.7681122,null,null,FALSE,1673
+9,2,is your favorite color red?,,102.415861,64.54912027,0,-4.33455658,159.7681122,null,null,FALSE,1674
+9,2,is your favorite color red?,,102.416318,64.54912027,0,-4.666702271,159.7681122,null,null,FALSE,1675
+9,2,is your favorite color red?,,102.416685,64.54912027,0,-4.707580566,159.7681122,null,null,FALSE,1676
+9,2,is your favorite color red?,,102.417044,64.54912027,0,-4.406089783,159.7681122,null,null,FALSE,1677
+9,2,is your favorite color red?,,102.989183,64.54912027,0,-3.404533386,159.7681122,null,null,FALSE,1678
+9,3,is your name ferdinand?,,103.990392,64.54912027,0,-3.897651672,159.7681122,null,null,FALSE,1679
+9,3,is your name ferdinand?,,105.000227,64.54912027,0,-4.301338196,159.7681122,null,null,FALSE,1680
+9,3,is your name ferdinand?,,105.995099,64.54912027,0,-4.027954102,159.7681122,null,null,FALSE,1681
+9,3,is your name ferdinand?,,107.000338,64.54912027,0,-4.293670654,159.7681122,null,null,FALSE,1682
+9,3,is your name ferdinand?,,107.98968,64.54912027,0,-3.969184875,159.7681122,null,null,FALSE,1683
+9,3,is your name ferdinand?,,108.987217,64.54912027,0,-3.325325012,159.7681122,null,null,FALSE,1684
+9,3,is your name ferdinand?,,110.007939,64.54912027,0,-3.693244934,159.7681122,null,null,FALSE,1685
+9,3,is your name ferdinand?,,110.997818,64.54912027,0,-3.700912476,159.7681122,null,null,FALSE,1686
+9,3,is your name ferdinand?,,112.000117,64.54912027,0,-4.007514954,159.7681122,null,null,FALSE,1687
+9,3,is your name ferdinand?,,112.996065,64.54912027,0,-4.309005737,159.7681122,null,null,FALSE,1688
+9,3,is your name ferdinand?,,113.998479,64.54912027,0,-4.743354797,159.7681122,null,null,FALSE,1689
+9,3,is your name ferdinand?,,114.991425,64.54912027,0,-4.835334778,159.7681122,null,null,FALSE,1690
+9,3,is your name ferdinand?,,116.004503,64.54912027,0,-3.846549988,159.7681122,null,null,FALSE,1691
+9,3,is your name ferdinand?,,117.003271,64.54912027,0,-2.735122681,159.7681122,null,null,FALSE,1692
+9,3,is your name ferdinand?,,118.000586,64.54912027,0,-2.921638489,159.7681122,null,null,FALSE,1693
+9,3,is your name ferdinand?,,118.995758,64.54912027,0,-3.568054199,159.7681122,null,null,FALSE,1694
+9,3,is your name ferdinand?,,119.980404,64.54912027,0,-4.173591614,159.7681122,null,null,FALSE,1695
+9,3,is your name ferdinand?,,121.00157,64.54912027,0,-4.705032349,159.7681122,null,null,FALSE,1696
+9,3,is your name ferdinand?,,122.010763,64.54912027,0,-5.00907135,159.7681122,null,null,FALSE,1697
+9,3,is your name ferdinand?,,123.001619,64.54912027,0,-5.085723877,159.7681122,null,null,FALSE,1698
+9,3,is your name ferdinand?,,123.994067,64.54912027,0,-5.072952271,159.7681122,null,null,FALSE,1699
+9,3,is your name ferdinand?,,124.983779,64.54912027,0,-4.894096375,159.7681122,null,null,FALSE,1700
+9,3,is your name ferdinand?,,125.99535,64.54912027,0,-3.767341614,159.7681122,null,null,FALSE,1701
+9,3,is your name ferdinand?,,127.014881,64.54912027,0,-2.712127686,159.7681122,null,null,FALSE,1702
+9,3,is your name ferdinand?,,128.003854,64.54912027,0,-2.635475159,159.7681122,null,null,FALSE,1703
+9,3,is your name ferdinand?,,128.990843,64.54912027,0,-3.069831848,159.7681122,null,null,FALSE,1704
+9,3,is your name ferdinand?,,129.994375,64.54912027,0,-3.67791748,159.7681122,null,null,FALSE,1705
+9,3,is your name ferdinand?,,130.997233,64.54912027,0,-4.204246521,159.7681122,null,null,FALSE,1706
+9,3,is your name ferdinand?,,132.000237,64.54912027,0,-4.78678894,159.7681122,null,null,FALSE,1707
+9,3,is your name ferdinand?,,132.994564,64.54912027,0,-5.070396423,159.7681122,null,null,FALSE,1708
+9,3,is your name ferdinand?,,134.001141,64.54912027,0,-5.044845581,159.7681122,null,null,FALSE,1709
+9,3,is your name ferdinand?,,134.991824,64.54912027,0,-4.98097229,159.7681122,null,null,FALSE,1710
+9,3,is your name ferdinand?,,136.001497,64.54912027,0,-4.311561584,159.7681122,null,null,FALSE,1711
+9,3,is your name ferdinand?,,136.985882,64.54912027,0,-3.27167511,159.7681122,null,null,FALSE,1712
+9,3,is your name ferdinand?,,138.009319,64.54912027,0,-2.592041016,159.7681122,null,null,FALSE,1713
+9,3,is your name ferdinand?,,139.006092,64.54912027,0,-2.727455139,159.7681122,null,null,FALSE,1714
+9,3,is your name ferdinand?,,140.004554,64.54912027,0,-3.601264954,159.7681122,null,null,FALSE,1715
+9,3,is your name ferdinand?,,140.992616,64.54912027,0,-4.158256531,159.7681122,null,null,FALSE,1716
+9,3,is your name ferdinand?,,141.984786,64.54912027,0,-4.697364807,159.7681122,null,null,FALSE,1717
+9,3,is your name ferdinand?,,143.002787,64.54912027,0,-5.047401428,159.7681122,null,null,FALSE,1718
+9,3,is your name ferdinand?,,144.000057,64.54912027,0,-5.044845581,159.7681122,null,null,FALSE,1719
+9,3,is your name ferdinand?,,145.007006,64.54912027,0,-4.996299744,159.7681122,null,null,FALSE,1720
+9,3,is your name ferdinand?,,145.987128,64.54912027,0,-4.605384827,159.7681122,null,null,FALSE,1721
+9,3,is your name ferdinand?,,151.89718,64.54912027,0,-3.731575012,159.7681122,null,null,FALSE,1722
+9,3,is your name ferdinand?,,151.897731,64.54912027,0,-2.6431427,159.7681122,null,null,FALSE,1723
+9,3,is your name ferdinand?,,151.898197,64.54912027,0,-1.925186157,159.7681122,null,null,FALSE,1724
+9,3,is your name ferdinand?,,151.898522,64.54912027,0,-2.632926941,159.7681122,null,null,FALSE,1725
+9,3,is your name ferdinand?,,151.898927,64.54912027,0,-3.422416687,159.7681122,null,null,FALSE,1726
+9,3,is your name ferdinand?,,152.00012,64.54912027,0,-3.92830658,159.7681122,null,null,FALSE,1727
+9,4,is the number 1?,,152.981669,64.54912027,0,-4.398429871,159.7681122,null,null,FALSE,1728
+9,4,is the number 1?,,154.009781,64.54912027,0,-4.725471497,159.7681122,null,null,FALSE,1729
+9,4,is the number 1?,,154.99923,64.54912027,0,-4.873657227,159.7681122,null,null,FALSE,1730
+9,4,is the number 1?,,155.999139,64.54912027,0,-3.925750732,159.7681122,null,null,FALSE,1731
+9,4,is the number 1?,,156.990856,64.54912027,0,-3.851661682,159.7681122,null,null,FALSE,1732
+9,4,is the number 1?,,157.985694,64.54912027,0,-3.279335022,159.7681122,null,null,FALSE,1733
+9,4,is the number 1?,,159.004278,64.54912027,0,-2.318656921,159.7681122,null,null,FALSE,1734
+9,4,is the number 1?,,160.000176,64.54912027,0,-2.880760193,159.7681122,null,null,FALSE,1735
+9,4,is the number 1?,,161.002518,64.54912027,0,-3.889984131,159.7681122,null,null,FALSE,1736
+9,4,is the number 1?,,161.996891,64.54912027,0,-4.286010742,159.7681122,null,null,FALSE,1737
+9,4,is the number 1?,,162.997984,64.54912027,0,-4.240020752,159.7681122,null,null,FALSE,1738
+9,4,is the number 1?,,163.985019,64.54912027,0,-3.378982544,159.7681122,null,null,FALSE,1739
+9,4,is the number 1?,,165.002962,64.54912027,0,-2.566490173,159.7681122,null,null,FALSE,1740
+9,4,is the number 1?,,166.000636,64.54912027,0,-2.16280365,159.7681122,null,null,FALSE,1741
+9,4,is the number 1?,,166.996932,64.54912027,0,-3.054496765,159.7681122,null,null,FALSE,1742
+9,4,is the number 1?,,167.997792,64.54912027,0,-3.637039185,159.7681122,null,null,FALSE,1743
+9,4,is the number 1?,,168.984413,64.54912027,0,-4.017730713,159.7681122,null,null,FALSE,1744
+9,4,is the number 1?,,170.002392,64.54912027,0,-4.395874023,159.7681122,null,null,FALSE,1745
+9,4,is the number 1?,,171.015452,64.54912027,0,-4.365211487,159.7681122,null,null,FALSE,1746
+9,4,is the number 1?,,172.002641,64.54912027,0,-3.746902466,159.7681122,null,null,FALSE,1747
+9,4,is the number 1?,,172.985513,64.54912027,0,-2.896087646,159.7681122,null,null,FALSE,1748
+9,4,is the number 1?,,173.995752,64.54912027,0,-2.663581848,159.7681122,null,null,FALSE,1749
+9,4,is the number 1?,,174.99173,64.54912027,0,-3.241012573,159.7681122,null,null,FALSE,1750
+9,4,is the number 1?,,175.999243,64.54912027,0,-3.813331604,159.7681122,null,null,FALSE,1751
+9,4,is the number 1?,,176.997265,64.54912027,0,-4.222129822,159.7681122,null,null,FALSE,1752
+9,4,is the number 1?,,177.996236,64.54912027,0,-4.367767334,159.7681122,null,null,FALSE,1753
+9,4,is the number 1?,,178.986736,64.54912027,0,-3.583381653,159.7681122,null,null,FALSE,1754
+9,4,is the number 1?,,179.994996,64.54912027,0,-2.878204346,159.7681122,null,null,FALSE,1755
+9,4,is the number 1?,,181.009895,64.54912027,0,-2.500061035,159.7681122,null,null,FALSE,1756
+9,4,is the number 1?,,181.995849,64.54912027,0,-3.062164307,159.7681122,null,null,FALSE,1757
+9,4,is the number 1?,,182.992142,64.54912027,0,-3.619155884,159.7681122,null,null,FALSE,1758
+9,4,is the number 1?,,183.99482,64.54912027,0,-4.038169861,159.7681122,null,null,FALSE,1759
+9,4,is the number 1?,,184.986353,64.54912027,0,-4.406089783,159.7681122,null,null,FALSE,1760
+9,4,is the number 1?,,185.984885,64.54912027,0,-4.551727295,159.7681122,null,null,FALSE,1761
+9,4,is the number 1?,,187.005188,64.54912027,0,-3.787780762,159.7681122,null,null,FALSE,1762
+9,4,is the number 1?,,188.003426,64.54912027,0,-3.629371643,159.7681122,null,null,FALSE,1763
+9,4,is the number 1?,,188.992343,64.54912027,0,-4.280899048,159.7681122,null,null,FALSE,1764
+9,4,is the number 1?,,189.992258,64.54912027,0,-4.464859009,159.7681122,null,null,FALSE,1765
+9,4,is the number 1?,,190.987093,64.54912027,0,-3.667701721,159.7681122,null,null,FALSE,1766
+9,4,is the number 1?,,192.007533,64.54912027,0,-2.558830261,159.7681122,null,null,FALSE,1767
+9,4,is the number 1?,,193.006853,64.54912027,0,-2.101486206,159.7681122,null,null,FALSE,1768
+9,4,is the number 1?,,198.388335,64.54912027,0,-2.676361084,159.7681122,null,null,FALSE,1769
+9,4,is the number 1?,,198.388741,64.54912027,0,-3.430084229,159.7681122,null,null,FALSE,1770
+9,4,is the number 1?,,198.389333,64.54912027,0,-3.971740723,159.7681122,null,null,FALSE,1771
+9,4,is the number 1?,,198.389761,64.54912027,0,-4.270675659,159.7681122,null,null,FALSE,1772
+9,4,is the number 1?,,198.390182,64.54912027,0,-4.439308167,159.7681122,null,null,FALSE,1773
+9,4,is the number 1?,,199.004833,64.54912027,0,-4.375434875,159.7681122,null,null,FALSE,1774
+9,5,is the number 2?,,200.001201,64.54912027,0,-3.514396667,159.7681122,null,null,FALSE,1775
+9,5,is the number 2?,,200.993969,64.54912027,0,-2.737678528,159.7681122,null,null,FALSE,1776
+9,5,is the number 2?,,201.989304,64.54912027,0,-3.120925903,159.7681122,null,null,FALSE,1777
+9,5,is the number 2?,,202.98151,64.54912027,0,-3.202690125,159.7681122,null,null,FALSE,1778
+9,5,is the number 2?,,204.005119,64.54912027,0,-3.744346619,159.7681122,null,null,FALSE,1779
+9,5,is the number 2?,,204.998862,64.54912027,0,-4.211914063,159.7681122,null,null,FALSE,1780
+9,5,is the number 2?,,206.004361,64.54912027,0,-4.132705688,159.7681122,null,null,FALSE,1781
+9,5,is the number 2?,,206.986827,64.54912027,0,-2.965072632,159.7681122,null,null,FALSE,1782
+9,5,is the number 2?,,207.989963,64.54912027,0,-2.265007019,159.7681122,null,null,FALSE,1783
+9,5,is the number 2?,,209.00771,64.54912027,0,-3.207801819,159.7681122,null,null,FALSE,1784
+9,5,is the number 2?,,209.996714,64.54912027,0,-3.838882446,159.7681122,null,null,FALSE,1785
+9,5,is the number 2?,,210.995891,64.54912027,0,-4.109710693,159.7681122,null,null,FALSE,1786
+9,5,is the number 2?,,211.986045,64.54912027,0,-4.242576599,159.7681122,null,null,FALSE,1787
+9,5,is the number 2?,,212.985902,64.54912027,0,-3.550170898,159.7681122,null,null,FALSE,1788
+9,5,is the number 2?,,213.998699,64.54912027,0,-2.561386108,159.7681122,null,null,FALSE,1789
+9,5,is the number 2?,,214.996601,64.54912027,0,-2.050384521,159.7681122,null,null,FALSE,1790
+9,5,is the number 2?,,215.996487,64.54912027,0,-2.272666931,159.7681122,null,null,FALSE,1791
+9,5,is the number 2?,,216.991816,64.54912027,0,-3.253791809,159.7681122,null,null,FALSE,1792
+9,5,is the number 2?,,217.986493,64.54912027,0,-3.698356628,159.7681122,null,null,FALSE,1793
+9,5,is the number 2?,,218.984553,64.54912027,0,-4.010070801,159.7681122,null,null,FALSE,1794
+9,5,is the number 2?,,220.014739,64.54912027,0,-4.2604599,159.7681122,null,null,FALSE,1795
+9,5,is the number 2?,,220.998693,64.54912027,0,-4.339660645,159.7681122,null,null,FALSE,1796
+9,5,is the number 2?,,222.017635,64.54912027,0,-4.314109802,159.7681122,null,null,FALSE,1797
+9,5,is the number 2?,,222.993371,64.54912027,0,-3.401977539,159.7681122,null,null,FALSE,1798
+9,5,is the number 2?,,223.991225,64.54912027,0,-2.663581848,159.7681122,null,null,FALSE,1799
+9,5,is the number 2?,,224.998912,64.54912027,0,-3.039169312,159.7681122,null,null,FALSE,1800
+9,5,is the number 2?,,226.00243,64.54912027,0,-3.642150879,159.7681122,null,null,FALSE,1801
+9,5,is the number 2?,,226.994235,64.54912027,0,-4.010070801,159.7681122,null,null,FALSE,1802
+9,5,is the number 2?,,228.001168,64.54912027,0,-4.247680664,159.7681122,null,null,FALSE,1803
+9,5,is the number 2?,,228.992531,64.54912027,0,-4.462303162,159.7681122,null,null,FALSE,1804
+9,5,is the number 2?,,229.991474,64.54912027,0,-4.178695679,159.7681122,null,null,FALSE,1805
+9,5,is the number 2?,,231.011861,64.54912027,0,-3.368766785,159.7681122,null,null,FALSE,1806
+9,5,is the number 2?,,232.002069,64.54912027,0,-2.93952179,159.7681122,null,null,FALSE,1807
+9,5,is the number 2?,,232.993256,64.54912027,0,-2.487289429,159.7681122,null,null,FALSE,1808
+9,5,is the number 2?,,234.002003,64.54912027,0,-2.898643494,159.7681122,null,null,FALSE,1809
+9,5,is the number 2?,,234.985991,64.54912027,0,-3.547615051,159.7681122,null,null,FALSE,1810
+9,5,is the number 2?,,235.981514,64.54912027,0,-3.958969116,159.7681122,null,null,FALSE,1811
+9,5,is the number 2?,,237.012791,64.54912027,0,-4.23235321,159.7681122,null,null,FALSE,1812
+9,5,is the number 2?,,238.007296,64.54912027,0,-4.689697266,159.7681122,null,null,FALSE,1813
+9,5,is the number 2?,,238.999986,64.54912027,0,-4.975860596,159.7681122,null,null,FALSE,1814
+9,5,is the number 2?,,239.992133,64.54912027,0,-5.062728882,159.7681122,null,null,FALSE,1815
+9,5,is the number 2?,,240.984505,64.54912027,0,-5.075500488,159.7681122,null,null,FALSE,1816
+9,5,is the number 2?,,242.007515,64.54912027,0,-4.383094788,159.7681122,null,null,FALSE,1817
+9,5,is the number 2?,,242.989757,64.54912027,0,-3.248680115,159.7681122,null,null,FALSE,1818
+9,5,is the number 2?,,244.019766,64.54912027,0,-2.650810242,159.7681122,null,null,FALSE,1819
+9,5,is the number 2?,,244.985762,64.54912027,0,-2.793891907,159.7681122,null,null,FALSE,1820
+9,5,is the number 2?,,250.412967,64.54912027,0,-3.453079224,159.7681122,null,null,FALSE,1821
+9,5,is the number 2?,,250.413374,64.54912027,0,-3.958969116,159.7681122,null,null,FALSE,1822
+9,5,is the number 2?,,250.413887,64.54912027,0,-4.390762329,159.7681122,null,null,FALSE,1823
+9,5,is the number 2?,,250.414247,64.54912027,0,-4.551727295,159.7681122,null,null,FALSE,1824
+9,5,is the number 2?,,250.414655,64.54912027,0,-4.132705688,159.7681122,null,null,FALSE,1825
+9,6,is the number 3?,,250.986371,64.54912027,0,-3.131149292,159.7681122,null,null,FALSE,1826
+9,6,is the number 3?,,251.986798,64.54912027,0,-2.952301025,159.7681122,null,null,FALSE,1827
+9,6,is the number 3?,,252.996991,64.54912027,0,-3.228240967,159.7681122,null,null,FALSE,1828
+9,6,is the number 3?,,254.00462,64.54912027,0,-3.726463318,159.7681122,null,null,FALSE,1829
+9,6,is the number 3?,,254.993178,64.54912027,0,-3.560386658,159.7681122,null,null,FALSE,1830
+9,6,is the number 3?,,255.99916,64.54912027,0,-2.571601868,159.7681122,null,null,FALSE,1831
+9,6,is the number 3?,,256.982822,64.54912027,0,-2.798995972,159.7681122,null,null,FALSE,1832
+9,6,is the number 3?,,258.003494,64.54912027,0,-3.570610046,159.7681122,null,null,FALSE,1833
+9,6,is the number 3?,,259.003471,64.54912027,0,-3.953857422,159.7681122,null,null,FALSE,1834
+9,6,is the number 3?,,260.011772,64.54912027,0,-4.286010742,159.7681122,null,null,FALSE,1835
+9,6,is the number 3?,,260.99101,64.54912027,0,-4.38054657,159.7681122,null,null,FALSE,1836
+9,6,is the number 3?,,261.980638,64.54912027,0,-4.459747314,159.7681122,null,null,FALSE,1837
+9,6,is the number 3?,,262.9788,64.54912027,0,-4.536399841,159.7681122,null,null,FALSE,1838
+9,6,is the number 3?,,264.004749,64.54912027,0,-3.532279968,159.7681122,null,null,FALSE,1839
+9,6,is the number 3?,,264.994821,64.54912027,0,-2.709571838,159.7681122,null,null,FALSE,1840
+9,6,is the number 3?,,265.988632,64.54912027,0,-3.430084229,159.7681122,null,null,FALSE,1841
+9,6,is the number 3?,,266.995255,64.54912027,0,-3.91809082,159.7681122,null,null,FALSE,1842
+9,6,is the number 3?,,267.984811,64.54912027,0,-4.423980713,159.7681122,null,null,FALSE,1843
+9,6,is the number 3?,,269.002969,64.54912027,0,-4.822555542,159.7681122,null,null,FALSE,1844
+9,6,is the number 3?,,269.996047,64.54912027,0,-4.825111389,159.7681122,null,null,FALSE,1845
+9,6,is the number 3?,,270.991678,64.54912027,0,-3.953857422,159.7681122,null,null,FALSE,1846
+9,6,is the number 3?,,271.987024,64.54912027,0,-3.044281006,159.7681122,null,null,FALSE,1847
+9,6,is the number 3?,,272.992032,64.54912027,0,-2.95740509,159.7681122,null,null,FALSE,1848
+9,6,is the number 3?,,273.982051,64.54912027,0,-3.657478333,159.7681122,null,null,FALSE,1849
+9,6,is the number 3?,,274.998196,64.54912027,0,-4.18636322,159.7681122,null,null,FALSE,1850
+9,6,is the number 3?,,276.003274,64.54912027,0,-4.549171448,159.7681122,null,null,FALSE,1851
+9,6,is the number 3?,,276.990902,64.54912027,0,-4.252792358,159.7681122,null,null,FALSE,1852
+9,6,is the number 3?,,277.985897,64.54912027,0,-3.210350037,159.7681122,null,null,FALSE,1853
+9,6,is the number 3?,,278.975716,64.54912027,0,-2.714683533,159.7681122,null,null,FALSE,1854
+9,6,is the number 3?,,280.00386,64.54912027,0,-3.189910889,159.7681122,null,null,FALSE,1855
+9,6,is the number 3?,,281.000512,64.54912027,0,-3.951301575,159.7681122,null,null,FALSE,1856
+9,6,is the number 3?,,281.997362,64.54912027,0,-4.400985718,159.7681122,null,null,FALSE,1857
+9,6,is the number 3?,,282.990044,64.54912027,0,-4.385650635,159.7681122,null,null,FALSE,1858
+9,6,is the number 3?,,283.977712,64.54912027,0,-3.629371643,159.7681122,null,null,FALSE,1859
+9,6,is the number 3?,,285.003895,64.54912027,0,-2.528167725,159.7681122,null,null,FALSE,1860
+9,6,is the number 3?,,285.990493,64.54912027,0,-2.714683533,159.7681122,null,null,FALSE,1861
+9,6,is the number 3?,,286.992422,64.54912027,0,-3.039169312,159.7681122,null,null,FALSE,1862
+9,6,is the number 3?,,287.983137,64.54912027,0,-3.22568512,159.7681122,null,null,FALSE,1863
+9,6,is the number 3?,,288.980809,64.54912027,0,-3.649810791,159.7681122,null,null,FALSE,1864
+9,6,is the number 3?,,289.987775,64.54912027,0,-4.219581604,159.7681122,null,null,FALSE,1865
+9,6,is the number 3?,,290.999228,64.54912027,0,-4.319221497,159.7681122,null,null,FALSE,1866
+9,6,is the number 3?,,291.990785,64.54912027,0,-4.040725708,159.7681122,null,null,FALSE,1867
+9,6,is the number 3?,,292.985842,64.54912027,0,-3.79800415,159.7681122,null,null,FALSE,1868
+9,6,is the number 3?,,293.99288,64.54912027,0,-4.076499939,159.7681122,null,null,FALSE,1869
+9,6,is the number 3?,,294.986492,64.54912027,0,-3.905311584,159.7681122,null,null,FALSE,1870
+9,6,is the number 3?,,295.9971,64.54912027,0,-4.127601624,159.7681122,null,null,FALSE,1871
+9,6,is the number 3?,,296.997865,64.54912027,0,-4.365211487,159.7681122,null,null,FALSE,1872
+9,6,is the number 3?,,297.988977,64.54912027,0,-4.178695679,159.7681122,null,null,FALSE,1873
+9,6,is the number 3?,,298.987226,64.54912027,0,-3.46585083,159.7681122,null,null,FALSE,1874
+9,6,is the number 3?,,299.992226,64.54912027,0,-3.371315002,159.7681122,null,null,FALSE,1875
+9,6,is the number 3?,,305.384628,64.54912027,0,-3.409645081,159.7681122,null,null,FALSE,1876
+9,6,is the number 3?,,305.385129,64.54912027,0,-3.838882446,159.7681122,null,null,FALSE,1877
+9,6,is the number 3?,,305.38562,64.54912027,0,-4.429084778,159.7681122,null,null,FALSE,1878
+9,6,is the number 3?,,305.386017,64.54912027,0,-4.183807373,159.7681122,null,null,FALSE,1879
+9,6,is the number 3?,,305.386399,64.54912027,0,-3.248680115,159.7681122,null,null,FALSE,1880
+9,7,is your number 4?,,305.989576,64.54912027,0,-2.806663513,159.7681122,null,null,FALSE,1881
+9,7,is your number 4?,,307.004487,64.54912027,0,-2.701911926,159.7681122,null,null,FALSE,1882
+9,7,is your number 4?,,308.002488,64.54912027,0,-2.027389526,159.7681122,null,null,FALSE,1883
+9,7,is your number 4?,,308.994556,64.54912027,0,-2.351875305,159.7681122,null,null,FALSE,1884
+9,7,is your number 4?,,309.983347,64.54912027,0,-3.302330017,159.7681122,null,null,FALSE,1885
+9,7,is your number 4?,,310.978409,64.54912027,0,-4.263015747,159.7681122,null,null,FALSE,1886
+9,7,is your number 4?,,312.007354,64.54912027,0,-4.196586609,159.7681122,null,null,FALSE,1887
+9,7,is your number 4?,,312.992012,64.54912027,0,-3.407089233,159.7681122,null,null,FALSE,1888
+9,7,is your number 4?,,313.997637,64.54912027,0,-4.025398254,159.7681122,null,null,FALSE,1889
+9,7,is your number 4?,,314.991028,64.54912027,0,-4.385650635,159.7681122,null,null,FALSE,1890
+9,7,is your number 4?,,315.983769,64.54912027,0,-3.70602417,159.7681122,null,null,FALSE,1891
+9,7,is your number 4?,,316.981807,64.54912027,0,-3.3176651,159.7681122,null,null,FALSE,1892
+9,7,is your number 4?,,318.002826,64.54912027,0,-4.395874023,159.7681122,null,null,FALSE,1893
+9,7,is your number 4?,,318.998785,64.54912027,0,-4.894096375,159.7681122,null,null,FALSE,1894
+9,7,is your number 4?,,319.985235,64.54912027,0,-3.938529968,159.7681122,null,null,FALSE,1895
+9,7,is your number 4?,,320.993943,64.54912027,0,-2.732566833,159.7681122,null,null,FALSE,1896
+9,7,is your number 4?,,321.972111,64.54912027,0,-2.658470154,159.7681122,null,null,FALSE,1897
+9,7,is your number 4?,,322.996933,64.54912027,0,-3.496513367,159.7681122,null,null,FALSE,1898
+9,7,is your number 4?,,323.994574,64.54912027,0,-4.104606628,159.7681122,null,null,FALSE,1899
+9,7,is your number 4?,,325.009569,64.54912027,0,-4.505737305,159.7681122,null,null,FALSE,1900
+9,7,is your number 4?,,325.986223,64.54912027,0,-4.546615601,159.7681122,null,null,FALSE,1901
+9,7,is your number 4?,,326.981427,64.54912027,0,-4.127601624,159.7681122,null,null,FALSE,1902
+9,7,is your number 4?,,328.007131,64.54912027,0,-3.386650085,159.7681122,null,null,FALSE,1903
+9,7,is your number 4?,,328.999378,64.54912027,0,-4.135261536,159.7681122,null,null,FALSE,1904
+9,7,is your number 4?,,329.990092,64.54912027,0,-4.390762329,159.7681122,null,null,FALSE,1905
+9,7,is your number 4?,,330.993521,64.54912027,0,-4.505737305,159.7681122,null,null,FALSE,1906
+9,7,is your number 4?,,331.98108,64.54912027,0,-4.774017334,159.7681122,null,null,FALSE,1907
+9,7,is your number 4?,,333.000841,64.54912027,0,-4.541511536,159.7681122,null,null,FALSE,1908
+9,7,is your number 4?,,333.999566,64.54912027,0,-3.473518372,159.7681122,null,null,FALSE,1909
+9,7,is your number 4?,,335.00436,64.54912027,0,-2.995735168,159.7681122,null,null,FALSE,1910
+9,7,is your number 4?,,335.995113,64.54912027,0,-3.256340027,159.7681122,null,null,FALSE,1911
+9,7,is your number 4?,,336.984247,64.54912027,0,-3.874656677,159.7681122,null,null,FALSE,1912
+9,7,is your number 4?,,337.984224,64.54912027,0,-4.025398254,159.7681122,null,null,FALSE,1913
+9,7,is your number 4?,,339.004125,64.54912027,0,-3.424972534,159.7681122,null,null,FALSE,1914
+9,7,is your number 4?,,339.996024,64.54912027,0,-2.359535217,159.7681122,null,null,FALSE,1915
+9,7,is your number 4?,,340.998376,64.54912027,0,-2.234344482,159.7681122,null,null,FALSE,1916
+9,7,is your number 4?,,342.003597,64.54912027,0,-3.19757843,159.7681122,null,null,FALSE,1917
+9,7,is your number 4?,,342.991467,64.54912027,0,-3.805671692,159.7681122,null,null,FALSE,1918
+9,7,is your number 4?,,344.007325,64.54912027,0,-4.160812378,159.7681122,null,null,FALSE,1919
+9,7,is your number 4?,,345.010902,64.54912027,0,-4.332000732,159.7681122,null,null,FALSE,1920
+9,7,is your number 4?,,345.995105,64.54912027,0,-4.538955688,159.7681122,null,null,FALSE,1921
+9,7,is your number 4?,,346.995976,64.54912027,0,-4.779121399,159.7681122,null,null,FALSE,1922
+9,7,is your number 4?,,347.987541,64.54912027,0,-4.929870605,159.7681122,null,null,FALSE,1923
+9,7,is your number 4?,,352.476288,64.54912027,0,-4.970748901,159.7681122,null,null,FALSE,1924
+9,7,is your number 4?,,352.476723,64.54912027,0,-4.855773926,159.7681122,null,null,FALSE,1925
+9,7,is your number 4?,,352.4775,64.54912027,0,-3.831214905,159.7681122,null,null,FALSE,1926
+9,7,is your number 4?,,352.47796,64.54912027,0,-3.338104248,159.7681122,null,null,FALSE,1927
+9,7,is your number 4?,,352.98742,64.54912027,0,-3.172027588,159.7681122,null,null,FALSE,1928
+9,8,is the number 5?,,354.009843,64.54912027,0,-3.550170898,159.7681122,null,null,FALSE,1929
+9,8,is the number 5?,,355.000839,64.54912027,0,-3.869544983,159.7681122,null,null,FALSE,1930
+9,8,is the number 5?,,355.988485,64.54912027,0,-4.076499939,159.7681122,null,null,FALSE,1931
+9,8,is the number 5?,,356.989592,64.54912027,0,-3.713691711,159.7681122,null,null,FALSE,1932
+9,8,is the number 5?,,357.98778,64.54912027,0,-3.22568512,159.7681122,null,null,FALSE,1933
+9,8,is the number 5?,,358.969574,64.54912027,0,-4.053504944,159.7681122,null,null,FALSE,1934
+9,8,is the number 5?,,360.000309,64.54912027,0,-4.623268127,159.7681122,null,null,FALSE,1935
+9,8,is the number 5?,,360.995774,64.54912027,0,-4.705032349,159.7681122,null,null,FALSE,1936
+9,8,is the number 5?,,361.994798,64.54912027,0,-4.605384827,159.7681122,null,null,FALSE,1937
+9,8,is the number 5?,,362.985114,64.54912027,0,-3.94618988,159.7681122,null,null,FALSE,1938
+9,8,is the number 5?,,363.97933,64.54912027,0,-3.054496765,159.7681122,null,null,FALSE,1939
+9,8,is the number 5?,,364.995592,64.54912027,0,-2.740234375,159.7681122,null,null,FALSE,1940
+9,8,is the number 5?,,365.99479,64.54912027,0,-3.228240967,159.7681122,null,null,FALSE,1941
+9,8,is the number 5?,,366.988065,64.54912027,0,-3.723907471,159.7681122,null,null,FALSE,1942
+9,8,is the number 5?,,367.982942,64.54912027,0,-4.183807373,159.7681122,null,null,FALSE,1943
+9,8,is the number 5?,,368.981747,64.54912027,0,-4.38054657,159.7681122,null,null,FALSE,1944
+9,8,is the number 5?,,370.006993,64.54912027,0,-4.567054749,159.7681122,null,null,FALSE,1945
+9,8,is the number 5?,,370.997184,64.54912027,0,-4.771461487,159.7681122,null,null,FALSE,1946
+9,8,is the number 5?,,371.982468,64.54912027,0,-4.153144836,159.7681122,null,null,FALSE,1947
+9,8,is the number 5?,,372.981849,64.54912027,0,-3.218017578,159.7681122,null,null,FALSE,1948
+9,8,is the number 5?,,373.982335,64.54912027,0,-2.569046021,159.7681122,null,null,FALSE,1949
+9,8,is the number 5?,,374.995185,64.54912027,0,-3.238456726,159.7681122,null,null,FALSE,1950
+9,8,is the number 5?,,375.99767,64.54912027,0,-4.18636322,159.7681122,null,null,FALSE,1951
+9,8,is the number 5?,,377.000168,64.54912027,0,-4.779121399,159.7681122,null,null,FALSE,1952
+9,8,is the number 5?,,377.989802,64.54912027,0,-5.024406433,159.7681122,null,null,FALSE,1953
+9,8,is the number 5?,,378.989164,64.54912027,0,-5.090835571,159.7681122,null,null,FALSE,1954
+9,8,is the number 5?,,379.9768,64.54912027,0,-4.993743896,159.7681122,null,null,FALSE,1955
+9,8,is the number 5?,,381.02311,64.54912027,0,-4.247680664,159.7681122,null,null,FALSE,1956
+9,8,is the number 5?,,381.993429,64.54912027,0,-3.156700134,159.7681122,null,null,FALSE,1957
+9,8,is the number 5?,,382.979834,64.54912027,0,-1.904747009,159.7681122,null,null,FALSE,1958
+9,8,is the number 5?,,383.97791,64.54912027,0,-2.150032043,159.7681122,null,null,FALSE,1959
+9,8,is the number 5?,,384.981348,64.54912027,0,-2.699356079,159.7681122,null,null,FALSE,1960
+9,8,is the number 5?,,386.013232,64.54912027,0,-3.338104248,159.7681122,null,null,FALSE,1961
+9,8,is the number 5?,,386.993158,64.54912027,0,-3.836326599,159.7681122,null,null,FALSE,1962
+9,8,is the number 5?,,387.992604,64.54912027,0,-4.211914063,159.7681122,null,null,FALSE,1963
+9,8,is the number 5?,,388.982232,64.54912027,0,-4.469970703,159.7681122,null,null,FALSE,1964
+9,8,is the number 5?,,389.97931,64.54912027,0,-4.446975708,159.7681122,null,null,FALSE,1965
+9,8,is the number 5?,,391.001674,64.54912027,0,-3.27167511,159.7681122,null,null,FALSE,1966
+9,8,is the number 5?,,391.994345,64.54912027,0,-2.280334473,159.7681122,null,null,FALSE,1967
+9,8,is the number 5?,,392.983227,64.54912027,0,-1.927742004,159.7681122,null,null,FALSE,1968
+9,8,is the number 5?,,393.980345,64.54912027,0,-2.377426147,159.7681122,null,null,FALSE,1969
+9,8,is the number 5?,,394.985402,64.54912027,0,-3.281890869,159.7681122,null,null,FALSE,1970
+9,8,is the number 5?,,395.999346,64.54912027,0,-3.80821991,159.7681122,null,null,FALSE,1971
+9,8,is the number 5?,,396.997034,64.54912027,0,-4.130149841,159.7681122,null,null,FALSE,1972
+9,8,is the number 5?,,397.985444,64.54912027,0,-4.467414856,159.7681122,null,null,FALSE,1973
+9,8,is the number 5?,,402.379785,64.54912027,0,-4.705032349,159.7681122,null,null,FALSE,1974
+9,8,is the number 5?,,402.380199,64.54912027,0,-4.809783936,159.7681122,null,null,FALSE,1975
+9,8,is the number 5?,,402.380471,64.54912027,0,-4.508293152,159.7681122,null,null,FALSE,1976
+9,8,is the number 5?,,402.380707,64.54912027,0,-3.514396667,159.7681122,null,null,FALSE,1977
+9,9,is the number 6?,,402.98861,64.54912027,0,-3.565498352,159.7681122,null,null,FALSE,1978
+9,9,is the number 6?,,403.978677,64.54912027,0,-3.703468323,159.7681122,null,null,FALSE,1979
+9,9,is the number 6?,,404.98123,64.54912027,0,-3.207801819,159.7681122,null,null,FALSE,1980
+9,9,is the number 6?,,405.982591,64.54912027,0,-3.565498352,159.7681122,null,null,FALSE,1981
+9,9,is the number 6?,,407.004332,64.54912027,0,-2.949745178,159.7681122,null,null,FALSE,1982
+9,9,is the number 6?,,407.997539,64.54912027,0,-2.285446167,159.7681122,null,null,FALSE,1983
+9,9,is the number 6?,,408.992999,64.54912027,0,-2.387641907,159.7681122,null,null,FALSE,1984
+9,9,is the number 6?,,409.987108,64.54912027,0,-3.044281006,159.7681122,null,null,FALSE,1985
+9,9,is the number 6?,,410.975624,64.54912027,0,-3.470962524,159.7681122,null,null,FALSE,1986
+9,9,is the number 6?,,411.983196,64.54912027,0,-3.897651672,159.7681122,null,null,FALSE,1987
+9,9,is the number 6?,,412.999733,64.54912027,0,-4.199134827,159.7681122,null,null,FALSE,1988
+9,9,is the number 6?,,413.991516,64.54912027,0,-4.413757324,159.7681122,null,null,FALSE,1989
+9,9,is the number 6?,,414.982608,64.54912027,0,-4.546615601,159.7681122,null,null,FALSE,1990
+9,9,is the number 6?,,415.983609,64.54912027,0,-4.538955688,159.7681122,null,null,FALSE,1991
+9,9,is the number 6?,,416.989667,64.54912027,0,-3.984519958,159.7681122,null,null,FALSE,1992
+9,9,is the number 6?,,417.994758,64.54912027,0,-3.046836853,159.7681122,null,null,FALSE,1993
+9,9,is the number 6?,,419.005408,64.54912027,0,-2.379981995,159.7681122,null,null,FALSE,1994
+9,9,is the number 6?,,419.996384,64.54912027,0,-3.080047607,159.7681122,null,null,FALSE,1995
+9,9,is the number 6?,,420.994059,64.54912027,0,-3.652366638,159.7681122,null,null,FALSE,1996
+9,9,is the number 6?,,421.983053,64.54912027,0,-4.058616638,159.7681122,null,null,FALSE,1997
+9,9,is the number 6?,,422.972995,64.54912027,0,-4.326889038,159.7681122,null,null,FALSE,1998
+9,9,is the number 6?,,423.991381,64.54912027,0,-4.556838989,159.7681122,null,null,FALSE,1999
+9,9,is the number 6?,,424.989717,64.54912027,0,-4.682037354,159.7681122,null,null,FALSE,2000
+9,9,is the number 6?,,425.983362,64.54912027,0,-4.722915649,159.7681122,null,null,FALSE,2001
+9,9,is the number 6?,,427.000111,64.54912027,0,-4.720359802,159.7681122,null,null,FALSE,2002
+9,9,is the number 6?,,427.985297,64.54912027,0,-3.874656677,159.7681122,null,null,FALSE,2003
+9,9,is the number 6?,,429.011285,64.54912027,0,-2.76322937,159.7681122,null,null,FALSE,2004
+9,9,is the number 6?,,430.000396,64.54912027,0,-2.408081055,159.7681122,null,null,FALSE,2005
+9,9,is the number 6?,,430.989945,64.54912027,0,-2.681465149,159.7681122,null,null,FALSE,2006
+9,9,is the number 6?,,431.989147,64.54912027,0,-3.468406677,159.7681122,null,null,FALSE,2007
+9,9,is the number 6?,,432.979222,64.54912027,0,-3.969184875,159.7681122,null,null,FALSE,2008
+9,9,is the number 6?,,434.002835,64.54912027,0,-4.395874023,159.7681122,null,null,FALSE,2009
+9,9,is the number 6?,,434.989561,64.54912027,0,-4.753570557,159.7681122,null,null,FALSE,2010
+9,9,is the number 6?,,435.997856,64.54912027,0,-5.003967285,159.7681122,null,null,FALSE,2011
+9,9,is the number 6?,,436.997836,64.54912027,0,-5.060173035,159.7681122,null,null,FALSE,2012
+9,9,is the number 6?,,437.979481,64.54912027,0,-4.845550537,159.7681122,null,null,FALSE,2013
+9,9,is the number 6?,,438.973894,64.54912027,0,-4.183807373,159.7681122,null,null,FALSE,2014
+9,9,is the number 6?,,439.990639,64.54912027,0,-3.350875854,159.7681122,null,null,FALSE,2015
+9,9,is the number 6?,,440.989744,64.54912027,0,-2.847541809,159.7681122,null,null,FALSE,2016
+9,9,is the number 6?,,441.984311,64.54912027,0,-2.54094696,159.7681122,null,null,FALSE,2017
+9,9,is the number 6?,,442.984331,64.54912027,0,-2.676361084,159.7681122,null,null,FALSE,2018
+9,9,is the number 6?,,443.985225,64.54912027,0,-3.435195923,159.7681122,null,null,FALSE,2019
+9,9,is the number 6?,,444.973174,64.54912027,0,-4.025398254,159.7681122,null,null,FALSE,2020
+9,9,is the number 6?,,445.983616,64.54912027,0,-4.487854004,159.7681122,null,null,FALSE,2021
+9,9,is the number 6?,,446.972059,64.54912027,0,-4.820007324,159.7681122,null,null,FALSE,2022
+9,9,is the number 6?,,447.984432,64.54912027,0,-5.052505493,159.7681122,null,null,FALSE,2023

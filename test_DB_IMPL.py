@@ -7,22 +7,6 @@ from sqlite3 import connect
 import database
 from sqlalchemy import create_engine
 
-db_con = mysql.connector.connect(
-    host="173.255.232.150",
-    user="cis4398",
-    passwd="dNC=IK~9)7",
-    database="Questions"
-)
-
-
-
-df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse, skin_conductivity, respiration_belt, blood_pressure, actual_ans  FROM SingularRecording;", db_con)
-
-#pd.set_option('display.expand_frame_repr', False)
-
-print(df)
-
-db_con.close()
 
 
 """while i > 0:

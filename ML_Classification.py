@@ -22,7 +22,7 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "db_Nov13.csv")
+    "db_Nov13_v2.csv")
 
 # Convert to numpy classificatin
 x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
@@ -30,3 +30,14 @@ x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'ski
 dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
 y = dummies.values
+
+#Build Neural network
+model = Sequential()
+model.add(Dense(50, input_dim=x.shape[1], activation='relu')) # Hidden 1
+model.add(Dense(25, activation='relu')) # Hidden 2
+model.add(Dense(y.shape[1],activation='softmax')) # Output
+
+model.compile(loss='categorical_crossentropy', optimizer='adam')
+model.fit(x,y,verbose=2,epochs=100)
+
+print(species)
