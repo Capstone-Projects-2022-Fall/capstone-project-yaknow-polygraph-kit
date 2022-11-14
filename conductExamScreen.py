@@ -58,9 +58,13 @@ global respirationbyQuestion
 global GSRbyQuestion
 
 global questionTimestamps
-global zTest1
-global zTest2
-global zTest3
+global zTest1SkinConductivity
+global zTest2SkinConductivity
+global zTest3SkinConductivity
+global ztest1Respiration
+global ztest2Respiration
+global ztest3Respiration
+
 import pyformulas
 
 
@@ -290,34 +294,84 @@ def separateByQuestion():
             y = y + 1
 
 
-def conductZtest(question):
+
+
+def conductZtestSkinConductivity(question):
     '''
     This function will return the z and p values from comparing a problematic question to a baseline
     needs baselineData array/list and ProblematicQuestionData as input
+
     :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
     '''
-    baselineData1 = respirationbyQuestion[0]
-    baselineData2 = respirationbyQuestion[1]
-    baselineData3 = respirationbyQuestion[2]
-    questionData = respirationbyQuestion[question]
-    conductExamScreen.zTest1 = list(ztest(baselineData1, questionData))
+
+    baselineData1 = GSRbyQuestion[0]
+    baselineData2 = GSRbyQuestion[1]
+    baselineData3 = GSRbyQuestion[2]
+
+    questionData = GSRbyQuestion[question]
+
+    conductExamScreen.zTest1SkinConductivity = list(ztest(baselineData1, questionData))
     # if zTest1[1] < .05:
     #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
     # else:
     #     print("We do not have reason to believe the data has any major differences")
-    conductExamScreen.zTest2 = list(ztest(baselineData2, questionData))
+
+    conductExamScreen.zTest2SkinConductivity = list(ztest(baselineData2, questionData))
     # if zTest2[1] < .05:
     #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
     # else:
     #     print("We do not have reason to believe the data has any major differences")
-    conductExamScreen.zTest3 = list(ztest(baselineData3, questionData))
+
+    conductExamScreen.zTest3SkinConductivity = list(ztest(baselineData3, questionData))
+
     # if zTest3[1] < .05:
     #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
     # else:
     #     print("We do not have reason to believe the data has any major differences")
 
 
-# return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
+#   return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
+
+
+
+
+def conductZtestRespiration(question):
+    '''
+    This function will return the z and p values from comparing a problematic question to a baseline
+    needs baselineData array/list and ProblematicQuestionData as input
+
+    :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
+    '''
+
+    baselineData1 = respirationbyQuestion[0]
+    baselineData2 = respirationbyQuestion[1]
+    baselineData3 = respirationbyQuestion[2]
+
+    questionData = respirationbyQuestion[question]
+
+    conductExamScreen.zTest1Respiration = list(ztest(baselineData1, questionData))
+    # if zTest1[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+    conductExamScreen.zTest2Respiration = list(ztest(baselineData2, questionData))
+    # if zTest2[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+    conductExamScreen.zTest3Respiration = list(ztest(baselineData3, questionData))
+
+    # if zTest3[1] < .05:
+    #     print("we reject the null hypothesis, we have reason to believe this data is fairly different... could be lying")
+    # else:
+    #     print("We do not have reason to believe the data has any major differences")
+
+
+#   return conductExamScreen.zTest1,conductExamScreen.zTest2,zTest3
+
+
 def showRespirationProbabilityDistribution(question):
     # mean1 = statistics.mean(cityA)
     # sd1 = statistics.stdev(cityA)
@@ -332,6 +386,7 @@ def showRespirationProbabilityDistribution(question):
     #
     # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
     # plt.show()
+
     for measurement in respirationbyQuestion[question]:
         print(measurement)
     conductExamScreen.respirationbyQuestion[question].sort()
@@ -354,21 +409,25 @@ def showRespirationProbabilityDistribution(question):
 
     # baseline1question
     meanBaseline1 = statistics.mean(conductExamScreen.respirationbyQuestion[0])
-
     standardDeviationBaseline1 = statistics.stdev(conductExamScreen.respirationbyQuestion[0])
     #   graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
+
     # baseline2question
     meanBaseline2 = statistics.mean(conductExamScreen.respirationbyQuestion[1])
     standardDeviationBaseline2 = statistics.stdev(conductExamScreen.respirationbyQuestion[1])
     #  graph1.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+
     # baseline3question
     meanBaseline3 = statistics.mean(conductExamScreen.respirationbyQuestion[2])
     standardDeviationBaseline3 = statistics.stdev(conductExamScreen.respirationbyQuestion[2])
     #   graph2.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
     # Test
     meanTest = statistics.mean(conductExamScreen.respirationbyQuestion[question])
     standardDeviationTest = statistics.stdev(conductExamScreen.respirationbyQuestion[question])
+
     # plotting
+
     graph0.plot(conductExamScreen.respirationbyQuestion[question],
                 norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph0.plot(conductExamScreen.respirationbyQuestion[0],
@@ -381,21 +440,113 @@ def showRespirationProbabilityDistribution(question):
                 norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[2],
                 norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
     # Subplot Titles
     #     graph0[0, 0].title.set_text("Normal Distribution 1")
     #     graph0[0, 1].title.set_text("Normal Distribution 2")
     #     graph0[0, 2].title.set_text("Normal Distribution 3")
 
-    conductZtest(question)
-    graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1, horizontalalignment='center',
+    conductZtestRespiration(question)
+
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1Respiration, horizontalalignment='center',
                 verticalalignment='center',
                 transform=graph0.transAxes)
-    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2, horizontalalignment='center',
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2Respiration, horizontalalignment='center',
                 verticalalignment='center',
                 transform=graph1.transAxes)
-    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3, horizontalalignment='center',
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3Respiration, horizontalalignment='center',
                 verticalalignment='center',
                 transform=graph2.transAxes)
+
+    matplotlib.pyplot.show()
+
+
+def showSkinConductivityProbabilityDistribution(question):
+    # mean1 = statistics.mean(cityA)
+    # sd1 = statistics.stdev(cityA)
+    #
+    # mean2 = statistics.mean(cityB)
+    # sd2 = statistics.stdev(cityB)
+    #
+    # # plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+    # #
+    #
+    #
+    #
+    # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
+    # plt.show()
+
+    for measurement in GSRbyQuestion[question]:
+        print(measurement)
+    conductExamScreen.GSRbyQuestion[question].sort()
+    conductExamScreen.GSRbyQuestion[0].sort()
+    conductExamScreen.GSRbyQuestion[1].sort()
+    conductExamScreen.GSRbyQuestion[2].sort()
+
+    # # subplot x and y axis
+    # ax = fig.add_subplot(111)
+    # ax.spines['top'].set_color('none')
+    # ax.spines['bottom'].set_color('none')
+    # ax.spines['left'].set_color('none')
+    # ax.spines['right'].set_color('none')
+    # ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+    # ax.set_xlabel('respiration')
+    # ax.set_ylabel('probability')
+
+    #   fig, (graph0, graph1, graph2, ax) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=False)
+    fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
+
+    # baseline1question
+    meanBaseline1 = statistics.mean(conductExamScreen.GSRbyQuestion[0])
+    standardDeviationBaseline1 = statistics.stdev(conductExamScreen.GSRbyQuestion[0])
+    #   graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
+
+    # baseline2question
+    meanBaseline2 = statistics.mean(conductExamScreen.GSRbyQuestion[1])
+    standardDeviationBaseline2 = statistics.stdev(conductExamScreen.GSRbyQuestion[1])
+    #  graph1.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+
+    # baseline3question
+    meanBaseline3 = statistics.mean(conductExamScreen.GSRbyQuestion[2])
+    standardDeviationBaseline3 = statistics.stdev(conductExamScreen.GSRbyQuestion[2])
+    #   graph2.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
+    # Test
+    meanTest = statistics.mean(conductExamScreen.GSRbyQuestion[question])
+    standardDeviationTest = statistics.stdev(conductExamScreen.GSRbyQuestion[question])
+
+    # plotting
+
+    graph0.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph0.plot(conductExamScreen.GSRbyQuestion[0],
+                norm.pdf(GSRbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r', marker='o')
+    graph1.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph1.plot(conductExamScreen.GSRbyQuestion[1],
+                norm.pdf(GSRbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    graph2.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph2.plot(conductExamScreen.GSRbyQuestion[2],
+                norm.pdf(GSRbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
+    # Subplot Titles
+    #     graph0[0, 0].title.set_text("Normal Distribution 1")
+    #     graph0[0, 1].title.set_text("Normal Distribution 2")
+    #     graph0[0, 2].title.set_text("Normal Distribution 3")
+
+    conductZtestSkinConductivity(question)
+
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph0.transAxes)
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph1.transAxes)
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph2.transAxes)
+
     matplotlib.pyplot.show()
 
 
