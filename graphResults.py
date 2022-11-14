@@ -15,8 +15,7 @@ plt.subplots_adjust(bottom=0.25)
 axis_position = plt.axes([0.25, 0.1, 0.65, 0.03])
 slider_position = Slider(axis_position, 'Pos', valmin=0, valmax=100, valstep=1)
 
-fig.subplots_adjust(hspace=0)
-
+#fig.subplots_adjust(hspace=0)
 
 def createGraphs():
     GSRMeasurement = []
@@ -50,7 +49,7 @@ def createGraphs():
 
     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
     for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
-        bloodPressureMeasurement.append(bloodPressureRecording.measurement[0])
+        bloodPressureMeasurement.append(bloodPressureRecording.measurement)
         bloodPressureTime.append(bloodPressureRecording.timestamp)
 
     graph2.plot(bloodPressureTime, bloodPressureMeasurement, color='k', marker='o')
@@ -88,11 +87,16 @@ def createGraphs():
     graph3.set_xlabel("Time (seconds)")
 '''
 
-
 def update(val):
     current_value = slider_position.val
     graph3.axis([current_value, current_value + 10, 0, 100])
     fig.canvas.draw()
 
+#ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
+
 # createGraphs()
 # slider_position.on_changed(update)
+
+#plt.show()
+
+

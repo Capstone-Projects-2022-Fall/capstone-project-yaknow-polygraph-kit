@@ -9,7 +9,8 @@ import conductExamScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem1101"
+#arduino_port = "/dev/cu.usbmodem14101"
+arduino_port = "COM4"
 arduino_port2 = "/dev/cu.usbmodem101"
 
 
@@ -36,21 +37,27 @@ def connectGSRSensor():
             immediateExit = True
         time.sleep(5)
     while not ( (PolygraphExamSetupScreen.examStarted) and immediateExit == False):
+        time.sleep(1)
         pass
 
     if(immediateExit == False):
         sensor_data = []
         rate = PolygraphExamSetupScreen.GSRSamplingRate
-        examStartTime = datetime.datetime.now()
+        #examStartTime = datetime.datetime.now()
         while conductExamScreen.examFinished == False:
-            getData = ser.readline()
-            data = int(getData.decode('utf-8'))
-            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
-            final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading, conductExamScreen.newQuestion, conductExamScreen.yn)
-            conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
-            time.sleep(rate)
-            print(final_reading)
+            if (conductExamScreen.inQuestion == True):
+                getData = ser.readline()
+                data = int(getData.decode('utf-8'))
+                currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
+                final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading, conductExamScreen.newQuestion, conductExamScreen.yn)
+                conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
+                conductExamScreen.skinConductivityMeasurements.append(final_reading)
+                conductExamScreen.skinConductivityTimings.append(currentTime)
+                #conductExamScreen.window.write_event_value('-UPDATED-', None)
+                print("Failed GSR")
+                time.sleep(rate)
+                print(final_reading)
     print("GSR Exited")
 
 

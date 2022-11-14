@@ -4,6 +4,11 @@ import datetime
 import time
 import random
 import PolygraphExamSetupScreen
+import matplotlib
+import graphResults
+import threading
+
+import time
 
 
 class conductExamScreenTest(unittest.TestCase):
@@ -33,6 +38,20 @@ class conductExamScreenTest(unittest.TestCase):
             assert (len(conductExamScreen.respirationbyQuestion[y]) == 3)
 
     def testDataTable(self):
+
+        conductExamScreen.respirationMeasurements = []
+        conductExamScreen.respirationTimings = []
+
+        conductExamScreen.skinConductivityMeasurements = []
+        conductExamScreen.skinConductivityTimings = []
+
+        conductExamScreen.bloodPressureMeasurements = []
+        conductExamScreen.bloodPressureTimings = []
+        conductExamScreen.bloodPressureRecordings = []
+
+        conductExamScreen.pulseMeasurements = []
+        conductExamScreen.pulseTimings = []
+
         conductExamScreen.respirationRecordings = []
         conductExamScreen.skinConductivityRecordings = []
         conductExamScreen.bloodPressureRecordings = []
@@ -41,35 +60,29 @@ class conductExamScreenTest(unittest.TestCase):
         questions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
         questionIterator = 0
         currentQuestion = questions[questionIterator]
-        bpMeasurements = []
-        bpMeasurements.append(random.random())
-        pulseMeasurements = []
-        pulseMeasurements.append(random.random())
+        bpMeasurements = (random.random())
+        pulseMeasurements = (random.random())
         currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
         tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion, None)
         conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
         tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion, None)
         conductExamScreen.pulseRecordings.append(tempMeasurement)
 
+        currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
         for x in range(27):
-            respirationMeasurements = []
-            bpMeasurements = []
-            pulseMeasurements = []
-            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            currentTime = currentTime + 3
             if (((x % 3) == 0) and (x != 0)):
-                bpMeasurements.append(random.random())
-                pulseMeasurements.append(random.random())
-                tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion,
-                                                                      None)
+                bpMeasurements = (random.random())
+                pulseMeasurements = (random.random())
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion, None)
                 conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
                 tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion,
                                                                       None)
                 conductExamScreen.pulseRecordings.append(tempMeasurement)
                 questionIterator = questionIterator + 1
                 currentQuestion = questions[questionIterator]
-            respirationMeasurements.append(random.random())
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, respirationMeasurements, currentQuestion,
-                                                                  None)
+            respirationMeasurements = (random.random())
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, respirationMeasurements, currentQuestion, None)
             conductExamScreen.respirationRecordings.append(tempMeasurement)
             scMeasurements = random.random()
             tempMeasurement = conductExamScreen.singularRecording(currentTime, scMeasurements, currentQuestion, None)
@@ -84,7 +97,6 @@ class conductExamScreenTest(unittest.TestCase):
         newWindow = conductExamScreen.make_window()
         # PolygraphExamSetupScreen.window = newWindow
         conductExamScreen.startExam(newWindow)
-
 
 if __name__ == '__main__':
     unittest.main()
