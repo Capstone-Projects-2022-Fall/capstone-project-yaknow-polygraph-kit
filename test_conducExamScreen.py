@@ -10,9 +10,11 @@ import threading
 
 import time
 
+
 class conductExamScreenTest(unittest.TestCase):
 
     def testQuestionSeparation(self):
+
         conductExamScreen.respirationRecordings = []
         examStartTime = datetime.datetime.now()
         questions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
@@ -20,7 +22,7 @@ class conductExamScreenTest(unittest.TestCase):
         measurements = []
         currentQuestion = questions[questionIterator]
         for x in range(27):
-            if( ( (x % 3) == 0 ) and (x != 0) ):
+            if (((x % 3) == 0) and (x != 0)):
                 questionIterator = questionIterator + 1
                 currentQuestion = questions[questionIterator]
             currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
@@ -74,7 +76,8 @@ class conductExamScreenTest(unittest.TestCase):
                 pulseMeasurements = (random.random())
                 tempMeasurement = conductExamScreen.singularRecording(currentTime, bpMeasurements, currentQuestion, None)
                 conductExamScreen.bloodPressureRecordings.append(tempMeasurement)
-                tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion, None)
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, pulseMeasurements, currentQuestion,
+                                                                      None)
                 conductExamScreen.pulseRecordings.append(tempMeasurement)
                 questionIterator = questionIterator + 1
                 currentQuestion = questions[questionIterator]
@@ -85,7 +88,6 @@ class conductExamScreenTest(unittest.TestCase):
             tempMeasurement = conductExamScreen.singularRecording(currentTime, scMeasurements, currentQuestion, None)
             conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
 
-
         conductExamScreen.questionCounter = 8
         PolygraphExamSetupScreen.global_overall_questions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
         conductExamScreen.iterated = False
@@ -93,11 +95,8 @@ class conductExamScreenTest(unittest.TestCase):
         conductExamScreen.examFinished = False
         conductExamScreen.inQuestion = True
         newWindow = conductExamScreen.make_window()
+        # PolygraphExamSetupScreen.window = newWindow
         conductExamScreen.startExam(newWindow)
-
-
-
-
 
 if __name__ == '__main__':
     unittest.main()
