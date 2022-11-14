@@ -25,7 +25,7 @@ df = pd.read_csv(
     "db_Nov13_v3.csv", na_values=['NA', '?'])
 
 # Convert to numpy classificatin
-x = df[['question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
+x = df[['response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
         'blood_pressure']].values
 dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
