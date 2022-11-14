@@ -22,11 +22,11 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "db_Nov13_v4.csv", na_values=['NA', '?'])
+    "db_Nov13_v5_addedTestArray.csv.csv", na_values=['NA', '?'])
 
 # Convert to numpy classificatin
 x = df[['response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
-        'blood_pressure']].values
+        'blood_pressure, trial']].values
 dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
 y = dummies.values
@@ -36,9 +36,24 @@ model = Sequential()
 model.add(Dense(50, input_dim=x.shape[1], activation='relu')) # Hidden 1
 model.add(Dense(25, activation='relu')) # Hidden 2
 model.add(Dense(y.shape[1],activation='softmax')) # Output
-
 model.compile(loss='categorical_crossentropy', optimizer='adam')
-
 model.fit(x,y,verbose=2,epochs=100)
 
 print(species)
+
+pred = model.predict(x)
+print(f"Shape: {pred.shape}")
+print(pred[0:10])
+np.set_printoptions(suppress=True)
+print(y[0:10])
+predict_classes = np.argmax(pred,axis=1)
+expected_classes = np.argmax(y,axis=1)
+print(f"Predictions: {predict_classes}")
+print(f"Expected: {expected_classes}")
+
+print(species[predict_classes[1:10]])
+
+correct = accuracy_score(expected_classes,predict_classes)
+print(f"Accuracy: {correct}")
+
+
