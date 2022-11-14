@@ -115,6 +115,10 @@ def is_duplicate(list):
             return True
     return False
 def make_window():
+    # sets the theme, background color and creates a window
+    gui.theme('Dark Amber')
+    gui.theme_background_color('#000000')
+
     # this is the variable that will store the questions read from the MySQL database
     PolygraphExamSetupScreen.this_data = database.get_questions()
     header = ['yaKnow - Polygraph Exam Startup']
@@ -202,6 +206,10 @@ def make_window():
         [gui.Button("Back", k='-BackButton-')]
     ]
 
+    row_restart = [
+        [gui.Button("Restart", k='-Restart-')]
+    ]
+
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
@@ -247,19 +255,20 @@ def startExam(window1):
     alreadyChanged = False
     PolygraphExamSetupScreen.respirationConnected = False
 
-    thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt)
+    thread1 = threading.Thread(target=respirationBelt.connectRespirationBelt, daemon=True)
     thread1.start()
 
-    thread2 = threading.Thread(target=arduino.connectGSRSensor)
+    thread2 = threading.Thread(target=arduino.connectGSRSensor, daemon=True)
     thread2.start()
 
     # NEW FOR BLOOD PRESSURE
-    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice)
+    thread3 = threading.Thread(target=bloodPressureDevice.connectBloodPressureDevice, daemon=True)
     thread3.start()
 
     while True:
         event, values = PolygraphExamSetupScreen.window.read()
         #print(event, values)
+
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event == '-BackButton-':
@@ -285,7 +294,7 @@ def startExam(window1):
 
             conductExamScreen.examTime = 1
 
-            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_list_of_questions_selected[0]
+            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[0]
 
             conductExamScreen.inQuestion = False
 
@@ -368,8 +377,10 @@ def startExam(window1):
                     if x != '':
                         # add the question mark back in and create that question in mysql database
                         database.add_question(x + "?")
-                        # add the question mark back in and append to the overall list
-                        global_overall_questions.append(x + "?")
+                        # check if question exist in global_overall_question, if not, add question to list
+                        if x + "?" not in PolygraphExamSetupScreen.global_overall_questions:
+                            # add the question mark back in and append to the overall list
+                            PolygraphExamSetupScreen.global_overall_questions.append(x + "?")
 
             # user input has been added to database and overall list, now clear user input for questions
             window['-PROBLEMATICQUESTIONS-'].update('')
@@ -439,6 +450,7 @@ def startExam(window1):
             #print('user_order_to_int', user_order_to_int)
             #print(PolygraphExamSetupScreen.global_overall_questions)
 
+    #print('exiting PolygraphExamSetupScreen.py')
 
 
 if __name__ == '__main__':

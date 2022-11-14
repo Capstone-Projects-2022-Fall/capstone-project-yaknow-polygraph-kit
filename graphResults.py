@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TKAgg')
 from matplotlib import pyplot as plt
 import numpy as np
 import csv
@@ -94,8 +96,3 @@ def update(val):
 
 # createGraphs()
 # slider_position.on_changed(update)
-
-# plt.show()
-
-
-
