@@ -639,7 +639,7 @@ def uploadDataToDataBase():
         pulseData = pulseRecordings[pulseIndex]
         bpData = bloodPressureRecordings[bpIndex]
 
-        respiration = respData.measurement[0]
+        respiration = respData.measurement
 
         if respData.question != question:  # when the respData question changes, update the stored q as well ass qID
             if not respData.question in questionList:
