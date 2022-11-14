@@ -706,6 +706,18 @@ def startExam(window1):
             showRespirationProbabilityDistribution(7)
         elif event == '-Test6R-':
             showRespirationProbabilityDistribution(8)
+        elif event == '-Test1G-':
+            showSkinConductivityProbabilityDistribution(3)
+        elif event == '-Test2G-':
+            showSkinConductivityProbabilityDistribution(4)
+        elif event == '-Test3G-':
+            showSkinConductivityProbabilityDistribution(5)
+        elif event == '-Test4G-':
+            showSkinConductivityProbabilityDistribution(6)
+        elif event == '-Test5G-':
+            showSkinConductivityProbabilityDistribution(7)
+        elif event == '-Test6G-':
+            showSkinConductivityProbabilityDistribution(8)
         elif event == '-UPDATED-':
             print("Respiration Timings: ")
             print(conductExamScreen.respirationTimings)
