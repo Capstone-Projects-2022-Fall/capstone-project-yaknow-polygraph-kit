@@ -37,7 +37,7 @@ def main():
             os.system(msg)
         else:
             print("[RECV] message: " + msg)
-        conn.send("Message received.".encode(FORMAT))
+        #conn.send("Message received.".encode(FORMAT))
 
     """ Closing the connection from the client. """
     conn.close()

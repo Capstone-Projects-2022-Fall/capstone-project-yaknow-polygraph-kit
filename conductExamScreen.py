@@ -690,28 +690,21 @@ def ml(dataset):
     print out server ip'''
 
     filename = "datafile.txt"
-
     file = open(filename, "a")
-    for x in range(len(dataset) - 1):
-        hold = dataset.pop()  # on single entry
+    for x in range(len(dataset)):
+        hold = dataset[x]  # on single entry
         print(hold)
-        for y in range(len(hold) - 1):
-            value = hold.pop()
+        for y in range(len(hold)):
+            value = hold[y]
             print(value)
             if value == '':
                 file.write('0, ')
             else:
-                file.write(f'{value} ,')
+                file.write(str(value) + ", ")
         file.write('\n')
-
-
-    # for item in dataset:
-    # for x in item:
-    # file.write(f'{x}, ')
-    # file.write('\n')
     file.close()
 
-    # client.conect(filename)
+    client.conect(filename)
 
 
 def uploadDataToDataBase():
@@ -775,8 +768,7 @@ def uploadDataToDataBase():
                                                 str(pulse), int(skin_Con),
                                                 str(respiration), str(bp), "false")
 
-        dataset.append([questionID, response, time_stamp, pulse, skin_Con, respiration,
-                        bp])
+        dataset.append([questionID, response, time_stamp, pulse, skin_Con, respiration, bp])
         numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left
 
         if respIndex < len(respirationRecordings) - 1:

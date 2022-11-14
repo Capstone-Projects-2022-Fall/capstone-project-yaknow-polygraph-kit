@@ -1,5 +1,4 @@
-
-"""'# import mysql
+"""""''''# import mysql
 import pandas as pd
 # import SingularRecordingsDB - UNCOMMENT WHEN USING DB IN SERVER, MUST ADD ADD THE FILE TO SERVER AS WELL
 import io
@@ -32,33 +31,54 @@ dummies = pd.get_dummies(df['actual_ans'])  # Classification (labelling)
 species = dummies.columns
 y = dummies.values
 
-#Build Neural network
+# Build Neural network
 model = Sequential()
-model.add(Dense(50, input_dim=x.shape[1], activation='relu')) # Hidden 1
-model.add(Dense(25, activation='relu')) # Hidden 2
-model.add(Dense(y.shape[1],activation='softmax')) # Output
+model.add(Dense(50, input_dim=x.shape[1], activation='relu'))  # Hidden 1
+model.add(Dense(25, activation='relu'))  # Hidden 2
+model.add(Dense(y.shape[1], activation='softmax'))  # Output
 model.compile(loss='categorical_crossentropy', optimizer='adam')
-model.fit(x,y,verbose=2,epochs=100)
+model.fit(x, y, verbose=2, epochs=100)
 
 print(species)
 
 pred = model.predict(x)
-#print(f"Shape: {pred.shape}")
+# print(f"Shape: {pred.shape}")
 np.set_printoptions(suppress=True)
-predict_classes = np.argmax(pred,axis=1)
-expected_classes = np.argmax(y,axis=1)
-#print(f"Predictions: {predict_classes}")
-#print(f"Expected: {expected_classes}")
+predict_classes = np.argmax(pred, axis=1)
+expected_classes = np.argmax(y, axis=1)
+# print(f"Predictions: {predict_classes}")
+# print(f"Expected: {expected_classes}")
 
 print(species[predict_classes[1:10]])
 
-correct = accuracy_score(expected_classes,predict_classes)
+correct = accuracy_score(expected_classes, predict_classes)
 print(f"Accuracy: {correct}")
 
-sample_flower = np.array( [['0', '93.032147', '0', '0', '26.402095794677734', '159.7682222']], dtype=float)
-pred = model.predict(sample_flower)
-print(pred)#False , True
-pred = np.argmax(pred)
-print(f"Predict that {sample_flower} is: {species[pred]}")
-os.system(f"echo  {species[pred]} with a accuracy of {pred} > prediction.txt")"""
+filename = "datafile.txt"
+# file = open(filename, "r")
+maxpred = ""
 
+counter = 0
+rigthSample = ""
+with open(filename) as file:
+    for line in file:
+        # print(line.rstrip())
+        splitLine = line.split(',')
+        singleEntry = splitLine[0:len(splitLine) - 1]
+        sample_flower = np.array(singleEntry, dtype=float)
+        pred = model.predict(sample_flower)
+        if counter == 0:
+            maxpred = pred
+            counter = 1
+            rigthSample = sample_flower
+        elif(np.argmax(pred) > np.argmax(maxpred)):
+            maxpred = pred
+            rigthSample = sample_flower
+
+    #print(dataset)
+
+pred = model.predict(rigthSample)
+print(maxpred)  # False , True
+pred = np.argmax(maxpred, axis=1)
+print(f"Predict that {rigthSample} is: {species[maxpred]}")
+os.system(f"echo  {species[maxpred]} with a accuracy of {maxpred} > prediction.txt")"""""
