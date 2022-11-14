@@ -22,7 +22,7 @@ df = pd.read_sql("SELECT exmaID, questionID, question, response, tsStamp, pulse,
 db_con.close()'''
 
 df = pd.read_csv(
-    "db_Nov13_v2.csv")
+    "db_Nov13_v2.csv", na_values=['0'])
 
 # Convert to numpy classificatin
 x = df[['exmaID', 'questionID', 'question', 'response', 'tsStamp', 'pulse', 'skin_conductivity', 'respiration_belt',
@@ -38,6 +38,8 @@ model.add(Dense(25, activation='relu')) # Hidden 2
 model.add(Dense(y.shape[1],activation='softmax')) # Output
 
 model.compile(loss='categorical_crossentropy', optimizer='adam')
-model.fit(x,y,verbose=2,epochs=100)
+#x_array = np.asarray(x).astype('float128')
+print(x)
+#model.fit(x,y,verbose=2,epochs=100)
 
 print(species)
