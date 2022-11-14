@@ -62,11 +62,11 @@ def bpCuffThread():
         conductExamScreen.inQuestion = True
         print("In Question")
         time.sleep(4)
-        conductExamScreen.bloodPressureMeasurements.append(random.random())
+        conductExamScreen.bloodPressureMeasurements.append(random.randrange(70,150))
         conductExamScreen.bloodPressureTimings.append(time.time() - conductExamScreen.startTime)
-        conductExamScreen.pulseMeasurements.append(random.random())
+        conductExamScreen.pulseMeasurements.append(random.randrange(40, 130))
         conductExamScreen.pulseTimings.append(time.time() - conductExamScreen.startTime)
-        conductExamScreen.window.write_event_value('-UPDATED-', None)
+        #conductExamScreen.window.write_event_value('-UPDATED-', None)
         conductExamScreen.bloodPressureRecordings.append(1)
         conductExamScreen.inQuestion = False
         time.sleep(2)
@@ -75,7 +75,7 @@ def bpCuffThread():
 def scThread():
     while conductExamScreen.examFinished == False:
         if (conductExamScreen.inQuestion == True):
-            conductExamScreen.skinConductivityMeasurements.append(random.random())
+            conductExamScreen.skinConductivityMeasurements.append(random.randrange(20100, 20800))
             conductExamScreen.skinConductivityTimings.append(time.time() - conductExamScreen.startTime)
             conductExamScreen.window.write_event_value('-UPDATED-', None)
             time.sleep(1)
@@ -87,7 +87,7 @@ def respirationThread():
         if (conductExamScreen.inQuestion == True):
             conductExamScreen.respirationTimings.append(time.time() - conductExamScreen.startTime)
             conductExamScreen.respirationMeasurements.append(random.random())
-            conductExamScreen.window.write_event_value('-UPDATED-', None)
+            #conductExamScreen.window.write_event_value('-UPDATED-', None)
             time.sleep(1)
 
 

@@ -37,6 +37,7 @@ def connectBloodPressureDevice():
         else:
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
+        time.sleep(1)
         pass
     print("Starting Exam in BP")
 # blood pressure sensor can measure mean arterial pressure, systolic (the maximum), diastolic (minimum)
@@ -67,11 +68,12 @@ def connectBloodPressureDevice():
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
-    examStartTime = datetime.datetime.now()
+    #examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
         correctPressure = False
         conductExamScreen.inQuestion = False
+        print("Not in Question")
         if ( (measurements[0] < 150)):
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
@@ -99,7 +101,7 @@ def connectBloodPressureDevice():
 
                     for index, elem in enumerate(listt):
                         if (index + 1 < len(listt) and index - 1 >= 0):
-                            prev_el = str(listt[index - 1])
+                            prev_el = listt[index - 1]
                             if elem == maxOsc:
                                 finalMeasurement = prev_el
                                 #print("Your real mean arterial blood pressure is : " + str(prev_el))
@@ -111,23 +113,23 @@ def connectBloodPressureDevice():
                     # print(peaks)
 
                     currentTime = (endTime - beginningTime).total_seconds()
-                    relativeTime = (endTime - examStartTime).total_seconds()
+                    relativeTime = (endTime - conductExamScreen.examStartTime).total_seconds()
                     pulseRate = ((((len(peaks))) / currentTime) * 60)
-                    print("The pulse rate is: " + str(pulseRate))
+                    #print("The pulse rate is: " + str(pulseRate))
                     tempMeasurementBP = conductExamScreen.singularRecording(relativeTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
                     tempMeasurementPR = conductExamScreen.singularRecording(relativeTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
                     conductExamScreen.bloodPressureRecordings.append(tempMeasurementBP)
                     conductExamScreen.pulseRecordings.append(tempMeasurementPR)
-                    print("Added BP: ", tempMeasurementBP.measurement)
+                    '''print("Added BP: ", tempMeasurementBP.measurement)
                     print("Associated Time: ", tempMeasurementBP.timestamp)
                     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
                     print("Added PR: ", tempMeasurementPR.measurement)
                     print("Associated Time: ", tempMeasurementPR.timestamp)
-                    print("PR Collections: ", len(conductExamScreen.pulseRecordings))
+                    print("PR Collections: ", len(conductExamScreen.pulseRecordings))'''
                     conductExamScreen.bloodPressureMeasurements.append(finalMeasurement)
-                    conductExamScreen.bloodPressureTimings.append(currentTime)
+                    conductExamScreen.bloodPressureTimings.append(relativeTime)
                     conductExamScreen.pulseMeasurements.append(pulseRate)
-                    conductExamScreen.pulseTimings.append(currentTime)
+                    conductExamScreen.pulseTimings.append(relativeTime)
                     #conductExamScreen.window.write_event_value('-UPDATED-', None)
                     correctPressure = True
                     listOfOscillations = []

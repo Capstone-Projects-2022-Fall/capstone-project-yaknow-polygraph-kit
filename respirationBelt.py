@@ -39,12 +39,12 @@ def connectRespirationBelt():
 
     rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
     theAPIs.start(rate)
-    examStartTime = datetime.datetime.now()
+    #examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         if(conductExamScreen.inQuestion == True):
             print("Recording Respiration")
             measurements = theAPIs.read()
-            currentTime = (datetime.datetime.now() - examStartTime).total_seconds()
+            currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
             if measurements is None:
                 break
             tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)

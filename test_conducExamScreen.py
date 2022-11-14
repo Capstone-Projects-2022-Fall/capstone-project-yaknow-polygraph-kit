@@ -36,6 +36,20 @@ class conductExamScreenTest(unittest.TestCase):
             assert (len(conductExamScreen.respirationbyQuestion[y]) == 3)
 
     def testDataTable(self):
+
+        conductExamScreen.respirationMeasurements = []
+        conductExamScreen.respirationTimings = []
+
+        conductExamScreen.skinConductivityMeasurements = []
+        conductExamScreen.skinConductivityTimings = []
+
+        conductExamScreen.bloodPressureMeasurements = []
+        conductExamScreen.bloodPressureTimings = []
+        conductExamScreen.bloodPressureRecordings = []
+
+        conductExamScreen.pulseMeasurements = []
+        conductExamScreen.pulseTimings = []
+
         conductExamScreen.respirationRecordings = []
         conductExamScreen.skinConductivityRecordings = []
         conductExamScreen.bloodPressureRecordings = []
