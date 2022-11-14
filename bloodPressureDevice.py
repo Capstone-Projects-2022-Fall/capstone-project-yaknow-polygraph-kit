@@ -110,11 +110,12 @@ def connectBloodPressureDevice():
 
                     # print(peaks)
 
-                    currentTime = endTime - beginningTime
-                    pulseRate = ((((len(peaks))) / currentTime.total_seconds()) * 60)
+                    currentTime = (endTime - beginningTime).total_seconds()
+                    relativeTime = (endTime - examStartTime).total_seconds()
+                    pulseRate = ((((len(peaks))) / currentTime) * 60)
                     print("The pulse rate is: " + str(pulseRate))
-                    tempMeasurementBP = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
-                    tempMeasurementPR = conductExamScreen.singularRecording(currentTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
+                    tempMeasurementBP = conductExamScreen.singularRecording(relativeTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
+                    tempMeasurementPR = conductExamScreen.singularRecording(relativeTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
                     conductExamScreen.bloodPressureRecordings.append(tempMeasurementBP)
                     conductExamScreen.pulseRecordings.append(tempMeasurementPR)
                     print("Added BP: ", tempMeasurementBP.measurement)

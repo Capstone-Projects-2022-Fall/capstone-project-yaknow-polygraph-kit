@@ -314,10 +314,10 @@ def startExam(window1):
             break
         elif event == '-RSamplingRate-':
             #Check User Input
-            PolygraphExamSetupScreen.RespirationSamplingRate = values['-RSamplingRate-']
+            PolygraphExamSetupScreen.RespirationSamplingRate = int(float(values['-RSamplingRate-']))
         elif event == '-SCSamplingRate-':
             #Check User Input
-            PolygraphExamSetupScreen.GSRSamplingRate = values['-SCSamplingRate-']
+            PolygraphExamSetupScreen.GSRSamplingRate = int(float(values['-SCSamplingRate-']))
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
             search_question = values['-SEARCHINPUT-']
