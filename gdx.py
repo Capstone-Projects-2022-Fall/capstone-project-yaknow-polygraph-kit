@@ -1,3 +1,15 @@
+'''
+***************************************************************************************/
+*    Title: gdx Module (gdx.py)
+*    Author: VernierST - Ian Honohan, Jennifer Minor, Laura Denney, David Lim, Jordan Austin
+*    Date: November 11, 2018
+*    Code version: N/A
+*    Availability: https://github.com/VernierST/godirect-examples
+*
+***************************************************************************************/
+[Source code].https://github.com/VernierST/godirect-examples/blob/main/python/gdx/gdx.py
+'''
+
 # To use Go Direct sensors with Python 3 you must install the godirect module
 # using pip3 install godirect[usb,ble]
 # If you plan to use the native Windows 10 BLE stack, the Bleak module must also
