@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/bootstrap.min.js"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav justify-content-end p-5">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="/logout">Logout</a>
+        </li>
+      </ul>
+      <div class="mb-2"></div>
+      <a href="/add" class="btn btn-primary btn-sm">Tambah</a>
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>username</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(function(user) { %>
+          <tr>
+            <td><%= user.f_name %></td>
+            <td><%= user.username %></td>
+            <td>
+              <a
+                href="/user/edit/<%= user.id %>"
+                class="badge rounded-pill bg-success"
+                >edit</a
+              >
+              <a
+                href="/user/delete/<%= user.id %>"
+                class="badge rounded-pill bg-danger"
+                >delete</a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

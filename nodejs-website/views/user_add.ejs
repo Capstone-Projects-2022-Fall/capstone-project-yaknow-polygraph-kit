@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2><%= title %></h2>
+      <form action="/save" method="post">
+        <div class="form-group mb-2">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter FullName"
+            name="f_name"
+            required
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter Username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="Enter password"
+            name="password"
+            required
+          />
+        </div>
+        <div class="form-group mb-2">
+          <a href="/user" class="btn btn-light">Back</a>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
