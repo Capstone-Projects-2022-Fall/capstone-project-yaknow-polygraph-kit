@@ -73,57 +73,61 @@ def connectBloodPressureDevice():
     while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
         correctPressure = False
+        pressureBar == False
         conductExamScreen.inQuestion = False
         #did u paste in the code yet
       #  manually_updated_meter_test()
         progress_bar = conductExamScreen.window['progress']
-        if measurements[0] > 15:
-            print("you made it to 10 percent")
-            progress_bar.update_bar(1)         # show 10% complete
-            # sleep(2)
+        while pressureBar == False:
+
+            if measurements[0] > 15:
+                print("you made it to 10 percent")
+                progress_bar.update_bar(1)         # show 10% complete
+                # sleep(2)
 
 
-        if measurements[0] > 30:
-            print("you made it to 20 percent")
-            progress_bar.update_bar(2)         # show 20% complete
+            if measurements[0] > 30:
+                print("you made it to 20 percent")
+                progress_bar.update_bar(2)         # show 20% complete
 
-            # sleep(2)
-        if measurements[0] > 45:
-            print("you made it to 30 percent")
-            progress_bar.update_bar(3)         # show 30% complete
-            # sleep(2)
+                # sleep(2)
+            if measurements[0] > 45:
+                print("you made it to 30 percent")
+                progress_bar.update_bar(3)         # show 30% complete
+                # sleep(2)
 
-        if measurements[0] > 60:
-            print("you made it to 40 percent")
-            progress_bar.update_bar(4)         # show 40% complete
-            # sleep(2)
-        if measurements[0] > 75:
-            print("you made it to 50 percent")
-            progress_bar.update_bar(5)         # show 50% complete
-            # sleep(2)
+            if measurements[0] > 60:
+                print("you made it to 40 percent")
+                progress_bar.update_bar(4)         # show 40% complete
+                # sleep(2)
+            if measurements[0] > 75:
+                print("you made it to 50 percent")
+                progress_bar.update_bar(5)         # show 50% complete
+                # sleep(2)
 
-        if measurements[0] > 90:
-            print("you made it to 60 percent")
-            progress_bar.update_bar(6)         # show 60% complete
-            # sleep(2)
-        if measurements[0] > 105:
-            print("you made it to 70 percent")
-            progress_bar.update_bar(7)         # show 70% complete
-            # sleep(2)
-        if measurements[0] > 120:
-            print("you made it to 80 percent")
-            progress_bar.update_bar(8)         # show 80% complete
-            # sleep(2)
-        if measurements[0] > 135:
-            print("you made it to 90 percent")
-            progress_bar.update_bar(9)         # show 90% complete
-            # sleep(2)
+            if measurements[0] > 90:
+                print("you made it to 60 percent")
+                progress_bar.update_bar(6)         # show 60% complete
+                # sleep(2)
+            if measurements[0] > 105:
+                print("you made it to 70 percent")
+                progress_bar.update_bar(7)         # show 70% complete
+                # sleep(2)
+            if measurements[0] > 120:
+                print("you made it to 80 percent")
+                progress_bar.update_bar(8)         # show 80% complete
+                # sleep(2)
+            if measurements[0] > 135:
+                print("you made it to 90 percent")
+                progress_bar.update_bar(9)         # show 90% complete
+                # sleep(2)
 
-        if measurements[0] > 150:
-            print("you made it to 100 percent")
-            progress_bar.update_bar(10)         # show 100% complete
-            time.sleep(3)
-            conductExamScreen.window.close()
+            if measurements[0] > 150:
+                print("you made it to 100 percent")
+                progress_bar.update_bar(10)         # show 100% complete
+                time.sleep(3)
+                conductExamScreen.window.close()
+                pressurebar == True
         print("Not in Question")
         if ( (measurements[0] < 150)):
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
