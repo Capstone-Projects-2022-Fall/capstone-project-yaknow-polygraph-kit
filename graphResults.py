@@ -18,6 +18,25 @@ slider_position = Slider(axis_position, 'Pos', valmin=0, valmax=100, valstep=1)
 #fig.subplots_adjust(hspace=0)
 
 def createGraphs():
+    '''
+    Purpose:
+       Create and display all of the data recorded from all of the devices, each with their own subplot but sharing the same time domain.
+
+    Pre-conditions:
+        The exam must have been conducted and completed.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.respirationRecordings, conductExamScreen.skinConductivityRecordings, conductExamScreen.pulseRecordings, conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+
+    Return value and output variables:
+        graph1, graph2, graph3 - MatPlotLib Subplot
+
+    Exceptions thrown:
+        None.
+    '''
     GSRMeasurement = []
     GSRTime = []
     RespirationMeasurement = []
@@ -88,6 +107,25 @@ def createGraphs():
 '''
 
 def update(val):
+    '''
+    Purpose:
+       Updates the scope of view in the end-of-exam graph when the user moves the scroll bar.
+
+    Pre-conditions:
+        The exam must have been conducted and completed, as well as an internet connection before completion.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        graphResults.graph3 - MatPlotLib subplot
+
+    Return value and output variables:
+        graphResults.fig.canvas - MatPlotLib Canvas
+
+    Exceptions thrown:
+        None.
+    '''
     current_value = slider_position.val
     graph3.axis([current_value, current_value + 10, 0, 100])
     fig.canvas.draw()

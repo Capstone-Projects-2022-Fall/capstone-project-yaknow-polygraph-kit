@@ -74,6 +74,28 @@ restart_clicked = False
 
 
 class singularRecording:
+    '''
+    Purpose:
+        Allows the recordings from each of the devices to be collected in an organized manner for use in uploading to the mySQL database and graphing.
+
+    Pre-conditions:
+        None
+
+    Post-conditions:
+        None
+
+    Parameters and data types:
+        timestamp - float
+        measurement - float
+        question - string
+        yn - string
+
+    Return value and output variables:
+        singularRecording instance
+
+    Exceptions thrown:
+        None.
+    '''
     def __init__(self, timestamp, measurement, question, yn):
         self.timestamp = timestamp
         self.measurement = measurement
@@ -82,6 +104,27 @@ class singularRecording:
 
 
 def make_window():
+    '''
+    Purpose:
+        Creates the window layout in which the user interacts with to conduct a polygraph exam. This includes recording an examinee's yes or no answers to each question and viewing and end-of-exam breakdown of the data collected.
+
+    Pre-conditions:
+        Is launched from main in "PolygraphExamSetupScreen.py"
+
+    Post-conditions:
+        Creates a window and the associated layout to allow the examiner to conduct a polygraph exam.
+
+    Parameters and data types:
+        xImage - Imag
+        row0, row1, row2, row3, row4, row5, row6, row8, row9, cl3_, col3_2, col3_3, col3_4, col3_5, col3_6, row3_7, col3_8, layout - Array
+        window - PySimpleGUI window
+
+    Return value and output variables:
+        window - PySimpleGUI window
+
+    Exceptions thrown:
+        None.
+    '''
     # sets the theme, background color and creates a window
     gui.theme('Dark Amber')
     gui.theme_background_color('#000000')
@@ -225,6 +268,30 @@ def make_window():
 
 #This is a thread
 def examCounter():
+    '''
+    Purpose:
+        Creates an exam counter to keep track of how long the exam has been conducted for (not included downtime between cuff pressure inflations). Respsonsible for iterating through the questions (and triggering text-to-speech) as well as triggering the updates to the live graphing.
+
+    Pre-conditions:
+        None.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.examTime - int
+        conductExamScreen.questionTimestamps - int
+        conductExamScreen.inQuestion - boolean
+
+    Return value and output variables:
+        conductExamScreen.examTime
+        conductExamScreen.questionTimestamps
+        conductExamScreen.inQuestion
+
+    Exceptions thrown:
+        None.
+    '''
+
     while conductExamScreen.examFinished == False:
         if ((conductExamScreen.examTime % 1) == 0):
             conductExamScreen.window.write_event_value('-UPDATED-', None)
@@ -262,6 +329,27 @@ def examCounter():
 
 
 def separateByQuestion():
+    '''
+    Purpose:
+        Upon exam completion, separates the collected values from each device by question for graphing and analysis purposes.
+
+    Pre-conditions:
+        The exam must be completed before being called, as that is when data will have been collected by all questions.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.respirationRecordings - singularRecording class instance
+        conductExamScreen.skinConductivityRecordings - singularRecording class instance
+
+    Return value and output variables:
+        conductExamScreen.respirationbyQuestion
+        conductExamScreen.GSRbyQuestion
+
+    Exceptions thrown:
+        None.
+    '''
     conductExamScreen.respirationbyQuestion = []
     conductExamScreen.GSRbyQuestion = []
     tempArray = []
@@ -301,10 +389,23 @@ def separateByQuestion():
 
 def conductZtestSkinConductivity(question):
     '''
-    This function will return the z and p values from comparing a problematic question to a baseline
-    needs baselineData array/list and ProblematicQuestionData as input
+    Purpose:
+        This function will return the z and p values from comparing a problematic question to a baseline for skin conductivity recordings.
 
-    :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
+    Pre-Conditions:
+
+    Post-Conditions:
+
+    Parameters and data types:
+        question - int
+        baselineeData - Array of float
+        ProblematicQuestionData - Array of float
+
+    Return value and output variables:
+        list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying.
+
+    Exceptions Thrown:
+        None.
     '''
 
     baselineData1 = GSRbyQuestion[0]
@@ -339,11 +440,24 @@ def conductZtestSkinConductivity(question):
 
 
 def conductZtestRespiration(question):
-    '''
-    This function will return the z and p values from comparing a problematic question to a baseline
-    needs baselineData array/list and ProblematicQuestionData as input
+    ''''
+    Purpose:
+        This function will return the z and p values from comparing a problematic question to a baseline for respiration recordings.
 
-    :return list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying
+    Pre-Conditions:
+
+    Post-Conditions:
+
+    Parameters and data types:
+        question - int
+        baselineeData - Array of float
+        ProblematicQuestionData - Array of float
+
+    Return value and output variables:
+        list of (z value, p value), also prints out a statement if we have reasonable evidence to show that someone is lying.
+
+    Exceptions Thrown:
+        None.
     '''
 
     baselineData1 = respirationbyQuestion[0]
@@ -376,6 +490,23 @@ def conductZtestRespiration(question):
 
 
 def showRespirationProbabilityDistribution(question):
+    '''
+    Purpose:
+        Displays the "test" question (input parameter) compared to each of the baseline questions for the respiration data recroded with Z and P values included in each graph to assist examiner in making a determination regarding whether examinee is lying or not.
+
+    Pre-Conditions:
+
+    Post-Conditions:
+
+    Parameters and data types:
+        question - int
+
+    Return value and output variables:
+        graph0, graph1, graph2 - MatPlotLib Subplots
+
+    Exceptions Thrown:
+        None.
+    '''
     # mean1 = statistics.mean(cityA)
     # sd1 = statistics.stdev(cityA)
     #
@@ -465,6 +596,23 @@ def showRespirationProbabilityDistribution(question):
 
 
 def showSkinConductivityProbabilityDistribution(question):
+    '''
+    Purpose:
+        Displays the "test" question (input parameter) compared to each of the baseline questions for the skin conductivity data recroded with Z and P values included in each graph to assist examiner in making a determination regarding whether examinee is lying or not.
+
+    Pre-Conditions:
+
+    Post-Conditions:
+
+    Parameters and data types:
+        question - int
+
+    Return value and output variables:
+        graph0, graph1, graph2 - MatPlotLib Subplots
+
+    Exceptions Thrown:
+        None.
+    '''
     # mean1 = statistics.mean(cityA)
     # sd1 = statistics.stdev(cityA)
     #
@@ -570,6 +718,27 @@ def run_something():
 
 
 def startExam(window1):
+    '''
+    Purpose:
+        Attaches logic to make the window produced by "conductExamScreen.make_window()" responsive to user input. Allows the user to view probability distributions comparisons for each of the test questions. Houses logic to update live graphing, statistical upload to database, end-of-exam statistics, restart button, and an end-of-exam graph.
+
+    Pre-conditions:
+        The "conductExamScreen.make_window()" function must be called in "PolygraphExamSetupScreen.startExam(window1)" first, as this function is responsible for attaching logic to the PySimpleGUI window produced by "conductExamScreen.make_window()."
+
+    Post-conditions:
+        Calls "conductExamScreen.make_window()" and "conductExamScreen.startExam(newWindow)" and closes current window upon user selection.
+
+    Parameters and data types:
+        window1 - PySimpleGUI window
+        event, values - string
+        conductExamScreen.liveGraph - MatPlotLib graph with subplots
+
+    Return value and output variables:
+        None.
+
+    Exceptions thrown:
+        None.
+    '''
     conductExamScreen.justRespirationRate = []
 
     conductExamScreen.questionTimestamps = []
@@ -779,6 +948,26 @@ def startExam(window1):
 
 
 def uploadDataToDataBase():
+    '''
+    Purpose:
+       Uploads the data recorded from each device during the exam to the mySQL database.
+
+    Pre-conditions:
+        The exam must have been conducted and completed, as well as an internet connection before completion.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.respirationRecordings, conductExamScreen.skinConductivityRecordings, conductExamScreen.pulseRecordings, conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+
+    Return value and output variables:
+        None.
+
+    Exceptions thrown:
+        None.
+
+    '''
     numberOfMeasurements = getNumOfMeasurements()  # will hold the max number of measurements from all devices available
 
     respIndex = 0
@@ -846,7 +1035,25 @@ def uploadDataToDataBase():
 
 
 def getNumOfMeasurements():
-    # return the length of the sensor with the most measurements
+    '''
+    Purpose:
+       Identify the sensor that recorded the most measurements during the exam.
+
+    Pre-conditions:
+        The exam must have been conducted and completed, as well as an internet connection before completion.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.respirationRecordings, conductExamScreen.skinConductivityRecordings, conductExamScreen.pulseRecordings, conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+
+    Return value and output variables:
+        length of the sensor with the most measurements - int
+
+    Exceptions thrown:
+        None.
+    '''
     resp_len = len(respirationRecordings)
     pulse_len = len(pulseRecordings)
     bp = len(bloodPressureRecordings)

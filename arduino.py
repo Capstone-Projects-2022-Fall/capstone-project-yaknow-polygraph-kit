@@ -15,6 +15,33 @@ arduino_port2 = "/dev/cu.usbmodem101"
 
 
 def connectGSRSensor():
+    '''
+    Purpose:
+        A thread that connects and records GSR data from the Arduino GSR Sensor in a non-blocking way and communicates the stored data with the main thread.
+
+    Pre-conditions:
+        Must be started within the context of a polygraph exam.
+
+    Post-conditions:
+        Exits the thread upon exam completion.
+
+    Parameters and data types:
+        PolygraphExamSetup.window - PySimpleGUI window
+        PolygrpahExamSetup.GSRSamplingRate - int
+        conductExamScreen.examFinished - boolean
+        conductExamScreen.skinConductivityRecordings - Array of singularRecording class instance
+        conductExamScreen.skinConductivityTimings - Array of float
+        conductExamScreen.skinConductivityMeasurements - Array of float
+
+    Return value and output variables:
+        conductExamScreen.skinConductivityRecordings - Array of singularRecording class instance
+        conductExamScreen.skinConductivityMeasurements - Array of float
+        conductExamScreen.skinConductivityTimings - Array of float
+
+    Exceptions thrown:
+        None.
+
+    '''
     connected = False
     immediateExit = False
     while ( (connected == False) and (immediateExit == False) ):
