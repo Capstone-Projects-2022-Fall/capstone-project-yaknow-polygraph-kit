@@ -1,6 +1,5 @@
-"""""''''# import mysql
+""""
 import pandas as pd
-# import SingularRecordingsDB - UNCOMMENT WHEN USING DB IN SERVER, MUST ADD ADD THE FILE TO SERVER AS WELL
 import io
 import requests
 import numpy as np
@@ -65,7 +64,7 @@ with open(filename) as file:
         # print(line.rstrip())
         splitLine = line.split(',')
         singleEntry = splitLine[0:len(splitLine) - 1]
-        sample_flower = np.array(singleEntry, dtype=float)
+        sample_flower = np.array([int(singleEntry[0]), int(singleEntry[1]), float(singleEntry[2]), int(singleEntry[3]), float(singleEntry[4]), float(singleEntry[5]), int(singleEntry[6])], dtype=float)
         pred = model.predict(sample_flower)
         if counter == 0:
             maxpred = pred
@@ -79,6 +78,6 @@ with open(filename) as file:
 
 pred = model.predict(rigthSample)
 print(maxpred)  # False , True
-pred = np.argmax(maxpred, axis=1)
+pred = np.argmax(maxpred)
 print(f"Predict that {rigthSample} is: {species[maxpred]}")
-os.system(f"echo  {species[maxpred]} with a accuracy of {maxpred} > prediction.txt")"""""
+os.system(f"echo  {species[maxpred]} with a accuracy of {maxpred} > prediction.txt")"""

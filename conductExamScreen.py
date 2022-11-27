@@ -684,12 +684,9 @@ def startExam(window1):
 
 
 def ml(dataset):
-    '''call server hand it data
-    launch ml on server
-    get output from server
-    print out server ip'''
+    """creates a local file and fills it with the exam data from the 2d array dataset """
 
-    filename = "datafile.txt"
+    filename = "dataSetFile.txt"
     file = open(filename, "a")
     for x in range(len(dataset)):
         hold = dataset[x]  # on single entry
@@ -704,7 +701,7 @@ def ml(dataset):
         file.write('\n')
     file.close()
 
-    client.conect(filename)
+    client.conect()
 
 
 def uploadDataToDataBase():
@@ -736,7 +733,7 @@ def uploadDataToDataBase():
         bpData = bloodPressureRecordings[bpIndex]
 
         respiration = respData.measurement
-
+        'Compresses data from multiple sensors into singularRecording entries by relation to respirationTime'
         if respData.question != question:  # when the respData question changes, update the stored q as well ass qID
             if not respData.question in questionList:
                 questionList.append(question)
@@ -759,20 +756,24 @@ def uploadDataToDataBase():
             if bpIndex < len(bloodPressureRecordings) - 1:
                 bpIndex += 1
 
-        # add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
-        # label):
-        print("examID ", examID, " questionID ", questionID, " question ", question, " response ", response,
+        print("Data uploaded to DB")
+        """print("examID ", examID, " questionID ", questionID, " question ", question, " response ", response,
               " time_stamp ", time_stamp, " pulse ", pulse, " skin_con", skin_Con, " respiration ", respiration,
-              " bp ", bp, "Label: false ")
+              " bp ", bp, "Label: false ")"""""
+        'add data to the db'
         SingularRecordingsDB.add_singularRecord(examID, int(questionID), str(question), str(response), str(time_stamp),
                                                 str(pulse), int(skin_Con),
                                                 str(respiration), str(bp), "false")
 
+        """into a 2d array(each reading(timestamp) is an array it self), add the data of this exam to be evaluated by  
+        the ml """
         dataset.append([questionID, response, time_stamp, pulse, skin_Con, respiration, bp])
-        numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left
 
+        'decrement the loop'
+        numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left
         if respIndex < len(respirationRecordings) - 1:
             respIndex += 1
+    'call the ml method that takes in the dataset 2d array'
     ml(dataset)
 
 

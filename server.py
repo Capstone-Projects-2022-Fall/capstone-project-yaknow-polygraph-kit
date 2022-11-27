@@ -35,8 +35,9 @@ def main():
             msg = msg.replace('$', '')
             print("Command: " + msg)
             os.system(msg)
-        else:
-            print("[RECV] message: " + msg)
+       # else:
+            #print("[RECV] message: " + msg)
+       # msg = ""
         #conn.send("Message received.".encode(FORMAT))
 
     """ Closing the connection from the client. """
