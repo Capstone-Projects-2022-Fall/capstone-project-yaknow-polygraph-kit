@@ -86,44 +86,43 @@ def connectBloodPressureDevice():
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
             # while pressureBar == False:
-
-            if measurements[0] > 15:
+            if measurements[0] < 15:
                 print("you made it to 10 percent")
                 progress_bar.update_bar(1)  # show 10% complete
                 # sleep(2)
 
-            if measurements[0] > 30:
+            if 16 < measurements[0] < 30:
                 print("you made it to 20 percent")
                 progress_bar.update_bar(2)  # show 20% complete
 
                 # sleep(2)
-            if measurements[0] > 45:
+            if 31 < measurements[0] < 45:
                 print("you made it to 30 percent")
                 progress_bar.update_bar(3)  # show 30% complete
                 # sleep(2)
 
-            if measurements[0] > 60:
+            if 46 < measurements[0] < 60:
                 print("you made it to 40 percent")
                 progress_bar.update_bar(4)  # show 40% complete
                 # sleep(2)
-            if measurements[0] > 75:
+            if 61 < measurements[0] < 75:
                 print("you made it to 50 percent")
                 progress_bar.update_bar(5)  # show 50% complete
                 # sleep(2)
 
-            if measurements[0] > 90:
+            if 76 < measurements[0] < 90:
                 print("you made it to 60 percent")
                 progress_bar.update_bar(6)  # show 60% complete
                 # sleep(2)
-            if measurements[0] > 105:
+            if 91 < measurements[0] < 105:
                 print("you made it to 70 percent")
                 progress_bar.update_bar(7)  # show 70% complete
                 # sleep(2)
-            if measurements[0] > 120:
+            if 106 < measurements[0] < 120:
                 print("you made it to 80 percent")
                 progress_bar.update_bar(8)  # show 80% complete
                 # sleep(2)
-            if measurements[0] > 135:
+            if 121 < measurements[0] > 135:
                 print("you made it to 90 percent")
                 progress_bar.update_bar(9)  # show 90% complete
                 # sleep(2)
@@ -133,7 +132,7 @@ def connectBloodPressureDevice():
                 progress_bar.update_bar(10)  # show 100% complete
                 time.sleep(3)
                 conductExamScreen.window.close()
-                pressureBar = True
+               # pressureBar = True
         else:
             beginningTime = datetime.datetime.now()
             conductExamScreen.inQuestion = True
