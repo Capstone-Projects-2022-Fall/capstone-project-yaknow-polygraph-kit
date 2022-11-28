@@ -189,8 +189,8 @@ def make_window():
         [gui.Text('', key='-Test5P-', visible=True)],
         [gui.Text('', key='-Test6P-', visible=True)]
     ]
-    row7 = [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')
-
+    row7 = [
+        [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
     ]
     row8 = [
         [gui.Button('YES', key='-YES-'), gui.Button('NO', key='-NO-')]
