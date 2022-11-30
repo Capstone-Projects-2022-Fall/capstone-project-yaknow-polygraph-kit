@@ -133,8 +133,8 @@ def connectBloodPressureDevice():
                 if measurements1[0] > 150:
                     print("you made it to 100 percent")
                     progress_bar.update_bar(10)  # show 100% complete
-                    time.sleep(3)
-                    conductExamScreen.window.close()
+                    #time.sleep(.5)
+                    #conductExamScreen.window.close()
                     pressureBar = True
         else:
             beginningTime = datetime.datetime.now()
