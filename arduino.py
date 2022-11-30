@@ -9,8 +9,8 @@ import conductExamScreen
 
 baud = 9600
 file_name = "analog_data.csv"
-#arduino_port = "/dev/cu.usbmodem14101"
-arduino_port = "COM1"
+arduino_port = "/dev/cu.usbmodem14101"
+#arduino_port = "COM1"
 #arduino_port = "COM4"
 arduino_port2 = "/dev/cu.usbmodem101"
 

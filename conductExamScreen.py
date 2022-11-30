@@ -722,27 +722,27 @@ def startExam(window1):
             showSkinConductivityProbabilityDistribution(7)
         elif event == '-Test6G-':
             showSkinConductivityProbabilityDistribution(8)
-        elif event == '-UPDATED-':
-            print("Respiration Timings: ")
-            print(conductExamScreen.respirationTimings)
-            print(conductExamScreen.respirationMeasurements)
-            print("Skin Conductivity Timings: ")
-            print(conductExamScreen.skinConductivityTimings)
-            print(conductExamScreen.skinConductivityMeasurements)
-            print("Blood Pressure Timings: ")
-            print(conductExamScreen.bloodPressureTimings)
-            print("Blood Pressure Measurements: ")
-            print(conductExamScreen.bloodPressureMeasurements)
-            print("Pulse Timings: ")
-            print(conductExamScreen.pulseTimings)
-            print("Pulse Measurements")
-            print(conductExamScreen.pulseMeasurements)
-            if(len(conductExamScreen.respirationTimings) > 0):
-                updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
-            else:
-                updateTime = 0
-            #updateTime = time.time() - conductExamScreen.startTime
-            print(updateTime)
+        # elif event == '-UPDATED-':
+        #     # print("Respiration Timings: ")
+        #     # print(conductExamScreen.respirationTimings)
+        #     # print(conductExamScreen.respirationMeasurements)
+        #     # print("Skin Conductivity Timings: ")
+        #     # print(conductExamScreen.skinConductivityTimings)
+        #     # print(conductExamScreen.skinConductivityMeasurements)
+        #     # print("Blood Pressure Timings: ")
+        #     # print(conductExamScreen.bloodPressureTimings)
+        #     # print("Blood Pressure Measurements: ")
+        #     # print(conductExamScreen.bloodPressureMeasurements)
+        #     # print("Pulse Timings: ")
+        #     # print(conductExamScreen.pulseTimings)
+        #     # print("Pulse Measurements")
+        #     # print(conductExamScreen.pulseMeasurements)
+        #     if(len(conductExamScreen.respirationTimings) > 0):
+        #         updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
+        #     else:
+        #         updateTime = 0
+        #     #updateTime = time.time() - conductExamScreen.startTime
+        #     print(updateTime)
             conductExamScreen.respirationLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
             conductExamScreen.respirationLiveGraph.axis(ymin=-30, ymax=30)
             conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings, conductExamScreen.respirationMeasurements, c='black')
