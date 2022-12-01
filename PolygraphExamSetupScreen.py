@@ -213,6 +213,11 @@ def make_window():
         [gui.Button('Start Examination')]
     ]
 
+    row2GSRPort = [
+       [gui.Text('Skin Conductivity Port Number'),
+        gui.Input(key='-row2GSRPort-', enable_events=True)]
+    ]
+
     row3 = [
          [gui.Text('Skin Conductivity Sampling Rate'),
           gui.Input(key='-SCSamplingRate-', enable_events=True),
@@ -258,6 +263,7 @@ def make_window():
          gui.Frame(layout=col2, title='Select Functionality', k='col2'),
          gui.Frame(layout=col3, title='Enter up to 5 "problematic questions"', k='col3'),
          gui.Frame(layout=col3_2, title='', k='col3_2')],
+        [gui.Frame(layout=row2GSRPort, title='', key='row2GSRPort')],
         [gui.Frame(layout=row3, title='', key='row3')],
         [gui.Frame(layout=col5, title='', key='row5'), gui.Frame(layout=col6, title='', k='col6')],
         [gui.Frame(layout=col4, title='Selected Questions. Click on Selected Questions to deselect', key='col4'), gui.Frame(layout=col7, title='', k='col7'), gui.Frame(layout=col7_2, title='', k='col7_2')],
@@ -390,6 +396,9 @@ def startExam(window1):
         elif event == '-SCSamplingRate-':
             #Check User Input
             PolygraphExamSetupScreen.GSRSamplingRate = int(float(values['-SCSamplingRate-']))
+        elif event == '-row2GSRPort-':
+            print("Changed Port")
+            arduino.arduino_port = values['-row2GSRPort-']
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
             search_question = values['-SEARCHINPUT-']

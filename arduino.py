@@ -6,10 +6,11 @@ import time
 import PolygraphExamSetupScreen
 import IndividualDeviceScreen
 import conductExamScreen
+import arduino
 
 baud = 9600
 file_name = "analog_data.csv"
-arduino_port = "/dev/cu.usbmodem14101"
+arduino.arduino_port = "/dev/cu.usbmodem14101"
 #arduino_port = "COM4"
 arduino_port2 = "/dev/cu.usbmodem101"
 
@@ -45,15 +46,16 @@ def connectGSRSensor():
     connected = False
     immediateExit = False
     while ( (connected == False) and (immediateExit == False) ):
+        print(arduino.arduino_port)
         try:
-            ser = serial.Serial(arduino_port, baud)
+            ser = serial.Serial(arduino.arduino_port, baud)
             connected = True
         except Exception as e:
             print("Board Not Connected", e)
-            try:
+            '''try:
                 ser = serial.Serial(arduino_port2, baud)
             except:
-                print("Neither Port Connected")
+                print("Neither Port Connected")'''
 
         if (connected == True):
             PolygraphExamSetupScreen.GSRConnector = True
