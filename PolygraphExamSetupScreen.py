@@ -46,6 +46,29 @@ global thread1
 
 global thread2
 
+'''
+    PolygraphExamSetupScreen.py module
+    
+    Purpose:
+         Creates a setup screen to allow the user to setup a polygraph exam by connecting devices, selecting questions, and inputting a sampling rate for compatible deivces.
+         
+    Data Fields:
+        Global variables above.
+        
+    Methods:
+        -database_lower()
+        -print_global_list_of_questions_searched_and_selected()
+        -print_global_list_of_questions_selected()
+        -print_global_list_of_questions_selected()
+        -print_global_list_of_questions_5_added()
+        -get_global_list_of_questions_searched_and_selected()
+        -get_selected_questions()
+        -get_global_list_of_questions_5_added()
+        -is_duplicate(list)
+        -make_window()
+        -startExam(window1
+
+'''
 
 def database_lower():
     for i in range(len(database)):
@@ -117,7 +140,29 @@ def is_duplicate(list):
         if list.count(i) > 1:
             return True
     return False
+
 def make_window():
+    '''
+    Purpose:
+        Creates the window layout in which the user interacts with to setup the polygraph exam by connecting devices, selecting questions, and inputting a sampling rate for compatible deivces
+
+    Pre-conditions:
+        Is launched from main in "homescreen.py"
+
+    Post-conditions:
+        Creates a window and the associated layout to allow the user setup and launch a polygraph exam.
+
+    Parameters and data types:
+        xImage - Image
+        row0, row1, row2,row3, row4, col1, col2, cl3, col3_2, col4, col5, col6, col7, row7, col7_2, layout - Array
+        window - PySimpleGUI window
+
+    Return value and output variables:
+        window - PySimpleGUI window
+
+    Exceptions thrown:
+        None.
+    '''
     # sets the theme, background color and creates a window
     gui.theme('Dark Amber')
     gui.theme_background_color('#000000')
@@ -133,11 +178,6 @@ def make_window():
     xImage = Image.open(XPath)
     xImage = xImage.resize((50, 50), Image.Resampling.LANCZOS)
     # xImage = ImageTk.PhotoImage(image=xImage)
-
-    menu = ['', ['Control Question Technique', 'Guilty Knowledge Test']]
-    RespirationSampling = ['', ['1', '5']]
-    BloodPressureSampling = ['', ['1', '5']]
-    SkinConductivitySampling = ['', ['1', '5']]
 
     row0 = [
         [gui.Text('yaKnow - Polygraph Exam Startup', size=(25, 1))]
@@ -209,10 +249,6 @@ def make_window():
         [gui.Button("Back", k='-BackButton-')]
     ]
 
-    row_restart = [
-        [gui.Button("Restart", k='-Restart-')]
-    ]
-
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
@@ -244,6 +280,27 @@ def make_window():
 
 
 def startExam(window1):
+    '''
+    Purpose:
+        Attaches logic to make the window produced by "PolygraphExamSetupScreen.make_window()" responsive to user input. Starts the threads respsonsible for each device and prepares the some of the data structures needed by the "conductExamScreen.py" module to conduct the exam smoothly.
+
+    Pre-conditions:
+        The "PolygraphExamSetupScreen.make_window()" function must be called in "homescreen.main()" first, as this function is responsible for attaching logic to the PySimpleGUI window produced by "PolygraphExamSetupScreen.make_window()."
+
+    Post-conditions:
+        Calls "conductExamScreen.make_window()" and "conductExamScreen.startExam(newWindow)" and closes current window upon user selection.
+
+    Parameters and data types:
+        window1 - PySimpleGUI window
+        event, values - string
+
+    Return value and output variables:
+        None.
+
+    Exceptions thrown:
+        None.
+
+    '''
     PolygraphExamSetupScreen.examStarted = False
 
     PolygraphExamSetupScreen.checkmarkImage = Image.open(checkPath)
