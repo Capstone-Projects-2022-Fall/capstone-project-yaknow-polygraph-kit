@@ -394,66 +394,72 @@ def separateByQuestion():
             y = y + 1
 
 
-def averageZtest(question):
-
-#### GSR ZTEST
-    baselineData1 = GSRbyQuestion[0]
-    baselineData2 = GSRbyQuestion[1]
-    baselineData3 = GSRbyQuestion[2]
-
-    questionData = GSRbyQuestion[question]
-
-    conductExamScreen.zTest1SkinConductivity = list(ztest(baselineData1, questionData))
-    conductExamScreen.zTest2SkinConductivity = list(ztest(baselineData2, questionData))
-    conductExamScreen.zTest3SkinConductivity = list(ztest(baselineData3, questionData))
+# def averageZtest(question):
 
 
-#### RESPIRATION ZTEST
-    baselineData1 = respirationbyQuestion[0]
-    baselineData2 = respirationbyQuestion[1]
-    baselineData3 = respirationbyQuestion[2]
-
-    questionData = respirationbyQuestion[question]
-
-    conductExamScreen.zTest1Respiration = list(ztest(baselineData1, questionData))
-
-    conductExamScreen.zTest2Respiration = list(ztest(baselineData2, questionData))
-
-    conductExamScreen.zTest3Respiration = list(ztest(baselineData3, questionData))
-
-# finds average ztest of gsr and respiration for current question to baseline
-
-    average1 = (conductExamScreen.zTest1SkinConductivity[1] + conductExamScreen.ztest1Respiration[1])/2
-    average2 = (conductExamScreen.zTest2SkinConductivity[1] + conductExamScreen.ztest2Respiration[1])/2
-    average3 = (conductExamScreen.zTest3SkinConductivity[1] + conductExamScreen.ztest3Respiration[1])/2
-
-# math idea: if the representing p value in each test average, if its below a certain number, mathematically lying
-# the more p values that are under a certain value, more likley they are lying
-
-    percentageLying = 0
-    percentageTruth = 100
-    if average1 < .1:
-        percentageLying + 33
-    if average2 < .1:
-        percentageLying + 33
-    if average3 < .1:
-        percentageLying + 33
-    print("Percentage lying = " + percentageLying)
-    print("Percentage True = " + percentageTruth - percentageLying)
-
-    if percentageLying > percentageTruth:
-        print("conclusion: Lying")
-    if percentageTruth > percentageLying:
-        print("Conclusion: Truth")
-
-
-    layout = [
-        [gui.Text(print("Percentage lying = " + percentageLying))],
-          [gui.Text(print("Percentage True = " + percentageTruth - percentageLying))],
-
-          [gui.Multiline(size=(30, 5), key='textbox')]]  # identify the multiline via key option
-
-    window = gui.Window('Test', layout).Finalize()
+# #### GSR ZTEST
+#     baselineData1 = GSRbyQuestion[0]
+#     baselineData2 = GSRbyQuestion[1]
+#     baselineData3 = GSRbyQuestion[2]
+#
+#     questionData = GSRbyQuestion[question]
+#
+#     conductExamScreen.zTest1SkinConductivity = list(ztest(baselineData1, questionData))
+#     conductExamScreen.zTest2SkinConductivity = list(ztest(baselineData2, questionData))
+#     conductExamScreen.zTest3SkinConductivity = list(ztest(baselineData3, questionData))
+#
+#
+# #### RESPIRATION ZTEST
+#     baselineData1 = respirationbyQuestion[0]
+#     baselineData2 = respirationbyQuestion[1]
+#     baselineData3 = respirationbyQuestion[2]
+#
+#     questionData = respirationbyQuestion[question]
+#
+#     conductExamScreen.zTest1Respiration = list(ztest(baselineData1, questionData))
+#
+#     conductExamScreen.zTest2Respiration = list(ztest(baselineData2, questionData))
+#
+#     conductExamScreen.zTest3Respiration = list(ztest(baselineData3, questionData))
+#
+# # finds average ztest of gsr and respiration for current question to baseline
+#
+#     average1 = (conductExamScreen.zTest1SkinConductivity[1] + conductExamScreen.ztest1Respiration[1])/2
+#     average2 = (conductExamScreen.zTest2SkinConductivity[1] + conductExamScreen.ztest2Respiration[1])/2
+#     average3 = (conductExamScreen.zTest3SkinConductivity[1] + conductExamScreen.ztest3Respiration[1])/2
+#
+# # math idea: if the representing p value in each test average, if its below a certain number, mathematically lying
+# # the more p values that are under a certain value, more likley they are lying
+#
+#     fig, graph0 = matplotlib.pyplot.subplots(nrows=1, ncols=1, sharex=False)
+#     graph0.plot()
+#
+#     graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1Respiration, horizontalalignment='center',
+#                 verticalalignment='center',
+#                 transform=graph0.transAxes)
+#
+#     percentageLying = 0
+#     percentageTruth = 100
+#     if average1 < .1:
+#         percentageLying + 33
+#     if average2 < .1:
+#         percentageLying + 33
+#     if average3 < .1:
+#         percentageLying + 33
+#     print("Percentage lying = " + percentageLying)
+#     print("Percentage True = " + percentageTruth - percentageLying)
+#
+#     if percentageLying > percentageTruth:
+#         print("conclusion: Lying")
+#     if percentageTruth > percentageLying:
+#         print("Conclusion: Truth")
+#
+#
+#     layout = [
+#         [gui.Text(print("Percentage lying = " + percentageLying))],
+#         [gui.Text(print("Percentage True = " + percentageTruth - percentageLying))]]
+#
+#     window = gui.Window('Test', layout).Finalize()
 
 
 
@@ -644,6 +650,7 @@ def showRespirationProbabilityDistribution(question):
                 norm.pdf(respirationbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
     graph2.plot(conductExamScreen.respirationbyQuestion[2],
                 norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+    # graph3.plot().set_axis_off()
 
     # Subplot Titles
     #     graph0[0, 0].title.set_text("Normal Distribution 1")
@@ -661,6 +668,9 @@ def showRespirationProbabilityDistribution(question):
     graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3Respiration, horizontalalignment='center',
                 verticalalignment='center',
                 transform=graph2.transAxes)
+    # graph3.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3Respiration, horizontalalignment='center',
+    #             verticalalignment='center',
+    #             transform=graph2.transAxes)
 
     matplotlib.pyplot.show()
 
@@ -769,6 +779,112 @@ def showSkinConductivityProbabilityDistribution(question):
                 transform=graph2.transAxes)
 
     matplotlib.pyplot.show()
+
+def averageZtest(question):
+    '''
+    Purpose:
+        Displays the "test" question (input parameter) compared to each of the baseline questions for the skin conductivity data recroded with Z and P values included in each graph to assist examiner in making a determination regarding whether examinee is lying or not.
+
+    Pre-Conditions:
+
+    Post-Conditions:
+
+    Parameters and data types:
+        question - int
+
+    Return value and output variables:
+        graph0, graph1, graph2 - MatPlotLib Subplots
+
+    Exceptions Thrown:
+        None.
+    '''
+    # mean1 = statistics.mean(cityA)
+    # sd1 = statistics.stdev(cityA)
+    #
+    # mean2 = statistics.mean(cityB)
+    # sd2 = statistics.stdev(cityB)
+    #
+    # # plt.plot(cityA, norm.pdf(cityA, mean1, sd1), 'r')
+    # #
+    #
+    #
+    #
+    # graph0.plot(cityB, norm.pdf(cityB, mean2, sd2), 'g', marker='*')
+    # plt.show()
+
+    for measurement in GSRbyQuestion[question]:
+        print(measurement)
+    conductExamScreen.GSRbyQuestion[question].sort()
+    conductExamScreen.GSRbyQuestion[0].sort()
+    conductExamScreen.GSRbyQuestion[1].sort()
+    conductExamScreen.GSRbyQuestion[2].sort()
+
+    # # subplot x and y axis
+    # ax = fig.add_subplot(111)
+    # ax.spines['top'].set_color('none')
+    # ax.spines['bottom'].set_color('none')
+    # ax.spines['left'].set_color('none')
+    # ax.spines['right'].set_color('none')
+    # ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+    # ax.set_xlabel('respiration')
+    # ax.set_ylabel('probability')
+
+    #   fig, (graph0, graph1, graph2, ax) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=False)
+    fig, (graph0, graph1, graph2) = matplotlib.pyplot.subplots(nrows=3, ncols=1, sharex=False)
+
+    # baseline1question
+    meanBaseline1 = statistics.mean(conductExamScreen.GSRbyQuestion[0])
+    standardDeviationBaseline1 = statistics.stdev(conductExamScreen.GSRbyQuestion[0])
+    #   graph0.plot(conductExamScreen.respirationbyQuestion[0], norm.pdf(respirationbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r',marker='o')
+
+    # baseline2question
+    meanBaseline2 = statistics.mean(conductExamScreen.GSRbyQuestion[1])
+    standardDeviationBaseline2 = statistics.stdev(conductExamScreen.GSRbyQuestion[1])
+    #  graph1.plot(conductExamScreen.respirationbyQuestion[1], norm.pdf(respirationbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+
+    # baseline3question
+    meanBaseline3 = statistics.mean(conductExamScreen.GSRbyQuestion[2])
+    standardDeviationBaseline3 = statistics.stdev(conductExamScreen.GSRbyQuestion[2])
+    #   graph2.plot(conductExamScreen.respirationbyQuestion[2], norm.pdf(respirationbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
+    # Test
+    meanTest = statistics.mean(conductExamScreen.GSRbyQuestion[question])
+    standardDeviationTest = statistics.stdev(conductExamScreen.GSRbyQuestion[question])
+
+    # plotting
+
+    graph0.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph0.plot(conductExamScreen.GSRbyQuestion[0],
+                norm.pdf(GSRbyQuestion[0], meanBaseline1, standardDeviationBaseline1), 'r', marker='o')
+    graph1.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph1.plot(conductExamScreen.GSRbyQuestion[1],
+                norm.pdf(GSRbyQuestion[1], meanBaseline2, standardDeviationBaseline2), 'r', marker='o')
+    graph2.plot(conductExamScreen.GSRbyQuestion[question],
+                norm.pdf(GSRbyQuestion[question], meanTest, standardDeviationTest), 'g', marker='*')
+    graph2.plot(conductExamScreen.GSRbyQuestion[2],
+                norm.pdf(GSRbyQuestion[2], meanBaseline3, standardDeviationBaseline3), 'r', marker='o')
+
+    # Subplot Titles
+    #     graph0[0, 0].title.set_text("Normal Distribution 1")
+    #     graph0[0, 1].title.set_text("Normal Distribution 2")
+    #     graph0[0, 2].title.set_text("Normal Distribution 3")
+
+    conductZtestSkinConductivity(question)
+
+    graph0.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest1SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph0.transAxes)
+    graph1.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest2SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph1.transAxes)
+    graph2.text(0.5, 0.25, 'Ztest: results(%s)' % conductExamScreen.zTest3SkinConductivity,
+                horizontalalignment='center', verticalalignment='center',
+                transform=graph2.transAxes)
+
+    matplotlib.pyplot.show()
+
 
 
 def task():
@@ -963,15 +1079,15 @@ def startExam(window1):
             showSkinConductivityProbabilityDistribution(8)
         elif event == 'Conclusion1-':
             averageZtest(3)
-        elif event == 'Conclusion1-':
+        elif event == 'Conclusion2-':
             averageZtest(4)
-        elif event == 'Conclusion1-':
+        elif event == 'Conclusion3-':
             averageZtest(5)
-        elif event == 'Conclusion1-':
+        elif event == 'Conclusion4-':
             averageZtest(6)
-        elif event == 'Conclusion1-':
+        elif event == 'Conclusion5-':
             averageZtest(7)
-        elif event == 'Conclusion1-':
+        elif event == 'Conclusion6-':
             averageZtest(8)
         elif event == '-UPDATED-':
             print("Respiration Timings: ")
