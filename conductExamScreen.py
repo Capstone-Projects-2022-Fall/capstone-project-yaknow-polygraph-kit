@@ -234,12 +234,12 @@ def make_window():
     ]
 
     col3_9 = [
-        [gui.Button('Test 1 Respiration', key='-Test1R-', visible=True)],
-        [gui.Button('Test 2 Respiration', key='-Test2R-', visible=True)],
-        [gui.Button('Test 3 Respiration', key='-Test3R-', visible=True)],
-        [gui.Button('Test 4 Respiration', key='-Test4R-', visible=True)],
-        [gui.Button('Test 5 Respiration', key='-Test5R-', visible=True)],
-        [gui.Button('Test 6 Respiration', key='-Test6R-', visible=True)]
+        [gui.Button('Conclusion 1', key='-Conclusion1-', visible=True)],
+        [gui.Button('Conclusion 2', key='-Conclusion2-', visible=True)],
+        [gui.Button('Conclusion 3', key='-Conclusion3-', visible=True)],
+        [gui.Button('Conclusion 4', key='-Conclusion4-', visible=True)],
+        [gui.Button('Conclusion 5', key='-Conclusion5-', visible=True)],
+        [gui.Button('Conclusion 6', key='-Conclusion6-', visible=True)]
     ]
     # row7 = [
     #     [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
@@ -264,7 +264,7 @@ def make_window():
         [gui.Frame(layout=row4, title='', key='row4', visible=False)],
         [gui.Frame(layout=row5, title='', key='row5', visible=False)],
         [gui.Frame(layout=row6, title='', key='row6', visible=False)],
-        [gui.Frame(layout=col3_1, title='', k='col3_1', visible=False), gui.Frame(layout=col3_2, title='', k='col3_2', visible=False), gui.Frame(layout=col3_3, title='', k='col3_3', visible=False), gui.Frame(layout=col3_4, title='', k='col3_4', visible=False), gui.Frame(layout=col3_5, title='', k='col3_5', visible=False), gui.Frame(layout=col3_6, title='', k='col3_6', visible=False), gui.Frame(layout=col3_7, title='', k='col3_7', visible=False), gui.Frame(layout=col3_8, title='', k='col3_8', visible=False)],
+        [gui.Frame(layout=col3_1, title='', k='col3_1', visible=False), gui.Frame(layout=col3_2, title='', k='col3_2', visible=False), gui.Frame(layout=col3_3, title='', k='col3_3', visible=False), gui.Frame(layout=col3_4, title='', k='col3_4', visible=False), gui.Frame(layout=col3_5, title='', k='col3_5', visible=False), gui.Frame(layout=col3_6, title='', k='col3_6', visible=False), gui.Frame(layout=col3_7, title='', k='col3_7', visible=False), gui.Frame(layout=col3_8, title='', k='col3_8', visible=False), gui.Frame(layout=col3_9, title='', k='col3_9', visible=False)],
         [gui.Push(), gui.Frame(layout=row8, title='', key='row8'), gui.Push()],
         [gui.Push(), gui.Frame(layout=row9, title='', key='row9'), gui.Push()]
         # [gui.Frame(layout=row7, title='', key='row7', visible=True)]
@@ -437,14 +437,14 @@ def averageZtest(question):
     if average2 < .1:
         percentageLying + 33
     if average3 < .1:
-        percentageLying +33
+        percentageLying + 33
     print("Percentage lying = " + percentageLying)
     print("Percentage True = " + percentageTruth - percentageLying)
 
     if percentageLying > percentageTruth:
         print("conclusion: Lying")
     if percentageTruth > percentageLying:
-        print("Coclusion: Truth")
+        print("Conclusion: Truth")
 
 
 
@@ -863,6 +863,7 @@ def startExam(window1):
             conductExamScreen.window['col3_6'].update(visible=True)
             conductExamScreen.window['col3_7'].update(visible=True)
             conductExamScreen.window['col3_8'].update(visible=True)
+            conductExamScreen.window['col3_9'].update(visible=True)
 
             conductExamScreen.window['-B1MeanR-'].update(round(statistics.mean(respirationbyQuestion[0]), 3))
             conductExamScreen.window['-B2MeanR-'].update(round(statistics.mean(respirationbyQuestion[1]), 3))
@@ -954,6 +955,18 @@ def startExam(window1):
             showSkinConductivityProbabilityDistribution(7)
         elif event == '-Test6G-':
             showSkinConductivityProbabilityDistribution(8)
+        elif event == 'Conclusion1-':
+            averageZtest(3)
+        elif event == 'Conclusion1-':
+            averageZtest(4)
+        elif event == 'Conclusion1-':
+            averageZtest(5)
+        elif event == 'Conclusion1-':
+            averageZtest(6)
+        elif event == 'Conclusion1-':
+            averageZtest(7)
+        elif event == 'Conclusion1-':
+            averageZtest(8)
         elif event == '-UPDATED-':
             print("Respiration Timings: ")
             print(conductExamScreen.respirationTimings)
