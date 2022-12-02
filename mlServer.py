@@ -1,15 +1,22 @@
 import socket
 import os
 
+#ncServerPort = 30006
+#ncFilePort = 30010
+mlServerPort = 30012
+#mlFilePort 30017
+
+
+
 IP = "129.32.22.10"
-PORT = 30006
-ADDR = (IP, PORT)
+#PORT = 3000
+ADDR = (IP, mlServerPort)
 SIZE = 1024
 FORMAT = "utf-8"
 
 
 def main():
-    print("Port: " + str(PORT) + "\nIP: " + str(IP) + "\nAddress: " + str(ADDR))
+    print("Port: " + str(mlServerPort) + "\nIP: " + str(IP) + "\nAddress: " + str(ADDR))
     print("[STARTING] Server is starting.")
     """ Staring a TCP socket. """
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -27,6 +34,7 @@ def main():
     # print(f"[NEW CONNECTION] {addr} connected.")
     print("New Connection" + str(addr))
 
+
     while msg != "-1":
         """ Receiving the filename from the client. """
         msg = conn.recv(SIZE).decode(FORMAT)
@@ -35,12 +43,10 @@ def main():
             msg = msg.replace('$', '')
             print("Command: " + msg)
             os.system(msg)
-       # else:
-            #print("[RECV] message: " + msg)
-       # msg = ""
-        #conn.send("Message received.".encode(FORMAT))
+
 
     """ Closing the connection from the client. """
+    conn.shutdown(socket.SHUT_RDWR)
     conn.close()
     print("[DISCONNECTED] disconnected form: " + str(addr))
 

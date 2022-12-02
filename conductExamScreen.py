@@ -7,7 +7,7 @@ import matplotlib
 import os
 import atexit
 
-import client
+import Client
 import graphResults
 import tkinter as tk
 import homescreen
