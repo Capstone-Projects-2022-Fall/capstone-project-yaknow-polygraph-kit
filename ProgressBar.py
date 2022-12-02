@@ -29,7 +29,7 @@ sg.theme('Dark Blue 3')
 
 def manually_updated_meter_test():
     # layout the form
-    layout = [[sg.Text('This meter is manually updated 4 times')],
+    layout = [[sg.Text('Blood pressure bar')],
               [sg.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]]
 
     # create the form`
@@ -50,42 +50,42 @@ def manually_updated_meter_test():
     # theAPIs.select_sensors([1, 7])
     # theAPIs.start(100)
     #
-    correctPressure = False
-    while correctPressure == False:
-        measurements = theAPIs.read()
-        print(measurements)
+    correctPressure1 = False
+    while correctPressure1 == False:
+        measurements1 = theAPIs.read()
+        print(measurements1)
         # -------------------- Your Program Code --------------------
         # Spot #1 to indicate progress
-        if measurements[0] > 15:
+        if measurements1[0] > 15:
             print("you made it to 10 percent")
             progress_bar.update_bar(1)         # show 10% complete
             # sleep(2)
 
 
-        if measurements[0] > 30:
+        if measurements1[0] > 30:
             print("you made it to 20 percent")
             progress_bar.update_bar(2)         # show 20% complete
 
             # sleep(2)
-        if measurements[0] > 45:
+        if measurements1[0] > 45:
             print("you made it to 30 percent")
             progress_bar.update_bar(3)         # show 30% complete
             # sleep(2)
 
-        if measurements[0] > 60:
+        if measurements1[0] > 60:
             print("you made it to 40 percent")
             progress_bar.update_bar(4)         # show 40% complete
             # sleep(2)
-        if measurements[0] > 75:
+        if measurements1[0] > 75:
             print("you made it to 50 percent")
             progress_bar.update_bar(5)         # show 50% complete
             # sleep(2)
 
-        if measurements[0] > 90:
+        if measurements1[0] > 90:
             print("you made it to 60 percent")
             progress_bar.update_bar(6)         # show 60% complete
             # sleep(2)
-        if measurements[0] > 105:
+        if measurements1[0] > 105:
             print("you made it to 70 percent")
             progress_bar.update_bar(7)         # show 70% complete
             # sleep(2)
@@ -101,8 +101,8 @@ def manually_updated_meter_test():
         if measurements[0] > 150:
             print("you made it to 100 percent")
             progress_bar.update_bar(10)         # show 100% complete
-            sleep(3)
-            correctPressure = True
+            #sleep(3)
+            correctPressure1 = True
             window.close()
 
 

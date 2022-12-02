@@ -192,6 +192,7 @@ def make_window():
     row7 = [
         [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
     ]
+
     row8 = [
         [gui.Button('YES', key='-YES-'), gui.Button('NO', key='-NO-')]
     ]
@@ -227,7 +228,7 @@ def make_window():
 #This is a thread
 def examCounter():
     while conductExamScreen.examFinished == False:
-        if ((conductExamScreen.examTime % 1) == 0):
+        if ((conductExamScreen.examTime % 3) == 0):
             conductExamScreen.window.write_event_value('-UPDATED-', None)
         if(conductExamScreen.inQuestion == True):
             conductExamScreen.examTime = conductExamScreen.examTime + 1
@@ -248,7 +249,7 @@ def examCounter():
                         # print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
                         conductExamScreen.examTime = conductExamScreen.examTime + 1
                         conductExamScreen.window['-Time-'].update(examTime)
-                        if ((conductExamScreen.examTime % 1) == 0):
+                        if ((conductExamScreen.examTime % 3) == 0):
                             conductExamScreen.window.write_event_value('-UPDATED-', None)
                         time.sleep(1)
                         continue
@@ -722,7 +723,7 @@ def startExam(window1):
             showSkinConductivityProbabilityDistribution(7)
         elif event == '-Test6G-':
             showSkinConductivityProbabilityDistribution(8)
-        # elif event == '-UPDATED-':
+        elif event == '-UPDATED-':
         #     # print("Respiration Timings: ")
         #     # print(conductExamScreen.respirationTimings)
         #     # print(conductExamScreen.respirationMeasurements)
@@ -737,12 +738,12 @@ def startExam(window1):
         #     # print(conductExamScreen.pulseTimings)
         #     # print("Pulse Measurements")
         #     # print(conductExamScreen.pulseMeasurements)
-        #     if(len(conductExamScreen.respirationTimings) > 0):
-        #         updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
-        #     else:
-        #         updateTime = 0
-        #     #updateTime = time.time() - conductExamScreen.startTime
-        #     print(updateTime)
+            if(len(conductExamScreen.respirationTimings) > 0):
+                updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
+            else:
+                updateTime = 0
+            #updateTime = time.time() - conductExamScreen.startTime
+            print(updateTime)
             conductExamScreen.respirationLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
             conductExamScreen.respirationLiveGraph.axis(ymin=-30, ymax=30)
             conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings, conductExamScreen.respirationMeasurements, c='black')
