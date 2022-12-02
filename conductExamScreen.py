@@ -447,7 +447,13 @@ def averageZtest(question):
         print("Conclusion: Truth")
 
 
+    layout = [
+        [gui.Text(print("Percentage lying = " + percentageLying))],
+          [gui.Text(print("Percentage True = " + percentageTruth - percentageLying))],
 
+          [gui.Multiline(size=(30, 5), key='textbox')]]  # identify the multiline via key option
+
+    window = gui.Window('Test', layout).Finalize()
 
 
 
