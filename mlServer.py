@@ -1,56 +1,27 @@
 import socket
-import os
+
 
 #ncServerPort = 30006
-#ncFilePort = 30010
+#ncFilePort = 30010  # data file port
 mlServerPort = 30012
-#mlFilePort 30017
+#mlFilePort = 30017
 
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+HOST = '129.32.22.10'
+#port = 9990
 
+server_socket.bind((HOST, mlServerPort))
+server_socket.listen(5)
 
-IP = "129.32.22.10"
-#PORT = 3000
-ADDR = (IP, mlServerPort)
-SIZE = 1024
-FORMAT = "utf-8"
+print("Server started...")
 
+client_sockets, addr = server_socket.accept()
+while True:
+    msg_received = client_sockets.recv(1024)
+    msg_received = msg_received.decode()
+    print("Client:", msg_received)
 
-def main():
-    print("Port: " + str(mlServerPort) + "\nIP: " + str(IP) + "\nAddress: " + str(ADDR))
-    print("[STARTING] Server is starting.")
-    """ Staring a TCP socket. """
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    msg_send = input("Me:")
+    client_sockets.send(msg_send.encode("ascii"))
 
-    """ Bind the IP and PORT to the server. """
-    server.bind(ADDR)
-
-    """ Server is listening, i.e., server is now waiting for the client to connected. """
-    server.listen()
-    print("[LISTENING] Server is listening.")
-
-    msg = ""
-    """ Server has accepted the connection from the client. """
-    conn, addr = server.accept()
-    # print(f"[NEW CONNECTION] {addr} connected.")
-    print("New Connection" + str(addr))
-
-
-    while msg != "-1":
-        """ Receiving the filename from the client. """
-        msg = conn.recv(SIZE).decode(FORMAT)
-        # print(f"[RECV] message: {msg}")
-        if "$" in msg:
-            msg = msg.replace('$', '')
-            print("Command: " + msg)
-            os.system(msg)
-
-
-    """ Closing the connection from the client. """
-    conn.shutdown(socket.SHUT_RDWR)
-    conn.close()
-    print("[DISCONNECTED] disconnected form: " + str(addr))
-
-
-if __name__ == "__main__":
-    main()
-
+client_sockets.close()

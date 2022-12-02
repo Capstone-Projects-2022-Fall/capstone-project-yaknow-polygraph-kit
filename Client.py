@@ -39,24 +39,9 @@ def main():
     "new connection to server via another port "
     mlClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     mlClient.connect(mlAdDDR)
+    print("new connection")
     "receive data file from console"
-    os.system("nc -v -w 30 -p" + str(mlFilePort) + " -l > mlResult.txt")
-
-    -----here
-
-    mlClient.send(("$nc -v -w 2 " + str(myIPAddr) + " " + str(mlFilePort) + " < myResult.txt").encode(FORMAT))
-    print("ml result received")
-    mlClient.send("$exit".encode(FORMAT))
-    mlClient.close()
-
-
-    # client.send("$python ml.py".encode(FORMAT))  # execute machine learning
-    # time.sleep(20)
-    # os.system("nc -nlvp 30002 >  prediction.txt")  # now the client preps to recive
-    # time.sleep(14)
-    # client.send(("$nc " + str(myIPAddr) + " 30002 < prediction.txt").encode(FORMAT))  # the server sends
-    # read file and display data  ~make if or statements or some command, so we only get the strongest truth
-    """ Closing the connection from the server. """
+    #os.system("nc -v -w 30 -p" + str(mlFilePort) + " -l > mlResult.txt")
 
 
 if __name__ == "__main__":
