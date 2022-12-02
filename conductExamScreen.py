@@ -232,6 +232,15 @@ def make_window():
         [gui.Text('', key='-Test5P-', visible=True)],
         [gui.Text('', key='-Test6P-', visible=True)]
     ]
+
+    col3_9 = [
+        [gui.Button('Test 1 Respiration', key='-Test1R-', visible=True)],
+        [gui.Button('Test 2 Respiration', key='-Test2R-', visible=True)],
+        [gui.Button('Test 3 Respiration', key='-Test3R-', visible=True)],
+        [gui.Button('Test 4 Respiration', key='-Test4R-', visible=True)],
+        [gui.Button('Test 5 Respiration', key='-Test5R-', visible=True)],
+        [gui.Button('Test 6 Respiration', key='-Test6R-', visible=True)]
+    ]
     # row7 = [
     #     [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
     # ]
@@ -383,6 +392,61 @@ def separateByQuestion():
         else:
             tempArray.append(skinConductivityRecordings[y].measurement)
             y = y + 1
+
+
+def averageZtest(question):
+
+#### GSR ZTEST
+    baselineData1 = GSRbyQuestion[0]
+    baselineData2 = GSRbyQuestion[1]
+    baselineData3 = GSRbyQuestion[2]
+
+    questionData = GSRbyQuestion[question]
+
+    conductExamScreen.zTest1SkinConductivity = list(ztest(baselineData1, questionData))
+    conductExamScreen.zTest2SkinConductivity = list(ztest(baselineData2, questionData))
+    conductExamScreen.zTest3SkinConductivity = list(ztest(baselineData3, questionData))
+
+
+#### RESPIRATION ZTEST
+    baselineData1 = respirationbyQuestion[0]
+    baselineData2 = respirationbyQuestion[1]
+    baselineData3 = respirationbyQuestion[2]
+
+    questionData = respirationbyQuestion[question]
+
+    conductExamScreen.zTest1Respiration = list(ztest(baselineData1, questionData))
+
+    conductExamScreen.zTest2Respiration = list(ztest(baselineData2, questionData))
+
+    conductExamScreen.zTest3Respiration = list(ztest(baselineData3, questionData))
+
+# finds average ztest of gsr and respiration for current question to baseline
+
+    average1 = (conductExamScreen.zTest1SkinConductivity[1] + conductExamScreen.ztest1Respiration[1])/2
+    average2 = (conductExamScreen.zTest2SkinConductivity[1] + conductExamScreen.ztest2Respiration[1])/2
+    average3 = (conductExamScreen.zTest3SkinConductivity[1] + conductExamScreen.ztest3Respiration[1])/2
+
+# math idea: if the representing p value in each test average, if its below a certain number, mathematically lying
+# the more p values that are under a certain value, more likley they are lying
+
+    percentageLying = 0
+    percentageTruth = 100
+    if average1 < .1:
+        percentageLying + 33
+    if average2 < .1:
+        percentageLying + 33
+    if average3 < .1:
+        percentageLying +33
+    print("Percentage lying = " + percentageLying)
+    print("Percentage True = " + percentageTruth - percentageLying)
+
+    if percentageLying > percentageTruth:
+        print("conclusion: Lying")
+    if percentageTruth > percentageLying:
+        print("Coclusion: Truth")
+
+
 
 
 
