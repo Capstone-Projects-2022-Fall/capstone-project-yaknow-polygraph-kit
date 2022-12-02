@@ -437,17 +437,20 @@ def averageZtest(question):
     percentageTruth = 100
     if average1 < .1:
         percentageLying + 33
+        percentageTruth - 33
     if average2 < .1:
         percentageLying + 33
+        percentageTruth - 33
     if average3 < .1:
         percentageLying + 33
+        percentageTruth - 33
     # print("Percentage lying = " + percentageLying)
     # print("Percentage True = " + percentageTruth - percentageLying)
     conclusion = ''
     if percentageLying > percentageTruth:
         conclusion = 'Lying'
-    if percentageTruth > percentageLying:
-        conclusion = 'telling the truth'
+    if percentageLying < percentageTruth:
+        conclusion = 'Telling the truth'
 
     layout = [
               [gui.Text("Conclusions based on Z-value Only")],
