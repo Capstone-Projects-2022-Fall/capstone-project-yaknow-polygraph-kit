@@ -21,8 +21,9 @@ def new_user_login():
 
     while True:
         event, values = window.read()
-        if event == gui.WIN_CLOSED or event == 'Cancel':
+        if event == 'Cancel' or event == gui.WIN_CLOSED:
             window.close()
+            break
         else:
             if event == "Ok":
                 password = values['PASSWORD']
@@ -54,7 +55,8 @@ def existing_user():
 
     while True:
         event, values = window.read()
-        if event == gui.WIN_CLOSED or event == 'Cancel':
+        if event == 'Cancel' or event == gui.WIN_CLOSED:
+            window.close()
             break
         else:
             email = values['-EMAIL-']
