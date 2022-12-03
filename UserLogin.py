@@ -1,23 +1,23 @@
 import PySimpleGUI as gui
-import UserLogin
 import homescreen
 import mysql.connector
-from mysql.connector import Error
 
 password = ''
 confirmPassword = ''
 
 def new_user_login():
     layout = [
-            [gui.Text('First name:'), gui.InputText(key='-FIRSTNAME-')],
-            [gui.Text('Last name:'), gui.InputText(key='-LASTNAME-')],
-            [gui.Text('Email:'), gui.InputText(key='-EMAIL-')],
-            [gui.Text('Password:'), gui.InputText(key='-PASSWORD-', password_char='*', do_not_clear=False)],
-            [gui.Text('Confirm Password:'), gui.InputText(key='-CONFIRMPASSWORD-', password_char='*', do_not_clear=False)],
-            [gui.Button('Ok'), gui.Button('Cancel')]
+        [gui.Text('First name:', justification="left"), gui.InputText(key='-FIRSTNAME-', justification="left")],
+        [gui.Text('Last name:', justification="left"), gui.InputText(key='-LASTNAME-', justification="left")],
+        [gui.Text('Email:', justification="left"), gui.InputText(key='-EMAIL-', justification="left")],
+        [gui.Text('Password:', justification="left")],
+        [gui.InputText(key='PASSWORD', password_char='*', do_not_clear=False, justification="left")],
+        [gui.Text('Confirm Password:', justification="left")],
+        [gui.InputText(key='-CONFIRMPASSWORD-', password_char='*', do_not_clear=False, justification="left")],
+        [gui.Button('Ok'), gui.Button('Cancel')]
     ]
 
-    window = gui.Window('Create account', layout)
+    window = gui.Window('Create account', layout, size=(400, 200))
 
     while True:
         event, values = window.read()
@@ -25,16 +25,19 @@ def new_user_login():
             break
         else:
             if event == "Ok":
-                password = values['-PASSWORD-']
+                password = values['PASSWORD']
                 confirmPassword = values['-CONFIRMPASSWORD-']
 
                 if password == confirmPassword:
                     name = values['-FIRSTNAME-'] + " " + values['-LASTNAME-']
                     email = values['-EMAIL-']
-                    password = values['-PASSWORD-']
 
-                    insert_user(name, email, password)
-                    homescreen.main()
+                    if get_user(email):
+                        gui.popup("The User Already Exists. Try Logging In Via Returning User option Maybe?")
+                    else:
+                        insert_user(name, email, password)
+                        homescreen.main()
+
                 elif password != confirmPassword:
                     gui.popup("Please retype password. Passwords to not match", font=16)
                     continue
@@ -42,9 +45,9 @@ def new_user_login():
 
 def existing_user():
     layout = [
-            [gui.Text('Email:'), gui.InputText(key='-EMAIL-')],
-            [gui.Text('Password:'), gui.InputText(key='-PASSWORD-', password_char='*', do_not_clear=False)],
-            [gui.Button('Ok'), gui.Button('Cancel')]
+        [gui.Text('Email:'), gui.InputText(key='-EMAIL-')],
+        [gui.Text('Password:'), gui.InputText(key='PASSWORD', password_char='*', do_not_clear=False)],
+        [gui.Button('Ok'), gui.Button('Cancel')]
     ]
 
     window = gui.Window('Login', layout)
@@ -55,17 +58,19 @@ def existing_user():
             break
         else:
             email = values['-EMAIL-']
-            password = values['-PASSWORD-']
-            get_user(email, password)
+            password = values['PASSWORD']
+            get_user(email)
 
         window.close()
 
 def decision():
     layout = [
-        [gui.Button('Returning User'), gui.Button('New User')],
+        [gui.Text("Welcome To Polygraph Test Kit!")],
+        [gui.Button('New User')],
+        [gui.Button('Returning User')],
         [gui.Button('Cancel')]
     ]
-    window = gui.Window('Welcome To Polygraph Test Kit!', layout)
+    window = gui.Window('Welcome To Polygraph Test Kit!', layout, size=(300, 150))
     while True:
         event, values = window.read()
         if event == gui.WIN_CLOSED or event == 'Cancel':
@@ -92,7 +97,9 @@ def insert_user(name, email, password):
         print("User Added")
     db.close()
 
-def get_user(email, password):
+
+def get_user(email):
+    email_list = []
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -101,10 +108,13 @@ def get_user(email, password):
     )
 
     with db.cursor() as mycursor:
-        mycursor.execute("SELECT email, password FROM users.user WHERE email=" + email + " password=" + password)
-        db.commit()
-        print("User Selected")
+        mycursor.execute("SELECT email FROM users.user")
+        result = list(mycursor.fetchall())
 
+    for x in result:
+        email_list.append(x[0])
+
+    return email in email_list
 
 if __name__ == "__main__":
     decision()
