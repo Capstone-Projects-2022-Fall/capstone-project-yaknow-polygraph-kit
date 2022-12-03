@@ -1,4 +1,4 @@
-import socket
+"""import socket
 
 mlServerPort = 20012
 IP = "129.32.22.10"
@@ -39,4 +39,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()"""

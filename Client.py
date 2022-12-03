@@ -3,6 +3,7 @@ import socket
 import time
 
 import mlChatServer
+import mlCleint
 
 ncServerPort = 30006
 ncFilePort = 30010  # data file port
@@ -39,7 +40,7 @@ def main():
     client.close()
 
     "get the data file"
-    mlChatServer.main()
+    mlCleint.main()
 
     "receive data file from console"
     #os.system("nc -v -w 30 -p" + str(mlFilePort) + " -l > mlResult.txt")

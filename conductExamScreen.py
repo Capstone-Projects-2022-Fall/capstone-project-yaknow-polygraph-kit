@@ -701,7 +701,7 @@ def ml(dataset):
         file.write('\n')
     file.close()
 
-    client.conect()
+    Client.main()
 
 
 def uploadDataToDataBase():
