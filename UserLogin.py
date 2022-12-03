@@ -34,6 +34,7 @@ def new_user_login():
                     password = values['-PASSWORD-']
 
                     insert_user(name, email, password)
+                    homescreen.main()
                 elif password != confirmPassword:
                     gui.popup("Please retype password. Passwords to not match", font=16)
                     continue
@@ -42,7 +43,7 @@ def new_user_login():
 def existing_user():
     layout = [
             [gui.Text('Email:'), gui.InputText(key='-EMAIL-')],
-            [gui.Text('Password:'), gui.InputText(key='-PASS-', password_char='*', do_not_clear=False)],
+            [gui.Text('Password:'), gui.InputText(key='-PASSWORD-', password_char='*', do_not_clear=False)],
             [gui.Button('Ok'), gui.Button('Cancel')]
     ]
 
