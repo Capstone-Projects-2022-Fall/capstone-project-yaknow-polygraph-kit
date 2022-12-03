@@ -7,17 +7,15 @@ confirmPassword = ''
 
 def new_user_login():
     layout = [
-        [gui.Text('First name:', justification="left"), gui.InputText(key='-FIRSTNAME-', justification="left")],
-        [gui.Text('Last name:', justification="left"), gui.InputText(key='-LASTNAME-', justification="left")],
-        [gui.Text('Email:', justification="left"), gui.InputText(key='-EMAIL-', justification="left")],
-        [gui.Text('Password:', justification="left")],
-        [gui.InputText(key='PASSWORD', password_char='*', do_not_clear=False, justification="left")],
-        [gui.Text('Confirm Password:', justification="left")],
-        [gui.InputText(key='-CONFIRMPASSWORD-', password_char='*', do_not_clear=False, justification="left")],
+        [gui.Text('First name:           ', justification="left"), gui.InputText(key='-FIRSTNAME-', justification="left")],
+        [gui.Text('Last name:            ', justification="left"), gui.InputText(key='-LASTNAME-', justification="left")],
+        [gui.Text('Email:                   ', justification="left"), gui.InputText(key='-EMAIL-', justification="left")],
+        [gui.Text('Password:             ', justification="left"), gui.InputText(key='PASSWORD', password_char='*', do_not_clear=False, justification="left")],
+        [gui.Text('Confirm Password:', justification="left"), gui.InputText(key='-CONFIRMPASSWORD-', password_char='*', do_not_clear=False, justification="left")],
         [gui.Button('Ok'), gui.Button('Cancel')]
     ]
 
-    window = gui.Window('Create account', layout, size=(400, 200))
+    window = gui.Window('Create account', layout, size=(350, 150))
 
     while True:
         event, values = window.read()
@@ -34,19 +32,21 @@ def new_user_login():
                     email = values['-EMAIL-']
 
                     if get_user(email, password):
-                        gui.popup("The User Already Exists. Try Logging In Via Returning User option Maybe?")
+                        gui.popup("Invalid Credentials", "The User Already Exists. Try Logging In Via Returning User option Maybe?")
+                        window.close()
+                        decision()
                     else:
                         insert_user(name, email, password)
                         homescreen.main()
 
                 elif password != confirmPassword:
-                    gui.popup("Please retype password. Passwords to not match", font=16)
+                    gui.popup("Incorrect Password", "Please retype password. Passwords to not match", font=16)
                     continue
         #window.close()
 
 def existing_user():
     layout = [
-        [gui.Text('Email:'), gui.InputText(key='-EMAIL-')],
+        [gui.Text('Email:      '), gui.InputText(key='-EMAIL-')],
         [gui.Text('Password:'), gui.InputText(key='PASSWORD', password_char='*', do_not_clear=False)],
         [gui.Button('Ok'), gui.Button('Cancel')]
     ]
@@ -64,9 +64,9 @@ def existing_user():
             if (get_user(email, password)):
                 homescreen.main()
             else:
-                gui.popup("The User Does Not Exist. Try Again Maybe?")
-
-        #window.close()
+                gui.popup("User Not Found","The User Does Not Exist. Try Again Maybe?")
+                window.close()
+                decision()
 
 def decision():
     layout = [
@@ -75,7 +75,7 @@ def decision():
         [gui.Button('Returning User')],
         [gui.Button('Cancel')]
     ]
-    window = gui.Window('Welcome To Polygraph Test Kit!', layout, size=(300, 150))
+    window = gui.Window('Welcome To Polygraph Test Kit!', layout, size=(300, 140))
     while True:
         event, values = window.read()
         if event == gui.WIN_CLOSED or event == 'Cancel':
