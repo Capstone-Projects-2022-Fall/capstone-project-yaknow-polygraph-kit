@@ -22,7 +22,7 @@ def new_user_login():
     while True:
         event, values = window.read()
         if event == gui.WIN_CLOSED or event == 'Cancel':
-            break
+            window.close()
         else:
             if event == "Ok":
                 password = values['PASSWORD']
@@ -32,7 +32,7 @@ def new_user_login():
                     name = values['-FIRSTNAME-'] + " " + values['-LASTNAME-']
                     email = values['-EMAIL-']
 
-                    if get_user(email):
+                    if get_user(email, password):
                         gui.popup("The User Already Exists. Try Logging In Via Returning User option Maybe?")
                     else:
                         insert_user(name, email, password)
@@ -41,7 +41,7 @@ def new_user_login():
                 elif password != confirmPassword:
                     gui.popup("Please retype password. Passwords to not match", font=16)
                     continue
-        window.close()
+        #window.close()
 
 def existing_user():
     layout = [
@@ -59,9 +59,12 @@ def existing_user():
         else:
             email = values['-EMAIL-']
             password = values['PASSWORD']
-            get_user(email)
+            if (get_user(email, password)):
+                homescreen.main()
+            else:
+                gui.popup("The User Does Not Exist. Try Again Maybe?")
 
-        window.close()
+        #window.close()
 
 def decision():
     layout = [
@@ -98,8 +101,9 @@ def insert_user(name, email, password):
     db.close()
 
 
-def get_user(email):
+def get_user(email, password):
     email_list = []
+    password_list = []
     db = mysql.connector.connect(
         host="173.255.232.150",
         user="cis4398",
@@ -108,13 +112,16 @@ def get_user(email):
     )
 
     with db.cursor() as mycursor:
-        mycursor.execute("SELECT email FROM users.user")
+        mycursor.execute("SELECT email, password FROM users.user")
         result = list(mycursor.fetchall())
 
     for x in result:
         email_list.append(x[0])
 
-    return email in email_list
+    for x in result:
+        password_list.append(x[1])
+
+    return email in email_list and password in password_list
 
 if __name__ == "__main__":
     decision()
