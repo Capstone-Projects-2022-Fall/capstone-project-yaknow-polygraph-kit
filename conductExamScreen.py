@@ -396,6 +396,7 @@ def startExam(window1):
         #print(event, values)
         if event == '-Restart-':
             conductExamScreen.restart_clicked = True
+            graphResults.plt.close('all')
             conductExamScreen.window.close()
             break
         elif event in (gui.WIN_CLOSED, 'EXIT'):
