@@ -1,4 +1,3 @@
-""""
 import pandas as pd
 import io
 import requests
@@ -53,31 +52,12 @@ print(species[predict_classes[1:10]])
 correct = accuracy_score(expected_classes, predict_classes)
 print(f"Accuracy: {correct}")
 
-filename = "datafile.txt"
 # file = open(filename, "r")
-maxpred = ""
 
-counter = 0
-rigthSample = ""
-with open(filename) as file:
-    for line in file:
-        # print(line.rstrip())
-        splitLine = line.split(',')
-        singleEntry = splitLine[0:len(splitLine) - 1]
-        sample_flower = np.array([int(singleEntry[0]), int(singleEntry[1]), float(singleEntry[2]), int(singleEntry[3]), float(singleEntry[4]), float(singleEntry[5]), int(singleEntry[6])], dtype=float)
-        pred = model.predict(sample_flower)
-        if counter == 0:
-            maxpred = pred
-            counter = 1
-            rigthSample = sample_flower
-        elif(np.argmax(pred) > np.argmax(maxpred)):
-            maxpred = pred
-            rigthSample = sample_flower
-
-    #print(dataset)
-
-pred = model.predict(rigthSample)
-print(maxpred)  # False , True
-pred = np.argmax(maxpred)
-print(f"Predict that {rigthSample} is: {species[maxpred]}")
-os.system(f"echo  {species[maxpred]} with a accuracy of {maxpred} > prediction.txt")"""
+sample_flower = np.array([[7, 1, 0, 24.355373, 0, 0, 15.9444809]], dtype=float)
+pred = model.predict(sample_flower)
+print(pred)
+pred = np.argmax(pred)
+file = open("mlResult.txt", "w")
+file.write(f"Predict that {sample_flower} is: {species[pred]}")
+file.close()
