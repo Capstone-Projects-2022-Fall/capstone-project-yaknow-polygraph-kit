@@ -106,13 +106,14 @@ def connectRespirationBeltIndividual():
     theAPIs.start(rate)
     print("Respiration Started")
 
-    times = int(IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
-    for i in range(times):
+    while not IndividualDeviceScreen.recordingStopped:
         measurements = theAPIs.read()
         currentTime = datetime.datetime.now()
         if measurements == None:
             break
-        print(currentTime, measurements)
+        IndividualDeviceScreen.deviceMeasurements.append(measurements)
+        IndividualDeviceScreen.deviceTimings.append(currentTime)
+        IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
     # if devicesFound is None:
     #    logging.error('No Device connected.')
     # else:

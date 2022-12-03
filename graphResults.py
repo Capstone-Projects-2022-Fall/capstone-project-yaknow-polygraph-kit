@@ -1,6 +1,6 @@
 import matplotlib
 matplotlib.use('TKAgg')
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as timePlot
 import numpy as np
 import csv
 import matplotlib.animation as animation
@@ -9,11 +9,13 @@ import time
 from matplotlib.widgets import Slider
 import conductExamScreen
 
-fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1, sharex=True)
-plt.subplots_adjust(bottom=0.25)
+fig, (graph0, graph1, graph2, graph3) = timePlot.subplots(nrows=4, ncols=1, sharex=True)
+fig.tight_layout()
+timePlot.subplots_adjust(bottom=0.25)
 
-axis_position = plt.axes([0.25, 0.1, 0.65, 0.03])
+axis_position = timePlot.axes([0.25, 0.1, 0.65, 0.03])
 slider_position = Slider(axis_position, 'Pos', valmin=0, valmax=100, valstep=1)
+
 
 #fig.subplots_adjust(hspace=0)
 
@@ -51,6 +53,18 @@ def createGraphs():
     #    for row in lines:
     #        x.append(row[0])
     #        y.append(int(row[1]))
+    questionColors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+    questionIndex = 0
+    for question in conductExamScreen.questionTimestampsTemp:
+        print("Question: ", question)
+        questionString = 'Question ' + str(questionIndex) + " Start"
+        graph0.axvline(x=question, color=questionColors[questionIndex], label=questionString)
+        graph1.axvline(x=question, color=questionColors[questionIndex])
+        graph2.axvline(x=question, color=questionColors[questionIndex])
+        graph3.axvline(x=question, color=questionColors[questionIndex])
+        questionIndex = questionIndex + 1
+
+    fig.legend(loc='lower left')
 
     for respirationRecording in conductExamScreen.respirationRecordings:
         RespirationMeasurement.append(respirationRecording.measurement)

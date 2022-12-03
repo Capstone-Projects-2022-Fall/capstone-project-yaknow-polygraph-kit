@@ -114,17 +114,20 @@ def connectGSRSensorIndividual():
         pass
 
     sensor_data = []
-    times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+    #times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
     print("GSR: Started")
-    for i in range(times):
+    while not IndividualDeviceScreen.recordingStopped:
         getData = ser.readline()
         data = int(getData.decode('utf-8'))
         currentTime = datetime.datetime.now()
         final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
         print(currentTime, final_reading)
+        IndividualDeviceScreen.deviceMeasurements.append(final_reading)
+        IndividualDeviceScreen.deviceTimings.append(currentTime)
+        IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
+
         sensor_data.append(final_reading)
         time.sleep(IndividualDeviceScreen.DeviceSamplingRate)
-    print(final_reading)
 
     # if devicesFound is None:
     #    logging.error('No Device connected.')
