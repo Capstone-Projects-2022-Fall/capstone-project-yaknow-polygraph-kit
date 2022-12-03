@@ -12,6 +12,7 @@ import time
 
 
 from scipy.signal import find_peaks
+#from ProgressBar import manually_updated_meter_test
 
 # import numpy as np
 
@@ -25,6 +26,37 @@ logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG,
 
 
 def connectBloodPressureDevice():
+    '''
+    Purpose:
+        A thread that connects and records blood presssure and pulse data from the Arduino GSR Sensor in a non-blocking way and communicates the stored data with the main thread.
+
+    Pre-conditions:
+        Must be started within the context of a polygraph exam.
+
+    Post-conditions:
+        Exits the thread upon exam completion.
+
+    Parameters and data types:
+        PolygraphExamSetup.window - PySimpleGUI window
+        PolygrpahExamSetup.GSRSamplingRate - int
+        conductExamScreen.examFinished - boolean
+        conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+        conductExamScreen.bloodPressureTimings - Array of Flaot
+        conductExamScreen.bloodPressureMeasurements - Array of float
+         conductExamScreen.pulseMeasurements - Array of float
+        conductExamScreen.pulseTimings - Array of float
+
+    Return value and output variables:
+        conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+        conductExamScreen.bloodPressureTimings - Array of Flaot
+        conductExamScreen.bloodPressureMeasurements - Array of float
+         conductExamScreen.pulseMeasurements - Array of float
+        conductExamScreen.pulseTimings - Array of float
+
+    Exceptions thrown:
+        None.
+
+    '''
     from gdx2 import gdx
     theAPIs = gdx()
     connected = False
@@ -37,6 +69,7 @@ def connectBloodPressureDevice():
         else:
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
+        time.sleep(1)
         pass
     print("Starting Exam in BP")
 # blood pressure sensor can measure mean arterial pressure, systolic (the maximum), diastolic (minimum)
@@ -67,11 +100,62 @@ def connectBloodPressureDevice():
     # # This continuously reads cuff pressure, until the pressure is above 155 and then it stops reading
     # # Cuff pressure needs to be at least 155 for the device to start reading blood pressure
     # # then when the cuff pressure is around 50, the device spits out your blood pressure measurements (and any other data collected would be printed at this time)
-    examStartTime = datetime.datetime.now()
+    #examStartTime = datetime.datetime.now()
     while conductExamScreen.examFinished == False:
         measurements = theAPIs.read()
         correctPressure = False
         conductExamScreen.inQuestion = False
+        #did u paste in the code yet
+      #  manually_updated_meter_test()
+      #   progress_bar = conductExamScreen.window['progress']
+      #   if measurements[0] > 15:
+      #       print("you made it to 10 percent")
+      #       progress_bar.update_bar(1)         # show 10% complete
+      #       # sleep(2)
+      #
+      #
+      #   if measurements[0] > 30:
+      #       print("you made it to 20 percent")
+      #       progress_bar.update_bar(2)         # show 20% complete
+      #
+      #       # sleep(2)
+      #   if measurements[0] > 45:
+      #       print("you made it to 30 percent")
+      #       progress_bar.update_bar(3)         # show 30% complete
+      #       # sleep(2)
+      #
+      #   if measurements[0] > 60:
+      #       print("you made it to 40 percent")
+      #       progress_bar.update_bar(4)         # show 40% complete
+      #       # sleep(2)
+      #   if measurements[0] > 75:
+      #       print("you made it to 50 percent")
+      #       progress_bar.update_bar(5)         # show 50% complete
+      #       # sleep(2)
+      #
+      #   if measurements[0] > 90:
+      #       print("you made it to 60 percent")
+      #       progress_bar.update_bar(6)         # show 60% complete
+      #       # sleep(2)
+      #   if measurements[0] > 105:
+      #       print("you made it to 70 percent")
+      #       progress_bar.update_bar(7)         # show 70% complete
+      #       # sleep(2)
+      #   if measurements[0] > 120:
+      #       print("you made it to 80 percent")
+      #       progress_bar.update_bar(8)         # show 80% complete
+      #       # sleep(2)
+      #   if measurements[0] > 135:
+      #       print("you made it to 90 percent")
+      #       progress_bar.update_bar(9)         # show 90% complete
+      #       # sleep(2)
+      #
+      #   if measurements[0] > 150:
+      #       print("you made it to 100 percent")
+      #       progress_bar.update_bar(10)         # show 100% complete
+      #       time.sleep(3)
+      #       conductExamScreen.window.close()
+        print("Not in Question")
         if ( (measurements[0] < 150)):
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             print("Paused Measurements: ", measurements[0])
@@ -99,7 +183,7 @@ def connectBloodPressureDevice():
 
                     for index, elem in enumerate(listt):
                         if (index + 1 < len(listt) and index - 1 >= 0):
-                            prev_el = str(listt[index - 1])
+                            prev_el = listt[index - 1]
                             if elem == maxOsc:
                                 finalMeasurement = prev_el
                                 #print("Your real mean arterial blood pressure is : " + str(prev_el))
@@ -110,19 +194,25 @@ def connectBloodPressureDevice():
 
                     # print(peaks)
 
-                    currentTime = endTime - beginningTime
-                    pulseRate = ((((len(peaks))) / currentTime.total_seconds()) * 60)
-                    print("The pulse rate is: " + str(pulseRate))
-                    tempMeasurementBP = conductExamScreen.singularRecording(currentTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
-                    tempMeasurementPR = conductExamScreen.singularRecording(currentTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
+                    currentTime = (endTime - beginningTime).total_seconds()
+                    relativeTime = (endTime - conductExamScreen.examStartTime).total_seconds()
+                    pulseRate = ((((len(peaks))) / currentTime) * 60)
+                    #print("The pulse rate is: " + str(pulseRate))
+                    tempMeasurementBP = conductExamScreen.singularRecording(relativeTime, finalMeasurement, conductExamScreen.newQuestion, conductExamScreen.yn)
+                    tempMeasurementPR = conductExamScreen.singularRecording(relativeTime, pulseRate,conductExamScreen.newQuestion, conductExamScreen.yn)
                     conductExamScreen.bloodPressureRecordings.append(tempMeasurementBP)
                     conductExamScreen.pulseRecordings.append(tempMeasurementPR)
-                    print("Added BP: ", tempMeasurementBP.measurement)
+                    '''print("Added BP: ", tempMeasurementBP.measurement)
                     print("Associated Time: ", tempMeasurementBP.timestamp)
                     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
                     print("Added PR: ", tempMeasurementPR.measurement)
                     print("Associated Time: ", tempMeasurementPR.timestamp)
-                    print("PR Collections: ", len(conductExamScreen.pulseRecordings))
+                    print("PR Collections: ", len(conductExamScreen.pulseRecordings))'''
+                    conductExamScreen.bloodPressureMeasurements.append(finalMeasurement)
+                    conductExamScreen.bloodPressureTimings.append(relativeTime)
+                    conductExamScreen.pulseMeasurements.append(pulseRate)
+                    conductExamScreen.pulseTimings.append(relativeTime)
+                    #conductExamScreen.window.write_event_value('-UPDATED-', None)
                     correctPressure = True
                     listOfOscillations = []
                     possibleBP = []

@@ -17,14 +17,36 @@ global slider_position
 
 
 
+
 def createGraphs():
+    '''
+    Purpose:
+       Create and display all of the data recorded from all of the devices, each with their own subplot but sharing the same time domain.
+
+    Pre-conditions:
+        The exam must have been conducted and completed.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        conductExamScreen.respirationRecordings, conductExamScreen.skinConductivityRecordings, conductExamScreen.pulseRecordings, conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+
+    Return value and output variables:
+        graph1, graph2, graph3 - MatPlotLib Subplot
+
+    Exceptions thrown:
+        None.
+    '''
+    
     fig, (graphResults.graph0, graphResults.graph1, graphResults.graph2, graphResults.graph3) = plt.subplots(nrows=4, ncols=1, sharex=True)
     plt.subplots_adjust(bottom=0.25)
 
     axis_position = plt.axes([0.25, 0.1, 0.65, 0.03])
     graphResults.slider_position = Slider(axis_position, 'Pos', valmin=0, valmax=100, valstep=1)
 
-    fig.subplots_adjust(hspace=0)
+    #fig.subplots_adjust(hspace=0)
+
     GSRMeasurement = []
     GSRTime = []
     RespirationMeasurement = []
@@ -56,7 +78,7 @@ def createGraphs():
 
     print("BP Collections: ", len(conductExamScreen.bloodPressureRecordings))
     for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
-        bloodPressureMeasurement.append(bloodPressureRecording.measurement[0])
+        bloodPressureMeasurement.append(bloodPressureRecording.measurement)
         bloodPressureTime.append(bloodPressureRecording.timestamp)
 
     graphResults.graph2.plot(bloodPressureTime, bloodPressureMeasurement, color='k', marker='o')
@@ -94,11 +116,37 @@ def createGraphs():
     graph3.set_xlabel("Time (seconds)")
 '''
 
-
 def update(val):
+    '''
+    Purpose:
+       Updates the scope of view in the end-of-exam graph when the user moves the scroll bar.
+
+    Pre-conditions:
+        The exam must have been conducted and completed, as well as an internet connection before completion.
+
+    Post-conditions:
+        None.
+
+    Parameters and data types:
+        graphResults.graph3 - MatPlotLib subplot
+
+    Return value and output variables:
+        graphResults.fig.canvas - MatPlotLib Canvas
+
+    Exceptions thrown:
+        None.
+    '''
+    
     current_value = graphResults.slider_position.val
+
     graph3.axis([current_value, current_value + 10, 0, 100])
     graphResults.fig.canvas.draw()
 
+#ani = animation.FuncAnimation(fig, animate, fargs=(x, y), interval=1000)
+
 # createGraphs()
 # slider_position.on_changed(update)
+
+#plt.show()
+
+
