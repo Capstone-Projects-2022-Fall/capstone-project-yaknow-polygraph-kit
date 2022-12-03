@@ -15,7 +15,7 @@ def new_user_login():
         [gui.Button('Ok'), gui.Button('Cancel')]
     ]
 
-    window = gui.Window('Create account', layout, size=(350, 150))
+    window = gui.Window('Create account', layout, size=(350, 200))
 
     while True:
         event, values = window.read()

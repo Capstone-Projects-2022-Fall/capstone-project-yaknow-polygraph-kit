@@ -293,7 +293,7 @@ def examCounter():
     '''
 
     while conductExamScreen.examFinished == False:
-        if ((conductExamScreen.examTime % 1) == 0):
+        if ((conductExamScreen.examTime % 3) == 0):
             conductExamScreen.window.write_event_value('-UPDATED-', None)
         if(conductExamScreen.inQuestion == True):
             conductExamScreen.examTime = conductExamScreen.examTime + 1
@@ -314,7 +314,7 @@ def examCounter():
                         # print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
                         conductExamScreen.examTime = conductExamScreen.examTime + 1
                         conductExamScreen.window['-Time-'].update(examTime)
-                        if ((conductExamScreen.examTime % 1) == 0):
+                        if ((conductExamScreen.examTime % 3) == 0):
                             conductExamScreen.window.write_event_value('-UPDATED-', None)
                         time.sleep(1)
                         continue
@@ -864,7 +864,8 @@ def startExam(window1):
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show(block=False)
-            uploadDataToDataBase()
+            uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
+            uploadThread.start()
 
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(3)
@@ -891,20 +892,20 @@ def startExam(window1):
         elif event == '-Test6G-':
             showSkinConductivityProbabilityDistribution(8)
         elif event == '-UPDATED-':
-            print("Respiration Timings: ")
-            print(conductExamScreen.respirationTimings)
-            print(conductExamScreen.respirationMeasurements)
-            print("Skin Conductivity Timings: ")
-            print(conductExamScreen.skinConductivityTimings)
-            print(conductExamScreen.skinConductivityMeasurements)
-            print("Blood Pressure Timings: ")
-            print(conductExamScreen.bloodPressureTimings)
-            print("Blood Pressure Measurements: ")
-            print(conductExamScreen.bloodPressureMeasurements)
-            print("Pulse Timings: ")
-            print(conductExamScreen.pulseTimings)
-            print("Pulse Measurements")
-            print(conductExamScreen.pulseMeasurements)
+            #print("Respiration Timings: ")
+            #print(conductExamScreen.respirationTimings)
+            #print(conductExamScreen.respirationMeasurements)
+            #print("Skin Conductivity Timings: ")
+            #print(conductExamScreen.skinConductivityTimings)
+            #print(conductExamScreen.skinConductivityMeasurements)
+            #print("Blood Pressure Timings: ")
+            #print(conductExamScreen.bloodPressureTimings)
+            #print("Blood Pressure Measurements: ")
+            #print(conductExamScreen.bloodPressureMeasurements)
+            #print("Pulse Timings: ")
+            #print(conductExamScreen.pulseTimings)
+            #print("Pulse Measurements")
+            #print(conductExamScreen.pulseMeasurements)
             if(len(conductExamScreen.respirationTimings) > 0):
                 updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
             else:
