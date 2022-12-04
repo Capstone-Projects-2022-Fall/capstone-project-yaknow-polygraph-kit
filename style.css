@@ -1,0 +1,10 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+path{
+    stroke: blue;
+    stroke-width: 2px;
+    fill: none;
+}

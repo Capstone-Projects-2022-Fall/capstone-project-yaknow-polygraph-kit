@@ -1,4 +1,7 @@
 <?php
+
+    //$email = $_POST['email'];
+
     //error_reporting(0);
     $dbServerName = "173.255.232.150";
     $dbUsername = "cis4398";
@@ -15,8 +18,17 @@
         //echo "Connected successfully";
     }
 
-    $sql = "SELECT exmaID, tsStamp, pulse, skin_conductivity,
-respiration_belt, blood_pressure FROM Questions.SingularRecording where exmaID = 9";
+//     $sql = "SELECT exmaID, tsStamp, pulse, skin_conductivity,
+// respiration_belt, blood_pressure FROM Questions.SingularRecording where exmaID = 9";
+    //$max = "SELECT MAX(exmaID) FROM Questions.SingularRecording";
+    //$sql = "SELECT tsStamp, respiration_belt, blood_pressure, skin_conductivity, pulse FROM Questions.SingularRecording WHERE exmaID = 75";
+
+    $sql = "SELECT tsStamp, respiration_belt, blood_pressure, skin_conductivity, pulse, exmaID FROM Questions.SingularRecording WHERE exmaID = (SELECT MAX(exmaID) FROM Questions.SingularRecording)";
+
+    // $sql = "SELECT Questions.SingularRecording.exmaID,Questions.SingularRecording.tsStamp,Questions.SingularRecording.skin_conductivity,Questions.SingularRecording.respiration_belt,Questions.SingularRecording.blood_pressure,users.user.email
+    // from Questions.SingularRecording Inner join users.user
+    // ON Questions.SingularRecording.exmaID=users.user.id";
+
     $result = mysqli_query($conn, $sql);
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -29,33 +41,54 @@ respiration_belt, blood_pressure FROM Questions.SingularRecording where exmaID =
     }
 
     $data = array();
+    $counter = 0;
 
-    for ($x = 0; $x < mysqli_num_rows($result); $x++) {
-        $data[] = mysqli_fetch_assoc($result);
+    $data[0] = ["tsStamp", "respiration_belt", "blood_pressure", "skin_conductivity", "pulse", "exmaID"];
+
+    for ($x = 1; $x < mysqli_num_rows($result); $x++) {
+        $counter = $counter + 1;
+        $data[] = $users[$x];
     }
+
+    $fp = fopen('dataCSV.csv', 'w');
+
+    foreach ($data as $fields) {
+        fputcsv($fp, $fields);
+    }
+
+    fclose($fp);
+
+    // $json = json_encode($data);
+
+    // if (file_put_contents("data.json", $json))
+    //     echo "JSON file created successfully...";
+    // else 
+    //     echo "Oops! Error creating json file...";
+
+    //print_r($counter);
 
     //print_r($result);
 
-    //print_r($users);
+    //print_r($users[0]);
 
-    echo json_encode($data);
+    // require('get.php');
+    // echo $email;
 
-    mysqli_free_result($result);
+    //echo json_encode($data);
 
-    mysqli_close($conn);
+    //json_encode($data);
     
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> Exam 9 Graphs <h1>
-    This is exam 9
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Graph Result</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="https://d3js.org/d3.v4.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="multipleGraphs.js"></script>
+    </body>
 </html>
+
