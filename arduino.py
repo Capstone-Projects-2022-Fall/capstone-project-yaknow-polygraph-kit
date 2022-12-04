@@ -68,37 +68,42 @@ def connectGSRSensor():
         if (PolygraphExamSetupScreen.examStarted == True):
             immediateExit = True
         time.sleep(5)
-    while not ( (PolygraphExamSetupScreen.examStarted) and immediateExit == False):
-        time.sleep(1)
-        pass
 
-    if(immediateExit == False):
-        sensor_data = []
-        rate = PolygraphExamSetupScreen.GSRSamplingRate
-        #examStartTime = datetime.datetime.now()
-        while conductExamScreen.examFinished == False:
-            if (conductExamScreen.inQuestion == True):
-                getData = ser.readline()
-                data = int(getData.decode('utf-8'))
-                currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
-                final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-                tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading, conductExamScreen.newQuestion, conductExamScreen.yn)
-                conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
-                conductExamScreen.skinConductivityMeasurements.append(final_reading)
-                conductExamScreen.skinConductivityTimings.append(currentTime)
-                #conductExamScreen.window.write_event_value('-UPDATED-', None)
-                print("Failed GSR")
-                time.sleep(rate)
-                print(final_reading)
-            else:
-                time.sleep(.5)
+    if (immediateExit == False):
+        while not ( (PolygraphExamSetupScreen.examStarted) ):
+            time.sleep(1)
+            pass
+
+        if not conductExamScreen.exited:
+            sensor_data = []
+            rate = PolygraphExamSetupScreen.GSRSamplingRate
+            #examStartTime = datetime.datetime.now()
+            while conductExamScreen.examFinished == False:
+                if (conductExamScreen.inQuestion == True):
+                    getData = ser.readline()
+                    data = int(getData.decode('utf-8'))
+                    currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
+                    final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
+                    tempMeasurement = conductExamScreen.singularRecording(currentTime, final_reading, conductExamScreen.newQuestion, conductExamScreen.yn)
+                    conductExamScreen.skinConductivityRecordings.append(tempMeasurement)
+                    conductExamScreen.skinConductivityMeasurements.append(final_reading)
+                    conductExamScreen.skinConductivityTimings.append(currentTime)
+                    #conductExamScreen.window.write_event_value('-UPDATED-', None)
+                    print("Failed GSR")
+                    time.sleep(rate)
+                    print(final_reading)
+
     print("GSR Exited")
 
 
 
 def connectGSRSensorIndividual():
     connected = False
-    while connected == False:
+    immediateExit = False
+    while ((connected == False) and (immediateExit == False)):
+        if IndividualDeviceScreen.exited:
+            print("Exited")
+            immediateExit = True
         try:
             ser = serial.Serial(arduino_port, baud)
             connected = True
@@ -115,21 +120,31 @@ def connectGSRSensorIndividual():
             IndividualDeviceScreen.window.refresh()
             connected = True
         time.sleep(5)
-    while not IndividualDeviceScreen.recordingStarted:
-        pass
 
-    sensor_data = []
-    times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
-    print("GSR: Started")
-    for i in range(times):
-        getData = ser.readline()
-        data = int(getData.decode('utf-8'))
-        currentTime = datetime.datetime.now()
-        final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
-        print(currentTime, final_reading)
-        sensor_data.append(final_reading)
-        time.sleep(IndividualDeviceScreen.DeviceSamplingRate)
-    print(final_reading)
+    if (immediateExit == False):
+        while not IndividualDeviceScreen.recordingStarted:
+            if IndividualDeviceScreen.exited:
+                print("Exited")
+                IndividualDeviceScreen.recordingStarted = True
+            pass
+        if not IndividualDeviceScreen.exited:
+            sensor_data = []
+            #times = int (IndividualDeviceScreen.deviceTime / IndividualDeviceScreen.DeviceSamplingRate)
+            print("GSR: Started")
+            while not IndividualDeviceScreen.recordingStopped:
+                getData = ser.readline()
+                data = int(getData.decode('utf-8'))
+                currentTime = (datetime.datetime.now() - IndividualDeviceScreen.recordingStartTime).total_seconds()
+                final_reading = ((1024 + 2 * data) * 10000) / (512 - data)
+                print(currentTime, final_reading)
+                IndividualDeviceScreen.deviceMeasurements.append(final_reading)
+                IndividualDeviceScreen.deviceTimings.append(currentTime)
+                IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
+
+                sensor_data.append(final_reading)
+                time.sleep(IndividualDeviceScreen.DeviceSamplingRate)
+
+    print("GSR Exited")
 
     # if devicesFound is None:
     #    logging.error('No Device connected.')

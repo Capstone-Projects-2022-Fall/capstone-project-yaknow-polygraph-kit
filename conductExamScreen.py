@@ -67,6 +67,8 @@ global ztest3Respiration
 
 import pyformulas
 
+import frequencyGraph
+
 
 global restart_clicked
 restart_clicked = False
@@ -309,8 +311,9 @@ def examCounter():
         if ((conductExamScreen.examTime % 3) == 0):
             conductExamScreen.window.write_event_value('-UPDATED-', None)
         if(conductExamScreen.inQuestion == True):
-            conductExamScreen.examTime = conductExamScreen.examTime + 1
-            conductExamScreen.window['-Time-'].update(examTime) #window is global so you should be able to update if you know the key for progres bar
+            conductExamScreen.window.write_event_value('-TimeUpdate-', None)
+            #conductExamScreen.examTime = conductExamScreen.examTime + 1
+            #conductExamScreen.window['-Time-'].update(examTime) #window is global so you should be able to update if you know the key for progres bar
             if (conductExamScreen.iterated == False):
                 conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
@@ -318,8 +321,7 @@ def examCounter():
                 #    if respirationRecording.yn == None:
                 #        respirationRecording.yn = conductExamScreen.yn
                 conductExamScreen.yn = None
-                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[
-                    conductExamScreen.questionCounter]
+                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
                 if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
                     while (len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions)):
@@ -814,6 +816,7 @@ def run_something():
 
 
 def startExam(window1):
+
     '''
     Purpose:
         Attaches logic to make the window produced by "conductExamScreen.make_window()" responsive to user input. Allows the user to view probability distributions comparisons for each of the test questions. Houses logic to update live graphing, statistical upload to database, end-of-exam statistics, restart button, and an end-of-exam graph.
@@ -865,7 +868,6 @@ def startExam(window1):
     thread = threading.Thread(target=conductExamScreen.examCounter, daemon=True)
     thread.start()
 
-
     while True:
         event, values = conductExamScreen.window.read()
         #print(event, values)
@@ -876,6 +878,9 @@ def startExam(window1):
             break
         elif event in (gui.WIN_CLOSED, 'EXIT'):
             break
+        elif event == '-TimeUpdate-':
+            conductExamScreen.examTime = conductExamScreen.examTime + 1
+            conductExamScreen.window['-Time-'].update(examTime) #window is global so you should be able to update if you know the key for progres bar
         elif event == '-YES-':
             conductExamScreen.yn = True
         elif event == '-NO-':

@@ -1,6 +1,6 @@
 import matplotlib
 matplotlib.use('TKAgg')
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as timePlot
 import numpy as np
 import csv
 import matplotlib.animation as animation
@@ -14,9 +14,6 @@ global graph1
 global graph2
 global graph3
 global slider_position
-
-
-
 
 def createGraphs():
     '''
@@ -61,6 +58,18 @@ def createGraphs():
     #    for row in lines:
     #        x.append(row[0])
     #        y.append(int(row[1]))
+    questionColors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+    questionIndex = 0
+    for question in conductExamScreen.questionTimestampsTemp:
+        print("Question: ", question)
+        questionString = 'Question ' + str(questionIndex) + " Start"
+        graph0.axvline(x=question, color=questionColors[questionIndex], label=questionString)
+        graph1.axvline(x=question, color=questionColors[questionIndex])
+        graph2.axvline(x=question, color=questionColors[questionIndex])
+        graph3.axvline(x=question, color=questionColors[questionIndex])
+        questionIndex = questionIndex + 1
+
+    fig.legend(loc='lower left')
 
     for respirationRecording in conductExamScreen.respirationRecordings:
         RespirationMeasurement.append(respirationRecording.measurement)

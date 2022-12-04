@@ -12,6 +12,11 @@ import bloodPressureDevice
 import threading
 import os
 import sys
+import matplotlib
+import datetime
+import numpy
+import pyformulas
+matplotlib.use('TKAgg')
 
 bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
 checkPath = os.path.abspath(os.path.join(bundle_dir, 'transparentCheck.png'))
@@ -25,9 +30,13 @@ global checkmarkImage
 
 global recordingStarted
 
+global recordingStopped
+
 global DeviceSamplingRate
 
 global deviceTime
+
+global exited
 
 
 def make_window():
@@ -42,14 +51,11 @@ def make_window():
     xImage = xImage.resize((50, 50), Image.Resampling.LANCZOS)
     # xImage = ImageTk.PhotoImage(image=xImage)
 
-    DeviceSampling = ['', ['1', '5']]
-    SamplingTime = ['', ['20', '30']]
-
     # layout is a list of lists
     # the lists corresponds to how many rows there will be on the display
 
     row0 = [
-        [gui.Text('yaKnow - Individual Device Collection', size=(25, 1))]
+        [gui.Text('yaKnow - Individual Device Collection')]
     ]
 
     row1 = [
@@ -61,22 +67,29 @@ def make_window():
 
     ]
 
+    row2GSRPort = [
+        [gui.Text('Skin Conductivity Port Number'),
+         gui.Input(key='-row2GSRPort-', enable_events=True)]
+    ]
+
     row3 = [
-        [gui.ButtonMenu('Select Device Sampling Rate', DeviceSampling, k='-DeviceSampling-')]
+        [gui.Text('Input Sampling Rate'),
+         gui.Input(key='-SamplingRate-', enable_events=True)]
     ]
 
     row4 = [
-        [gui.ButtonMenu('Select Device Sampling Time', SamplingTime, k='-SamplingTime-')]
+        [gui.Button('Start Recording', k='-StartRecording-'), gui.Button('Stop Recording', k='-StopRecording-')]
     ]
 
     row5 = [
-        [gui.Button('Start Recording', k='-StartRecording-')]
+        [gui.Button('Back', k='-Back-')]
     ]
 
     layout = [
         [gui.Frame(layout=row0, title='', key='row0')],
         [gui.Frame(layout=row1, title='', key='row1')],
         [gui.Frame(layout=row2, title='', key='row2')],
+        [gui.Frame(layout=row2GSRPort, title='', key='row2GSRPort', visible=False)],
         [gui.Frame(layout=row3, title='', key='row3')],
         [gui.Frame(layout=row4, title='', key='row4')],
         [gui.Frame(layout=row5, title='', key='row5')]
@@ -94,7 +107,14 @@ def make_window():
 
 
 def startExam(window1):
+
+    IndividualDeviceScreen.exited = False
+
+    IndividualDeviceScreen.deviceMeasurements = []
+    IndividualDeviceScreen.deviceTimings = []
+
     IndividualDeviceScreen.recordingStarted = False
+    IndividualDeviceScreen.recordingStopped = False
 
     IndividualDeviceScreen.checkmarkImage = Image.open(checkPath)
 
@@ -103,14 +123,24 @@ def startExam(window1):
 
     IndividualDeviceScreen.window = window1
 
+    IndividualDeviceScreen.liveGraph, (IndividualDeviceScreen.actualLiveGraph) = matplotlib.pyplot.subplots(nrows=1, ncols=1, sharex=True)
+    #IndividualDeviceScreen.liveGraph = matplotlib.pyplot
+
     alreadyChanged = False
     PolygraphExamSetupScreen.respirationConnected = False
 
     if homescreen.deviceSelected == 0:
+        IndividualDeviceScreen.actualLiveGraph.set_ylabel("Respiration (N)")
         window['DeviceSelected'].update('Respiration Belt')
+        yMin = -30
+        yMax = 30
         thread = threading.Thread(target=respirationBelt.connectRespirationBeltIndividual)
         thread.start()
     elif homescreen.deviceSelected == 1:
+        yMin = 20100
+        yMax = 20800
+        IndividualDeviceScreen.window['row2GSRPort'].update(visible=True)
+        IndividualDeviceScreen.actualLiveGraph.set_ylabel("GSR (S)")
         window['DeviceSelected'].update('GSR Sensor')
         thread = threading.Thread(target=arduino.connectGSRSensorIndividual)
         thread.start()
@@ -119,41 +149,61 @@ def startExam(window1):
         thread = threading.Thread(target=bloodPressureDevice.connectBloodPressureDeviceIndividual)
         thread.start()
 
+    IndividualDeviceScreen.actualLiveGraph.set_xlabel("Time (S)")
+
+    IndividualDeviceScreen.liveGraphInArray = numpy.zeros((1, 1))  # Prepares numpy array to hold snapshot of live graphing data
+    IndividualDeviceScreen.liveGraphScreen = pyformulas.screen(IndividualDeviceScreen.liveGraphInArray,'Live Readings')  # Creates a numpy canvas compatible with numpy graph created above
+    IndividualDeviceScreen.liveGraphingWidth, IndividualDeviceScreen.liveGraphingHeight = IndividualDeviceScreen.liveGraph.canvas.get_width_height()  # Gets the width and height of the numpy canas used for live graphing
 
     while True:
         event, values = IndividualDeviceScreen.window.read()
 
-        print(event, values)
+        #print(event, values)
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
-        elif event in ('Start Collection'):
-            IndividualDeviceScreen.recordingStarted = True
+        #elif event in ('Start Collection'):
+            #IndividualDeviceScreen.recordingStarted = True
             #newWindow = conductExamScreen.make_window()
             #PolygraphExamSetupScreen.window.close()
             #PolygraphExamSetupScreen.window = newWindow
             #conductExamScreen.startExam(newWindow)
 
             # you have to add a break here otherwise you get an error with PySimpleGUI saying key error not found when it does actually exists.
-            break
-        elif event == '-DeviceSampling-':
-            print("Hello")
-            if values['-DeviceSampling-'] == '1':
-                window['-DeviceSampling-'].update(button_text='1')
-                IndividualDeviceScreen.DeviceSamplingRate = 1
-                window.refresh()
-            elif values['-DeviceSampling-'] == '5':
-                window['-DeviceSampling-'].update(button_text='5')
-                IndividualDeviceScreen.DeviceSamplingRate = 5
-                window.refresh()
-        elif event == '-SamplingTime-':
-            if values['-SamplingTime-'] == '20':
-                window['-SamplingTime-'].update(button_text="20")
-                IndividualDeviceScreen.deviceTime = 20
-                window.refresh()
-            elif values['-SamplingTime-'] == '30':
-                window['-SamplingTime-'].update(button_text="30")
-                IndividualDeviceScreen.deviceTime = 30
-                window.refresh()
+        #    break
+        elif event == '-Connected-':
+            IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
+            IndividualDeviceScreen.window.refresh()
+        elif event == '-SamplingRate-':
+            IndividualDeviceScreen.DeviceSamplingRate = int(float(values['-SamplingRate-']))
         elif event == '-StartRecording-':
+            IndividualDeviceScreen.recordingStartTime = datetime.datetime.now()
             IndividualDeviceScreen.recordingStarted = True
+        elif event == '-StopRecording-':
+            IndividualDeviceScreen.recordingStopped = True
+        elif event == '-UPDATED-':
+            if(len(IndividualDeviceScreen.deviceTimings) > 0):
+                updateTime = IndividualDeviceScreen.deviceTimings[len(IndividualDeviceScreen.deviceTimings)-1]
+            else:
+                updateTime = 0
+            #updateTime = time.time() - conductExamScreen.startTime
+            print(updateTime)
+            IndividualDeviceScreen.actualLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
+            IndividualDeviceScreen.actualLiveGraph.axis(ymin=yMin, ymax=yMax)
+            IndividualDeviceScreen.actualLiveGraph.plot(IndividualDeviceScreen.deviceTimings, IndividualDeviceScreen.deviceMeasurements, c='black')
+
+            IndividualDeviceScreen.liveGraph.canvas.draw()  # Creates the new numpy live graphing snapshot
+
+            liveGraphingSnapshot = numpy.array(list(IndividualDeviceScreen.liveGraph.canvas.tostring_rgb()),'uint8')  # Gets a snapshot of the new live graphing as unsigned integers
+            liveGraphingSnapshot = liveGraphingSnapshot.reshape(IndividualDeviceScreen.liveGraphingHeight,IndividualDeviceScreen.liveGraphingWidth,3)  # Reformats the above snapshot into arrays needed to update numpy canvas 3 unsigned ints in each of 480 arrays, each inside 640 arrays
+
+            IndividualDeviceScreen.liveGraphScreen.update(liveGraphingSnapshot)  # updates the numpy canvas
+        elif event == '-Back-':
+            IndividualDeviceScreen.exited = True
+            #newWindow = homescreen.make_window()
+            IndividualDeviceScreen.window.close()
+            #IndividualDeviceScreen.window = newWindow
+            homescreen.main()
+        elif event == '-row2GSRPort-':
+            print("Changed Port")
+            arduino.arduino_port = values['-row2GSRPort-']
