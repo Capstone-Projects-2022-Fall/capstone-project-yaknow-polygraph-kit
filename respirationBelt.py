@@ -80,7 +80,8 @@ def connectRespirationBelt():
             conductExamScreen.respirationMeasurements.append(measurements[0])
             #conductExamScreen.window.write_event_value('-UPDATED-', None)
             print("Failed Respiration")
-
+        else:
+            time.sleep(.5)
     print("Respiration Exited")
 
 
