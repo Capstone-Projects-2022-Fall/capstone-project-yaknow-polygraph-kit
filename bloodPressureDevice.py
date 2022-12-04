@@ -33,6 +33,37 @@ logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG,
 
 
 def connectBloodPressureDevice():
+    '''
+    Purpose:
+        A thread that connects and records blood presssure and pulse data from the Arduino GSR Sensor in a non-blocking way and communicates the stored data with the main thread.
+
+    Pre-conditions:
+        Must be started within the context of a polygraph exam.
+
+    Post-conditions:
+        Exits the thread upon exam completion.
+
+    Parameters and data types:
+        PolygraphExamSetup.window - PySimpleGUI window
+        PolygrpahExamSetup.GSRSamplingRate - int
+        conductExamScreen.examFinished - boolean
+        conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+        conductExamScreen.bloodPressureTimings - Array of Flaot
+        conductExamScreen.bloodPressureMeasurements - Array of float
+         conductExamScreen.pulseMeasurements - Array of float
+        conductExamScreen.pulseTimings - Array of float
+
+    Return value and output variables:
+        conductExamScreen.bloodPressureRecordings - Array of singularRecording class instance
+        conductExamScreen.bloodPressureTimings - Array of Flaot
+        conductExamScreen.bloodPressureMeasurements - Array of float
+         conductExamScreen.pulseMeasurements - Array of float
+        conductExamScreen.pulseTimings - Array of float
+
+    Exceptions thrown:
+        None.
+
+    '''
     from gdx2 import gdx
     theAPIs = gdx()
     connected = False
@@ -82,11 +113,7 @@ def connectBloodPressureDevice():
         correctPressure = False
         pressureBar = False
         conductExamScreen.inQuestion = False
-        #did u paste in the code yet
-      #  manually_updated_meter_test()
         progress_bar = conductExamScreen.window['progress']
-
-
         print("Not in Question")
         if ( (measurements[0] < 150)):
             #measurements1 = theAPIs.read()
