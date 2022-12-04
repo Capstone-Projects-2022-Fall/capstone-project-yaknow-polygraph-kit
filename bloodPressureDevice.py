@@ -120,6 +120,8 @@ def connectBloodPressureDevice():
             #conductExamScreen.window['-CuffPressure-'].update(measurements[0])
             #print("Paused Measurements: ", measurements[0])
             while pressureBar == False:
+                if(conductExamScreen.examFinished == True):
+                    pressureBar = True
                 # make_bloodPressure_bar()
                 # progress_bar1 = sg.window['progress1']
                 measurements1 = theAPIs.read()
