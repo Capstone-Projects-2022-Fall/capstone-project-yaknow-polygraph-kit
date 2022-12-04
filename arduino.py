@@ -89,9 +89,10 @@ def connectGSRSensor():
                     conductExamScreen.skinConductivityMeasurements.append(final_reading)
                     conductExamScreen.skinConductivityTimings.append(currentTime)
                     #conductExamScreen.window.write_event_value('-UPDATED-', None)
-                    print("Failed GSR")
                     time.sleep(rate)
                     print(final_reading)
+                else:
+                    time.sleep(.5)
 
     print("GSR Exited")
 
