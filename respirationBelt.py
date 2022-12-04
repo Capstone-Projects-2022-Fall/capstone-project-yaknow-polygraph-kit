@@ -50,6 +50,11 @@ def connectRespirationBelt():
     theAPIs = gdx()
     connected = False
     while connected == False:
+        if (conductExamScreen.exited):
+            connected = True
+            PolygraphExamSetupScreen.examStarted = True
+            PolygraphExamSetupScreen.examFinished = True
+            theAPIs.close()
         respirationConnected = theAPIs.open_ble('GDX-RB 0K4007N0')
         if(respirationConnected == True):
             PolygraphExamSetupScreen.respirationConnected = True
@@ -59,27 +64,33 @@ def connectRespirationBelt():
         else:
             theAPIs.close()
     while not PolygraphExamSetupScreen.examStarted:
+        if (conductExamScreen.exited):
+            PolygraphExamSetupScreen.examStarted = True
+            PolygraphExamSetupScreen.examFinished = True
+            theAPIs.close()
         time.sleep(1)
         pass
 
-    theAPIs.select_sensors([1])
+    if not conductExamScreen.exited:
 
-    rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
-    theAPIs.start(rate)
+        theAPIs.select_sensors([1])
+
+        rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
+        theAPIs.start(rate)
     #examStartTime = datetime.datetime.now()
-    while conductExamScreen.examFinished == False:
-        if(conductExamScreen.inQuestion == True):
-            print("Recording Respiration")
-            measurements = theAPIs.read()
-            currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
-            if measurements is None:
-                break
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
-            conductExamScreen.respirationRecordings.append(tempMeasurement)
-            conductExamScreen.respirationTimings.append(currentTime)
-            conductExamScreen.respirationMeasurements.append(measurements[0])
-            #conductExamScreen.window.write_event_value('-UPDATED-', None)
-            print("Failed Respiration")
+        while conductExamScreen.examFinished == False:
+            if(conductExamScreen.inQuestion == True):
+                print("Recording Respiration")
+                measurements = theAPIs.read()
+                currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
+                if measurements is None:
+                    break
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
+                conductExamScreen.respirationRecordings.append(tempMeasurement)
+                conductExamScreen.respirationTimings.append(currentTime)
+                conductExamScreen.respirationMeasurements.append(measurements[0])
+                #conductExamScreen.window.write_event_value('-UPDATED-', None)
+                print("Failed Respiration")
 
     print("Respiration Exited")
 
@@ -90,30 +101,47 @@ def connectRespirationBeltIndividual():
     connected = False
     while connected == False:
         respirationConnected = theAPIs.open_ble('GDX-RB 0K4007N0')
+        if(IndividualDeviceScreen.exited):
+            connected = True
+            IndividualDeviceScreen.recordingStarted = True
+            IndividualDeviceScreen.recordingStopped = True
+            theAPIs.close()
         if (respirationConnected == True):
             IndividualDeviceScreen.deviceConnected = True
-            IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
-            IndividualDeviceScreen.window.refresh()
+            IndividualDeviceScreen.window.write_event_value('-Connected-', None)
+            #IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
+            #IndividualDeviceScreen.window.refresh()
             connected = True
         else:
             theAPIs.close()
     while not IndividualDeviceScreen.recordingStarted:
+        if IndividualDeviceScreen.exited:
+            IndividualDeviceScreen.recordingStarted = True
+            IndividualDeviceScreen.recordingStopped = True
+            theAPIs.close()
+        time.sleep(1)
         pass
 
-    theAPIs.select_sensors([1])
+    if not IndividualDeviceScreen.exited:
+        theAPIs.select_sensors([1])
 
-    rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
-    theAPIs.start(rate)
-    print("Respiration Started")
+        rate = IndividualDeviceScreen.DeviceSamplingRate * 1000
+        theAPIs.start(rate)
+        print("Respiration Started")
 
     while not IndividualDeviceScreen.recordingStopped:
+        if IndividualDeviceScreen.exited:
+            IndividualDeviceScreen.recordingStopped = True
+            theAPIs.close()
         measurements = theAPIs.read()
-        currentTime = datetime.datetime.now()
+        currentTime = (datetime.datetime.now() - IndividualDeviceScreen.recordingStartTime).total_seconds()
         if measurements == None:
             break
         IndividualDeviceScreen.deviceMeasurements.append(measurements)
         IndividualDeviceScreen.deviceTimings.append(currentTime)
         IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
+
+    print("Respiration Exited")
     # if devicesFound is None:
     #    logging.error('No Device connected.')
     # else:

@@ -307,6 +307,8 @@ def startExam(window1):
         None.
 
     '''
+    conductExamScreen.exited = False
+
     PolygraphExamSetupScreen.examStarted = False
 
     PolygraphExamSetupScreen.checkmarkImage = Image.open(checkPath)
@@ -338,9 +340,10 @@ def startExam(window1):
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event == '-BackButton-':
-            newWindow = homescreen.make_window()
+            conductExamScreen.exited = True
+            #newWindow = homescreen.make_window()
             PolygraphExamSetupScreen.window.close()
-            PolygraphExamSetupScreen.window = newWindow
+            #PolygraphExamSetupScreen.window = newWindow
             homescreen.main()
         elif event in ('Start Examination'):
 
