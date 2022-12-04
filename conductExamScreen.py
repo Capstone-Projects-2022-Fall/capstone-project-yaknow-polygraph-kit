@@ -340,6 +340,7 @@ def examCounter():
             time.sleep(1)
         else:
             conductExamScreen.iterated = False
+            conductExamScreen.examTime = conductExamScreen.examTime + 1
             time.sleep(1)
 
 
@@ -967,6 +968,10 @@ def startExam(window1):
             graphResults.createGraphs()
             graphResults.slider_position.on_changed(graphResults.update)
             graphResults.plt.show(block=False)
+
+            frequencyGraph.createFrequencyGraphs()
+            frequencyGraph.plt.show(block=False)
+
             uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
             uploadThread.start()
 

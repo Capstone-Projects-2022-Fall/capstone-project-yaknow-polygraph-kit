@@ -1,6 +1,6 @@
 import matplotlib
 matplotlib.use('TKAgg')
-from matplotlib import pyplot as timePlot
+from matplotlib import pyplot as plt
 import numpy as np
 import csv
 import matplotlib.animation as animation
@@ -58,9 +58,9 @@ def createGraphs():
     #    for row in lines:
     #        x.append(row[0])
     #        y.append(int(row[1]))
-    questionColors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+    questionColors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w', 'tab:orange']
     questionIndex = 0
-    for question in conductExamScreen.questionTimestampsTemp:
+    for question in conductExamScreen.questionTimestamps:
         print("Question: ", question)
         questionString = 'Question ' + str(questionIndex) + " Start"
         graph0.axvline(x=question, color=questionColors[questionIndex], label=questionString)
