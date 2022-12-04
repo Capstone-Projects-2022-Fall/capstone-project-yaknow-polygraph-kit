@@ -70,7 +70,7 @@ def make_window():
     # Window
     # window = gui.Window('yaKnow - PolyGraph Examination Kit', layout).Finalize
     # window.maximize()
-    window = gui.Window('Window Title', layout, resizable=True, size=(1000,900), finalize=True)
+    window = gui.Window('yaKnow - Polygraph Exam Homescreen', layout, resizable=True, size=(1000,900), icon=icon, finalize=True)
     return window
 
 
