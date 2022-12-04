@@ -77,7 +77,7 @@ def scThread():
         if (conductExamScreen.inQuestion == True):
             conductExamScreen.skinConductivityMeasurements.append(random.randrange(20100, 20800))
             conductExamScreen.skinConductivityTimings.append(time.time() - conductExamScreen.startTime)
-            conductExamScreen.window.write_event_value('-UPDATED-', None)
+            #conductExamScreen.window.write_event_value('-UPDATED-', None)
             time.sleep(1)
 
 

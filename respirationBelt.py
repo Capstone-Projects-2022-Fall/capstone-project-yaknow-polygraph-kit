@@ -78,20 +78,21 @@ def connectRespirationBelt():
         rate = PolygraphExamSetupScreen.RespirationSamplingRate * 1000
         theAPIs.start(rate)
     #examStartTime = datetime.datetime.now()
-        while conductExamScreen.examFinished == False:
-            if(conductExamScreen.inQuestion == True):
-                print("Recording Respiration")
-                measurements = theAPIs.read()
-                currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
-                if measurements is None:
-                    break
-                tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
-                conductExamScreen.respirationRecordings.append(tempMeasurement)
-                conductExamScreen.respirationTimings.append(currentTime)
-                conductExamScreen.respirationMeasurements.append(measurements[0])
-                #conductExamScreen.window.write_event_value('-UPDATED-', None)
-                print("Failed Respiration")
-
+    while conductExamScreen.examFinished == False:
+        if(conductExamScreen.inQuestion == True):
+            print("Recording Respiration")
+            measurements = theAPIs.read()
+            currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
+            if measurements is None:
+                break
+            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
+            conductExamScreen.respirationRecordings.append(tempMeasurement)
+            conductExamScreen.respirationTimings.append(currentTime)
+            conductExamScreen.respirationMeasurements.append(measurements[0])
+            #conductExamScreen.window.write_event_value('-UPDATED-', None)
+            print("Failed Respiration")
+        else:
+            time.sleep(.5)
     print("Respiration Exited")
 
 

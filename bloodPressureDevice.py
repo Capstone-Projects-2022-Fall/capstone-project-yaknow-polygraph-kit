@@ -9,6 +9,10 @@ import math
 import numpy as np
 
 import time
+import PySimpleGUI as sg
+
+
+global pressureBar
 
 
 from scipy.signal import find_peaks
@@ -22,6 +26,9 @@ with open('polygraphExamKitLogging.log', 'w'):
 
 log_format = '%(asctime)s %(filename)s - %(levelname)s: %(message)s'
 logging.basicConfig(filename='polygraphExamKitLogging.log', level=logging.DEBUG, force=True, format=log_format, datefmt='%H:%M:%S')
+
+
+
 
 
 
@@ -280,5 +287,77 @@ def connectBloodPressureDeviceIndividual():
         if measurements == None:
             break
         print(currentTime, measurements)
+
+# def make_bloodPressure_bar():
+#     layout = [[sg.Text('Blood pressure bar')],
+#               [sg.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]]
+#
+#     # create the form`
+#     # must finalize since not running an event loop
+#     window = sg.Window('Custom Progress Meter', layout, finalize=True)
+#
+#     # Get the element to make updating easier
+#     progress_bar1 = window['progress']
+    # measurements1 = theAPIs.read()
+    # print("Paused Measurements: ", measurements1[0])
+    # if measurements1[0] < 15:
+    #     print("you made it to 10 percent")
+    #     progress_bar.update_bar(1)  # show 10% complete
+    #     # sleep(2)
+    #
+    # if 16 < measurements1[0] < 30:
+    #     print("you made it to 20 percent")
+    #     progress_bar.update_bar(2)  # show 20% complete
+    #
+    #     # sleep(2)
+    # if 31 < measurements1[0] < 45:
+    #     print("you made it to 30 percent")
+    #     progress_bar.update_bar(3)  # show 30% complete
+    #     # sleep(2)
+    #
+    # if 46 < measurements1[0] < 60:
+    #     print("you made it to 40 percent")
+    #     progress_bar.update_bar(4)  # show 40% complete
+    #     # sleep(2)
+    # if 61 < measurements1[0] < 75:
+    #     print("you made it to 50 percent")
+    #     progress_bar.update_bar(5)  # show 50% complete
+    #     # sleep(2)
+    #
+    # if 76 < measurements1[0] < 90:
+    #     print("you made it to 60 percent")
+    #     progress_bar.update_bar(6)  # show 60% complete
+    #     # sleep(2)
+    # if 91 < measurements1[0] < 105:
+    #     print("you made it to 70 percent")
+    #     progress_bar.update_bar(7)  # show 70% complete
+    #     # sleep(2)
+    # if 106 < measurements1[0] < 120:
+    #     print("you made it to 80 percent")
+    #     progress_bar.update_bar(8)  # show 80% complete
+    #     # sleep(2)
+    # if 121 < measurements1[0] > 135:
+    #     print("you made it to 90 percent")
+    #     progress_bar.update_bar(9)  # show 90% complete
+    #     # sleep(2)
+    #
+    # if measurements1[0] > 150:
+    #     print("you made it to 100 percent")
+    #     progress_bar.update_bar(10)  # show 100% complete
+    #     time.sleep(.5)
+    #     pressureBar = True
+    #     progress_bar.window.close()
+
+
+# def make_bloodPressure_bar():
+#     layout = [[sg.Text('Blood pressure bar')],
+#               [sg.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress1')]]
+#
+#     # create the form`
+#     # must finalize since not running an event loop
+#     return sg.Window('Custom Progress Meter', layout, finalize=True)
+#
+#     # Get the element to make updating easier
+
 
 
