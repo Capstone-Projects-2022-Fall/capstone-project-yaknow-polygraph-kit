@@ -9,7 +9,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import accuracy_score
 import os
 
-# TODO, ask Thomos to install mysql-shell package on the server or ask for permission to do it your self
+
 '''db_con = mysql.connector.connect(
     host="173.255.232.150",
     user="cis4398",
