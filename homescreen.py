@@ -125,10 +125,13 @@ def main():
                 homescreen.deviceSelected = 2
                 window.refresh()
         elif event in 'Obtain Individual Sensor Measurements':
-            newWindow = IndividualDeviceScreen.make_window()
-            window.close()
-            window = newWindow
-            IndividualDeviceScreen.startExam(window)
+            if(values['-DeviceSelection-'] == None):
+                continue
+            else:
+                newWindow = IndividualDeviceScreen.make_window()
+                window.close()
+                window = newWindow
+                IndividualDeviceScreen.startExam(window)
 
     #print('exiting homescreen.py')
 

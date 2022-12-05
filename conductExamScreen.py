@@ -248,7 +248,7 @@ def make_window():
 
     
     row7 = [
-        [gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
+        [gui.Text('Cuff Pressure Bar ', key='cuffPressureLabel'), gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
     ]
     
 
@@ -258,7 +258,6 @@ def make_window():
 
     row9 = [
         [gui.Push(), gui.Button('Restart', key='-Restart-', visible=False),
-         gui.Button('Cancel Conversion', key='-cancelConversion-'),
          gui.Push()]
     ]
 
@@ -319,13 +318,23 @@ def examCounter():
             if (conductExamScreen.iterated == False):
                 conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
-                # for respirationRecording in conductExamScreen.respirationRecordings:
-                #    if respirationRecording.yn == None:
-                #        respirationRecording.yn = conductExamScreen.yn
+                for respirationRecording in conductExamScreen.respirationRecordings:
+                    if respirationRecording.yn == None:
+                        respirationRecording.yn = conductExamScreen.yn
+                for skinConductivityRecording in conductExamScreen.skinConductivityRecordings:
+                    if skinConductivityRecording.yn == None:
+                        skinConductivityRecording.yn = conductExamScreen.yn
+                for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
+                    if bloodPressureRecording.yn == None:
+                        bloodPressureRecording.yn = conductExamScreen.yn
+                for pulseRecording in conductExamScreen.pulseRecordings:
+                    if pulseRecording.yn == None:
+                        pulseRecording.yn = conductExamScreen.yn
                 conductExamScreen.yn = None
                 conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
                 if (len(PolygraphExamSetupScreen.global_overall_questions) == (questionCounter + 1)):
+                    conductExamScreen.window['-Text-'].update(newQuestion)
                     while (len(bloodPressureRecordings) != len(PolygraphExamSetupScreen.global_overall_questions)):
                         # print("BP SIZE: ", len(bloodPressureRecordings) )
                         # print("Question Size: ", len(PolygraphExamSetupScreen.global_overall_questions))
@@ -342,7 +351,8 @@ def examCounter():
             time.sleep(1)
         else:
             conductExamScreen.iterated = False
-            conductExamScreen.examTime = conductExamScreen.examTime + 1
+            conductExamScreen.window.write_event_value('-TimeUpdate-', None)
+            #conductExamScreen.examTime = conductExamScreen.examTime + 1
             time.sleep(1)
 
 
@@ -469,7 +479,7 @@ def averageZtest(question):
               [gui.Text('Percentage of Lying: %s' % str(percentageLying))],
               [gui.Text('Percentage of Truth: %s' % str(percentageTruth))],
               [gui.Text('Conclusion: %s' % str(conclusion))],
-              [gui.Button('Ok'), gui.Button('Close Window')]]
+              [gui.Button('Close Window')]]
 
     # Create the Window
     window = gui.Window('Test', layout).Finalize()
@@ -480,7 +490,7 @@ def averageZtest(question):
         if event in (None, 'Close Window'):  # if user closes window or clicks cancel
             break
         print('You entered in the textbox:')
-        print(values['textbox'])  # get the content of multiline via its unique key
+        #print(values['textbox'])  # get the content of multiline via its unique key
 
     window.close()
 
@@ -894,6 +904,14 @@ def startExam(window1):
         elif event == '-NO-':
             conductExamScreen.yn = False
         elif event == '-ENDED-':
+            for respirationRecording in conductExamScreen.respirationRecordings:
+                print("Resp: ", respirationRecording.yn)
+            for skinConductivityRecording in conductExamScreen.skinConductivityRecordings:
+                print("SC: ", skinConductivityRecording.yn)
+            for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
+                print("BP: ", bloodPressureRecording.yn)
+            for pulseRecording in conductExamScreen.pulseRecordings:
+                print("Pulse: ", pulseRecording.yn)
             matplotlib.pyplot.close(conductExamScreen.liveGraph)
             separateByQuestion()
             conductExamScreen.examFinished = True
