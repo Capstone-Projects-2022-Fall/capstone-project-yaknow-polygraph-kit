@@ -6,9 +6,12 @@ import arduino
 import matplotlib
 import os
 import atexit
+
+import Client
 import graphResults
 import tkinter as tk
 import homescreen
+
 matplotlib.use('TKAgg')
 import conductExamScreen
 import PolygraphExamSetupScreen
@@ -25,6 +28,7 @@ from scipy.stats import norm
 import statistics
 from multiprocessing import Process, Queue
 import matplotlib
+
 matplotlib.use("TkAgg")
 global window
 global examFinished
@@ -69,10 +73,8 @@ import pyformulas
 
 import frequencyGraph
 
-
 global restart_clicked
 restart_clicked = False
-
 
 
 class singularRecording:
@@ -146,23 +148,23 @@ def make_window():
     row2 = [
         [gui.Text('0', key='-Time-'), gui.Text('Cuff Pressure: ', key='-CuffPressure-')]
     ]
-    
+
     row3 = [
         [gui.Text('                                                                     ', key='-placeHolder-'), gui.Text('Mean Respiration (N)', key='-MeanRHeader-'), gui.Text('      MeanGSR (S)', key='-MeanGSRHeader-'),  gui.Text('MedianRespiration (N)', key='-MedianRHeader-'), gui.Text('     MedianGSR (S)', key='MedianGSRHeader'), gui.Text('  Blood Pressure (mmHg)', key='-BPHeader-'),  gui.Text('Pulse (BPM)', key='-PHeader-')]
     ]
-    
+
     row4 = [
         [gui.Text('Baseline Question 1                                                  ', key='-B1placeHolder-'), gui.Text('', key='-B1MeanR-'), gui.Text('', key='-B1MeanGSR-'), gui.Text('', key='-B1MedianR-'), gui.Text('', key='-B1MedianGSR-'),  gui.Text('', key='-B1BP-'), gui.Text('', key='-B1P-')]
     ]
-    
+
     row5 = [
         [gui.Text('Baseline Question 2                                                  ', key='-B2placeHolder-'), gui.Text('', key='-B2MeanR-'), gui.Text('', key='-B2MeanGSR-'), gui.Text('', key='-B2MedianR-'), gui.Text('', key='-B2MedianGSR-'),  gui.Text('', key='-B2BP-'), gui.Text('', key='-B2P-')]
     ]
-    
+
     row6 = [
         [gui.Text('Baseline Question 3                                                  ', key='-B3placeHolder-'), gui.Text('', key='-B3MeanR-'), gui.Text('', key='-B3MeanGSR-'), gui.Text('', key='-B3MedianR-'), gui.Text('', key='-B3MedianGSR-'),  gui.Text('', key='-B3BP-'), gui.Text('', key='-B3P-')]
     ]
-    
+
     col3_1 = [
         [gui.Button('Test 1 Respiration', key='-Test1R-', visible=True)],
         [gui.Button('Test 2 Respiration', key='-Test2R-', visible=True)],
@@ -179,8 +181,8 @@ def make_window():
         [gui.Button('Test 4 GSR', key='-Test4G-', visible=True)],
         [gui.Button('Test 5 GSR', key='-Test5G-', visible=True)],
         [gui.Button('Test 6 GSR', key='-Test6G-', visible=True)]
-    ]    
-    
+    ]
+
     col3_3 = [
         [gui.Text('', key='-Test1MeanR-', visible=True)],
         [gui.Text('', key='-Test2MeanR-', visible=True)],
@@ -189,7 +191,7 @@ def make_window():
         [gui.Text('', key='-Test5MeanR-', visible=True)],
         [gui.Text('', key='-Test6MeanR-', visible=True)]
     ]
-    
+
     col3_4 = [
         [gui.Text('', key='-Test1MeanG-', visible=True)],
         [gui.Text('', key='-Test2MeanG-', visible=True)],
@@ -198,7 +200,7 @@ def make_window():
         [gui.Text('', key='-Test5MeanG-', visible=True)],
         [gui.Text('', key='-Test6MeanG-', visible=True)]
     ]
-    
+
     col3_5 = [
         [gui.Text('', key='-Test1MedianR-', visible=True)],
         [gui.Text('', key='-Test2MedianR-', visible=True)],
@@ -207,7 +209,7 @@ def make_window():
         [gui.Text('', key='-Test5MedianR-', visible=True)],
         [gui.Text('', key='-Test6MedianR-', visible=True)]
     ]
-    
+
     col3_6 = [
         [gui.Text('', key='-Test1MedianG-', visible=True)],
         [gui.Text('', key='-Test2MedianG-', visible=True)],
@@ -371,9 +373,9 @@ def separateByQuestion():
     tempArray = []
     tempQuestion = conductExamScreen.respirationRecordings[0].question
     x = 0
-    while(x < len(respirationRecordings)):
-        if( (tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1) ) ):
-            if( x == (len(respirationRecordings) - 1) ):
+    while (x < len(respirationRecordings)):
+        if ((tempQuestion != respirationRecordings[x].question) or (x == (len(respirationRecordings) - 1))):
+            if (x == (len(respirationRecordings) - 1)):
                 tempArray.append(respirationRecordings[x].measurement)
             conductExamScreen.respirationbyQuestion.append(tempArray)
             tempArray = []
@@ -803,6 +805,7 @@ def showSkinConductivityProbabilityDistribution(question):
 def task():
     os.system('Python3 homescreen.py')
 
+
 @atexit.register
 def run_something():
     # if restart button was clicked, make a new thread to run task
@@ -851,7 +854,9 @@ def startExam(window1):
 
     conductExamScreen.initialExamEnded = False
 
-    conductExamScreen.liveGraph, (conductExamScreen.respirationLiveGraph, conductExamScreen.gsrLiveGraph, conductExamScreen.bpLiveGraph, conductExamScreen.pulseLiveGraph) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=True)
+    conductExamScreen.liveGraph, (
+        conductExamScreen.respirationLiveGraph, conductExamScreen.gsrLiveGraph, conductExamScreen.bpLiveGraph,
+        conductExamScreen.pulseLiveGraph) = matplotlib.pyplot.subplots(nrows=4, ncols=1, sharex=True)
     matplotlib.pyplot.subplots_adjust(bottom=0.1)
     conductExamScreen.respirationLiveGraph.set_ylabel("Respiration (N)")
     conductExamScreen.gsrLiveGraph.set_ylabel("GSR (S)")
@@ -859,8 +864,10 @@ def startExam(window1):
     conductExamScreen.pulseLiveGraph.set_ylabel("Pulse (BPM)")
     conductExamScreen.pulseLiveGraph.set_xlabel("Time (S)")
 
-    conductExamScreen.liveGraphInArray = numpy.zeros((1, 1)) #Prepares numpy array to hold snapshot of live graphing data
-    conductExamScreen.liveGraphScreen = pyformulas.screen(conductExamScreen.liveGraphInArray, 'Live Readings') #Creates a numpy canvas compatible with numpy graph created above
+    conductExamScreen.liveGraphInArray = numpy.zeros(
+        (1, 1))  # Prepares numpy array to hold snapshot of live graphing data
+    conductExamScreen.liveGraphScreen = pyformulas.screen(conductExamScreen.liveGraphInArray,
+                                                          'Live Readings')  # Creates a numpy canvas compatible with numpy graph created above
     conductExamScreen.liveGraphingWidth, conductExamScreen.liveGraphingHeight = conductExamScreen.liveGraph.canvas.get_width_height()  # Gets the width and height of the numpy canas used for live graphing
 
     conductExamScreen.examStartTime = datetime.datetime.now()
@@ -871,7 +878,7 @@ def startExam(window1):
 
     while True:
         event, values = conductExamScreen.window.read()
-        #print(event, values)
+        # print(event, values)
         if event == '-Restart-':
             conductExamScreen.restart_clicked = True
             graphResults.plt.close('all')
@@ -914,55 +921,100 @@ def startExam(window1):
             conductExamScreen.window['-Test5MeanR-'].update(round(statistics.mean(respirationbyQuestion[7]), 3))
             conductExamScreen.window['-Test6MeanR-'].update(round(statistics.mean(respirationbyQuestion[8]), 3))
 
-            conductExamScreen.window['-B1MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[0]), 3)))
-            conductExamScreen.window['-B2MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[1]), 3)))
-            conductExamScreen.window['-B3MeanGSR-'].update("                        " + str(round(statistics.mean(GSRbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MeanG-'].update("                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-B1MeanGSR-'].update(
+                "                        " + str(round(statistics.mean(GSRbyQuestion[0]), 3)))
+            conductExamScreen.window['-B2MeanGSR-'].update(
+                "                        " + str(round(statistics.mean(GSRbyQuestion[1]), 3)))
+            conductExamScreen.window['-B3MeanGSR-'].update(
+                "                        " + str(round(statistics.mean(GSRbyQuestion[2]), 3)))
+            conductExamScreen.window['-Test1MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MeanG-'].update(
+                "                    " + str(round(statistics.mean(GSRbyQuestion[6]), 3)))
 
-            conductExamScreen.window['-B1MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[0]), 3)))
-            conductExamScreen.window['-B2MedianR-'].update("                      " + str(round(numpy.median(respirationbyQuestion[1]), 3)))
-            conductExamScreen.window['-B3MedianR-'].update("                     " + str(round(numpy.median(respirationbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MedianR-'].update("                   " + str(round(numpy.median(respirationbyQuestion[8]), 3)))
+            conductExamScreen.window['-B1MedianR-'].update(
+                "                     " + str(round(numpy.median(respirationbyQuestion[0]), 3)))
+            conductExamScreen.window['-B2MedianR-'].update(
+                "                      " + str(round(numpy.median(respirationbyQuestion[1]), 3)))
+            conductExamScreen.window['-B3MedianR-'].update(
+                "                     " + str(round(numpy.median(respirationbyQuestion[2]), 3)))
+            conductExamScreen.window['-Test1MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MedianR-'].update(
+                "                   " + str(round(numpy.median(respirationbyQuestion[8]), 3)))
 
-            conductExamScreen.window['-B1MedianGSR-'].update("                       " + str(round(numpy.median(GSRbyQuestion[0]), 3)))
-            conductExamScreen.window['-B2MedianGSR-'].update("                       " + str(round(numpy.median(GSRbyQuestion[1]), 3)))
-            conductExamScreen.window['-B3MedianGSR-'].update("                        " + str(round(numpy.median(GSRbyQuestion[2]), 3)))
-            conductExamScreen.window['-Test1MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[3]), 3)))
-            conductExamScreen.window['-Test2MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[4]), 3)))
-            conductExamScreen.window['-Test3MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[5]), 3)))
-            conductExamScreen.window['-Test4MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[6]), 3)))
-            conductExamScreen.window['-Test5MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[7]), 3)))
-            conductExamScreen.window['-Test6MedianG-'].update("                   " + str(round(numpy.median(GSRbyQuestion[8]), 3)))
+            conductExamScreen.window['-B1MedianGSR-'].update(
+                "                       " + str(round(numpy.median(GSRbyQuestion[0]), 3)))
+            conductExamScreen.window['-B2MedianGSR-'].update(
+                "                       " + str(round(numpy.median(GSRbyQuestion[1]), 3)))
+            conductExamScreen.window['-B3MedianGSR-'].update(
+                "                        " + str(round(numpy.median(GSRbyQuestion[2]), 3)))
+            conductExamScreen.window['-Test1MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[3]), 3)))
+            conductExamScreen.window['-Test2MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[4]), 3)))
+            conductExamScreen.window['-Test3MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[5]), 3)))
+            conductExamScreen.window['-Test4MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[6]), 3)))
+            conductExamScreen.window['-Test5MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[7]), 3)))
+            conductExamScreen.window['-Test6MedianG-'].update(
+                "                   " + str(round(numpy.median(GSRbyQuestion[8]), 3)))
 
-            conductExamScreen.window['-B1BP-'].update("                 " + str(round(bloodPressureRecordings[0].measurement, 3)))
-            conductExamScreen.window['-B2BP-'].update("                 " + str(round(bloodPressureRecordings[1].measurement, 3)))
-            conductExamScreen.window['-B3BP-'].update("                 " + str(round(bloodPressureRecordings[2].measurement, 3)))
-            conductExamScreen.window['-Test1BP-'].update("              " + str(round(bloodPressureRecordings[3].measurement, 3)))
-            conductExamScreen.window['-Test2BP-'].update("              " + str(round(bloodPressureRecordings[4].measurement, 3)))
-            conductExamScreen.window['-Test3BP-'].update("              " + str(round(bloodPressureRecordings[5].measurement, 3)))
-            conductExamScreen.window['-Test4BP-'].update("              " + str(round(bloodPressureRecordings[6].measurement, 3)))
-            conductExamScreen.window['-Test5BP-'].update("              " + str(round(bloodPressureRecordings[7].measurement, 3)))
-            conductExamScreen.window['-Test6BP-'].update("              " + str(round(bloodPressureRecordings[8].measurement, 3)))
+            conductExamScreen.window['-B1BP-'].update(
+                "                 " + str(round(bloodPressureRecordings[0].measurement, 3)))
+            conductExamScreen.window['-B2BP-'].update(
+                "                 " + str(round(bloodPressureRecordings[1].measurement, 3)))
+            conductExamScreen.window['-B3BP-'].update(
+                "                 " + str(round(bloodPressureRecordings[2].measurement, 3)))
+            conductExamScreen.window['-Test1BP-'].update(
+                "              " + str(round(bloodPressureRecordings[3].measurement, 3)))
+            conductExamScreen.window['-Test2BP-'].update(
+                "              " + str(round(bloodPressureRecordings[4].measurement, 3)))
+            conductExamScreen.window['-Test3BP-'].update(
+                "              " + str(round(bloodPressureRecordings[5].measurement, 3)))
+            conductExamScreen.window['-Test4BP-'].update(
+                "              " + str(round(bloodPressureRecordings[6].measurement, 3)))
+            conductExamScreen.window['-Test5BP-'].update(
+                "              " + str(round(bloodPressureRecordings[7].measurement, 3)))
+            conductExamScreen.window['-Test6BP-'].update(
+                "              " + str(round(bloodPressureRecordings[8].measurement, 3)))
 
-            conductExamScreen.window['-B1P-'].update("                  " + str(round(pulseRecordings[0].measurement, 3)))
-            conductExamScreen.window['-B2P-'].update("                 " + str(round(pulseRecordings[1].measurement, 3)))
-            conductExamScreen.window['-B3P-'].update("                 " + str(round(pulseRecordings[2].measurement, 3)))
-            conductExamScreen.window['-Test1P-'].update("               " + str(round(pulseRecordings[3].measurement, 3)))
-            conductExamScreen.window['-Test2P-'].update("               " + str(round(pulseRecordings[4].measurement, 3)))
-            conductExamScreen.window['-Test3P-'].update("               " + str(round(pulseRecordings[5].measurement, 3)))
-            conductExamScreen.window['-Test4P-'].update("               " + str(round(pulseRecordings[6].measurement, 3)))
-            conductExamScreen.window['-Test5P-'].update("               " + str(round(pulseRecordings[7].measurement, 3)))
-            conductExamScreen.window['-Test6P-'].update("               " + str(round(pulseRecordings[8].measurement, 3)))
+            conductExamScreen.window['-B1P-'].update(
+                "                  " + str(round(pulseRecordings[0].measurement, 3)))
+            conductExamScreen.window['-B2P-'].update(
+                "                 " + str(round(pulseRecordings[1].measurement, 3)))
+            conductExamScreen.window['-B3P-'].update(
+                "                 " + str(round(pulseRecordings[2].measurement, 3)))
+            conductExamScreen.window['-Test1P-'].update(
+                "               " + str(round(pulseRecordings[3].measurement, 3)))
+            conductExamScreen.window['-Test2P-'].update(
+                "               " + str(round(pulseRecordings[4].measurement, 3)))
+            conductExamScreen.window['-Test3P-'].update(
+                "               " + str(round(pulseRecordings[5].measurement, 3)))
+            conductExamScreen.window['-Test4P-'].update(
+                "               " + str(round(pulseRecordings[6].measurement, 3)))
+            conductExamScreen.window['-Test5P-'].update(
+                "               " + str(round(pulseRecordings[7].measurement, 3)))
+            conductExamScreen.window['-Test6P-'].update(
+                "               " + str(round(pulseRecordings[8].measurement, 3)))
 
             conductExamScreen.window['-Restart-'].update(visible=True)
             graphResults.createGraphs()
@@ -1030,42 +1082,70 @@ def startExam(window1):
                 updateTime = conductExamScreen.respirationTimings[len(conductExamScreen.respirationTimings)-1]
             else:
                 updateTime = 0
-            #updateTime = time.time() - conductExamScreen.startTime
+            # updateTime = time.time() - conductExamScreen.startTime
             print(updateTime)
             conductExamScreen.respirationLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
             conductExamScreen.respirationLiveGraph.axis(ymin=-30, ymax=30)
-            conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings, conductExamScreen.respirationMeasurements, c='black')
-
+            conductExamScreen.respirationLiveGraph.plot(conductExamScreen.respirationTimings,
+                                                        conductExamScreen.respirationMeasurements, c='black')
 
             conductExamScreen.gsrLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
             conductExamScreen.gsrLiveGraph.axis(ymin=20100, ymax=20800)
-            conductExamScreen.gsrLiveGraph.plot(conductExamScreen.skinConductivityTimings, conductExamScreen.skinConductivityMeasurements, c='black')
+            conductExamScreen.gsrLiveGraph.plot(conductExamScreen.skinConductivityTimings,
+                                                conductExamScreen.skinConductivityMeasurements, c='black')
 
-
-            if(len(conductExamScreen.bloodPressureMeasurements) > 0):
+            if (len(conductExamScreen.bloodPressureMeasurements) > 0):
                 conductExamScreen.bpLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
                 conductExamScreen.bpLiveGraph.axis(ymin=70, ymax=150)
-                conductExamScreen.bpLiveGraph.plot(conductExamScreen.bloodPressureTimings, conductExamScreen.bloodPressureMeasurements,c='black')
+                conductExamScreen.bpLiveGraph.plot(conductExamScreen.bloodPressureTimings,
+                                                   conductExamScreen.bloodPressureMeasurements, c='black')
 
-
-            if(len(conductExamScreen.pulseMeasurements) > 0):
+            if (len(conductExamScreen.pulseMeasurements) > 0):
                 conductExamScreen.pulseLiveGraph.axis(xmin=updateTime - 20, xmax=updateTime + 20)
                 conductExamScreen.pulseLiveGraph.axis(ymin=40, ymax=130)
-                conductExamScreen.pulseLiveGraph.plot(conductExamScreen.pulseTimings, conductExamScreen.pulseMeasurements, c='black')
+                conductExamScreen.pulseLiveGraph.plot(conductExamScreen.pulseTimings,
+                                                      conductExamScreen.pulseMeasurements, c='black')
 
+            conductExamScreen.liveGraph.canvas.draw()  # Creates the new numpy live graphing snapshot
 
-            conductExamScreen.liveGraph.canvas.draw() #Creates the new numpy live graphing snapshot
+            liveGraphingSnapshot = numpy.array(list(conductExamScreen.liveGraph.canvas.tostring_rgb()),
+                                               'uint8')  # Gets a snapshot of the new live graphing as unsigned integers
+            liveGraphingSnapshot = liveGraphingSnapshot.reshape(conductExamScreen.liveGraphingHeight,
+                                                                conductExamScreen.liveGraphingWidth,
+                                                                3)  # Reformats the above snapshot into arrays needed to update numpy canvas 3 unsigned ints in each of 480 arrays, each inside 640 arrays
 
-            liveGraphingSnapshot = numpy.array(list(conductExamScreen.liveGraph.canvas.tostring_rgb()), 'uint8') #Gets a snapshot of the new live graphing as unsigned integers
-            liveGraphingSnapshot = liveGraphingSnapshot.reshape(conductExamScreen.liveGraphingHeight, conductExamScreen.liveGraphingWidth, 3) #Reformats the above snapshot into arrays needed to update numpy canvas 3 unsigned ints in each of 480 arrays, each inside 640 arrays
-
-            conductExamScreen.liveGraphScreen.update(liveGraphingSnapshot) #updates the numpy canvas
+            conductExamScreen.liveGraphScreen.update(liveGraphingSnapshot)  # updates the numpy canvas
 
             print("Update Finsished")
-          #  newWindow = homescreen.make_window()
-          #   conductExamScreen.window.close()
-          #  # PolygraphExamSetupScreen.window = newWindow
-          #   homescreen.main()
+        #  newWindow = homescreen.make_window()
+        #   conductExamScreen.window.close()
+        #  # PolygraphExamSetupScreen.window = newWindow
+        #   homescreen.main()
+
+
+def ml(dataset):
+    """creates a local file and fills it with the exam data from the 2d array dataset """
+
+    filename = "dataSetFile.csv"
+    file = open(filename, "w")
+    for x in range(len(dataset)):
+        hold = dataset[x]  # on single entry
+        print(hold)
+        count = 0
+        for y in range(len(hold)):
+            value = hold[y]
+            print(value)
+            if value == '':
+                file.write(',0 ')
+            else:
+                if count == 0:
+                    file.write (str(value))
+                    count +=1
+                file.write("," + str(value) )
+        file.write('\n')
+    file.close()
+
+    Client.main()
 
 
 def uploadDataToDataBase():
@@ -1107,7 +1187,8 @@ def uploadDataToDataBase():
     bp = ""
     label = ""
 
-    questionList =  []
+    dataset = [[]]
+    questionList = []
 
     while numberOfMeasurements > 0:  # while there is still something to be read
         respData = respirationRecordings[respIndex]
@@ -1116,14 +1197,12 @@ def uploadDataToDataBase():
         bpData = bloodPressureRecordings[bpIndex]
 
         respiration = respData.measurement
-
+        'Compresses data from multiple sensors into singularRecording entries by relation to respirationTime'
         if respData.question != question:  # when the respData question changes, update the stored q as well ass qID
             if not respData.question in questionList:
                 questionList.append(question)
                 question = respData.question
                 questionID += 1
-
-
 
         time_stamp = respData.timestamp
         if abs(pulseData.timestamp - time_stamp) < 0.2 and question == pulseData.question:  # if pulse time is < 0.2 of different consider it
@@ -1141,18 +1220,25 @@ def uploadDataToDataBase():
             if bpIndex < len(bloodPressureRecordings) - 1:
                 bpIndex += 1
 
-        # add_singularRecord(examID, questionID, question, response, time_stamp, pulse, skin_Con, respiration, bp,
-        # label):
-        print("examID ", examID, " questionID ", questionID, " question ", question, " response ", response,
+        print("Data uploaded to DB")
+        """print("examID ", examID, " questionID ", questionID, " question ", question, " response ", response,
               " time_stamp ", time_stamp, " pulse ", pulse, " skin_con", skin_Con, " respiration ", respiration,
-              " bp ", bp, "Label: false ")
-        SingularRecordingsDB.add_singularRecord(examID, int(questionID), str(question), str(response), str(time_stamp), str(pulse), int(skin_Con),
+              " bp ", bp, "Label: false ")"""""
+        'add data to the db'
+        SingularRecordingsDB.add_singularRecord(examID, int(questionID), str(question), str(response), str(time_stamp),
+                                                str(pulse), int(skin_Con),
                                                 str(respiration), str(bp), "false")
 
-        numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left
+        """into a 2d array(each reading(timestamp) is an array it self), add the data of this exam to be evaluated by  
+        the ml """
+        dataset.append([questionID,time_stamp, pulse, skin_Con, respiration, bp])
 
+        'decrement the loop'
+        numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left
         if respIndex < len(respirationRecordings) - 1:
             respIndex += 1
+    'call the ml method that takes in the dataset 2d array'
+    ml(dataset)
 
 
 def getNumOfMeasurements():
