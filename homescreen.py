@@ -4,6 +4,7 @@ import IndividualDeviceScreen
 import homescreen
 import matplotlib
 matplotlib.use("TkAgg")
+global window
 
 global deviceSelected
 '''
@@ -99,36 +100,36 @@ def main():
     # sets the theme, background color and creates a window
     gui.theme('Dark Amber')
     gui.theme_background_color('#000000')
-    window = make_window()
+    homescreen.window = make_window()
 
     while True:
-        event, values = window.read()
+        event, values = homescreen.window.read()
         # if user clicks Start Examination button go to next page
         if event in (gui.WIN_CLOSED, 'EXIT'):
             break
         elif event in 'Conduct Polygraph Exam':
             newWindow = PolygraphExamSetupScreen.make_window()
-            window.close()
-            window = newWindow
-            PolygraphExamSetupScreen.startExam(window)
+            homescreen.window.close()
+            homescreen.window = newWindow
+            PolygraphExamSetupScreen.startExam(homescreen.window)
         elif event == '-DeviceSelection-':
             if values['-DeviceSelection-'] == 'Respiration Belt':
-                window['-DeviceSelection-'].update(button_text="Respiration Belt")
+                homescreen.window['-DeviceSelection-'].update(button_text="Respiration Belt")
                 homescreen.deviceSelected = 0
-                window.refresh()
+                homescreen.window.refresh()
             elif values['-DeviceSelection-'] == 'Skin Conductivity':
-                window['-DeviceSelection-'].update(button_text="Skin Conductivity")
+                homescreen.window['-DeviceSelection-'].update(button_text="Skin Conductivity")
                 homescreen.deviceSelected = 1
-                window.refresh()
+                homescreen.window.refresh()
             elif values['-DeviceSelection-'] == 'Blood Pressure Device':
-                window['-DeviceSelection-'].update(button_text="Blood Pressure Device")
+                homescreen.window['-DeviceSelection-'].update(button_text="Blood Pressure Device")
                 homescreen.deviceSelected = 2
-                window.refresh()
+                homescreen.window.refresh()
         elif event in 'Obtain Individual Sensor Measurements':
             newWindow = IndividualDeviceScreen.make_window()
-            window.close()
-            window = newWindow
-            IndividualDeviceScreen.startExam(window)
+            homescreen.window.close()
+            homescreen.window = newWindow
+            IndividualDeviceScreen.startExam(homescreen.window)
 
     #print('exiting homescreen.py')
 
