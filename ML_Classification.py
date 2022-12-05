@@ -103,7 +103,9 @@ pred = np.argmax(pred, axis=1)
 file = open("mlResult.txt", "w")
 count = 0
 for x in sample_flower:
-    file.write(f"Predict that {sample_flower[count]}  Question: {count+1} is {species[pred][count]} \n")
-    print(f"Predict that {sample_flower[count]} Question: {count+1} is {species[pred][count]}\n")
+    file.write(f"{species[pred][count]}, {correct} \n")
+    print(f"{species[pred][count]}, {correct} \n")
+
+    #print(f"Predict that {sample_flower[count]} Question: {count+1} is {species[pred][count]}\n")
     count += 1
 file.close()"""

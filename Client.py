@@ -1,7 +1,7 @@
 import os
 import socket
 import time
-
+import conductExamScreen
 
 ncServerPort = 30006
 ncFilePort = 30010  # data file port
@@ -30,7 +30,8 @@ def main():
     myIPAddr = extendedIP[2][len(extendedIP[2]) - 1]
 
     "send data file to server"
-    client.send(("$nc -v -w 30 -p" + str(ncFilePort) + " -l > dataSetFile.csv").encode(FORMAT))  # prep receiver (severer)
+    client.send(
+        ("$nc -v -w 30 -p" + str(ncFilePort) + " -l > dataSetFile.csv").encode(FORMAT))  # prep receiver (severer)
     os.system("nc -v -w 2 " + str(serverIP) + " " + str(ncFilePort) + " < dataSetFile.csv")  # send file
     print("data file sent")
     client.send("$python3 3ml.py".encode(FORMAT))
@@ -43,21 +44,33 @@ def main():
 
     mlClient.connect(mlAdDDR)
     print("connected")
-    file = open("mlResult.txt", "w")
+    #file = open("mlResult.txt", "w")
     print("file created")
     msg = " "
     count = 0
-    while count < 9:
+    while count < 6:
         msg = mlClient.recv(SIZE).decode(FORMAT)
-        file.write(msg)
+        result = msg.split(',')
+        #file.write(msg)
         print(msg)
+
         count += 1
 
+
+
     mlClient.close()
-    file.close()
+    #file.close()
+    #I dont know how to passs multiple values to an event or what is going on
+    conductExamScreen.window.write_event_value('-mlUpdate1-', None)
+    conductExamScreen.window.write_event_value('-mlUpdate2-', None)
+    conductExamScreen.window.write_event_value('-mlUpdate3-', None)
+    conductExamScreen.window.write_event_value('-mlUpdate4-', None)
+    conductExamScreen.window.write_event_value('-mlUpdate5-', None)
+    conductExamScreen.window.write_event_value('-mlUpdate6-', None)
+
+
+
     print("file closed")
-
-
 
 
 if __name__ == "__main__":

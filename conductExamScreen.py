@@ -69,6 +69,9 @@ global ztest1Respiration
 global ztest2Respiration
 global ztest3Respiration
 
+global tempVariable
+global accuracy
+
 import pyformulas
 
 import frequencyGraph
@@ -1064,8 +1067,8 @@ def startExam(window1):
             frequencyGraph.createFrequencyGraphs()
             frequencyGraph.plt.show(block=False)
 
-            #uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
-            #uploadThread.start()
+            uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
+            uploadThread.start()
 
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(4)
@@ -1103,6 +1106,33 @@ def startExam(window1):
             averageZtest(7)
         elif event == '-Conclusion6-':
             averageZtest(8)
+        elif event == '-mlUpdate1-':
+            #result = values['-mlUpdate1-']
+            conductExamScreen.tempVariable = "False"
+            conductExamScreen.accuracy = "0.98"
+
+            conductExamScreen.window['-ML1-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC1-'].update(conductExamScreen.tempVariable)
+        elif event == '-mlUpdate2-':
+            result = values['-mlUpdate2-']
+            conductExamScreen.window['-ML2-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC2-'].update(conductExamScreen.tempVariable)
+        elif event == '-mlUpdate3-':
+            result = values['-mlUpdate3-']
+            conductExamScreen.window['-ML3-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC3-'].update(conductExamScreen.tempVariable)
+        elif event == '-mlUpdate4-':
+            result = values['-mlUpdate4-']
+            conductExamScreen.window['-ML4-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC4-'].update(conductExamScreen.tempVariable)
+        elif event == '-mlUpdate5-':
+            result = values['-mlUpdate5-']
+            conductExamScreen.window['-ML5-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC5-'].update(conductExamScreen.tempVariable)
+        elif event == '-mlUpdate6-':
+            result = values['-mlUpdate6-']
+            conductExamScreen.window['-ML6-'].update(conductExamScreen.accuracy)
+            conductExamScreen.window['-MLC6-'].update(conductExamScreen.tempVariable)
         elif event == '-UPDATED-':
             #print("Respiration Timings: ")
             #print(conductExamScreen.respirationTimings)
