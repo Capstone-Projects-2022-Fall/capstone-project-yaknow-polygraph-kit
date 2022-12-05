@@ -59,6 +59,8 @@ class conductExamScreenTest(unittest.TestCase):
         conductExamScreen.pulseMeasurements = []
         conductExamScreen.pulseTimings = []
 
+        conductExamScreen.questionTimestampsTemp = []
+
         conductExamScreen.respirationRecordings = []
         conductExamScreen.skinConductivityRecordings = []
         conductExamScreen.bloodPressureRecordings = []
@@ -88,6 +90,8 @@ class conductExamScreenTest(unittest.TestCase):
                 conductExamScreen.pulseRecordings.append(tempMeasurement)
                 questionIterator = questionIterator + 1
                 currentQuestion = questions[questionIterator]
+                conductExamScreen.questionTimestampsTemp.append(currentTime)
+                print("Appended: ", currentTime)
             respirationMeasurements = (random.random())
             tempMeasurement = conductExamScreen.singularRecording(currentTime, respirationMeasurements, currentQuestion, None)
             conductExamScreen.respirationRecordings.append(tempMeasurement)

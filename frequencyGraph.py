@@ -5,35 +5,50 @@ from collections import Counter
 import numpy as np
 import conductExamScreen
 
-fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1)
-plt.subplots_adjust(bottom=0.25)
-
-binwidthRespiration = 2
-#binwidthGSR =
-#binwidthBP =
 
 def createFrequencyGraphs():
-    print("Hello??")
-    GSRMeasurement = []
-    GSRTime = []
-    RespirationMeasurement = []
-    RespirationTime = []
+    fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1)
+    fig.tight_layout()
+    plt.subplots_adjust(bottom=0.25)
 
-    print("Length: ", len(conductExamScreen.respirationRecordings) )
+    binwidthRespiration = .2
+    binwidthGSR = .2
+    binwidthBP = .2
+    binWidthPulse = .2
+
+    GSRMeasurement = []
+    RespirationMeasurement = []
+    BloodPressureMeasurement = []
+    PulseMeasurement = []
+
     for respirationRecording in conductExamScreen.respirationRecordings:
-        print(respirationRecording.measurement[0])
-        RespirationMeasurement.append(respirationRecording.measurement[0])
+        RespirationMeasurement.append(respirationRecording.measurement)
 
     graph0.hist(RespirationMeasurement, bins=np.arange(min(RespirationMeasurement), max(RespirationMeasurement) + binwidthRespiration, binwidthRespiration), color='blue', edgecolor='black')
-    graph0.set_ylabel("Respiration")
+    graph0.set_xlabel("Respiration")
 
-    # for skinConductivityRecording in conductExamScreen.skinConductivityRecordings:
-    #     print(skinConductivityRecording.measurement[0])
-    #     GSRMeasurement.append(skinConductivityRecording.measurement[0])
-    #graph1.hist(GSRMeasurement, bins=np.arange(min(GSRMeasurement), max(GSRMeasurement) + binwidthGSR, binwidthGSR), color='green', edgecolor='black')
-    #graph1.set_ylabel("Siemens")
+    for skinConductivityRecording in conductExamScreen.skinConductivityRecordings:
+         GSRMeasurement.append(skinConductivityRecording.measurement)
 
-    graph3.set_xlabel("Frequency")
+    graph1.hist(GSRMeasurement, bins=np.arange(min(GSRMeasurement), max(GSRMeasurement) + binwidthGSR, binwidthGSR), color='green', edgecolor='black')
+    graph1.set_xlabel("Siemens")
+
+    for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
+         BloodPressureMeasurement.append(bloodPressureRecording.measurement)
+
+    graph2.hist(BloodPressureMeasurement, bins=np.arange(min(BloodPressureMeasurement), max(BloodPressureMeasurement) + binwidthBP, binwidthBP), color='green', edgecolor='black')
+    graph2.set_xlabel("Blood Pressure")
+
+    for pulseRecording in conductExamScreen.pulseRecordings:
+         PulseMeasurement.append(pulseRecording.measurement)
+
+    graph3.hist(PulseMeasurement, bins=np.arange(min(PulseMeasurement), max(PulseMeasurement) + binWidthPulse, binWidthPulse), color='green', edgecolor='black')
+    graph3.set_xlabel("Pulse Rate")
+
+    graph0.set_ylabel("Frequency")
+    graph1.set_ylabel("Frequency")
+    graph2.set_ylabel("Frequency")
+    graph3.set_ylabel("Frequency")
 
 '''
     for bloodPressureRecording in conductExamScreen.bloodPressureRecordings:
