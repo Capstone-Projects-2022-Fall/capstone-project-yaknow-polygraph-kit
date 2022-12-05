@@ -150,19 +150,19 @@ def make_window():
     ]
 
     row3 = [
-        [gui.Text('                                                                     ', key='-placeHolder-'), gui.Text('Mean Respiration (N)', key='-MeanRHeader-'), gui.Text('      MeanGSR (S)', key='-MeanGSRHeader-'),  gui.Text('MedianRespiration (N)', key='-MedianRHeader-'), gui.Text('     MedianGSR (S)', key='MedianGSRHeader'), gui.Text('  Blood Pressure (mmHg)', key='-BPHeader-'),  gui.Text('Pulse (BPM)', key='-PHeader-')]
+        [gui.Text('                                                                             ', key='-placeHolder-'), gui.Text('Mean Respiration (N)', key='-MeanRHeader-'), gui.Text('      MeanGSR (S)', key='-MeanGSRHeader-'),  gui.Text('MedianRespiration (N)', key='-MedianRHeader-'), gui.Text('     MedianGSR (S)', key='MedianGSRHeader'), gui.Text('  Blood Pressure (mmHg)', key='-BPHeader-'),  gui.Text('Pulse (BPM)', key='-PHeader-'), gui.Text('Machine Learning Output', key='-mlHeader-'), gui.Text('Machine Learning Confidence', key='-mlCHeader-')]
     ]
 
     row4 = [
-        [gui.Text('Baseline Question 1                                                  ', key='-B1placeHolder-'), gui.Text('', key='-B1MeanR-'), gui.Text('', key='-B1MeanGSR-'), gui.Text('', key='-B1MedianR-'), gui.Text('', key='-B1MedianGSR-'),  gui.Text('', key='-B1BP-'), gui.Text('', key='-B1P-')]
+        [gui.Text('Baseline Question 1                                                          ', key='-B1placeHolder-'), gui.Text('', key='-B1MeanR-'), gui.Text('', key='-B1MeanGSR-'), gui.Text('', key='-B1MedianR-'), gui.Text('', key='-B1MedianGSR-'),  gui.Text('', key='-B1BP-'), gui.Text('', key='-B1P-')]
     ]
 
     row5 = [
-        [gui.Text('Baseline Question 2                                                  ', key='-B2placeHolder-'), gui.Text('', key='-B2MeanR-'), gui.Text('', key='-B2MeanGSR-'), gui.Text('', key='-B2MedianR-'), gui.Text('', key='-B2MedianGSR-'),  gui.Text('', key='-B2BP-'), gui.Text('', key='-B2P-')]
+        [gui.Text('Baseline Question 2                                                          ', key='-B2placeHolder-'), gui.Text('', key='-B2MeanR-'), gui.Text('', key='-B2MeanGSR-'), gui.Text('', key='-B2MedianR-'), gui.Text('', key='-B2MedianGSR-'),  gui.Text('', key='-B2BP-'), gui.Text('', key='-B2P-')]
     ]
 
     row6 = [
-        [gui.Text('Baseline Question 3                                                  ', key='-B3placeHolder-'), gui.Text('', key='-B3MeanR-'), gui.Text('', key='-B3MeanGSR-'), gui.Text('', key='-B3MedianR-'), gui.Text('', key='-B3MedianGSR-'),  gui.Text('', key='-B3BP-'), gui.Text('', key='-B3P-')]
+        [gui.Text('Baseline Question 3                                                          ', key='-B3placeHolder-'), gui.Text('', key='-B3MeanR-'), gui.Text('', key='-B3MeanGSR-'), gui.Text('', key='-B3MedianR-'), gui.Text('', key='-B3MedianGSR-'),  gui.Text('', key='-B3BP-'), gui.Text('', key='-B3P-')]
     ]
 
     col3_1 = [
@@ -246,6 +246,24 @@ def make_window():
         [gui.Button('Conclusion 6', key='-Conclusion6-', visible=True)]
     ]
 
+    col3_10 = [
+        [gui.Text('Loading', key='-ML1-', visible=True)],
+        [gui.Text('Loading', key='-ML2-', visible=True)],
+        [gui.Text('Loading', key='-ML3-', visible=True)],
+        [gui.Text('Loading', key='-ML4-', visible=True)],
+        [gui.Text('Loading', key='-ML5-', visible=True)],
+        [gui.Text('Loading', key='-ML6-', visible=True)]
+    ]
+
+    col3_11 = [
+        [gui.Text('Loading', key='-MLC1-', visible=True)],
+        [gui.Text('Loading', key='-MLC2-', visible=True)],
+        [gui.Text('Loading', key='-MLC3-', visible=True)],
+        [gui.Text('Loading', key='-MLC4-', visible=True)],
+        [gui.Text('Loading', key='-MLC5-', visible=True)],
+        [gui.Text('Loading', key='-MLC6-', visible=True)]
+    ]
+
     
     row7 = [
         [gui.Text('Cuff Pressure Bar ', key='cuffPressureLabel'), gui.ProgressBar(max_value=10, orientation='h', size=(20, 20), key='progress')]
@@ -271,7 +289,7 @@ def make_window():
         [gui.Frame(layout=row4, title='', key='row4', visible=False)],
         [gui.Frame(layout=row5, title='', key='row5', visible=False)],
         [gui.Frame(layout=row6, title='', key='row6', visible=False)],
-        [gui.Frame(layout=col3_1, title='', k='col3_1', visible=False), gui.Frame(layout=col3_2, title='', k='col3_2', visible=False), gui.Frame(layout=col3_9, title='', k='col3_9', visible=False), gui.Frame(layout=col3_3, title='', k='col3_3', visible=False), gui.Frame(layout=col3_4, title='', k='col3_4', visible=False), gui.Frame(layout=col3_5, title='', k='col3_5', visible=False), gui.Frame(layout=col3_6, title='', k='col3_6', visible=False), gui.Frame(layout=col3_7, title='', k='col3_7', visible=False), gui.Frame(layout=col3_8, title='', k='col3_8', visible=False)],
+        [gui.Frame(layout=col3_1, title='', k='col3_1', visible=False), gui.Frame(layout=col3_2, title='', k='col3_2', visible=False), gui.Frame(layout=col3_9, title='', k='col3_9', visible=False), gui.Frame(layout=col3_3, title='', k='col3_3', visible=False), gui.Frame(layout=col3_4, title='', k='col3_4', visible=False), gui.Frame(layout=col3_5, title='', k='col3_5', visible=False), gui.Frame(layout=col3_6, title='', k='col3_6', visible=False), gui.Frame(layout=col3_7, title='', k='col3_7', visible=False), gui.Frame(layout=col3_8, title='', k='col3_8', visible=False), gui.Frame(layout=col3_10, title='', k='col3_10', visible=False),gui.Frame(layout=col3_11, title='', k='col3_11', visible=False)],
         [gui.Push(), gui.Frame(layout=row8, title='', key='row8'), gui.Push()],
         [gui.Push(), gui.Frame(layout=row9, title='', key='row9'), gui.Push()],
         [gui.Frame(layout=row7, title='', key='row7', visible=True)]
@@ -930,6 +948,8 @@ def startExam(window1):
             conductExamScreen.window['col3_6'].update(visible=True)
             conductExamScreen.window['col3_7'].update(visible=True)
             conductExamScreen.window['col3_8'].update(visible=True)
+            conductExamScreen.window['col3_10'].update(visible=True)
+            conductExamScreen.window['col3_11'].update(visible=True)
 
             conductExamScreen.window['-B1MeanR-'].update(round(statistics.mean(respirationbyQuestion[0]), 3))
             conductExamScreen.window['-B2MeanR-'].update(round(statistics.mean(respirationbyQuestion[1]), 3))
@@ -1018,11 +1038,11 @@ def startExam(window1):
                 "              " + str(round(bloodPressureRecordings[8].measurement, 3)))
 
             conductExamScreen.window['-B1P-'].update(
-                "                  " + str(round(pulseRecordings[0].measurement, 3)))
+                "                           " + str(round(pulseRecordings[0].measurement, 3)))
             conductExamScreen.window['-B2P-'].update(
-                "                 " + str(round(pulseRecordings[1].measurement, 3)))
+                "                           " + str(round(pulseRecordings[1].measurement, 3)))
             conductExamScreen.window['-B3P-'].update(
-                "                 " + str(round(pulseRecordings[2].measurement, 3)))
+                "                           " + str(round(pulseRecordings[2].measurement, 3)))
             conductExamScreen.window['-Test1P-'].update(
                 "               " + str(round(pulseRecordings[3].measurement, 3)))
             conductExamScreen.window['-Test2P-'].update(
@@ -1044,8 +1064,8 @@ def startExam(window1):
             frequencyGraph.createFrequencyGraphs()
             frequencyGraph.plt.show(block=False)
 
-            uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
-            uploadThread.start()
+            #uploadThread = threading.Thread(target=conductExamScreen.uploadDataToDataBase, daemon=True)
+            #uploadThread.start()
 
         elif event == '-Test1R-':
             showRespirationProbabilityDistribution(4)
