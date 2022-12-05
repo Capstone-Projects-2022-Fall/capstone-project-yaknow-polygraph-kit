@@ -10,6 +10,13 @@ import threading
 
 import time
 
+#/opt/homebrew/Cellar/portaudio/19.7.0
+#/opt/homebrew/opt/portaudio
+
+
+
+
+
 
 class conductExamScreenTest(unittest.TestCase):
 
