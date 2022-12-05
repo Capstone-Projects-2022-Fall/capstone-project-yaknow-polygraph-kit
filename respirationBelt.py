@@ -79,27 +79,27 @@ def connectRespirationBelt():
         theAPIs.start(rate)
         questionSubtractionTimeTotal = 0
     #examStartTime = datetime.datetime.now()
-    while conductExamScreen.examFinished == False:
-        if(conductExamScreen.inQuestion == True):
-            questionSubtractionStart = datetime.datetime.now()
-            print("Recording Respiration")
-            measurements = theAPIs.read()
-            currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
-            if measurements is None:
-                break
-            tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
-            conductExamScreen.respirationRecordings.append(tempMeasurement)
-            conductExamScreen.respirationTimings.append(currentTime)
-            conductExamScreen.respirationMeasurements.append(measurements[0])
-            #conductExamScreen.window.write_event_value('-UPDATED-', None)
-            print("Failed Respiration")
-        else:
-            time.sleep(.5)
+        while conductExamScreen.examFinished == False:
+            if(conductExamScreen.inQuestion == True):
+                questionSubtractionStart = datetime.datetime.now()
+                print("Recording Respiration")
+                measurements = theAPIs.read()
+                currentTime = (datetime.datetime.now() - conductExamScreen.examStartTime).total_seconds()
+                if measurements is None:
+                    break
+                tempMeasurement = conductExamScreen.singularRecording(currentTime, measurements[0], conductExamScreen.newQuestion, conductExamScreen.yn)
+                conductExamScreen.respirationRecordings.append(tempMeasurement)
+                conductExamScreen.respirationTimings.append(currentTime)
+                conductExamScreen.respirationMeasurements.append(measurements[0])
+                #conductExamScreen.window.write_event_value('-UPDATED-', None)
+                print("Failed Respiration")
+            else:
+                time.sleep(.5)
     print("Respiration Exited")
 
 
 def connectRespirationBeltIndividual():
-    from gdx import gdx
+    from gdx3 import gdx
     theAPIs = gdx()
     connected = False
     while connected == False:
@@ -110,11 +110,17 @@ def connectRespirationBeltIndividual():
             IndividualDeviceScreen.recordingStopped = True
             theAPIs.close()
         if (respirationConnected == True):
-            IndividualDeviceScreen.deviceConnected = True
-            IndividualDeviceScreen.window.write_event_value('-Connected-', None)
-            #IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
-            #IndividualDeviceScreen.window.refresh()
-            connected = True
+            if (IndividualDeviceScreen.exited):
+                connected = True
+                IndividualDeviceScreen.recordingStarted = True
+                IndividualDeviceScreen.recordingStopped = True
+                theAPIs.close()
+            else:
+                IndividualDeviceScreen.deviceConnected = True
+                IndividualDeviceScreen.window.write_event_value('-Connected-', None)
+                #IndividualDeviceScreen.window['theImage1'].update(data=IndividualDeviceScreen.checkmarkImage)
+                #IndividualDeviceScreen.window.refresh()
+                connected = True
         else:
             theAPIs.close()
     while not IndividualDeviceScreen.recordingStarted:
@@ -136,14 +142,16 @@ def connectRespirationBeltIndividual():
         if IndividualDeviceScreen.exited:
             IndividualDeviceScreen.recordingStopped = True
             theAPIs.close()
-        measurements = theAPIs.read()
-        currentTime = (datetime.datetime.now() - IndividualDeviceScreen.recordingStartTime).total_seconds()
-        if measurements == None:
-            break
-        IndividualDeviceScreen.deviceMeasurements.append(measurements)
-        IndividualDeviceScreen.deviceTimings.append(currentTime)
-        IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
+        else:
+            measurements = theAPIs.read()
+            currentTime = (datetime.datetime.now() - IndividualDeviceScreen.recordingStartTime).total_seconds()
+            if measurements == None:
+                break
+            IndividualDeviceScreen.deviceMeasurements.append(measurements)
+            IndividualDeviceScreen.deviceTimings.append(currentTime)
+            IndividualDeviceScreen.window.write_event_value('-UPDATED-', None)
 
+    theAPIs.close()
     print("Respiration Exited")
     # if devicesFound is None:
     #    logging.error('No Device connected.')

@@ -346,61 +346,64 @@ def startExam(window1):
             #PolygraphExamSetupScreen.window = newWindow
             homescreen.main()
         elif event in ('Start Examination'):
+            if( (values['-RSamplingRate-'] == "" ) or (values['-SCSamplingRate-'] == "") ):
+                continue
+            else:
+                conductExamScreen.respirationMeasurements = []
+                conductExamScreen.respirationTimings = []
 
-            conductExamScreen.respirationMeasurements = []
-            conductExamScreen.respirationTimings = []
+                conductExamScreen.skinConductivityMeasurements = []
+                conductExamScreen.skinConductivityTimings = []
 
-            conductExamScreen.skinConductivityMeasurements = []
-            conductExamScreen.skinConductivityTimings = []
+                conductExamScreen.bloodPressureMeasurements = []
+                conductExamScreen.bloodPressureTimings = []
+                conductExamScreen.bloodPressureRecordings = []
 
-            conductExamScreen.bloodPressureMeasurements = []
-            conductExamScreen.bloodPressureTimings = []
-            conductExamScreen.bloodPressureRecordings = []
+                conductExamScreen.pulseMeasurements = []
+                conductExamScreen.pulseTimings = []
 
-            conductExamScreen.pulseMeasurements = []
-            conductExamScreen.pulseTimings = []
+                conductExamScreen.respirationRecordings = []
 
-            conductExamScreen.respirationRecordings = []
+                conductExamScreen.bloodPressureRecordings = []
 
-            conductExamScreen.bloodPressureRecordings = []
+                conductExamScreen.pulseRecordings = []
 
-            conductExamScreen.pulseRecordings = []
+                conductExamScreen.skinConductivityRecordings = []
 
-            conductExamScreen.skinConductivityRecordings = []
+                conductExamScreen.yn = None
 
-            conductExamScreen.yn = None
+                conductExamScreen.questionCounter = 0
 
-            conductExamScreen.questionCounter = 0
+                conductExamScreen.examFinished = False
 
-            conductExamScreen.examFinished = False
+                conductExamScreen.examTime = 1
 
-            conductExamScreen.examTime = 1
+                conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[0]
 
-            conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[0]
+                conductExamScreen.inQuestion = False
 
-            conductExamScreen.inQuestion = False
+                # tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
 
-            # tts.questionToSpeech(conductExamScreen.newQuestion, conductExamScreen.questionCounter)
+                # conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
 
-            # conductExamScreen.questionCounter = conductExamScreen.questionCounter + 1
+                conductExamScreen.iterated = False
 
-            conductExamScreen.iterated = False
+                newWindow = conductExamScreen.make_window()
+                PolygraphExamSetupScreen.window.close()
+                conductExamScreen.window = newWindow
+                conductExamScreen.startExam(newWindow)
 
-            newWindow = conductExamScreen.make_window()
-            PolygraphExamSetupScreen.window.close()
-            conductExamScreen.window = newWindow
-            conductExamScreen.startExam(newWindow)
-
-            # you have to add a break here otherwise you get an error with PySimpleGUI saying key error not found when it does actually exists.
-            break
+                # you have to add a break here otherwise you get an error with PySimpleGUI saying key error not found when it does actually exists.
+                break
         elif event == '-RSamplingRate-':
             #Check User Input
-            PolygraphExamSetupScreen.RespirationSamplingRate = int(float(values['-RSamplingRate-']))
+            if(values['-RSamplingRate-'].isdigit()):
+                PolygraphExamSetupScreen.RespirationSamplingRate = int(float(values['-RSamplingRate-']))
         elif event == '-SCSamplingRate-':
             #Check User Input
-            PolygraphExamSetupScreen.GSRSamplingRate = int(float(values['-SCSamplingRate-']))
+            if (values['-SCSamplingRate-'].isdigit()):
+                PolygraphExamSetupScreen.GSRSamplingRate = int(float(values['-SCSamplingRate-']))
         elif event == '-row2GSRPort-':
-            print("Changed Port")
             arduino.arduino_port = values['-row2GSRPort-']
         # search functionality
         if (values['-SEARCHINPUT-'] != ''):
