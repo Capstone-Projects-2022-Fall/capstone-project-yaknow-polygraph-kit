@@ -1,5 +1,0 @@
-python3 ncServer.py  #on cis-wangStu1
-python3 mlChatServer.py  #on cis-wangStu1
-
-ensure trainingData.csv is on said server, that is the output of the java file and is required for training the model
-ensure you are on temples WIFI
