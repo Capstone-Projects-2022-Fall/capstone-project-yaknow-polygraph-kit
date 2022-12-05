@@ -468,6 +468,10 @@ def averageZtest(question):
     # average2 = (conductExamScreen.zTest2Respiration[1])
     # average3 = (conductExamScreen.zTest3Respiration[1])
 
+    # currentQuestion = ''
+
+    currentQuestion = PolygraphExamSetupScreen.global_overall_questions[question]
+
 
 
     percentageLying = 0
@@ -492,6 +496,7 @@ def averageZtest(question):
         conclusion = 'Telling the truth'
 
     layout = [
+              [gui.Text("Current Questin: %s" % str(currentQuestion))],
               [gui.Text("Conclusions based on Z-value Only")],
               [gui.Text('1st baseline average: %s' % str(average1))],
               [gui.Text('2nd question average: %s' % str(average2))],
