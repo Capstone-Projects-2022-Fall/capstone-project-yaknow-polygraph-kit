@@ -319,7 +319,7 @@ def examCounter():
                 conductExamScreen.questionTimestamps.append(examTime)
                 conductExamScreen.iterated = True
                 for respirationRecording in conductExamScreen.respirationRecordings:
-                    if respirationRecording.yn == None:
+                    '''if respirationRecording.yn == None:
                         respirationRecording.yn = conductExamScreen.yn
                 for skinConductivityRecording in conductExamScreen.skinConductivityRecordings:
                     if skinConductivityRecording.yn == None:
@@ -329,7 +329,7 @@ def examCounter():
                         bloodPressureRecording.yn = conductExamScreen.yn
                 for pulseRecording in conductExamScreen.pulseRecordings:
                     if pulseRecording.yn == None:
-                        pulseRecording.yn = conductExamScreen.yn
+                        pulseRecording.yn = conductExamScreen.yn'''
                 conductExamScreen.yn = None
                 conductExamScreen.newQuestion = PolygraphExamSetupScreen.global_overall_questions[conductExamScreen.questionCounter]
                 tts.questionToSpeech(newQuestion, conductExamScreen.questionCounter)
@@ -454,15 +454,17 @@ def averageZtest(question):
 
     percentageLying = 0
     percentageTruth = 100
-    if average1 < .1:
-        percentageLying + 33
-        percentageTruth - 33
-    if average2 < .1:
-        percentageLying + 33
-        percentageTruth - 33
-    if average3 < .1:
-        percentageLying + 33
-        percentageTruth - 33
+    if average1 < .3:
+        percentageLying = percentageLying + 33
+        percentageTruth = percentageTruth - 33
+    if average2 < .3:
+        percentageLying = percentageLying + 33
+        percentageTruth = percentageTruth - 33
+    if average3 < .3:
+        percentageLying = percentageLying + 33
+        percentageTruth = percentageTruth - 33
+
+
     # print("Percentage lying = " + percentageLying)
     # print("Percentage True = " + percentageTruth - percentageLying)
     conclusion = ''
