@@ -686,18 +686,22 @@ def startExam(window1):
 def ml(dataset):
     """creates a local file and fills it with the exam data from the 2d array dataset """
 
-    filename = "dataSetFile.txt"
-    file = open(filename, "a")
+    filename = "dataSetFile.csv"
+    file = open(filename, "w")
     for x in range(len(dataset)):
         hold = dataset[x]  # on single entry
         print(hold)
+        count = 0
         for y in range(len(hold)):
             value = hold[y]
             print(value)
             if value == '':
-                file.write('0, ')
+                file.write(',0 ')
             else:
-                file.write(str(value) + ", ")
+                if count == 0:
+                    file.write (str(value))
+                    count +=1
+                file.write("," + str(value) )
         file.write('\n')
     file.close()
 
@@ -767,7 +771,7 @@ def uploadDataToDataBase():
 
         """into a 2d array(each reading(timestamp) is an array it self), add the data of this exam to be evaluated by  
         the ml """
-        dataset.append([questionID, response, time_stamp, pulse, skin_Con, respiration, bp])
+        dataset.append([questionID,time_stamp, pulse, skin_Con, respiration, bp])
 
         'decrement the loop'
         numberOfMeasurements -= 1  # you've done one reading, reduce that from what's left

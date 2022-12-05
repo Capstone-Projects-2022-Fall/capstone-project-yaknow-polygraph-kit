@@ -8,21 +8,21 @@ SIZE = 1024
 
 
 def main():
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    mlClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    client.connect(ADDR)
+    mlClient.connect(ADDR)
     print("connected")
     file = open("mlResult.txt", "w")
     print("file created")
     msg = " "
     count = 0
     while count < 9:
-        msg = client.recv(SIZE).decode(FORMAT)
+        msg = mlClient.recv(SIZE).decode(FORMAT)
         file.write(msg)
         print(msg)
         count += 1
 
-    client.close()
+    mlClient.close()
     file.close()
     print("file closed")
 
