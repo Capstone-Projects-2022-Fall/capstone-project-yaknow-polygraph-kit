@@ -5,16 +5,16 @@ from collections import Counter
 import numpy as np
 import conductExamScreen
 
-fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1)
-fig.tight_layout()
-plt.subplots_adjust(bottom=0.25)
-
-binwidthRespiration = .2
-binwidthGSR = .2
-binwidthBP = .2
-binWidthPulse = .2
 
 def createFrequencyGraphs():
+    fig, (graph0, graph1, graph2, graph3) = plt.subplots(nrows=4, ncols=1)
+    fig.tight_layout()
+    plt.subplots_adjust(bottom=0.25)
+
+    binwidthRespiration = .2
+    binwidthGSR = .2
+    binwidthBP = .2
+    binWidthPulse = .2
 
     GSRMeasurement = []
     RespirationMeasurement = []
